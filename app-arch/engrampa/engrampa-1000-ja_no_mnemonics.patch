@@ -1,0 +1,636 @@
+diff -urN a/po/ja.po b/po/ja.po
+--- a/po/ja.po	2021-08-06 16:17:41.000000000 -0700
++++ b/po/ja.po	2022-05-30 20:24:20.743826296 -0700
+@@ -573,7 +573,7 @@
+ 
+ #: src/dlg-add-folder.c:738
+ msgid "_Options Name:"
+-msgstr "オプションの名前(_O):"
++msgstr "オプションの名前:"
+ 
+ #: src/dlg-add-folder.c:741 src/dlg-package-installer.c:319
+ #: src/fr-window.c:2540 src/fr-window.c:7770 src/fr-window.c:8211
+@@ -582,11 +582,11 @@
+ #: src/ui/dlg-extract.ui:56 src/ui/new.ui:235 src/ui/password.ui:37
+ #: src/ui/update.ui:33 src/ui/update.ui:190
+ msgid "_Cancel"
+-msgstr "キャンセル(_C)"
++msgstr "キャンセル"
+ 
+ #: src/dlg-add-folder.c:742
+ msgid "_Save"
+-msgstr "サーバ(_S)"
++msgstr "サーバ"
+ 
+ #: src/dlg-ask-password.c:116
+ #, c-format
+@@ -627,7 +627,7 @@
+ 
+ #: src/dlg-batch-add.c:237 src/dlg-extract.c:108 src/fr-window.c:6914
+ msgid "Create _Folder"
+-msgstr "フォルダーの生成(_F)"
++msgstr "フォルダーの生成"
+ 
+ #: src/dlg-batch-add.c:256 src/dlg-extract.c:128 src/fr-window.c:6931
+ #, c-format
+@@ -644,7 +644,7 @@
+ 
+ #: src/dlg-batch-add.c:324
+ msgid "_Overwrite"
+-msgstr "上書きする(_O)"
++msgstr "上書きする"
+ 
+ #: src/dlg-extract.c:127 src/dlg-extract.c:145 src/dlg-extract.c:172
+ #: src/fr-window.c:4274 src/fr-window.c:6846 src/fr-window.c:6851
+@@ -687,7 +687,7 @@
+ 
+ #: src/dlg-package-installer.c:323
+ msgid "_Search Command"
+-msgstr "コマンドの検索(_S)"
++msgstr "コマンドの検索"
+ 
+ #: src/dlg-prop.c:97
+ #, c-format
+@@ -723,7 +723,7 @@
+ #: src/eggfileformatchooser.c:224
+ #, c-format
+ msgid "File _Format: %s"
+-msgstr "ファイル形式(_F): %s"
++msgstr "ファイル形式: %s"
+ 
+ #: src/eggfileformatchooser.c:385
+ msgid "All Files"
+@@ -1137,24 +1137,24 @@
+ 
+ #: src/fr-window.c:2535 src/ui/app-menu.ui:14
+ msgid "_Quit"
+-msgstr "終了 (_Q)"
++msgstr "終了 "
+ 
+ #: src/fr-window.c:2536
+ msgid "_Open the Archive"
+-msgstr "書庫を開く(_O)"
++msgstr "書庫を開く"
+ 
+ #: src/fr-window.c:2537
+ msgid "_Show the Files"
+-msgstr "ファイルを表示する(_S)"
++msgstr "ファイルを表示する"
+ 
+ #: src/fr-window.c:2538
+ msgid "Show the _Files and Quit"
+-msgstr "ファイルを表示して終了する(_F)"
++msgstr "ファイルを表示して終了する"
+ 
+ #: src/fr-window.c:2539 src/ui/add-options.ui:40 src/ui.h:58
+ #: src/ui/properties.ui:52
+ msgid "_Close"
+-msgstr "閉じる(_C)"
++msgstr "閉じる"
+ 
+ #: src/fr-window.c:2718
+ #, c-format
+@@ -1232,7 +1232,7 @@
+ 
+ #: src/fr-window.c:4176
+ msgid "Create _Archive"
+-msgstr "新しい書庫の作成(_A)"
++msgstr "新しい書庫の作成"
+ 
+ #: src/fr-window.c:4772 src/fr-window.c:5815
+ msgid "Folders"
+@@ -1274,7 +1274,7 @@
+ #. Translators: this is the label for the "open recent file" sub-menu.
+ #: src/fr-window.c:5856
+ msgid "Open _Recent"
+-msgstr "最近開いた書庫(_R)"
++msgstr "最近開いた書庫"
+ 
+ #: src/fr-window.c:5857 src/fr-window.c:5869
+ msgid "Open a recently used archive"
+@@ -1283,7 +1283,7 @@
+ #. Translators: after the colon there is a folder name.
+ #: src/fr-window.c:5946 src/ui/batch-add-files.ui:209
+ msgid "_Location:"
+-msgstr "場所(_L):"
++msgstr "場所:"
+ 
+ #: src/fr-window.c:6295
+ #, c-format
+@@ -1302,15 +1302,15 @@
+ 
+ #: src/fr-window.c:6804
+ msgid "Replace _All"
+-msgstr "すべて置き換える(_A)"
++msgstr "すべて置き換える"
+ 
+ #: src/fr-window.c:6805
+ msgid "_Skip"
+-msgstr "スキップ(_S)"
++msgstr "スキップ"
+ 
+ #: src/fr-window.c:6806
+ msgid "_Replace"
+-msgstr "置換(_R)"
++msgstr "置換"
+ 
+ #. Translators: the name references to a filename.  This message can appear when renaming a file.
+ #: src/fr-window.c:7648
+@@ -1359,15 +1359,15 @@
+ 
+ #: src/fr-window.c:7767
+ msgid "_New folder name:"
+-msgstr "新しいフォルダー名(_N):"
++msgstr "新しいフォルダー名:"
+ 
+ #: src/fr-window.c:7767
+ msgid "_New file name:"
+-msgstr "新しいファイル名(_N):"
++msgstr "新しいファイル名:"
+ 
+ #: src/fr-window.c:7771
+ msgid "_Rename"
+-msgstr "名前の変更(_R)"
++msgstr "名前の変更"
+ 
+ #: src/fr-window.c:7788 src/fr-window.c:7807
+ msgid "Could not rename the folder"
+@@ -1383,11 +1383,11 @@
+ 
+ #: src/fr-window.c:8208
+ msgid "_Destination folder:"
+-msgstr "送り先フォルダー(_D):"
++msgstr "送り先フォルダー:"
+ 
+ #: src/fr-window.c:8212 src/ui.h:75 src/ui.h:96
+ msgid "_Paste"
+-msgstr "貼り付け(_P)"
++msgstr "貼り付け"
+ 
+ #: src/fr-window.c:8811
+ msgid "Add files to an archive"
+@@ -1400,7 +1400,7 @@
+ 
+ #: src/gtk-utils.c:317
+ msgid "Command _Line Output"
+-msgstr "コマンドラインの出力(_L)"
++msgstr "コマンドラインの出力"
+ 
+ #: src/gtk-utils.c:556
+ msgid "Could not display help"
+@@ -1462,29 +1462,29 @@
+ 
+ #: src/ui/add-options.ui:58
+ msgid "_Apply"
+-msgstr "適用(_A)"
++msgstr "適用"
+ 
+ #: src/ui/add-options.ui:97
+ msgid "_Remove"
+-msgstr "削除(_R)"
++msgstr "削除"
+ 
+ #: src/ui/app-menu.ui:6 src/ui/batch-add-files.ui:81 src/ui/dlg-add-files.ui:41
+ #: src/ui/dlg-add-folder.ui:42 src/ui/dlg-extract.ui:41 src/ui.h:34
+ #: src/ui/new.ui:268 src/ui/properties.ui:34
+ msgid "_Help"
+-msgstr "ヘルプ(_H)"
++msgstr "ヘルプ"
+ 
+ #: src/ui/app-menu.ui:10
+ msgid "_About Archive Manager"
+-msgstr "書庫マネージャについて (_A)"
++msgstr "書庫マネージャについて "
+ 
+ #: src/ui/batch-add-files.ui:62 src/ui/new.ui:251
+ msgid "C_reate"
+-msgstr "作成(_R)"
++msgstr "作成"
+ 
+ #: src/ui/batch-add-files.ui:142
+ msgid "_Filename:"
+-msgstr "ファイル名(_F):"
++msgstr "ファイル名:"
+ 
+ #: src/ui/batch-add-files.ui:158
+ msgid "Location"
+@@ -1492,12 +1492,12 @@
+ 
+ #: src/ui/batch-add-files.ui:246 src/ui/new.ui:103
+ msgid "_Encrypt the file list too"
+-msgstr "ファイルの一覧も暗号化する(_E)"
++msgstr "ファイルの一覧も暗号化する"
+ 
+ #. this is part of a sentence, for example "split into volumes of 10.0 MB", where MB stands for megabyte.
+ #: src/ui/batch-add-files.ui:261 src/ui/new.ui:140
+ msgid "Split into _volumes of"
+-msgstr "次の容量で分割する(_V): "
++msgstr "次の容量で分割する: "
+ 
+ #. MB means megabytes
+ #: src/ui/batch-add-files.ui:300 src/ui/new.ui:174
+@@ -1507,15 +1507,15 @@
+ #: src/ui/batch-add-files.ui:324 src/ui/batch-password.ui:147 src/ui/new.ui:92
+ #: src/ui/password.ui:126
+ msgid "_Password:"
+-msgstr "パスワード(_P):"
++msgstr "パスワード:"
+ 
+ #: src/ui/batch-add-files.ui:365 src/ui/new.ui:197
+ msgid "_Other Options"
+-msgstr "その他のオプション(_O)"
++msgstr "その他のオプション"
+ 
+ #: src/ui/batch-password.ui:53 src/ui/password.ui:54
+ msgid "_OK"
+-msgstr "OK(_O)"
++msgstr "OK"
+ 
+ #: src/ui/batch-password.ui:116
+ msgid "<span weight=\"bold\" size=\"larger\">Password required</span>"
+@@ -1527,15 +1527,15 @@
+ 
+ #: src/ui/delete.ui:52 src/ui.h:83 src/ui.h:104
+ msgid "_Delete"
+-msgstr "削除(_D)"
++msgstr "削除"
+ 
+ #: src/ui/delete.ui:86 src/ui/dlg-extract.ui:122
+ msgid "_All files"
+-msgstr "すべてのファイル(_A)"
++msgstr "すべてのファイル"
+ 
+ #: src/ui/delete.ui:103 src/ui/dlg-extract.ui:139
+ msgid "_Selected files"
+-msgstr "選択したファイル(_S)"
++msgstr "選択したファイル"
+ 
+ #: src/ui/delete.ui:122 src/ui/dlg-extract.ui:183
+ msgid "example: *.txt; *.doc"
+@@ -1543,15 +1543,15 @@
+ 
+ #: src/ui/delete.ui:133 src/ui/dlg-extract.ui:161
+ msgid "_Files:"
+-msgstr "ファイル(_F):"
++msgstr "ファイル:"
+ 
+ #: src/ui/dlg-add-files.ui:71 src/ui/dlg-add-folder.ui:72
+ msgid "_Add"
+-msgstr "追加(_A)"
++msgstr "追加"
+ 
+ #: src/ui/dlg-add-files.ui:105 src/ui/dlg-add-folder.ui:145
+ msgid "Add only if _newer"
+-msgstr "新しい場合にのみ追加する(_N)"
++msgstr "新しい場合にのみ追加する"
+ 
+ #: src/ui/dlg-add-folder.ui:22
+ msgid "Add a Folder"
+@@ -1559,15 +1559,15 @@
+ 
+ #: src/ui/dlg-add-folder.ui:111
+ msgid "_Include subfolders"
+-msgstr "サブフォルダも含める(_I)"
++msgstr "サブフォルダも含める"
+ 
+ #: src/ui/dlg-add-folder.ui:128
+ msgid "Exclude folders that are symbolic lin_ks"
+-msgstr "フォルダがシンボリックリンクの場合は除く(_K)"
++msgstr "フォルダがシンボリックリンクの場合は除く"
+ 
+ #: src/ui/dlg-add-folder.ui:169
+ msgid "Include _files:"
+-msgstr "対象とするファイル(_F):"
++msgstr "対象とするファイル:"
+ 
+ #: src/ui/dlg-add-folder.ui:186 src/ui/dlg-add-folder.ui:231
+ #: src/ui/dlg-add-folder.ui:263
+@@ -1576,23 +1576,23 @@
+ 
+ #: src/ui/dlg-add-folder.ui:214
+ msgid "E_xclude files:"
+-msgstr "除外するファイル(_X):"
++msgstr "除外するファイル:"
+ 
+ #: src/ui/dlg-add-folder.ui:247
+ msgid "_Exclude folders:"
+-msgstr "除外するフォルダ(_E):"
++msgstr "除外するフォルダ:"
+ 
+ #: src/ui/dlg-add-folder.ui:300
+ msgid "_Load Options"
+-msgstr "オプションの読み込み(_L)"
++msgstr "オプションの読み込み"
+ 
+ #: src/ui/dlg-add-folder.ui:315
+ msgid "Sa_ve Options"
+-msgstr "オプションの保存(_V)"
++msgstr "オプションの保存"
+ 
+ #: src/ui/dlg-add-folder.ui:330
+ msgid "_Reset Options"
+-msgstr "オプションのクリア(_R)"
++msgstr "オプションのクリア"
+ 
+ #: src/ui/dlg-extract.ui:22 src/ui/dlg-extract.ui:211 src/ui.h:121
+ msgid "Extract"
+@@ -1600,19 +1600,19 @@
+ 
+ #: src/ui/dlg-extract.ui:71
+ msgid "_Extract"
+-msgstr "展開(_E)"
++msgstr "展開"
+ 
+ #: src/ui/dlg-extract.ui:244
+ msgid "Re-crea_te folders"
+-msgstr "フォルダを再作成する(_T)"
++msgstr "フォルダを再作成する"
+ 
+ #: src/ui/dlg-extract.ui:260
+ msgid "Over_write existing files"
+-msgstr "既存のファイルに上書きする(_W)"
++msgstr "既存のファイルに上書きする"
+ 
+ #: src/ui/dlg-extract.ui:277
+ msgid "Do not e_xtract older files"
+-msgstr "古いファイルは展開しない(_X)"
++msgstr "古いファイルは展開しない"
+ 
+ #: src/ui/dlg-extract.ui:299
+ msgid "Actions"
+@@ -1620,23 +1620,23 @@
+ 
+ #: src/ui.h:31
+ msgid "_Archive"
+-msgstr "書庫(_A)"
++msgstr "書庫"
+ 
+ #: src/ui.h:32
+ msgid "_Edit"
+-msgstr "編集(_E)"
++msgstr "編集"
+ 
+ #: src/ui.h:33
+ msgid "_View"
+-msgstr "表示(_V)"
++msgstr "表示"
+ 
+ #: src/ui.h:35
+ msgid "_Arrange Files"
+-msgstr "ファイルの並び替え(_A)"
++msgstr "ファイルの並び替え"
+ 
+ #: src/ui.h:38
+ msgid "_About"
+-msgstr "情報(_A)"
++msgstr "情報"
+ 
+ #: src/ui.h:39
+ msgid "Information about the program"
+@@ -1644,7 +1644,7 @@
+ 
+ #: src/ui.h:42
+ msgid "_Add Files…"
+-msgstr "ファイルの追加(_A)..."
++msgstr "ファイルの追加..."
+ 
+ #: src/ui.h:43 src/ui.h:47
+ msgid "Add files to the archive"
+@@ -1656,7 +1656,7 @@
+ 
+ #: src/ui.h:50
+ msgid "Add a _Folder…"
+-msgstr "フォルダの追加(_F)"
++msgstr "フォルダの追加"
+ 
+ #: src/ui.h:51 src/ui.h:55
+ msgid "Add a folder to the archive"
+@@ -1680,7 +1680,7 @@
+ 
+ #: src/ui.h:67 src/ui.h:88
+ msgid "_Copy"
+-msgstr "コピー(_C)"
++msgstr "コピー"
+ 
+ #: src/ui.h:68 src/ui.h:89
+ msgid "Copy the selection"
+@@ -1688,7 +1688,7 @@
+ 
+ #: src/ui.h:71 src/ui.h:92
+ msgid "Cu_t"
+-msgstr "切取り(_T)"
++msgstr "切取り"
+ 
+ #: src/ui.h:72 src/ui.h:93
+ msgid "Cut the selection"
+@@ -1700,7 +1700,7 @@
+ 
+ #: src/ui.h:79 src/ui.h:100
+ msgid "_Rename…"
+-msgstr "名前の変更(_R)..."
++msgstr "名前の変更..."
+ 
+ #: src/ui.h:80 src/ui.h:101
+ msgid "Rename the selection"
+@@ -1712,7 +1712,7 @@
+ 
+ #: src/ui.h:109
+ msgid "Dese_lect All"
+-msgstr "すべて選択解除(_L)"
++msgstr "すべて選択解除"
+ 
+ #: src/ui.h:110
+ msgid "Deselect all files"
+@@ -1720,7 +1720,7 @@
+ 
+ #: src/ui.h:113 src/ui.h:117
+ msgid "_Extract…"
+-msgstr "展開(_E)..."
++msgstr "展開..."
+ 
+ #: src/ui.h:114 src/ui.h:118 src/ui.h:122
+ msgid "Extract files from the archive"
+@@ -1732,7 +1732,7 @@
+ 
+ #: src/ui.h:130
+ msgid "_Last Output"
+-msgstr "最後の出力(_L)"
++msgstr "最後の出力"
+ 
+ #: src/ui.h:131
+ msgid "View the output produced by the last executed command"
+@@ -1756,11 +1756,11 @@
+ 
+ #: src/ui.h:142 src/ui.h:178 src/ui.h:182 src/ui.h:186 src/ui.h:190
+ msgid "_Open"
+-msgstr "開く(_O)"
++msgstr "開く"
+ 
+ #: src/ui.h:146
+ msgid "_Open With…"
+-msgstr "アプリケーションで開く(_O)"
++msgstr "アプリケーションで開く"
+ 
+ #: src/ui.h:147
+ msgid "Open selected files with an application"
+@@ -1768,7 +1768,7 @@
+ 
+ #: src/ui.h:150
+ msgid "Pass_word…"
+-msgstr "パスワード(_W)..."
++msgstr "パスワード..."
+ 
+ #: src/ui.h:151
+ msgid "Specify a password for this archive"
+@@ -1776,7 +1776,7 @@
+ 
+ #: src/ui.h:154
+ msgid "_Properties"
+-msgstr "プロパティ(_P)"
++msgstr "プロパティ"
+ 
+ #: src/ui.h:155
+ msgid "Show archive properties"
+@@ -1784,7 +1784,7 @@
+ 
+ #: src/ui.h:158
+ msgid "_Refresh"
+-msgstr "更新(_R)"
++msgstr "更新"
+ 
+ #: src/ui.h:159
+ msgid "Reload current archive"
+@@ -1800,7 +1800,7 @@
+ 
+ #: src/ui.h:166
+ msgid "Select _All"
+-msgstr "すべて選択(_A)"
++msgstr "すべて選択"
+ 
+ #: src/ui.h:167
+ msgid "Select all files"
+@@ -1808,7 +1808,7 @@
+ 
+ #: src/ui.h:170
+ msgid "_Stop"
+-msgstr "停止(_S)"
++msgstr "停止"
+ 
+ #: src/ui.h:171
+ msgid "Stop current operation"
+@@ -1816,7 +1816,7 @@
+ 
+ #: src/ui.h:174
+ msgid "_Test Integrity"
+-msgstr "整合性のテスト(_T)"
++msgstr "整合性のテスト"
+ 
+ #: src/ui.h:175
+ msgid "Test whether the archive contains errors"
+@@ -1849,7 +1849,7 @@
+ 
+ #: src/ui.h:217
+ msgid "_Toolbar"
+-msgstr "ツールバー(_T)"
++msgstr "ツールバー"
+ 
+ #: src/ui.h:218
+ msgid "View the main toolbar"
+@@ -1857,7 +1857,7 @@
+ 
+ #: src/ui.h:222
+ msgid "Stat_usbar"
+-msgstr "ステータスバー(_U)"
++msgstr "ステータスバー"
+ 
+ #: src/ui.h:223
+ msgid "View the statusbar"
+@@ -1865,7 +1865,7 @@
+ 
+ #: src/ui.h:227
+ msgid "_Reversed Order"
+-msgstr "逆順で並び替え(_R)"
++msgstr "逆順で並び替え"
+ 
+ #: src/ui.h:228
+ msgid "Reverse the list order"
+@@ -1873,19 +1873,19 @@
+ 
+ #: src/ui.h:232
+ msgid "_Folders"
+-msgstr "フォルダ(_F)"
++msgstr "フォルダ"
+ 
+ #: src/ui.h:242
+ msgid "View All _Files"
+-msgstr "全ファイルの一覧表示(_F)"
++msgstr "全ファイルの一覧表示"
+ 
+ #: src/ui.h:245
+ msgid "View as a F_older"
+-msgstr "フォルダ形式で表示(_O)"
++msgstr "フォルダ形式で表示"
+ 
+ #: src/ui.h:253
+ msgid "by _Name"
+-msgstr "名前順(_N)"
++msgstr "名前順"
+ 
+ #: src/ui.h:254
+ msgid "Sort file list by name"
+@@ -1893,7 +1893,7 @@
+ 
+ #: src/ui.h:256
+ msgid "by _Size"
+-msgstr "サイズ順(_S)"
++msgstr "サイズ順"
+ 
+ #: src/ui.h:257
+ msgid "Sort file list by file size"
+@@ -1901,7 +1901,7 @@
+ 
+ #: src/ui.h:259
+ msgid "by T_ype"
+-msgstr "拡張子順(_Y)"
++msgstr "拡張子順"
+ 
+ #: src/ui.h:260
+ msgid "Sort file list by type"
+@@ -1909,7 +1909,7 @@
+ 
+ #: src/ui.h:262
+ msgid "by _Date Modified"
+-msgstr "変更日時順(_D)"
++msgstr "変更日時順"
+ 
+ #: src/ui.h:263
+ msgid "Sort file list by modification time"
+@@ -1918,7 +1918,7 @@
+ #. Translators: this is the "sort by file location" menu item
+ #: src/ui.h:266
+ msgid "by _Location"
+-msgstr "場所順(_L)"
++msgstr "場所順"
+ 
+ #. Translators: location is the file location
+ #: src/ui.h:268
+@@ -1931,7 +1931,7 @@
+ 
+ #: src/ui/password.ui:94
+ msgid "_Encrypt the file list"
+-msgstr "ファイル一覧を暗号化する(_E)"
++msgstr "ファイル一覧を暗号化する"
+ 
+ #: src/ui/password.ui:167
+ msgid ""
+@@ -1978,8 +1978,8 @@
+ 
+ #: src/ui/update.ui:50 src/ui/update.ui:207
+ msgid "_Update"
+-msgstr "更新する(_U)"
++msgstr "更新する"
+ 
+ #: src/ui/update.ui:305
+ msgid "S_elect the files you want to update:"
+-msgstr "アップデートするファイルを選択してください(_E):"
++msgstr "アップデートするファイルを選択してください:"
