@@ -1,6 +1,6 @@
 diff -urN a/src/eggtreemultidnd.c b/src/eggtreemultidnd.c
 --- a/src/eggtreemultidnd.c	2021-08-06 16:13:09.000000000 -0700
-+++ b/src/eggtreemultidnd.c	2022-05-31 08:24:14.746447850 -0700
++++ b/src/eggtreemultidnd.c	2022-05-31 08:33:05.667786772 -0700
 @@ -417,7 +417,7 @@
  
    if (path)
@@ -33,7 +33,7 @@ diff -urN a/src/fr-window.c b/src/fr-window.c
  
 diff -urN a/src/ui.h b/src/ui.h
 --- a/src/ui.h	2021-08-06 16:13:09.000000000 -0700
-+++ b/src/ui.h	2022-05-31 08:23:15.812597237 -0700
++++ b/src/ui.h	2022-05-31 08:36:05.475733196 -0700
 @@ -55,28 +55,28 @@
  	  N_("Add a folder to the archive"),
  	  G_CALLBACK (activate_action_add_folder) },
@@ -178,6 +178,15 @@ diff -urN a/src/ui.h b/src/ui.h
  	  N_("Open the selected folder"),
  	  G_CALLBACK (activate_action_open_folder_from_sidebar) },
  
+@@ -229,7 +229,7 @@
+ 	  G_CALLBACK (activate_action_sort_reverse_order),
+ 	  FALSE },
+ 	{ "ViewFolders", NULL,
+-	  N_("_Folders"), "F9",
++	  N_("_Folders"), "<shift><super>T",
+ 	  N_("View the folders pane"),
+ 	  G_CALLBACK (activate_action_view_folders),
+ 	  FALSE },
 @@ -239,10 +239,10 @@
  
  static GtkRadioActionEntry view_as_entries[] = {
