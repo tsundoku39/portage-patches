@@ -1,0 +1,293 @@
+diff -urN a/src/caja-shell-ui.xml b/src/caja-shell-ui.xml
+--- a/src/caja-shell-ui.xml	2021-08-04 06:10:30.000000000 -0700
++++ b/src/caja-shell-ui.xml	2021-09-25 14:26:00.486419837 -0700
+@@ -5,7 +5,6 @@
+ <menubar name="MenuBar">
+ 	<menu action="File">
+ 		<placeholder name="New Items Placeholder"/>
+-		<separator/>
+ 		<placeholder name="Open Placeholder"/>
+ 		<separator/>
+ 		<placeholder name="Location Placeholder"/>
+diff -urN a/src/caja-spatial-window.c b/src/caja-spatial-window.c
+--- a/src/caja-spatial-window.c	2021-08-04 06:10:30.000000000 -0700
++++ b/src/caja-spatial-window.c	2021-09-25 14:27:21.407964266 -0700
+@@ -926,29 +926,29 @@
+     },
+     /* name, icon name, label */ {
+         SPATIAL_ACTION_GO_TO_LOCATION, NULL, N_("Open _Location..."),
+-        "<control>L", N_("Specify a location to open"),
++        "<super>L", N_("Specify a location to open"),
+         G_CALLBACK (action_go_to_location_callback)
+     },
+     /* name, icon name, label */ {
+         SPATIAL_ACTION_CLOSE_PARENT_FOLDERS, NULL, N_("Close P_arent Folders"),
+-        "<control><shift>W", N_("Close this folder's parents"),
++        "<super><shift>W", N_("Close this folder's parents"),
+         G_CALLBACK (action_close_parent_folders_callback)
+     },
+     /* name, icon name, label */ {
+         SPATIAL_ACTION_CLOSE_ALL_FOLDERS, NULL, N_("Clos_e All Folders"),
+-        "<control>Q", N_("Close all folder windows"),
++        "<super>Q", N_("Close all folder windows"),
+         G_CALLBACK (action_close_all_folders_callback)
+     },
+     /* name, icon name, label */ { "Add Bookmark", "list-add", N_("_Add Bookmark"),
+-        "<control>d", N_("Add a bookmark for the current location to this menu"),
++        "<super>b", N_("Add a bookmark for the current location to this menu"),
+         G_CALLBACK (action_add_bookmark_callback)
+     },
+     /* name, icon name, label */ { "Edit Bookmarks", NULL, N_("_Edit Bookmarks..."),
+-        "<control>b", N_("Display a window that allows editing the bookmarks in this menu"),
++        "<super><shift>b", N_("Display a window that allows editing the bookmarks in this menu"),
+         G_CALLBACK (action_edit_bookmarks_callback)
+     },
+     /* name, icon name, label */ { "Search", "edit-find", N_("_Search for Files..."),
+-        "<control>F", N_("Locate documents and folders on this computer by name or content"),
++        "<super>F", N_("Locate documents and folders on this computer by name or content"),
+         G_CALLBACK (action_search_callback)
+     },
+ };
+diff -urN a/src/caja-window-menus.c b/src/caja-window-menus.c
+--- a/src/caja-window-menus.c	2021-08-04 06:10:30.000000000 -0700
++++ b/src/caja-window-menus.c	2021-09-25 14:29:17.525830996 -0700
+@@ -855,7 +855,7 @@
+     /* name, icon name, label */ { "Help", NULL, N_("_Help"),
+                                    NULL, NULL, NULL },
+     /* name, icon name */        { "Close", "window-close",
+-        /* label, accelerator */       N_("_Close"), "<control>W",
++        /* label, accelerator */       N_("_Close"), "<super>W",
+         /* tooltip */                  N_("Close this folder"),
+         G_CALLBACK (action_close_window_slot_callback)
+     },
+@@ -872,7 +872,7 @@
+         G_CALLBACK (action_preferences_callback)
+     },
+     /* name, icon name, label */ { "Up", "go-up", N_("Open _Parent"),
+-        "<alt>Up", N_("Open the parent folder"),
++        "<super>Up", N_("Open the parent folder"),
+         G_CALLBACK (action_up_callback)
+     },
+     /* name, icon name, label */ { "UpAccel", NULL, "UpAccel",
+@@ -885,12 +885,12 @@
+         G_CALLBACK (action_stop_callback)
+     },
+     /* name, icon name */        { "Reload", "view-refresh",
+-        /* label, accelerator */       N_("_Reload"), "<control>R",
++        /* label, accelerator */       N_("_Reload"), "<super>R",
+         /* tooltip */                  N_("Reload the current location"),
+         G_CALLBACK (action_reload_callback)
+     },
+     /* name, icon name */        { "Caja Manual", "help-browser",
+-        /* label, accelerator */       N_("_Contents"), "F1",
++        /* label, accelerator */       N_("_Contents"), NULL,
+         /* tooltip */                  N_("Display Caja help"),
+         G_CALLBACK (action_caja_manual_callback)
+     },
+@@ -900,32 +900,32 @@
+         G_CALLBACK (action_about_caja_callback)
+     },
+     /* name, icon name */        { "Zoom In", "zoom-in",
+-        /* label, accelerator */       N_("Zoom _In"), "<control>plus",
++        /* label, accelerator */       N_("Zoom _In"), "<super>plus",
+         /* tooltip */                  N_("Increase the view size"),
+         G_CALLBACK (action_zoom_in_callback)
+     },
+     /* name, icon name */        { "ZoomInAccel", NULL,
+-        /* label, accelerator */       "ZoomInAccel", "<control>equal",
++        /* label, accelerator */       "ZoomInAccel", "<super>equal",
+         /* tooltip */                  NULL,
+         G_CALLBACK (action_zoom_in_callback)
+     },
+     /* name, icon name */        { "ZoomInAccel2", NULL,
+-        /* label, accelerator */       "ZoomInAccel2", "<control>KP_Add",
++        /* label, accelerator */       "ZoomInAccel2", "<super>KP_Add",
+         /* tooltip */                  NULL,
+         G_CALLBACK (action_zoom_in_callback)
+     },
+     /* name, icon name */        { "Zoom Out", "zoom-out",
+-        /* label, accelerator */       N_("Zoom _Out"), "<control>minus",
++        /* label, accelerator */       N_("Zoom _Out"), "<super>minus",
+         /* tooltip */                  N_("Decrease the view size"),
+         G_CALLBACK (action_zoom_out_callback)
+     },
+     /* name, icon name */        { "ZoomOutAccel", NULL,
+-        /* label, accelerator */       "ZoomOutAccel", "<control>KP_Subtract",
++        /* label, accelerator */       "ZoomOutAccel", "<super>KP_Subtract",
+         /* tooltip */                  NULL,
+         G_CALLBACK (action_zoom_out_callback)
+     },
+     /* name, icon name */        { "Zoom Normal", "zoom-original",
+-        /* label, accelerator */       N_("Normal Si_ze"), "<control>0",
++        /* label, accelerator */       N_("Normal Si_ze"), "<super>0",
+         /* tooltip */                  N_("Use the normal view size"),
+         G_CALLBACK (action_zoom_normal_callback)
+     },
+@@ -935,7 +935,7 @@
+         G_CALLBACK (action_connect_to_server_callback)
+     },
+     /* name, icon name */        { "Home", CAJA_ICON_HOME,
+-        /* label, accelerator */       N_("_Home Folder"), "<alt>Home",
++        /* label, accelerator */       N_("_Home Folder"), "<shift><super>H",
+         /* tooltip */                  N_("Open your personal folder"),
+         G_CALLBACK (action_home_callback)
+     },
+@@ -964,13 +964,13 @@
+ static const GtkToggleActionEntry main_toggle_entries[] =
+ {
+     /* name, icon name */        { "Show Hidden Files", NULL,
+-        /* label, accelerator */       N_("Show _Hidden Files"), "<control>H",
++        /* label, accelerator */       N_("Show _Hidden Files"), "<alt><super>H",
+         /* tooltip */                  N_("Toggle the display of hidden files in the current window"),
+         G_CALLBACK (action_show_hidden_files_callback),
+         TRUE
+     },
+     /* name, stock id */         { "Show Backup Files", NULL,
+-    /* label, accelerator */       N_("Show Bac_kup Files"), "<control>K",
++    /* label, accelerator */       N_("Show Bac_kup Files"), "<super>K",
+     /* tooltip */                  N_("Toggle the display of backup files in the current window"),
+         G_CALLBACK (action_show_backup_files_callback),
+         TRUE
+diff -urN a/src/file-manager/caja-directory-view-ui.xml b/src/file-manager/caja-directory-view-ui.xml
+--- a/src/file-manager/caja-directory-view-ui.xml	2021-08-04 06:10:30.000000000 -0700
++++ b/src/file-manager/caja-directory-view-ui.xml	2021-09-25 14:29:52.692156432 -0700
+@@ -18,7 +18,6 @@
+ 		<placeholder name="Open Placeholder">
+ 			<menuitem name="Open" action="Open"/>
+ 			<menuitem name="OpenInNewTab" action="OpenInNewTab"/>
+-			<menuitem name="OpenAlternate" action="OpenAlternate"/>
+ 			<placeholder name="Applications Placeholder">
+                         </placeholder>
+ 			<menu action="Open With">
+diff -urN a/src/file-manager/fm-directory-view.c b/src/file-manager/fm-directory-view.c
+--- a/src/file-manager/fm-directory-view.c	2021-08-04 06:10:30.000000000 -0700
++++ b/src/file-manager/fm-directory-view.c	2021-09-25 14:33:45.437836609 -0700
+@@ -7391,15 +7391,11 @@
+   /* name, icon name, label */ { "Open With", NULL, N_("Open Wit_h"),
+                                  NULL, N_("Choose a program with which to open the selected item"), NULL },
+   /* name, icon name */        { "Properties", "document-properties",
+-  /* label, accelerator */       N_("_Properties"), "<alt>Return",
++  /* label, accelerator */       N_("_Properties"), "<super>I",
+   /* tooltip */                  N_("View or modify the properties of each selected item"),
+                                  G_CALLBACK (action_properties_callback) },
+-  /* name, icon name */        { "PropertiesAccel", NULL,
+-  /* label, accelerator */       "PropertiesAccel", "<control>I",
+-  /* tooltip */                  NULL,
+-                                 G_CALLBACK (action_properties_callback) },
+   /* name, icon name */        { "New Folder", "folder-new",
+-  /* label, accelerator */       N_("Create _Folder"), "<control><shift>N",
++  /* label, accelerator */       N_("Create _Folder"), "<super>N",
+   /* tooltip */                  N_("Create a new empty folder inside this folder"),
+                                  G_CALLBACK (action_new_folder_callback) },
+   /* name, icon name, label */ { "No Templates", NULL, N_("No templates installed"), NULL, NULL, NULL },
+@@ -7413,19 +7409,15 @@
+   /* tooltip */                  N_("Create a new launcher"),
+                                  G_CALLBACK (action_new_launcher_callback) },
+   /* name, icon name */        { "Open", NULL,
+-  /* label, accelerator */       N_("_Open"), "<control>o",
++  /* label, accelerator */       N_("_Open"), "<super>o",
+   /* tooltip */                  N_("Open the selected item in this window"),
+                                  G_CALLBACK (action_open_callback) },
+-  /* name, icon name */        { "OpenAccel", NULL,
+-  /* label, accelerator */       "OpenAccel", "<alt>Down",
+-  /* tooltip */                  NULL,
+-                                 G_CALLBACK (action_open_callback) },
+   /* name, icon name */        { "OpenAlternate", NULL,
+-  /* label, accelerator */       N_("Open in Navigation Window"), "<control><shift>w",
++  /* label, accelerator */       N_("Open in Navigation Window"), "<super><shift>w",
+   /* tooltip */                  N_("Open each selected item in a navigation window"),
+                                  G_CALLBACK (action_open_alternate_callback) },
+   /* name, icon name */        { "OpenInNewTab", NULL,
+-  /* label, accelerator */       N_("Open in New _Tab"), "<control><shift>o",
++  /* label, accelerator */       N_("Open in New _Tab"), "<super><shift>o",
+   /* tooltip */                  N_("Open each selected item in a new tab"),
+                                  G_CALLBACK (action_open_new_tab_callback) },
+   /* name, icon name */        { "OpenFolderWindow", NULL,
+@@ -7449,15 +7441,15 @@
+   /* tooltip */                  N_("Delete all items in the Trash"),
+                                  G_CALLBACK (action_empty_trash_callback) },
+   /* name, icon name */        { "Cut", "edit-cut",
+-  /* label, accelerator */       N_("Cu_t"), "<control>X",
++  /* label, accelerator */       N_("Cu_t"), "<super>X",
+   /* tooltip */                  N_("Prepare the selected files to be moved with a Paste command"),
+                                  G_CALLBACK (action_cut_files_callback) },
+   /* name, icon name */        { "Copy", "edit-copy",
+-  /* label, accelerator */       N_("_Copy"), "<control>C",
++  /* label, accelerator */       N_("_Copy"), "<super>C",
+   /* tooltip */                  N_("Prepare the selected files to be copied with a Paste command"),
+                                  G_CALLBACK (action_copy_files_callback) },
+   /* name, icon name */        { "Paste", "edit-paste",
+-  /* label, accelerator */       N_("_Paste"), "<control>V",
++  /* label, accelerator */       N_("_Paste"), "<super>V",
+   /* tooltip */                  N_("Move or copy files previously selected by a Cut or Copy command"),
+                                  G_CALLBACK (action_paste_files_callback) },
+   /* We make accelerator "" instead of null here to not inherit the stock
+@@ -7471,27 +7463,27 @@
+   /* name, icon name, label */ { "MoveToMenu", NULL, N_("M_ove to"),
+                                  NULL, NULL, NULL },
+   /* name, icon name */        { "Select All", NULL,
+-  /* label, accelerator */       N_("Select _All"), "<control>A",
++  /* label, accelerator */       N_("Select _All"), "<super>A",
+   /* tooltip */                  N_("Select all items in this window"),
+                                  G_CALLBACK (action_select_all_callback) },
+   /* name, icon name */        { "Select Pattern", NULL,
+-  /* label, accelerator */       N_("Select I_tems Matching..."), "<control>S",
++  /* label, accelerator */       N_("Select I_tems Matching..."), "<super>S",
+   /* tooltip */                  N_("Select items in this window matching a given pattern"),
+                                  G_CALLBACK (action_select_pattern_callback) },
+   /* name, icon name */        { "Invert Selection", NULL,
+-  /* label, accelerator */       N_("_Invert Selection"), "<control><shift>I",
++  /* label, accelerator */       N_("_Invert Selection"), "<super><shift>I",
+   /* tooltip */                  N_("Select all and only the items that are not currently selected"),
+                                  G_CALLBACK (action_invert_selection_callback) },
+   /* name, icon name */        { "Duplicate", NULL,
+-  /* label, accelerator */       N_("D_uplicate"), NULL,
++  /* label, accelerator */       N_("D_uplicate"), "<super>D",
+   /* tooltip */                  N_("Duplicate each selected item"),
+                                  G_CALLBACK (action_duplicate_callback) },
+   /* name, icon name */        { "Create Link", NULL,
+-  /* label, accelerator */       N_("Ma_ke Link"), "<control>M",
++  /* label, accelerator */       N_("Ma_ke Link"), "<super>M",
+   /* tooltip */                  N_("Create a symbolic link for each selected item"),
+                                  G_CALLBACK (action_create_link_callback) },
+   /* name, icon name */        { "Rename", NULL,
+-  /* label, accelerator */       N_("_Rename..."), "F2",
++  /* label, accelerator */       N_("_Rename..."), "<super>E",
+   /* tooltip */                  N_("Rename selected item"),
+                                  G_CALLBACK (action_rename_callback) },
+   /* name, icon name */        { "RenameSelectAll", NULL,
+@@ -7511,11 +7503,11 @@
+ 				 NULL,
+                                  G_CALLBACK (action_restore_from_trash_callback) },
+   /* name, icon name */        { FM_ACTION_UNDO, "edit-undo",
+-  /* label, accelerator */       N_("_Undo"), "<control>Z",
++  /* label, accelerator */       N_("_Undo"), "<super>Z",
+   /* tooltip */                  N_("Undo the last action"),
+                                  G_CALLBACK (action_undo_callback) },
+   /* name, icon name */        { FM_ACTION_REDO, "edit-redo",
+-  /* label, accelerator */       N_("_Redo"), "<control>Y",
++  /* label, accelerator */       N_("_Redo"), "<super>Y",
+   /* tooltip */                  N_("Redo the last undone action"),
+                                  G_CALLBACK (action_redo_callback) },
+ 
+@@ -7590,7 +7582,7 @@
+   /* tooltip */                  N_("Detect media in the selected drive"),
+                                  G_CALLBACK (action_self_detect_media_callback) },
+   /* name, icon name */        { "OpenCloseParent", NULL,
+-  /* label, accelerator */       N_("Open File and Close window"), "<alt><shift>Down",
++  /* label, accelerator */       N_("Open File and Close window"), "<alt><super>O",
+   /* tooltip */                  NULL,
+                                  G_CALLBACK (action_open_close_parent_callback) },
+   /* name, icon name */        { "Save Search", NULL,
+diff -urN a/src/file-manager/fm-list-view.c b/src/file-manager/fm-list-view.c
+--- a/src/file-manager/fm-list-view.c	2021-08-04 06:10:30.000000000 -0700
++++ b/src/file-manager/fm-list-view.c	2021-09-25 14:34:23.773830844 -0700
+@@ -2626,7 +2626,7 @@
+ static const GtkActionEntry list_view_entries[] =
+ {
+     /* name, stock id */     { "Visible Columns", NULL,
+-        /* label, accelerator */   N_("Visible _Columns..."), NULL,
++        /* label, accelerator */   N_("Visible _Columns..."), "<super>J",
+         /* tooltip */              N_("Select the columns visible in this folder"),
+         G_CALLBACK (action_visible_columns_callback)
+     },

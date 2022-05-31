@@ -1,0 +1,19 @@
+Description: Force 16x16 toolbar icons
+ Specifying a systemwide toolbar icon size is no longer available
+ to GTK themes, so we set it here instead.
+Origin: tsundoku custom patchset
+Author: tsundoku <me@tsundoku.ne.jp>
+Last-Update: 2019-02-23
+--- a/gtk/deprecated/gtkiconfactory.c
++++ b/gtk/deprecated/gtkiconfactory.c
+@@ -689,8 +689,8 @@
+ 
+       icon_sizes[GTK_ICON_SIZE_LARGE_TOOLBAR].size = GTK_ICON_SIZE_LARGE_TOOLBAR;
+       icon_sizes[GTK_ICON_SIZE_LARGE_TOOLBAR].name = "gtk-large-toolbar";
+-      icon_sizes[GTK_ICON_SIZE_LARGE_TOOLBAR].width = 24;
+-      icon_sizes[GTK_ICON_SIZE_LARGE_TOOLBAR].height = 24;
++      icon_sizes[GTK_ICON_SIZE_LARGE_TOOLBAR].width = 16;
++      icon_sizes[GTK_ICON_SIZE_LARGE_TOOLBAR].height = 16;
+ 
+       icon_sizes[GTK_ICON_SIZE_DND].size = GTK_ICON_SIZE_DND;
+       icon_sizes[GTK_ICON_SIZE_DND].name = "gtk-dnd";

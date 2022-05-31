@@ -1,0 +1,12 @@
+diff -urN a/src/event.c b/src/event.c
+--- a/src/event.c	2022-01-03 12:33:39.559697611 -0800
++++ b/src/event.c	2022-01-03 12:40:04.142664109 -0800
+@@ -2384,7 +2384,7 @@
+ 		    d->autoRaiseHandle = 0;
+ 		}
+ 
+-		if (w->type & NO_FOCUS_MASK)
++		if (w->type & (CompWindowTypeDockMask | CompWindowTypeSplashMask))
+ 		    focus = FALSE;
+ 		else
+ 		    focus = (*w->screen->focusWindow) (w);

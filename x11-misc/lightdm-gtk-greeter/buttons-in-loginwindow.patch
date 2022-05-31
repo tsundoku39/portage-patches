@@ -1,0 +1,131 @@
+Description: Add power and reboot buttons to login window
+ We prefer to have buttons for these functions in the login window,
+ instead of having a GNOME-style panel at the top of the screen with menus.
+Origin: tsundoku custom patchset
+Author: tsundoku <me@tsundoku.ne.jp>
+Last-Update: 2019-02-26
+--- a/src/lightdm-gtk-greeter.glade
++++ b/src/lightdm-gtk-greeter.glade
+@@ -1,10 +1,14 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+-<!-- Generated with glade 3.18.3 -->
++<!-- Generated with glade 3.22.1 -->
+ <interface>
+   <requires lib="gtk+" version="3.4"/>
+   <requires lib="greeter_menu_bar" version="1.0"/>
+   <object class="GtkAccelGroup" id="a11y_accelgroup"/>
+-  <object class="GtkAccelGroup" id="power_accelgroup"/>
++  <object class="GtkImage" id="login_button_image">
++    <property name="visible">True</property>
++    <property name="can_focus">False</property>
++    <property name="icon_name">dialog-ok</property>
++  </object>
+   <object class="GtkEventBox" id="panel_window">
+     <property name="name">panel_window</property>
+     <property name="visible">True</property>
+@@ -182,6 +186,7 @@
+       <class name="osd"/>
+     </style>
+   </object>
++  <object class="GtkAccelGroup" id="power_accelgroup"/>
+   <object class="GtkEventBox" id="power_window">
+     <property name="name">power_window</property>
+     <property name="can_focus">False</property>
+@@ -324,6 +329,11 @@
+       <class name="keycap"/>
+     </style>
+   </object>
++  <object class="GtkImage" id="restart_button_image">
++    <property name="visible">True</property>
++    <property name="can_focus">False</property>
++    <property name="icon_name">view-refresh</property>
++  </object>
+   <object class="GtkOverlay" id="screen_overlay">
+     <property name="name">screen</property>
+     <property name="can_focus">False</property>
+@@ -339,11 +349,19 @@
+           <placeholder/>
+         </child>
+       </object>
++      <packing>
++        <property name="index">-1</property>
++      </packing>
+     </child>
+     <style>
+       <class name="lightdm-gtk-greeter"/>
+     </style>
+   </object>
++  <object class="GtkImage" id="shutdown_button_image">
++    <property name="visible">True</property>
++    <property name="can_focus">False</property>
++    <property name="icon_name">application-exit</property>
++  </object>
+   <object class="GtkListStore" id="user_liststore">
+     <columns>
+       <!-- column-name username -->
+@@ -483,6 +501,8 @@
+           <object class="GtkInfoBar" id="greeter_infobar">
+             <property name="name">greeter_infobar</property>
+             <property name="can_focus">False</property>
++            <property name="margin_left">4</property>
++            <property name="margin_right">4</property>
+             <child internal-child="action_area">
+               <object class="GtkButtonBox" id="infobar-action_area">
+                 <property name="can_focus">False</property>
+@@ -539,15 +559,19 @@
+                 <property name="can_focus">False</property>
+                 <property name="margin_left">24</property>
+                 <property name="margin_right">24</property>
++                <property name="margin_top">16</property>
+                 <property name="margin_bottom">24</property>
++                <property name="spacing">8</property>
+                 <child>
+-                  <object class="GtkButton" id="cancel_button">
+-                    <property name="label" translatable="yes">Cancel</property>
+-                    <property name="name">cancel_button</property>
++                  <object class="GtkButton" id="restart_button">
++                    <property name="label" translatable="yes">Restart</property>
++                    <property name="name">restart_button</property>
+                     <property name="visible">True</property>
+                     <property name="can_focus">True</property>
+                     <property name="receives_default">False</property>
+-                    <signal name="clicked" handler="cancel_cb" swapped="no"/>
++                    <property name="image">restart_button_image</property>
++                    <property name="always_show_image">True</property>
++                    <signal name="clicked" handler="restart_cb" swapped="no"/>
+                   </object>
+                   <packing>
+                     <property name="expand">False</property>
+@@ -562,6 +586,8 @@
+                     <property name="visible">True</property>
+                     <property name="can_focus">True</property>
+                     <property name="receives_default">False</property>
++                    <property name="image">login_button_image</property>
++                    <property name="always_show_image">True</property>
+                     <signal name="clicked" handler="login_cb" swapped="no"/>
+                   </object>
+                   <packing>
+@@ -571,6 +597,23 @@
+                     <property name="position">1</property>
+                   </packing>
+                 </child>
++                <child>
++                  <object class="GtkButton" id="shutdown_button">
++                    <property name="label" translatable="yes">Shut Down</property>
++                    <property name="name">shutdown_button</property>
++                    <property name="visible">True</property>
++                    <property name="can_focus">True</property>
++                    <property name="receives_default">False</property>
++                    <property name="image">shutdown_button_image</property>
++                    <property name="always_show_image">True</property>
++                    <signal name="clicked" handler="shutdown_cb" swapped="no"/>
++                  </object>
++                  <packing>
++                    <property name="expand">False</property>
++                    <property name="fill">True</property>
++                    <property name="position">2</property>
++                  </packing>
++                </child>
+               </object>
+             </child>
+             <child type="label_item">

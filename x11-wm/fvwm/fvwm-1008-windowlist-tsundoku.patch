@@ -1,0 +1,130 @@
+diff -urN a/fvwm/windowlist.c b/fvwm/windowlist.c
+--- a/fvwm/windowlist.c	2018-05-26 04:35:26.000000000 -0700
++++ b/fvwm/windowlist.c	2022-05-30 16:28:29.423913357 -0700
+@@ -87,24 +87,22 @@
+ 
+ 	if (desk_name != NULL)
+ 	{
+-		if (flags & NO_NUM_IN_DESK_TITLE)
++		if (flags & SHOW_ALLDESKS)
+ 		{
+-			sprintf(tlabel, "%s%s", desk_name,
+-				(is_top_title && (flags & SHOW_GEOMETRY)) ?
+-				_("\tGeometry") : "");
++			sprintf(tlabel, "%s%s", desk_name, _("\t %ops/raise.png%"));
+ 		}
+ 		else
+ 		{
+-			sprintf(tlabel,"%d: %s%s", desk, desk_name,
+-				(is_top_title && (flags & SHOW_GEOMETRY)) ?
+-				_("\tGeometry") : "");
++			sprintf(tlabel, "%s%s", desk_name,
++				(is_top_title && (flags & SHOW_ICONIC)) ?
++				_("\t非表示%ops/hidden_group.png%") : _("\t %teambuttons.png%"));
+ 		}
+ 	}
+ 	else
+ 	{
+ 		sprintf(tlabel,_("Desk: %d%s"),desk,
+-			(is_top_title && (flags & SHOW_GEOMETRY)) ?
+-			_("\tGeometry") : "");
++			(is_top_title && (flags & SHOW_ICONIC)) ?
++			_("\t非表示%ops/hidden_group.png%") : _("\t %ops/raise.png%"));
+ 	}
+ 
+ 	return tlabel;
+@@ -199,6 +197,8 @@
+ 	FvwmWindow **windowList;
+ 	FvwmWindow **iconifiedList = NULL;
+ 	int numWindows;
++	int numIcons;
++	int numNormal;
+ 	int ii;
+ 	char tname[128];
+ 	char loc[64];
+@@ -576,12 +576,14 @@
+ 	mr = NewMenuRoot(tlabel);
+ 	if (!(flags & NO_CURRENT_DESK_TITLE))
+ 	{
+-		AddToMenu(mr, tlabel, "TITLE", False, False, False);
++		AddToMenu(mr, tlabel, "TITLE", True, False, False);
+ 		empty_menu = False;
+ 	}
+ 	free(tlabel);
+ 
+ 	numWindows = 0;
++	numIcons = 0;
++	numNormal = 0;
+ 	for (t = Scr.FvwmRoot.next; t != NULL; t = t->next)
+ 	{
+ 		numWindows++;
+@@ -710,6 +712,42 @@
+ 		      (int(*)(const void*, const void*))sort);
+ 	}
+ 
++	/* count icons to determine whether to build contents into the icon operations menu */
++	for (ii = 0; ii < numWindows; ii++)
++	{
++		t = windowList[ii];
++		if (IS_ICONIFIED(t))
++		{
++			numIcons++;
++		}
++		else if (!DO_SKIP_WINDOW_LIST(t))
++		{
++			numNormal++;
++		}
++	}
++	/* add the universal operations header or a "no windows" entry if appropriate */
++	if (!(flags & NO_CURRENT_DESK_TITLE))
++	{
++		if (flags & SHOW_ICONIC)
++		{
++			if (numIcons)
++			{
++				AddToMenu(mr, "すべてを送る%ayame/ops/send_hidden.png%", "Popup DeskSendHidden", True, False, False);
++				AddToMenu(mr, "すべてを表示%ops/raise.png%", "DeiconifyEvery", True, False, False);
++				AddToMenu(mr, "", "Nop", False, False, False);
++			}
++		}
++		else
++		{
++			if (numNormal)
++			{
++				fprintf(stderr, "numNormal is %d", numNormal);
++				AddToMenu(mr, "すべてを送る%ayame/ops/send_all.png%", "Popup DeskSendVisible", True, False, False);
++				AddToMenu(mr, "すべてを隠す%ops/hide_all.png%", "IconifyEvery", True, False, False);
++				AddToMenu(mr, "", "Nop", False, False, False);
++			}
++		}
++	}
+ 	while(next_desk != INT_MAX)
+ 	{
+ 		/* Sort window list by desktop number */
+@@ -815,7 +853,7 @@
+ 							t->Desk, flags, False);
+ 						AddToMenu(
+ 							mr, tlabel, "TITLE",
+-							False, False, False);
++							True, False, False);
+ 						free(tlabel);
+ 					}
+ 				}
+@@ -825,7 +863,7 @@
+ 			{
+ 				tlabel = get_desk_title(t->Desk, flags, False);
+ 				AddToMenu(
+-					mr, tlabel, "TITLE", False, False,
++					mr, tlabel, "TITLE", True, False,
+ 					False);
+ 				free(tlabel);
+ 			}
+@@ -1040,7 +1078,7 @@
+ 	{
+ 		/* force current desk title */
+ 		tlabel = get_desk_title(desk, flags, True);
+-		AddToMenu(mr, tlabel, "TITLE", False, False, False);
++		AddToMenu(mr, tlabel, "TITLE", True, False, False);
+ 		free(tlabel);
+ 	}
+ 

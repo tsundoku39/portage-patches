@@ -1,0 +1,20 @@
+Description: Allow EWMH desktop windows to receive focus on mouseover
+ Upstream FVWM's HandleEnterNotify returns early when it encounters
+ an EWMH desktop window, preventing a focus change from taking place.
+ We remove this return instruction to allow processing to continue
+ as for other window types. This is good for people who want to use
+ strict MouseFocus in combination with file managers that draw a desktop
+ over the root window, like us.
+Origin: tsundoku custom patchset
+Author: tsundoku <me@tsundoku.ne.jp>
+Last-Update: 2019-02-19
+--- a/fvwm/events.c
++++ b/fvwm/events.c
+@@ -2255,7 +2255,6 @@
+ 		BroadcastPacket(
+ 			MX_ENTER_WINDOW, 3, (long)Scr.Root, (long)NULL,
+ 			(long)NULL);
+-		return;
+ 	}
+ 	if (ewp->window == FW_W_FRAME(fw) ||
+ 	    ewp->window == FW_W_ICON_TITLE(fw) ||

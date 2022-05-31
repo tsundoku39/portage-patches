@@ -1,0 +1,22 @@
+Description: Keep dialog windows on top
+ A trivial patch to the EWMH special cases that keeps dialog windows above others,
+ modeled after the way desktop windows are kept on the bottom. Implemented to resolve
+ issues with caja (née nautilus) dialogs spawning under other applications' windows,
+ probably a side effect of unanticipated MouseFocus.
+Origin: tsundoku custom patchset
+Author: tsundoku <me@tsundoku.ne.jp>
+Last-Update: 2019-02-19
+--- a/fvwm/ewmh.c
++++ b/fvwm/ewmh.c
+@@ -1412,6 +1412,11 @@
+ {
+ 	fw->ewmh_window_type = EWMH_WINDOW_TYPE_DIALOG_ID;
+ 
++    SSET_LAYER(*style, 6);
++    style->flags.use_layer = 1;
++    style->flag_mask.use_layer = 1;
++    style->change_mask.use_layer = 1;
++
+ 	return 0;
+ }
+ 

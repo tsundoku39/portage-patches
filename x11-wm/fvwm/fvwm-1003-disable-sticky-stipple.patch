@@ -1,0 +1,53 @@
+Description: Do not draw stippled lines on sticky windows
+ FVWM is hardcoded to draw a pattern of recessed lines on the titlebars of
+ sticky windows. Our decorations have a sticky button that indicates state with
+ MwmDecorStick instead.
+Origin: tsundoku custom patchset
+Author: tsundoku <me@tsundoku.ne.jp>
+Last-Update: 2019-02-19
+--- a/fvwm/borders.c
++++ b/fvwm/borders.c
+@@ -3751,7 +3751,6 @@
+ 		border_draw_title_deep(fw, td, &tdd, &fstr, *dest_pix, w);
+ 	}
+ 	border_draw_title_relief(fw, td, &tdd, *dest_pix);
+-	border_draw_title_stick_lines(fw, td, &tdd, *dest_pix);
+ 
+ 	return;
+ }
+--- a/fvwm/icons.c
++++ b/fvwm/icons.c
+@@ -1084,33 +1084,6 @@
+ 		ICON_HEIGHT(fw) - 1,
+ 		(fw->icon_title_relief > 0)? Relief:Shadow,
+ 		(fw->icon_title_relief > 0)? Shadow:Relief, relief);
+-	if (is_stippled)
+-	{
+-		/* an odd number of lines every 4 pixels */
+-		int pseudo_height = ICON_HEIGHT(fw)- 2*relief + 2;
+-		int num = (pseudo_height /
+-			   ICON_TITLE_STICK_VERT_DIST / 2) * 2 - 1;
+-		int min = ICON_HEIGHT(fw) / 2 -
+-			num * 2 + 1;
+-		int max = ICON_HEIGHT(fw) / 2 +
+-			num * 2 - ICON_TITLE_STICK_VERT_DIST + 1;
+-		int i;
+-
+-		for(i = min; w_stipple > 0 && i <= max;
+-		    i += ICON_TITLE_STICK_VERT_DIST)
+-		{
+-			RelieveRectangle(
+-				dpy, FW_W_ICON_TITLE(fw), x_stipple,
+-				i, w_stipple - 1, 1, Shadow,
+-				Relief, ICON_TITLE_STICK_HEIGHT);
+-			RelieveRectangle(
+-				dpy, FW_W_ICON_TITLE(fw),
+-				w_title_w - x_stipple - w_stipple, i,
+-				w_stipple - 1, 1, Shadow, Relief,
+-				ICON_TITLE_STICK_HEIGHT);
+-		}
+-	}
+-
+ 	return;
+ }
+ 

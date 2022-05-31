@@ -1,0 +1,1497 @@
+diff -urN a/po/ja.po b/po/ja.po
+--- a/po/ja.po	2021-06-15 13:58:25.000000000 -0700
++++ b/po/ja.po	2021-09-22 22:55:03.255676071 -0700
+@@ -657,32 +657,32 @@
+ #: gtk/a11y/gtkimageaccessible.c:53 gtk/deprecated/gtkstock.c:345
+ msgctxt "Stock label"
+ msgid "_About"
+-msgstr "このアプリケーションについて(_A)"
++msgstr "このアプリケーションについて"
+ 
+ #: gtk/a11y/gtkimageaccessible.c:54 gtk/deprecated/gtkstock.c:346
+ msgctxt "Stock label"
+ msgid "_Add"
+-msgstr "追加(_A)"
++msgstr "追加"
+ 
+ #: gtk/a11y/gtkimageaccessible.c:55 gtk/deprecated/gtkstock.c:348
+ msgctxt "Stock label"
+ msgid "_Bold"
+-msgstr "太字(_B)"
++msgstr "太字"
+ 
+ #: gtk/a11y/gtkimageaccessible.c:56 gtk/deprecated/gtkstock.c:350
+ msgctxt "Stock label"
+ msgid "_CD-ROM"
+-msgstr "CD-ROM(_C)"
++msgstr "CD-ROM"
+ 
+ #: gtk/a11y/gtkimageaccessible.c:57 gtk/deprecated/gtkstock.c:351
+ msgctxt "Stock label"
+ msgid "_Clear"
+-msgstr "クリア(_C)"
++msgstr "クリア"
+ 
+ #: gtk/a11y/gtkimageaccessible.c:58 gtk/deprecated/gtkstock.c:352
+ msgctxt "Stock label"
+ msgid "_Close"
+-msgstr "閉じる(_C)"
++msgstr "閉じる"
+ 
+ #: gtk/a11y/gtkimageaccessible.c:59 gtk/gtkheaderbar.c:415 gtk/gtkwindow.c:9319
+ msgid "Minimize"
+@@ -699,17 +699,17 @@
+ #: gtk/a11y/gtkimageaccessible.c:62 gtk/deprecated/gtkstock.c:355
+ msgctxt "Stock label"
+ msgid "_Copy"
+-msgstr "コピー(_C)"
++msgstr "コピー"
+ 
+ #: gtk/a11y/gtkimageaccessible.c:63 gtk/deprecated/gtkstock.c:356
+ msgctxt "Stock label"
+ msgid "Cu_t"
+-msgstr "切り取り(_T)"
++msgstr "切り取り"
+ 
+ #: gtk/a11y/gtkimageaccessible.c:64 gtk/deprecated/gtkstock.c:357
+ msgctxt "Stock label"
+ msgid "_Delete"
+-msgstr "削除(_D)"
++msgstr "削除"
+ 
+ #: gtk/a11y/gtkimageaccessible.c:65 gtk/deprecated/gtkstock.c:339
+ msgctxt "Stock label"
+@@ -735,95 +735,95 @@
+ #: gtk/a11y/gtkimageaccessible.c:69 gtk/deprecated/gtkstock.c:360
+ msgctxt "Stock label"
+ msgid "_Execute"
+-msgstr "実行(_E)"
++msgstr "実行"
+ 
+ #: gtk/a11y/gtkimageaccessible.c:70 gtk/deprecated/gtkstock.c:362
+ msgctxt "Stock label"
+ msgid "_File"
+-msgstr "ファイル(_F)"
++msgstr "ファイル"
+ 
+ #: gtk/a11y/gtkimageaccessible.c:71 gtk/deprecated/gtkstock.c:363
+ msgctxt "Stock label"
+ msgid "_Find"
+-msgstr "検索(_F)"
++msgstr "検索"
+ 
+ #: gtk/a11y/gtkimageaccessible.c:72 gtk/deprecated/gtkstock.c:364
+ msgctxt "Stock label"
+ msgid "Find and _Replace"
+-msgstr "検索して置換(_R)"
++msgstr "検索して置換"
+ 
+ #: gtk/a11y/gtkimageaccessible.c:73 gtk/deprecated/gtkstock.c:365
+ msgctxt "Stock label"
+ msgid "_Floppy"
+-msgstr "フロッピー(_F)"
++msgstr "フロッピー"
+ 
+ #: gtk/a11y/gtkimageaccessible.c:74 gtk/deprecated/gtkstock.c:366
+ msgctxt "Stock label"
+ msgid "_Fullscreen"
+-msgstr "フルスクリーン(_F)"
++msgstr "フルスクリーン"
+ 
+ #. This is a navigation label as in "go to the bottom of the page"
+ #: gtk/a11y/gtkimageaccessible.c:75 gtk/deprecated/gtkstock.c:369
+ msgctxt "Stock label, navigation"
+ msgid "_Bottom"
+-msgstr "最後(_B)"
++msgstr "最後"
+ 
+ #. This is a navigation label as in "go to the first page"
+ #: gtk/a11y/gtkimageaccessible.c:76 gtk/deprecated/gtkstock.c:371
+ msgctxt "Stock label, navigation"
+ msgid "_First"
+-msgstr "先頭(_F)"
++msgstr "先頭"
+ 
+ #. This is a navigation label as in "go to the last page"
+ #: gtk/a11y/gtkimageaccessible.c:77 gtk/deprecated/gtkstock.c:373
+ msgctxt "Stock label, navigation"
+ msgid "_Last"
+-msgstr "最後(_L)"
++msgstr "最後"
+ 
+ #. This is a navigation label as in "go to the top of the page"
+ #: gtk/a11y/gtkimageaccessible.c:78 gtk/deprecated/gtkstock.c:375
+ msgctxt "Stock label, navigation"
+ msgid "_Top"
+-msgstr "先頭(_T)"
++msgstr "先頭"
+ 
+ #. This is a navigation label as in "go back"
+ #: gtk/a11y/gtkimageaccessible.c:79 gtk/deprecated/gtkstock.c:377
+ msgctxt "Stock label, navigation"
+ msgid "_Back"
+-msgstr "戻る(_B)"
++msgstr "戻る"
+ 
+ #. This is a navigation label as in "go down"
+ #: gtk/a11y/gtkimageaccessible.c:80 gtk/deprecated/gtkstock.c:379
+ msgctxt "Stock label, navigation"
+ msgid "_Down"
+-msgstr "下へ(_D)"
++msgstr "下へ"
+ 
+ #. This is a navigation label as in "go forward"
+ #: gtk/a11y/gtkimageaccessible.c:81 gtk/deprecated/gtkstock.c:381
+ msgctxt "Stock label, navigation"
+ msgid "_Forward"
+-msgstr "進む(_F)"
++msgstr "進む"
+ 
+ #. This is a navigation label as in "go up"
+ #: gtk/a11y/gtkimageaccessible.c:82 gtk/deprecated/gtkstock.c:383
+ msgctxt "Stock label, navigation"
+ msgid "_Up"
+-msgstr "上へ(_U)"
++msgstr "上へ"
+ 
+ #: gtk/a11y/gtkimageaccessible.c:83 gtk/deprecated/gtkstock.c:384
+ msgctxt "Stock label"
+ msgid "_Hard Disk"
+-msgstr "ハードディスク(_H)"
++msgstr "ハードディスク"
+ 
+ #: gtk/a11y/gtkimageaccessible.c:84 gtk/deprecated/gtkstock.c:385
+ msgctxt "Stock label"
+ msgid "_Help"
+-msgstr "ヘルプ(_H)"
++msgstr "ヘルプ"
+ 
+ #: gtk/a11y/gtkimageaccessible.c:85 gtk/deprecated/gtkstock.c:386
+ msgctxt "Stock label"
+ msgid "_Home"
+-msgstr "ホーム(_H)"
++msgstr "ホーム"
+ 
+ #: gtk/a11y/gtkimageaccessible.c:86 gtk/deprecated/gtkstock.c:387
+ msgctxt "Stock label"
+@@ -833,203 +833,203 @@
+ #: gtk/a11y/gtkimageaccessible.c:87 gtk/deprecated/gtkstock.c:391
+ msgctxt "Stock label"
+ msgid "_Italic"
+-msgstr "斜体(_I)"
++msgstr "斜体"
+ 
+ #: gtk/a11y/gtkimageaccessible.c:88 gtk/deprecated/gtkstock.c:392
+ msgctxt "Stock label"
+ msgid "_Jump to"
+-msgstr "移動(_J)"
++msgstr "移動"
+ 
+ #. This is about text justification, "centered text"
+ #: gtk/a11y/gtkimageaccessible.c:89 gtk/deprecated/gtkstock.c:394
+ msgctxt "Stock label"
+ msgid "_Center"
+-msgstr "中央寄せ(_C)"
++msgstr "中央寄せ"
+ 
+ #. This is about text justification
+ #: gtk/a11y/gtkimageaccessible.c:90 gtk/deprecated/gtkstock.c:396
+ msgctxt "Stock label"
+ msgid "_Fill"
+-msgstr "埋める(_F)"
++msgstr "埋める"
+ 
+ #. This is about text justification, "left-justified text"
+ #: gtk/a11y/gtkimageaccessible.c:91 gtk/deprecated/gtkstock.c:398
+ msgctxt "Stock label"
+ msgid "_Left"
+-msgstr "左寄せ(_L)"
++msgstr "左寄せ"
+ 
+ #. This is about text justification, "right-justified text"
+ #: gtk/a11y/gtkimageaccessible.c:92 gtk/deprecated/gtkstock.c:400
+ msgctxt "Stock label"
+ msgid "_Right"
+-msgstr "右寄せ(_R)"
++msgstr "右寄せ"
+ 
+ #: gtk/a11y/gtkimageaccessible.c:93 gtk/deprecated/gtkstock.c:367
+ msgctxt "Stock label"
+ msgid "_Leave Fullscreen"
+-msgstr "フルスクリーンの解除(_L)"
++msgstr "フルスクリーンの解除"
+ 
+ #. Media label, as in "fast forward"
+ #: gtk/a11y/gtkimageaccessible.c:94 gtk/deprecated/gtkstock.c:403
+ msgctxt "Stock label, media"
+ msgid "_Forward"
+-msgstr "早送り(_F)"
++msgstr "早送り"
+ 
+ #. Media label, as in "next song"
+ #: gtk/a11y/gtkimageaccessible.c:95 gtk/deprecated/gtkstock.c:405
+ msgctxt "Stock label, media"
+ msgid "_Next"
+-msgstr "次(_N)"
++msgstr "次"
+ 
+ #. Media label, as in "pause music"
+ #: gtk/a11y/gtkimageaccessible.c:96 gtk/deprecated/gtkstock.c:407
+ msgctxt "Stock label, media"
+ msgid "P_ause"
+-msgstr "一時停止(_A)"
++msgstr "一時停止"
+ 
+ #. Media label, as in "play music"
+ #: gtk/a11y/gtkimageaccessible.c:97 gtk/deprecated/gtkstock.c:409
+ msgctxt "Stock label, media"
+ msgid "_Play"
+-msgstr "再生(_P)"
++msgstr "再生"
+ 
+ #. Media label, as in  "previous song"
+ #: gtk/a11y/gtkimageaccessible.c:98 gtk/deprecated/gtkstock.c:411
+ msgctxt "Stock label, media"
+ msgid "Pre_vious"
+-msgstr "前(_V)"
++msgstr "前"
+ 
+ #. Media label
+ #: gtk/a11y/gtkimageaccessible.c:99 gtk/deprecated/gtkstock.c:413
+ msgctxt "Stock label, media"
+ msgid "_Record"
+-msgstr "録音(_R)"
++msgstr "録音"
+ 
+ #. Media label
+ #: gtk/a11y/gtkimageaccessible.c:100 gtk/deprecated/gtkstock.c:415
+ msgctxt "Stock label, media"
+ msgid "R_ewind"
+-msgstr "巻き戻し(_E)"
++msgstr "巻き戻し"
+ 
+ #. Media label
+ #: gtk/a11y/gtkimageaccessible.c:101 gtk/deprecated/gtkstock.c:417
+ msgctxt "Stock label, media"
+ msgid "_Stop"
+-msgstr "停止(_S)"
++msgstr "停止"
+ 
+ #: gtk/a11y/gtkimageaccessible.c:102 gtk/deprecated/gtkstock.c:418
+ msgctxt "Stock label"
+ msgid "_Network"
+-msgstr "ネットワーク(_N)"
++msgstr "ネットワーク"
+ 
+ #: gtk/a11y/gtkimageaccessible.c:103 gtk/deprecated/gtkstock.c:419
+ msgctxt "Stock label"
+ msgid "_New"
+-msgstr "新規(_N)"
++msgstr "新規"
+ 
+ #: gtk/a11y/gtkimageaccessible.c:104 gtk/deprecated/gtkstock.c:422
+ msgctxt "Stock label"
+ msgid "_Open"
+-msgstr "開く(_O)"
++msgstr "開く"
+ 
+ #: gtk/a11y/gtkimageaccessible.c:105 gtk/deprecated/gtkstock.c:432
+ msgctxt "Stock label"
+ msgid "_Paste"
+-msgstr "貼り付け(_P)"
++msgstr "貼り付け"
+ 
+ #: gtk/a11y/gtkimageaccessible.c:106 gtk/deprecated/gtkstock.c:434
+ msgctxt "Stock label"
+ msgid "_Print"
+-msgstr "印刷(_P)"
++msgstr "印刷"
+ 
+ #: gtk/a11y/gtkimageaccessible.c:107 gtk/deprecated/gtkstock.c:435
+ msgctxt "Stock label"
+ msgid "Print Pre_view"
+-msgstr "印刷プレビュー(_V)"
++msgstr "印刷プレビュー"
+ 
+ #: gtk/a11y/gtkimageaccessible.c:108 gtk/deprecated/gtkstock.c:436
+ msgctxt "Stock label"
+ msgid "_Properties"
+-msgstr "プロパティ(_P)"
++msgstr "プロパティ"
+ 
+ #: gtk/a11y/gtkimageaccessible.c:109 gtk/deprecated/gtkstock.c:437
+ msgctxt "Stock label"
+ msgid "_Quit"
+-msgstr "終了(_Q)"
++msgstr "終了"
+ 
+ #: gtk/a11y/gtkimageaccessible.c:110 gtk/deprecated/gtkstock.c:438
+ msgctxt "Stock label"
+ msgid "_Redo"
+-msgstr "やり直す(_R)"
++msgstr "やり直す"
+ 
+ #: gtk/a11y/gtkimageaccessible.c:111 gtk/deprecated/gtkstock.c:439
+ msgctxt "Stock label"
+ msgid "_Refresh"
+-msgstr "更新(_R)"
++msgstr "更新"
+ 
+ #: gtk/a11y/gtkimageaccessible.c:112 gtk/deprecated/gtkstock.c:440
+ msgctxt "Stock label"
+ msgid "_Remove"
+-msgstr "削除(_R)"
++msgstr "削除"
+ 
+ #: gtk/a11y/gtkimageaccessible.c:113 gtk/deprecated/gtkstock.c:441
+ msgctxt "Stock label"
+ msgid "_Revert"
+-msgstr "元に戻す(_R)"
++msgstr "元に戻す"
+ 
+ #: gtk/a11y/gtkimageaccessible.c:114 gtk/deprecated/gtkstock.c:442
+ msgctxt "Stock label"
+ msgid "_Save"
+-msgstr "保存(_S)"
++msgstr "保存"
+ 
+ #: gtk/a11y/gtkimageaccessible.c:115 gtk/deprecated/gtkstock.c:443
+ msgctxt "Stock label"
+ msgid "Save _As"
+-msgstr "名前を付けて保存(_A)"
++msgstr "名前を付けて保存"
+ 
+ #: gtk/a11y/gtkimageaccessible.c:116 gtk/deprecated/gtkstock.c:444
+ msgctxt "Stock label"
+ msgid "Select _All"
+-msgstr "すべて選択(_A)"
++msgstr "すべて選択"
+ 
+ #. Sorting direction
+ #: gtk/a11y/gtkimageaccessible.c:117 gtk/deprecated/gtkstock.c:448
+ msgctxt "Stock label"
+ msgid "_Ascending"
+-msgstr "昇順(_A)"
++msgstr "昇順"
+ 
+ #. Sorting direction
+ #: gtk/a11y/gtkimageaccessible.c:118 gtk/deprecated/gtkstock.c:450
+ msgctxt "Stock label"
+ msgid "_Descending"
+-msgstr "降順(_D)"
++msgstr "降順"
+ 
+ #: gtk/a11y/gtkimageaccessible.c:119 gtk/deprecated/gtkstock.c:451
+ msgctxt "Stock label"
+ msgid "_Spell Check"
+-msgstr "スペルチェック(_S)"
++msgstr "スペルチェック"
+ 
+ #: gtk/a11y/gtkimageaccessible.c:120 gtk/deprecated/gtkstock.c:452
+ msgctxt "Stock label"
+ msgid "_Stop"
+-msgstr "停止(_S)"
++msgstr "停止"
+ 
+ #. Font variant
+ #: gtk/a11y/gtkimageaccessible.c:121 gtk/deprecated/gtkstock.c:454
+ msgctxt "Stock label"
+ msgid "_Strikethrough"
+-msgstr "打ち消し線(_S)"
++msgstr "打ち消し線"
+ 
+ #. Font variant
+ #: gtk/a11y/gtkimageaccessible.c:122 gtk/deprecated/gtkstock.c:457
+ msgctxt "Stock label"
+ msgid "_Underline"
+-msgstr "下線(_U)"
++msgstr "下線"
+ 
+ #: gtk/a11y/gtkimageaccessible.c:123 gtk/deprecated/gtkstock.c:458
+ msgctxt "Stock label"
+ msgid "_Undo"
+-msgstr "元に戻す(_U)"
++msgstr "元に戻す"
+ 
+ #: gtk/a11y/gtkimageaccessible.c:124 gtk/deprecated/gtkstock.c:388
+ msgctxt "Stock label"
+@@ -1040,23 +1040,23 @@
+ #: gtk/a11y/gtkimageaccessible.c:125 gtk/deprecated/gtkstock.c:461
+ msgctxt "Stock label"
+ msgid "_Normal Size"
+-msgstr "標準サイズ(_N)"
++msgstr "標準サイズ"
+ 
+ #. Zoom
+ #: gtk/a11y/gtkimageaccessible.c:126 gtk/deprecated/gtkstock.c:463
+ msgctxt "Stock label"
+ msgid "Best _Fit"
+-msgstr "フィットさせる(_F)"
++msgstr "フィットさせる"
+ 
+ #: gtk/a11y/gtkimageaccessible.c:127 gtk/deprecated/gtkstock.c:464
+ msgctxt "Stock label"
+ msgid "Zoom _In"
+-msgstr "拡大(_I)"
++msgstr "拡大"
+ 
+ #: gtk/a11y/gtkimageaccessible.c:128 gtk/deprecated/gtkstock.c:465
+ msgctxt "Stock label"
+ msgid "Zoom _Out"
+-msgstr "縮小(_O)"
++msgstr "縮小"
+ 
+ #: gtk/a11y/gtkmenubuttonaccessible.c:102 gtk/inspector/window.ui:459
+ msgid "Menu"
+@@ -1118,7 +1118,7 @@
+ 
+ #: gtk/deprecated/gtkcolorsel.c:461
+ msgid "_Hue:"
+-msgstr "色相(_H):"
++msgstr "色相:"
+ 
+ #: gtk/deprecated/gtkcolorsel.c:462
+ msgid "Position on the color wheel."
+@@ -1126,7 +1126,7 @@
+ 
+ #: gtk/deprecated/gtkcolorsel.c:464
+ msgid "S_aturation:"
+-msgstr "彩度(_A):"
++msgstr "彩度:"
+ 
+ #: gtk/deprecated/gtkcolorsel.c:465
+ msgid "Intensity of the color."
+@@ -1134,7 +1134,7 @@
+ 
+ #: gtk/deprecated/gtkcolorsel.c:466
+ msgid "_Value:"
+-msgstr "明度(_V):"
++msgstr "明度:"
+ 
+ #: gtk/deprecated/gtkcolorsel.c:467
+ msgid "Brightness of the color."
+@@ -1142,7 +1142,7 @@
+ 
+ #: gtk/deprecated/gtkcolorsel.c:468
+ msgid "_Red:"
+-msgstr "赤(_R):"
++msgstr "赤:"
+ 
+ #: gtk/deprecated/gtkcolorsel.c:469
+ msgid "Amount of red light in the color."
+@@ -1150,7 +1150,7 @@
+ 
+ #: gtk/deprecated/gtkcolorsel.c:470
+ msgid "_Green:"
+-msgstr "緑(_G):"
++msgstr "緑:"
+ 
+ #: gtk/deprecated/gtkcolorsel.c:471
+ msgid "Amount of green light in the color."
+@@ -1158,7 +1158,7 @@
+ 
+ #: gtk/deprecated/gtkcolorsel.c:472
+ msgid "_Blue:"
+-msgstr "青(_B):"
++msgstr "青:"
+ 
+ #: gtk/deprecated/gtkcolorsel.c:473
+ msgid "Amount of blue light in the color."
+@@ -1166,7 +1166,7 @@
+ 
+ #: gtk/deprecated/gtkcolorsel.c:476
+ msgid "Op_acity:"
+-msgstr "不透明度(_A):"
++msgstr "不透明度:"
+ 
+ #: gtk/deprecated/gtkcolorsel.c:484 gtk/deprecated/gtkcolorsel.c:494
+ msgid "Transparency of the color."
+@@ -1174,7 +1174,7 @@
+ 
+ #: gtk/deprecated/gtkcolorsel.c:501
+ msgid "Color _name:"
+-msgstr "色の名称(_N):"
++msgstr "色の名称:"
+ 
+ #: gtk/deprecated/gtkcolorsel.c:516
+ msgid ""
+@@ -1186,7 +1186,7 @@
+ 
+ #: gtk/deprecated/gtkcolorsel.c:548
+ msgid "_Palette:"
+-msgstr "パレット(_P):"
++msgstr "パレット:"
+ 
+ #: gtk/deprecated/gtkcolorsel.c:578
+ msgid "Color Wheel"
+@@ -1222,7 +1222,7 @@
+ 
+ #: gtk/deprecated/gtkcolorsel.c:1458
+ msgid "_Save color here"
+-msgstr "ここに色を保存する(_S)"
++msgstr "ここに色を保存する"
+ 
+ #: gtk/deprecated/gtkcolorsel.c:1664
+ msgid ""
+@@ -1244,17 +1244,17 @@
+ #: gtk/ui/gtkappchooserdialog.ui:61 gtk/ui/gtkassistant.ui:125
+ #: gtk/ui/gtkcolorchooserdialog.ui:34 gtk/ui/gtkfontchooserdialog.ui:31
+ msgid "_Cancel"
+-msgstr "キャンセル(_C)"
++msgstr "キャンセル"
+ 
+ #: gtk/deprecated/gtkcolorseldialog.c:195 gtk/gtkprinteroptionwidget.c:546
+ #: gtk/ui/gtkappchooserdialog.ui:67 gtk/ui/gtkcolorchooserdialog.ui:40
+ #: gtk/ui/gtkfontchooserdialog.ui:37
+ msgid "_Select"
+-msgstr "選択(_S)"
++msgstr "選択"
+ 
+ #: gtk/deprecated/gtkcolorseldialog.c:201
+ msgid "_Help"
+-msgstr "ヘルプ(_H)"
++msgstr "ヘルプ"
+ 
+ #: gtk/deprecated/gtkcolorseldialog.c:213
+ msgid "Color Selection"
+@@ -1268,30 +1268,30 @@
+ 
+ #: gtk/deprecated/gtkfontsel.c:386
+ msgid "_Family:"
+-msgstr "ファミリ(_F):"
++msgstr "ファミリ:"
+ 
+ #: gtk/deprecated/gtkfontsel.c:393
+ msgid "_Style:"
+-msgstr "スタイル(_S):"
++msgstr "スタイル:"
+ 
+ #: gtk/deprecated/gtkfontsel.c:400
+ msgid "Si_ze:"
+-msgstr "サイズ(_Z):"
++msgstr "サイズ:"
+ 
+ #. create the text entry widget
+ #: gtk/deprecated/gtkfontsel.c:577
+ msgid "_Preview:"
+-msgstr "プレビュー(_P):"
++msgstr "プレビュー:"
+ 
+ #: gtk/deprecated/gtkfontsel.c:1693 gtk/gtkpagesetupunixdialog.c:198
+ #: gtk/ui/gtkassistant.ui:50
+ msgid "_Apply"
+-msgstr "適用(_A)"
++msgstr "適用"
+ 
+ #: gtk/deprecated/gtkfontsel.c:1698 gtk/gtkmessagedialog.c:944
+ #: gtk/gtkmessagedialog.c:966 gtk/gtkprintbackend.c:780 gtk/gtkwindow.c:12790
+ msgid "_OK"
+-msgstr "OK(_O)"
++msgstr "OK"
+ 
+ #: gtk/deprecated/gtkfontsel.c:1709
+ msgid "Font Selection"
+@@ -1309,57 +1309,57 @@
+ #: gtk/deprecated/gtkstock.c:347
+ msgctxt "Stock label"
+ msgid "_Apply"
+-msgstr "適用(_A)"
++msgstr "適用"
+ 
+ #: gtk/deprecated/gtkstock.c:349
+ msgctxt "Stock label"
+ msgid "_Cancel"
+-msgstr "キャンセル(_C)"
++msgstr "キャンセル"
+ 
+ #: gtk/deprecated/gtkstock.c:353
+ msgctxt "Stock label"
+ msgid "C_onnect"
+-msgstr "接続(_O)"
++msgstr "接続"
+ 
+ #: gtk/deprecated/gtkstock.c:354
+ msgctxt "Stock label"
+ msgid "_Convert"
+-msgstr "変換(_C)"
++msgstr "変換"
+ 
+ #: gtk/deprecated/gtkstock.c:358
+ msgctxt "Stock label"
+ msgid "_Discard"
+-msgstr "無効(_D)"
++msgstr "無効"
+ 
+ #: gtk/deprecated/gtkstock.c:359
+ msgctxt "Stock label"
+ msgid "_Disconnect"
+-msgstr "切断(_D)"
++msgstr "切断"
+ 
+ #: gtk/deprecated/gtkstock.c:361
+ msgctxt "Stock label"
+ msgid "_Edit"
+-msgstr "編集(_E)"
++msgstr "編集"
+ 
+ #: gtk/deprecated/gtkstock.c:389
+ msgctxt "Stock label"
+ msgid "_Index"
+-msgstr "インデックス(_I)"
++msgstr "インデックス"
+ 
+ #: gtk/deprecated/gtkstock.c:390
+ msgctxt "Stock label"
+ msgid "_Information"
+-msgstr "情報(_I)"
++msgstr "情報"
+ 
+ #: gtk/deprecated/gtkstock.c:420
+ msgctxt "Stock label"
+ msgid "_No"
+-msgstr "いいえ(_N)"
++msgstr "いいえ"
+ 
+ #: gtk/deprecated/gtkstock.c:421
+ msgctxt "Stock label"
+ msgid "_OK"
+-msgstr "OK(_O)"
++msgstr "OK"
+ 
+ #. Page orientation
+ #: gtk/deprecated/gtkstock.c:424
+@@ -1388,32 +1388,32 @@
+ #: gtk/deprecated/gtkstock.c:431
+ msgctxt "Stock label"
+ msgid "Page Set_up"
+-msgstr "ページの設定(_U)"
++msgstr "ページの設定"
+ 
+ #: gtk/deprecated/gtkstock.c:433
+ msgctxt "Stock label"
+ msgid "_Preferences"
+-msgstr "設定(_P)"
++msgstr "設定"
+ 
+ #: gtk/deprecated/gtkstock.c:445
+ msgctxt "Stock label"
+ msgid "_Color"
+-msgstr "色(_C)"
++msgstr "色"
+ 
+ #: gtk/deprecated/gtkstock.c:446
+ msgctxt "Stock label"
+ msgid "_Font"
+-msgstr "フォント(_F)"
++msgstr "フォント"
+ 
+ #: gtk/deprecated/gtkstock.c:455
+ msgctxt "Stock label"
+ msgid "_Undelete"
+-msgstr "削除の取り消し(_U)"
++msgstr "削除の取り消し"
+ 
+ #: gtk/deprecated/gtkstock.c:459
+ msgctxt "Stock label"
+ msgid "_Yes"
+-msgstr "はい(_Y)"
++msgstr "はい"
+ 
+ #: gtk/deprecated/gtkuimanager.c:1782
+ #, c-format
+@@ -1527,16 +1527,16 @@
+ 
+ #: gtk/gtkaboutdialog.c:703
+ msgid "C_redits"
+-msgstr "クレジット(_R)"
++msgstr "クレジット"
+ 
+ #: gtk/gtkaboutdialog.c:711
+ msgid "_License"
+-msgstr "ライセンス(_L)"
++msgstr "ライセンス"
+ 
+ #: gtk/gtkaboutdialog.c:720 gtk/gtkcustompaperunixdialog.c:329
+ #: gtk/gtkmessagedialog.c:948 gtk/ui/gtkassistant.ui:144
+ msgid "_Close"
+-msgstr "閉じる(_C)"
++msgstr "閉じる"
+ 
+ #: gtk/gtkaboutdialog.c:1004
+ msgid "Could not show link"
+@@ -2197,7 +2197,7 @@
+ 
+ #: gtk/gtkcolorswatch.c:360
+ msgid "C_ustomize"
+-msgstr "カスタマイズ(_U)"
++msgstr "カスタマイズ"
+ 
+ #. Translate to the default units to use for presenting
+ #. * lengths to the user. Translate to default:inch if you
+@@ -2233,11 +2233,11 @@
+ 
+ #: gtk/gtkcustompaperunixdialog.c:1120
+ msgid "_Width:"
+-msgstr "幅(_W):"
++msgstr "幅:"
+ 
+ #: gtk/gtkcustompaperunixdialog.c:1131
+ msgid "_Height:"
+-msgstr "高さ(_H):"
++msgstr "高さ:"
+ 
+ #: gtk/gtkcustompaperunixdialog.c:1142
+ msgid "Paper Size"
+@@ -2245,19 +2245,19 @@
+ 
+ #: gtk/gtkcustompaperunixdialog.c:1151
+ msgid "_Top:"
+-msgstr "上側(_T):"
++msgstr "上側:"
+ 
+ #: gtk/gtkcustompaperunixdialog.c:1162
+ msgid "_Bottom:"
+-msgstr "下側(_B):"
++msgstr "下側:"
+ 
+ #: gtk/gtkcustompaperunixdialog.c:1173
+ msgid "_Left:"
+-msgstr "左側(_L):"
++msgstr "左側:"
+ 
+ #: gtk/gtkcustompaperunixdialog.c:1184
+ msgid "_Right:"
+-msgstr "右側(_R):"
++msgstr "右側:"
+ 
+ #: gtk/gtkcustompaperunixdialog.c:1223
+ msgid "Paper Margins"
+@@ -2265,28 +2265,28 @@
+ 
+ #: gtk/gtkentry.c:9591 gtk/gtklabel.c:6680 gtk/gtktextview.c:9520
+ msgid "Cu_t"
+-msgstr "切り取り(_T)"
++msgstr "切り取り"
+ 
+ #: gtk/gtkentry.c:9595 gtk/gtklabel.c:6681 gtk/gtktextview.c:9524
+ msgid "_Copy"
+-msgstr "コピー(_C)"
++msgstr "コピー"
+ 
+ #: gtk/gtkentry.c:9599 gtk/gtklabel.c:6682 gtk/gtktextview.c:9526
+ msgid "_Paste"
+-msgstr "貼り付け(_P)"
++msgstr "貼り付け"
+ 
+ #: gtk/gtkentry.c:9602 gtk/gtkfilechooserwidget.c:1499
+ #: gtk/gtkfilechooserwidget.c:2334 gtk/gtklabel.c:6684 gtk/gtktextview.c:9529
+ msgid "_Delete"
+-msgstr "削除(_D)"
++msgstr "削除"
+ 
+ #: gtk/gtkentry.c:9613 gtk/gtklabel.c:6693 gtk/gtktextview.c:9543
+ msgid "Select _All"
+-msgstr "すべて選択(_A)"
++msgstr "すべて選択"
+ 
+ #: gtk/gtkentry.c:9623 gtk/gtktextview.c:9553
+ msgid "Insert _Emoji"
+-msgstr "絵文字を挿入(_E)"
++msgstr "絵文字を挿入"
+ 
+ #: gtk/gtkentry.c:9799 gtk/gtktextview.c:9777
+ msgid "Select all"
+@@ -2330,18 +2330,18 @@
+ 
+ #: gtk/gtkfilechooserdialog.c:542
+ msgid "_Name"
+-msgstr "名前(_N)"
++msgstr "名前"
+ 
+ #. Open item is always present
+ #: gtk/gtkfilechoosernative.c:546 gtk/gtkfilechoosernative.c:631
+ #: gtk/gtkplacessidebar.c:3625 gtk/gtkplacessidebar.c:3693
+ #: gtk/gtkplacesview.c:1696
+ msgid "_Open"
+-msgstr "開く(_O)"
++msgstr "開く"
+ 
+ #: gtk/gtkfilechoosernative.c:631 gtk/inspector/css-editor.c:202
+ msgid "_Save"
+-msgstr "保存(_S)"
++msgstr "保存"
+ 
+ #: gtk/gtkfilechoosernativequartz.c:331 gtk/ui/gtkfilechooserwidget.ui:405
+ msgid "Select which types of files are shown"
+@@ -2496,48 +2496,48 @@
+ 
+ #: gtk/gtkfilechooserwidget.c:2329
+ msgid "_Visit File"
+-msgstr "ファイルの場所に移動する(_V)"
++msgstr "ファイルの場所に移動する"
+ 
+ #: gtk/gtkfilechooserwidget.c:2330
+ msgid "_Open With File Manager"
+-msgstr "ファイルマネージャーで開く(_O)"
++msgstr "ファイルマネージャーで開く"
+ 
+ #: gtk/gtkfilechooserwidget.c:2331
+ msgid "_Copy Location"
+-msgstr "場所のコピー(_C)"
++msgstr "場所のコピー"
+ 
+ #: gtk/gtkfilechooserwidget.c:2332
+ msgid "_Add to Bookmarks"
+-msgstr "ブックマークへ追加(_A)"
++msgstr "ブックマークへ追加"
+ 
+ #: gtk/gtkfilechooserwidget.c:2333 gtk/gtkplacessidebar.c:2741
+ #: gtk/ui/gtkfilechooserwidget.ui:539
+ msgid "_Rename"
+-msgstr "名前の変更(_R)"
++msgstr "名前の変更"
+ 
+ #: gtk/gtkfilechooserwidget.c:2335
+ msgid "_Move to Trash"
+-msgstr "ゴミ箱へ移動する(_M)"
++msgstr "ゴミ箱へ移動する"
+ 
+ #: gtk/gtkfilechooserwidget.c:2339
+ msgid "Show _Hidden Files"
+-msgstr "隠しファイルを表示する(_H)"
++msgstr "隠しファイルを表示する"
+ 
+ #: gtk/gtkfilechooserwidget.c:2340
+ msgid "Show _Size Column"
+-msgstr "サイズを表示する(_S)"
++msgstr "サイズを表示する"
+ 
+ #: gtk/gtkfilechooserwidget.c:2341
+ msgid "Show T_ype Column"
+-msgstr "種類を表示する(_Y)"
++msgstr "種類を表示する"
+ 
+ #: gtk/gtkfilechooserwidget.c:2342
+ msgid "Show _Time"
+-msgstr "時刻を表示する(_T)"
++msgstr "時刻を表示する"
+ 
+ #: gtk/gtkfilechooserwidget.c:2343
+ msgid "Sort _Folders before Files"
+-msgstr "フォルダーをファイルよりも前に配置する(_F)"
++msgstr "フォルダーをファイルよりも前に配置する"
+ 
+ #. this is the header for the location column in the print dialog
+ #: gtk/gtkfilechooserwidget.c:2625 gtk/inspector/css-node-tree.ui:141
+@@ -2548,7 +2548,7 @@
+ #. Label
+ #: gtk/gtkfilechooserwidget.c:2718
+ msgid "_Name:"
+-msgstr "名前(_N):"
++msgstr "名前:"
+ 
+ #: gtk/gtkfilechooserwidget.c:3343 gtk/gtkfilechooserwidget.c:3357
+ #, c-format
+@@ -2683,7 +2683,7 @@
+ 
+ #: gtk/gtkfilechooserwidget.c:6573 gtk/gtkprintunixdialog.c:677
+ msgid "_Replace"
+-msgstr "置き換える(_R)"
++msgstr "置き換える"
+ 
+ #: gtk/gtkfilechooserwidget.c:6792
+ msgid "You do not have access to the specified folder."
+@@ -2832,12 +2832,12 @@
+ #. Open Link
+ #: gtk/gtklabel.c:6661
+ msgid "_Open Link"
+-msgstr "リンクを開く(_O)"
++msgstr "リンクを開く"
+ 
+ #. Copy Link Address
+ #: gtk/gtklabel.c:6670
+ msgid "Copy _Link Address"
+-msgstr "リンクのアドレスをコピー(_L)"
++msgstr "リンクのアドレスをコピー"
+ 
+ #: gtk/gtk-launch.c:42
+ msgid "Show program version"
+@@ -2984,15 +2984,15 @@
+ 
+ #: gtk/gtkmessagedialog.c:956
+ msgid "_No"
+-msgstr "いいえ(_N)"
++msgstr "いいえ"
+ 
+ #: gtk/gtkmessagedialog.c:957
+ msgid "_Yes"
+-msgstr "はい(_Y)"
++msgstr "はい"
+ 
+ #: gtk/gtkmountoperation.c:595
+ msgid "Co_nnect"
+-msgstr "接続する(_N)"
++msgstr "接続する"
+ 
+ #: gtk/gtkmountoperation.c:668
+ msgid "Connect As"
+@@ -3000,19 +3000,19 @@
+ 
+ #: gtk/gtkmountoperation.c:677
+ msgid "_Anonymous"
+-msgstr "匿名(_A)"
++msgstr "匿名"
+ 
+ #: gtk/gtkmountoperation.c:686
+ msgid "Registered U_ser"
+-msgstr "登録ユーザー(_S)"
++msgstr "登録ユーザー"
+ 
+ #: gtk/gtkmountoperation.c:697
+ msgid "_Username"
+-msgstr "ユーザー名(_U)"
++msgstr "ユーザー名"
+ 
+ #: gtk/gtkmountoperation.c:702
+ msgid "_Domain"
+-msgstr "ドメイン(_D)"
++msgstr "ドメイン"
+ 
+ #: gtk/gtkmountoperation.c:711
+ msgid "Volume type"
+@@ -3020,31 +3020,31 @@
+ 
+ #: gtk/gtkmountoperation.c:721
+ msgid "_Hidden"
+-msgstr "隠しボリューム(_H)"
++msgstr "隠しボリューム"
+ 
+ #: gtk/gtkmountoperation.c:724
+ msgid "_Windows system"
+-msgstr "Windows システムボリューム(_W)"
++msgstr "Windows システムボリューム"
+ 
+ #: gtk/gtkmountoperation.c:727
+ msgid "_PIM"
+-msgstr "PIM(_P)"
++msgstr "PIM"
+ 
+ #: gtk/gtkmountoperation.c:733
+ msgid "_Password"
+-msgstr "パスワード(_P)"
++msgstr "パスワード"
+ 
+ #: gtk/gtkmountoperation.c:755
+ msgid "Forget password _immediately"
+-msgstr "今すぐパスワードを破棄する(_I)"
++msgstr "今すぐパスワードを破棄する"
+ 
+ #: gtk/gtkmountoperation.c:765
+ msgid "Remember password until you _logout"
+-msgstr "ログアウトするまでパスワードを記憶する(_L)"
++msgstr "ログアウトするまでパスワードを記憶する"
+ 
+ #: gtk/gtkmountoperation.c:775
+ msgid "Remember _forever"
+-msgstr "期限なしで記憶する(_F)"
++msgstr "期限なしで記憶する"
+ 
+ #: gtk/gtkmountoperation.c:1170
+ #, c-format
+@@ -3058,7 +3058,7 @@
+ 
+ #: gtk/gtkmountoperation.c:1389
+ msgid "_End Process"
+-msgstr "プロセスを終了(_E)"
++msgstr "プロセスを終了"
+ 
+ #: gtk/gtkmountoperation-stub.c:62
+ #, c-format
+@@ -3220,45 +3220,45 @@
+ #. Adjust start/stop items to reflect the type of the drive
+ #: gtk/gtkplacessidebar.c:2334 gtk/gtkplacessidebar.c:3713
+ msgid "_Start"
+-msgstr "開始(_S)"
++msgstr "開始"
+ 
+ #: gtk/gtkplacessidebar.c:2335 gtk/gtkplacessidebar.c:3714
+ msgid "_Stop"
+-msgstr "停止(_S)"
++msgstr "停止"
+ 
+ #. start() for type G_DRIVE_START_STOP_TYPE_SHUTDOWN is normally not used
+ #: gtk/gtkplacessidebar.c:2342
+ msgid "_Power On"
+-msgstr "電源オン(_P)"
++msgstr "電源オン"
+ 
+ #: gtk/gtkplacessidebar.c:2343
+ msgid "_Safely Remove Drive"
+-msgstr "ドライブの安全な取り出し(_S)"
++msgstr "ドライブの安全な取り出し"
+ 
+ #: gtk/gtkplacessidebar.c:2347
+ msgid "_Connect Drive"
+-msgstr "ドライブに接続(_C)"
++msgstr "ドライブに接続"
+ 
+ #: gtk/gtkplacessidebar.c:2348
+ msgid "_Disconnect Drive"
+-msgstr "ドライブを切断(_D)"
++msgstr "ドライブを切断"
+ 
+ #: gtk/gtkplacessidebar.c:2352
+ msgid "_Start Multi-disk Device"
+-msgstr "マルチディスクデバイスを起動(_S)"
++msgstr "マルチディスクデバイスを起動"
+ 
+ #: gtk/gtkplacessidebar.c:2353
+ msgid "_Stop Multi-disk Device"
+-msgstr "マルチディスクデバイスを停止(_S)"
++msgstr "マルチディスクデバイスを停止"
+ 
+ #. stop() for type G_DRIVE_START_STOP_TYPE_PASSWORD is normally not used
+ #: gtk/gtkplacessidebar.c:2358
+ msgid "_Unlock Device"
+-msgstr "デバイスのロック解除(_U)"
++msgstr "デバイスのロック解除"
+ 
+ #: gtk/gtkplacessidebar.c:2359
+ msgid "_Lock Device"
+-msgstr "デバイスのロック(_L)"
++msgstr "デバイスのロック"
+ 
+ #: gtk/gtkplacessidebar.c:2397 gtk/gtkplacessidebar.c:3394
+ #, c-format
+@@ -3313,20 +3313,20 @@
+ #: gtk/gtkplacessidebar.c:3630 gtk/gtkplacessidebar.c:3696
+ #: gtk/gtkplacesview.c:1706
+ msgid "Open in New _Tab"
+-msgstr "新しいタブで開く(_T)"
++msgstr "新しいタブで開く"
+ 
+ #: gtk/gtkplacessidebar.c:3636 gtk/gtkplacessidebar.c:3699
+ #: gtk/gtkplacesview.c:1717
+ msgid "Open in New _Window"
+-msgstr "新しいウィンドウで開く(_W)"
++msgstr "新しいウィンドウで開く"
+ 
+ #: gtk/gtkplacessidebar.c:3703
+ msgid "_Add Bookmark"
+-msgstr "ブックマークを追加(_A)"
++msgstr "ブックマークを追加"
+ 
+ #: gtk/gtkplacessidebar.c:3704
+ msgid "_Remove"
+-msgstr "削除(_R)"
++msgstr "削除"
+ 
+ #: gtk/gtkplacessidebar.c:3705
+ msgid "Rename…"
+@@ -3334,19 +3334,19 @@
+ 
+ #: gtk/gtkplacessidebar.c:3709 gtk/gtkplacesview.c:1751
+ msgid "_Mount"
+-msgstr "マウント(_M)"
++msgstr "マウント"
+ 
+ #: gtk/gtkplacessidebar.c:3710 gtk/gtkplacesview.c:1741
+ msgid "_Unmount"
+-msgstr "アンマウント(_U)"
++msgstr "アンマウント"
+ 
+ #: gtk/gtkplacessidebar.c:3711
+ msgid "_Eject"
+-msgstr "取り出す(_E)"
++msgstr "取り出す"
+ 
+ #: gtk/gtkplacessidebar.c:3712
+ msgid "_Detect Media"
+-msgstr "メディアを検出(_D)"
++msgstr "メディアを検出"
+ 
+ #: gtk/gtkplacessidebar.c:4158 gtk/gtkplacesview.c:1122
+ msgid "Computer"
+@@ -3368,7 +3368,7 @@
+ #. Restore from Cancel to Connect
+ #: gtk/gtkplacesview.c:1250 gtk/ui/gtkplacesview.ui:317
+ msgid "Con_nect"
+-msgstr "接続(_N)"
++msgstr "接続"
+ 
+ #. if it wasn't cancelled show a dialog
+ #: gtk/gtkplacesview.c:1384
+@@ -3378,7 +3378,7 @@
+ #. Allow to cancel the operation
+ #: gtk/gtkplacesview.c:1485
+ msgid "Cance_l"
+-msgstr "キャンセル(_L)"
++msgstr "キャンセル"
+ 
+ #: gtk/gtkplacesview.c:1648
+ msgid "AppleTalk"
+@@ -3421,11 +3421,11 @@
+ 
+ #: gtk/gtkplacesview.c:1741
+ msgid "_Disconnect"
+-msgstr "切断(_D)"
++msgstr "切断"
+ 
+ #: gtk/gtkplacesview.c:1751
+ msgid "_Connect"
+-msgstr "接続(_C)"
++msgstr "接続"
+ 
+ #: gtk/gtkplacesview.c:1892
+ msgid "Unable to get remote server location"
+@@ -3464,7 +3464,7 @@
+ 
+ #: gtk/gtkprintbackend.c:849
+ msgid "_Remember password"
+-msgstr "パスワードを記憶する(_R)"
++msgstr "パスワードを記憶する"
+ 
+ #: gtk/gtkprinteroptionwidget.c:542
+ msgid "Select a filename"
+@@ -3616,11 +3616,11 @@
+ 
+ #: gtk/gtkprintunixdialog.c:746
+ msgid "Pre_view"
+-msgstr "プレビュー(_V)"
++msgstr "プレビュー"
+ 
+ #: gtk/gtkprintunixdialog.c:748
+ msgid "_Print"
+-msgstr "印刷(_P)"
++msgstr "印刷"
+ 
+ #: gtk/gtkprintunixdialog.c:861
+ msgid "Getting printer information failed"
+@@ -3721,19 +3721,19 @@
+ 
+ #: gtk/gtkrecentchooserdefault.c:1689
+ msgid "Copy _Location"
+-msgstr "場所のコピー(_L)"
++msgstr "場所のコピー"
+ 
+ #: gtk/gtkrecentchooserdefault.c:1700
+ msgid "_Remove From List"
+-msgstr "一覧から削除する(_R)"
++msgstr "一覧から削除する"
+ 
+ #: gtk/gtkrecentchooserdefault.c:1707
+ msgid "_Clear List"
+-msgstr "一覧のクリア(_C)"
++msgstr "一覧のクリア"
+ 
+ #: gtk/gtkrecentchooserdefault.c:1719
+ msgid "Show _Private Resources"
+-msgstr "個人的なリソースを表示する(_P)"
++msgstr "個人的なリソースを表示する"
+ 
+ #. we create a placeholder menuitem, to be used in case
+ #. * the menu is empty. this placeholder will stay around
+@@ -3828,7 +3828,7 @@
+ 
+ #: gtk/gtkshortcutssection.c:451
+ msgid "_Show All"
+-msgstr "すべて表示する(_S)"
++msgstr "すべて表示する"
+ 
+ #: gtk/gtkshortcutsshortcut.c:136
+ msgid "Two finger pinch"
+@@ -3996,43 +3996,43 @@
+ 
+ #: gtk/gtktextutil.c:57
+ msgid "LRM _Left-to-right mark"
+-msgstr "LRM 左→右 Mark(_L)"
++msgstr "LRM 左→右 Mark"
+ 
+ #: gtk/gtktextutil.c:58
+ msgid "RLM _Right-to-left mark"
+-msgstr "RLM 右→左 Mark(_R)"
++msgstr "RLM 右→左 Mark"
+ 
+ #: gtk/gtktextutil.c:59
+ msgid "LRE Left-to-right _embedding"
+-msgstr "LRE 左→右 Embedding(_E)"
++msgstr "LRE 左→右 Embedding"
+ 
+ #: gtk/gtktextutil.c:60
+ msgid "RLE Right-to-left e_mbedding"
+-msgstr "RLE 右→左 Embedding(_M)"
++msgstr "RLE 右→左 Embedding"
+ 
+ #: gtk/gtktextutil.c:61
+ msgid "LRO Left-to-right _override"
+-msgstr "LRO 左→右 Override(_O)"
++msgstr "LRO 左→右 Override"
+ 
+ #: gtk/gtktextutil.c:62
+ msgid "RLO Right-to-left o_verride"
+-msgstr "RLO 右→左 Override(_V)"
++msgstr "RLO 右→左 Override"
+ 
+ #: gtk/gtktextutil.c:63
+ msgid "PDF _Pop directional formatting"
+-msgstr "PDF POP Directional Formatting(_P)"
++msgstr "PDF POP Directional Formatting"
+ 
+ #: gtk/gtktextutil.c:64
+ msgid "ZWS _Zero width space"
+-msgstr "ZWS Zero Width Space(_Z)"
++msgstr "ZWS Zero Width Space"
+ 
+ #: gtk/gtktextutil.c:65
+ msgid "ZWJ Zero width _joiner"
+-msgstr "ZWJ Zero Width Joiner(_J)"
++msgstr "ZWJ Zero Width Joiner"
+ 
+ #: gtk/gtktextutil.c:66
+ msgid "ZWNJ Zero width _non-joiner"
+-msgstr "ZWNJ Zero Width Non-Joiner(_N)"
++msgstr "ZWNJ Zero Width Non-Joiner"
+ 
+ #: gtk/gtkvolumebutton.c:189
+ msgid "Adjusts the volume"
+@@ -7095,11 +7095,11 @@
+ 
+ #: gtk/ui/gtkappchooserdialog.ui:78
+ msgid "_View All Applications"
+-msgstr "すべてのアプリケーションを表示(_V)"
++msgstr "すべてのアプリケーションを表示"
+ 
+ #: gtk/ui/gtkappchooserdialog.ui:86
+ msgid "_Find New Applications"
+-msgstr "新しいアプリケーションを探す(_F)"
++msgstr "新しいアプリケーションを探す"
+ 
+ #: gtk/ui/gtkappchooserwidget.ui:119
+ msgid "No applications found."
+@@ -7139,15 +7139,15 @@
+ 
+ #: gtk/ui/gtkassistant.ui:68
+ msgid "_Next"
+-msgstr "進む(_N)"
++msgstr "進む"
+ 
+ #: gtk/ui/gtkassistant.ui:88
+ msgid "_Back"
+-msgstr "戻る(_B)"
++msgstr "戻る"
+ 
+ #: gtk/ui/gtkassistant.ui:107
+ msgid "_Finish"
+-msgstr "完了(_F)"
++msgstr "完了"
+ 
+ #: gtk/ui/gtkcolorchooserdialog.ui:6
+ msgid "Select a Color"
+@@ -7244,7 +7244,7 @@
+ 
+ #: gtk/ui/gtkfilechooserwidget.ui:474
+ msgid "_Create"
+-msgstr "作成(_C)"
++msgstr "作成"
+ 
+ #: gtk/ui/gtkfontchooserdialog.ui:6
+ msgid "Select Font"
+@@ -7268,15 +7268,15 @@
+ 
+ #: gtk/ui/gtkpagesetupunixdialog.ui:47
+ msgid "_Format for:"
+-msgstr "フォーマット(_F):"
++msgstr "フォーマット:"
+ 
+ #: gtk/ui/gtkpagesetupunixdialog.ui:80 gtk/ui/gtkprintunixdialog.ui:747
+ msgid "_Paper size:"
+-msgstr "用紙サイズ(_P):"
++msgstr "用紙サイズ:"
+ 
+ #: gtk/ui/gtkpagesetupunixdialog.ui:122
+ msgid "_Orientation:"
+-msgstr "用紙の向き(_O):"
++msgstr "用紙の向き:"
+ 
+ #: gtk/ui/gtkpagesetupunixdialog.ui:152 gtk/ui/gtkprintunixdialog.ui:794
+ msgid "Portrait"
+@@ -7330,7 +7330,7 @@
+ 
+ #: gtk/ui/gtkplacesview.ui:307
+ msgid "Connect to _Server"
+-msgstr "サーバーへ接続(_S)"
++msgstr "サーバーへ接続"
+ 
+ #: gtk/ui/gtkplacesview.ui:340
+ msgid "Enter server address…"
+@@ -7351,19 +7351,19 @@
+ 
+ #: gtk/ui/gtkprintunixdialog.ui:201
+ msgid "_All Pages"
+-msgstr "すべてのページ(_A)"
++msgstr "すべてのページ"
+ 
+ #: gtk/ui/gtkprintunixdialog.ui:216
+ msgid "C_urrent Page"
+-msgstr "現在のページだけ(_U)"
++msgstr "現在のページだけ"
+ 
+ #: gtk/ui/gtkprintunixdialog.ui:233
+ msgid "Se_lection"
+-msgstr "選択(_L)"
++msgstr "選択"
+ 
+ #: gtk/ui/gtkprintunixdialog.ui:249
+ msgid "Pag_es:"
+-msgstr "ページ(_E):"
++msgstr "ページ:"
+ 
+ #: gtk/ui/gtkprintunixdialog.ui:252 gtk/ui/gtkprintunixdialog.ui:270
+ #: gtk/ui/gtkprintunixdialog.ui:277
+@@ -7384,15 +7384,15 @@
+ 
+ #: gtk/ui/gtkprintunixdialog.ui:334
+ msgid "Copie_s:"
+-msgstr "コピーの数(_S):"
++msgstr "コピーの数:"
+ 
+ #: gtk/ui/gtkprintunixdialog.ui:361
+ msgid "C_ollate"
+-msgstr "ページを揃える(_O)"
++msgstr "ページを揃える"
+ 
+ #: gtk/ui/gtkprintunixdialog.ui:375
+ msgid "_Reverse"
+-msgstr "ページを逆順にする(_R)"
++msgstr "ページを逆順にする"
+ 
+ #: gtk/ui/gtkprintunixdialog.ui:452
+ msgid "Layout"
+@@ -7400,19 +7400,19 @@
+ 
+ #: gtk/ui/gtkprintunixdialog.ui:475
+ msgid "T_wo-sided:"
+-msgstr "両面印刷(_W):"
++msgstr "両面印刷:"
+ 
+ #: gtk/ui/gtkprintunixdialog.ui:500
+ msgid "Pages per _side:"
+-msgstr "段組み印刷(_S):"
++msgstr "段組み印刷:"
+ 
+ #: gtk/ui/gtkprintunixdialog.ui:527
+ msgid "Page or_dering:"
+-msgstr "ページの順番(_D):"
++msgstr "ページの順番:"
+ 
+ #: gtk/ui/gtkprintunixdialog.ui:553
+ msgid "_Only print:"
+-msgstr "印刷の対象(_O):"
++msgstr "印刷の対象:"
+ 
+ #: gtk/ui/gtkprintunixdialog.ui:570
+ msgid "All sheets"
+@@ -7428,7 +7428,7 @@
+ 
+ #: gtk/ui/gtkprintunixdialog.ui:585
+ msgid "Sc_ale:"
+-msgstr "拡大/縮小(_A):"
++msgstr "拡大/縮小:"
+ 
+ #: gtk/ui/gtkprintunixdialog.ui:649
+ msgid "Paper"
+@@ -7436,19 +7436,19 @@
+ 
+ #: gtk/ui/gtkprintunixdialog.ui:672
+ msgid "Paper _type:"
+-msgstr "種類(_T):"
++msgstr "種類:"
+ 
+ #: gtk/ui/gtkprintunixdialog.ui:697
+ msgid "Paper _source:"
+-msgstr "用紙のソース(_S):"
++msgstr "用紙のソース:"
+ 
+ #: gtk/ui/gtkprintunixdialog.ui:722
+ msgid "Output t_ray:"
+-msgstr "出力先のトレイ(_R):"
++msgstr "出力先のトレイ:"
+ 
+ #: gtk/ui/gtkprintunixdialog.ui:776
+ msgid "Or_ientation:"
+-msgstr "用紙の向き(_I):"
++msgstr "用紙の向き:"
+ 
+ #: gtk/ui/gtkprintunixdialog.ui:876
+ msgid "Job Details"
+@@ -7456,11 +7456,11 @@
+ 
+ #: gtk/ui/gtkprintunixdialog.ui:899
+ msgid "Pri_ority:"
+-msgstr "優先順位(_O):"
++msgstr "優先順位:"
+ 
+ #: gtk/ui/gtkprintunixdialog.ui:923
+ msgid "_Billing info:"
+-msgstr "サマリ情報(_B):"
++msgstr "サマリ情報:"
+ 
+ #: gtk/ui/gtkprintunixdialog.ui:967
+ msgid "Print Document"
+@@ -7469,12 +7469,12 @@
+ #. this is one of the choices for the print at option in the print dialog
+ #: gtk/ui/gtkprintunixdialog.ui:987
+ msgid "_Now"
+-msgstr "今すぐ印刷する(_N)"
++msgstr "今すぐ印刷する"
+ 
+ #. this is one of the choices for the print at option in the print dialog. It also serves as the label for an entry that allows the user to enter a time.
+ #: gtk/ui/gtkprintunixdialog.ui:1003
+ msgid "A_t:"
+-msgstr "時間を指定する(_T):"
++msgstr "時間を指定する:"
+ 
+ #. Ability to parse the am/pm format depends on actual locale. You can remove the am/pm values below for your locale if they are not supported.
+ #: gtk/ui/gtkprintunixdialog.ui:1007 gtk/ui/gtkprintunixdialog.ui:1009
+@@ -7494,7 +7494,7 @@
+ #. this is one of the choices for the print at option in the print dialog. It means that the print job will not be printed until it explicitly gets 'released'.
+ #: gtk/ui/gtkprintunixdialog.ui:1050
+ msgid "On _hold"
+-msgstr "保留する(_H)"
++msgstr "保留する"
+ 
+ #: gtk/ui/gtkprintunixdialog.ui:1054 gtk/ui/gtkprintunixdialog.ui:1055
+ msgid "Hold the job until it is explicitly released"
+@@ -7507,12 +7507,12 @@
+ #. this is the label used for the option in the print dialog that controls the front cover page.
+ #: gtk/ui/gtkprintunixdialog.ui:1115
+ msgid "Be_fore:"
+-msgstr "前(_F):"
++msgstr "前:"
+ 
+ #. this is the label used for the option in the print dialog that controls the back cover page.
+ #: gtk/ui/gtkprintunixdialog.ui:1139
+ msgid "_After:"
+-msgstr "後(_A):"
++msgstr "後:"
+ 
+ #: gtk/ui/gtkprintunixdialog.ui:1181
+ msgid "Job"
+@@ -7795,7 +7795,7 @@
+ #: modules/printbackends/file/gtkprintbackendfile.c:676
+ #: modules/printbackends/test/gtkprintbackendtest.c:501
+ msgid "Pages per _sheet:"
+-msgstr "段組み印刷(_S):"
++msgstr "段組み印刷:"
+ 
+ #: modules/printbackends/cups/gtkprintbackendcups.c:1129
+ #: modules/printbackends/cups/gtkprintbackendcups.c:1438
+@@ -8349,7 +8349,7 @@
+ 
+ #: modules/printbackends/file/gtkprintbackendfile.c:745
+ msgid "_Output format"
+-msgstr "出力の形式(_O)"
++msgstr "出力の形式"
+ 
+ #: modules/printbackends/lpr/gtkprintbackendlpr.c:394
+ msgid "Print to LPR"

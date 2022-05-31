@@ -1,0 +1,118 @@
+Description: Change primary modifier from Control to Command
+Source: tsundoku custom patchset
+Author: tsundoku <me@tsundoku.ne.jp>
+Last-Update: 2020-07-09
+--- a/src/fe-gtk/fkeys.h
++++ b/src/fe-gtk/fkeys.h
+@@ -23,10 +23,11 @@
+ /* These are cp'ed from history.c --AGL */
+ #define STATE_SHIFT		GDK_SHIFT_MASK
+ #define STATE_ALT		GDK_MOD1_MASK
++#define STATE_CTRL		GDK_CONTROL_MASK
+ #ifdef __APPLE__
+-#define STATE_CTRL		GDK_META_MASK
++#define STATE_CMD		GDK_META_MASK
+ #else
+-#define STATE_CTRL		GDK_CONTROL_MASK
++#define STATE_CMD		GDK_SUPER_MASK
+ #endif
+ 
+ void key_init (void);
+--- a/src/fe-gtk/menu.c
++++ b/src/fe-gtk/menu.c
+@@ -1779,7 +1779,7 @@
+ #define MENUBAR_OFFSET (17)
+ 	{N_("_Menu Bar"), menu_bar_toggle_cb, 0, M_MENUTOG, MENU_ID_MENUBAR, 0, 1, GDK_KEY_F9},
+ 	{N_("_Topic Bar"), menu_topicbar_toggle, 0, M_MENUTOG, MENU_ID_TOPICBAR, 0, 1},
+-	{N_("_User List"), menu_userlist_toggle, 0, M_MENUTOG, MENU_ID_USERLIST, 0, 1, GDK_KEY_F7},
++	{N_("_User List"), menu_userlist_toggle, 0, M_MENUTOG, MENU_ID_USERLIST, 0, 1, GDK_KEY_u},
+ 	{N_("U_ser List Buttons"), menu_ulbuttons_toggle, 0, M_MENUTOG, MENU_ID_ULBUTTONS, 0, 1},
+ 	{N_("M_ode Buttons"), menu_cmbuttons_toggle, 0, M_MENUTOG, MENU_ID_MODEBUTTONS, 0, 1},
+ 	{0, 0, 0, M_SEP, 0, 0, 0},
+@@ -2258,7 +2258,7 @@
+ 	GtkWidget *menu_bar;
+ 	GtkWidget *usermenu = 0;
+ 	GtkWidget *submenu = 0;
+-	int close_mask = STATE_CTRL;
++	int close_mask = STATE_CMD;
+ 	int away_mask = STATE_ALT;
+ 	char *key_theme = NULL;
+ 	GtkSettings *settings;
+@@ -2331,7 +2331,7 @@
+ 		{
+ 			if (!g_ascii_strcasecmp (key_theme, "Emacs"))
+ 			{
+-				close_mask = STATE_SHIFT | STATE_CTRL;
++				close_mask = STATE_SHIFT | STATE_CMD;
+ 				mymenu[SEARCH_OFFSET].key = 0;
+ 			}
+ 			g_free (key_theme);
+@@ -2343,7 +2343,7 @@
+ 		char *help = _("_Help");
+ 		char *under = strchr (help, '_');
+ 		if (under && (under[1] == 'a' || under[1] == 'A'))
+-			away_mask = STATE_ALT | STATE_CTRL;
++			away_mask = STATE_ALT | STATE_CMD;
+ 	}
+ 
+ 	if (!toplevel)
+@@ -2401,8 +2401,8 @@
+ 										mymenu[i].key == GDK_KEY_F1 ? 0 :
+ 										mymenu[i].key == GDK_KEY_w ? close_mask :
+ 										(g_ascii_isupper (mymenu[i].key)) ?
+-											STATE_SHIFT | STATE_CTRL :
+-											STATE_CTRL,
++											STATE_SHIFT | STATE_CMD :
++											STATE_CMD,
+ 										GTK_ACCEL_VISIBLE);
+ 			if (mymenu[i].callback)
+ 				g_signal_connect (G_OBJECT (item), "activate",
+@@ -2426,7 +2426,7 @@
+ 											mymenu[i].key,
+ 											mymenu[i].id == MENU_ID_FULLSCREEN ? 0 :
+ 											mymenu[i].id == MENU_ID_AWAY ? away_mask :
+-											STATE_CTRL, GTK_ACCEL_VISIBLE);
++											STATE_CMD, GTK_ACCEL_VISIBLE);
+ 			if (mymenu[i].callback)
+ 				g_signal_connect (G_OBJECT (item), "toggled",
+ 									G_CALLBACK (mymenu[i].callback), NULL);
+--- a/src/fe-gtk/rawlog.c
++++ b/src/fe-gtk/rawlog.c
+@@ -84,13 +84,13 @@
+ static gboolean
+ rawlog_key_cb (GtkWidget * wid, GdkEventKey * key, gpointer userdata)
+ {
+-	/* Copy rawlog selection to clipboard when Ctrl+Shift+C is pressed,
++	/* Copy rawlog selection to clipboard when Cmd+Shift+C is pressed,
+ 	 * but make sure not to copy twice, i.e. when auto-copy is enabled.
+ 	 */
+ 	if (!prefs.hex_text_autocopy_text &&
+ 		(key->keyval == GDK_KEY_c || key->keyval == GDK_KEY_C) &&
+ 		key->state & STATE_SHIFT &&
+-		key->state & STATE_CTRL)
++		key->state & STATE_CMD)
+ 	{
+ 		gtk_xtext_copy_selection (userdata);
+ 	}
+--- a/src/fe-gtk/userlistgui.c
++++ b/src/fe-gtk/userlistgui.c
+@@ -554,7 +554,7 @@
+ 	if (!event)
+ 		return FALSE;
+ 
+-	if (!(event->state & STATE_CTRL) &&
++	if (!(event->state & STATE_CMD) &&
+ 		event->type == GDK_2BUTTON_PRESS && prefs.hex_gui_ulist_doubleclick[0])
+ 	{
+ 		nicks = userlist_selection_list (widget, &i);
+--- a/src/fe-gtk/xtext.c
++++ b/src/fe-gtk/xtext.c
+@@ -1929,7 +1929,7 @@
+ 		if (xtext->buffer->last_ent_start)
+ 		{
+ 			xtext->color_paste = FALSE;
+-			if (event->state & STATE_CTRL || prefs.hex_text_autocopy_color)
++			if (event->state & STATE_CMD || prefs.hex_text_autocopy_color)
+ 				xtext->color_paste = TRUE;
+ 			if (prefs.hex_text_autocopy_text)
+ 			{

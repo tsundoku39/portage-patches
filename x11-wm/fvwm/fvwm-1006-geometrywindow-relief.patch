@@ -1,0 +1,18 @@
+Description: Reduce geometry window relief
+ FVWM has a harccoded relief of 2 pixels for the geometry window.
+ Our style uses a relief of 1 pixel across the board, so the 
+ geometry window should match.
+Origin: tsundoku custom patchset
+Author: tsundoku <me@tsundoku.ne.jp>
+Last-Update: 2019-02-19
+--- a/libs/defaults.h
++++ b/libs/defaults.h
+@@ -153,7 +153,7 @@
+ #define BROKEN_MINSIZE_LIMIT 30000
+ 
+ /* geometry window */
+-#define GEOMETRY_WINDOW_BW                 2 /* pixels */
++#define GEOMETRY_WINDOW_BW                 1 /* pixel */
+ #define GEOMETRY_WINDOW_STRING             " +8888 x +8888 "
+ #define GEOMETRY_WINDOW_POS_STRING         " %+-4d %+-4d "
+ #define GEOMETRY_WINDOW_SIZE_STRING        " %4d x %-4d "

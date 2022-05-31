@@ -1,0 +1,241 @@
+Description: Add support for EWMH focused hint
+ This is used by GTK to draw widgets in unfocused windows
+ in the backdrop state.
+Source: tsundoku custom patchset
+Author: tsundoku <me@tsundoku.ne.jp>
+Last-Update: 2020-08-18
+--- a/fvwm/events.c
++++ b/fvwm/events.c
+@@ -2291,6 +2291,7 @@
+ 			/*  Event is for the frame...*/
+ 			SetFocusWindow(fw, True, FOCUS_SET_BY_ENTER);
+                 }
++				SET_EWMH_FOCUSED(fw, True);
+ 	}
+ 	else if (focus_is_focused(fw) && focus_does_accept_input_focus(fw))
+ 	{
+@@ -2819,6 +2820,11 @@
+ 		/* handle a subwindow cmap */
+ 		LeaveSubWindowColormap(te->xany.window);
+ 	}
++	if (fw != NULL && IS_EWMH_FOCUSED(fw))
++	{
++		SET_EWMH_FOCUSED(fw, False);
++		EWMH_SetWMState(fw, False);
++	}
+ 	if (fw != NULL &&
+ 	    (lwp->window == FW_W_FRAME(fw) ||
+ 	     lwp->window == FW_W_ICON_TITLE(fw) ||
+--- a/fvwm/ewmh.c
++++ b/fvwm/ewmh.c
+@@ -143,6 +143,9 @@
+ 		"_NET_WM_STATE_BELOW",           XA_ATOM,
+ 		ewmh_WMStateStaysOnBottom),
+ 	ENTRY(
++		"_NET_WM_STATE_FOCUSED",         XA_ATOM,
++		ewmh_WMStateFocused),
++	ENTRY(
+ 		"_NET_WM_STATE_FULLSCREEN",      XA_ATOM,
+ 		ewmh_WMStateFullScreen),
+ 	ENTRY("_NET_WM_STATE_HIDDEN",          XA_ATOM,   ewmh_WMStateHidden),
+@@ -621,6 +624,7 @@
+ 
+ void EWMH_SetWMState(FvwmWindow *fw, Bool do_restore)
+ {
++	DBUG("EWMH_SetWMState", "Routine Entered");
+ 	Atom wm_state[EWMH_NUMBER_OF_STATE];
+ 	int i = 0;
+ 	ewmh_atom *list = ewmh_atom_wm_state;
+@@ -634,18 +638,9 @@
+ 		list++;
+ 	}
+ 
+-	if (i > 0)
+-	{
+-		ewmh_ChangeProperty(
+-			FW_W(fw), "_NET_WM_STATE", EWMH_ATOM_LIST_CLIENT_WIN,
+-			(unsigned char *)wm_state, i);
+-	}
+-	else
+-	{
+-		ewmh_DeleteProperty(
+-			FW_W(fw), "_NET_WM_STATE",
+-			EWMH_ATOM_LIST_CLIENT_WIN);
+-	}
++	ewmh_ChangeProperty(
++		FW_W(fw), "_NET_WM_STATE", EWMH_ATOM_LIST_CLIENT_WIN,
++		(unsigned char *)wm_state, i);
+ 
+ 	return;
+ }
+--- a/fvwm/ewmh_events.c
++++ b/fvwm/ewmh_events.c
+@@ -564,6 +564,16 @@
+ 	return 0;
+ }
+ 
++int ewmh_WMStateFocused(
++	FvwmWindow *fw, XEvent *ev, window_style *style, unsigned long any)
++{
++	if (ev == NULL && style == NULL)
++	{
++		 return (IS_EWMH_FOCUSED(fw));
++	}
++	/* Read only value for clients. We do not set it here */
++}
++
+ int ewmh_WMStateFullScreen(
+ 	FvwmWindow *fw, XEvent *ev, window_style *style, unsigned long any)
+ {
+--- a/fvwm/ewmh_intern.h
++++ b/fvwm/ewmh_intern.h
+@@ -138,6 +138,8 @@
+ 
+ int ewmh_WMState(
+ 	FvwmWindow *fw, XEvent *ev, window_style *style, unsigned long any);
++int ewmh_WMStateFocused(
++	FvwmWindow *fw, XEvent *ev, window_style *style, unsigned long any);
+ int ewmh_WMStateFullScreen(
+ 	FvwmWindow *fw, XEvent *ev, window_style *style, unsigned long any);
+ int ewmh_WMStateHidden(
+--- a/fvwm/focus.c
++++ b/fvwm/focus.c
+@@ -963,6 +963,15 @@
+ 	}
+ 	set_focus_to_fwin(FW_W(fw), fw, &sf_args);
+ 
++	DBUG("SetFocusWindow", "_NET_WM_STATE_FOCUSED");
++	/* Set _NET_WM_STATE_FOCUSED for window to receive focus */
++	/* Not for icons because they would keep it when being deiconified */
++	if (!IS_ICONIFIED(fw))
++	{
++		SET_EWMH_FOCUSED(fw, True);
++		EWMH_SetWMState(fw, False);
++	}
++
+ 	return;
+ }
+ 
+@@ -985,6 +994,7 @@
+ void _DeleteFocus(Bool do_allow_force_broadcast)
+ {
+ 	sftfwin_args_t sf_args;
++	FvwmWindow *t;
+ 
+ 	memset(&sf_args, 0, sizeof(sf_args));
+ 	sf_args.do_allow_force_broadcast = !!do_allow_force_broadcast;
+@@ -995,12 +1005,22 @@
+ 	sf_args.set_by = FOCUS_SET_FORCE;
+ 	set_focus_to_fwin(Scr.NoFocusWin, NULL, &sf_args);
+ 
++	for (t = Scr.FvwmRoot.next; t != NULL; t = t->next)
++	{
++		if (IS_EWMH_FOCUSED(t))
++		{
++			SET_EWMH_FOCUSED(t, False);
++			EWMH_SetWMState(t, False);
++		}
++	}
++
+ 	return;
+ }
+ 
+ void _ForceDeleteFocus(void)
+ {
+ 	sftfwin_args_t sf_args;
++	FvwmWindow *t;
+ 
+ 	memset(&sf_args, 0, sizeof(sf_args));
+ 	sf_args.do_allow_force_broadcast = 1;
+@@ -1011,6 +1031,15 @@
+ 	sf_args.set_by = FOCUS_SET_FORCE;
+ 	set_focus_to_fwin(Scr.NoFocusWin, NULL, &sf_args);
+ 
++	for (t = Scr.FvwmRoot.next; t != NULL; t = t->next)
++	{
++		if (IS_EWMH_FOCUSED(t))
++		{
++			SET_EWMH_FOCUSED(t, False);
++			EWMH_SetWMState(t, False);
++		}
++	}
++
+ 	return;
+ }
+ 
+--- a/fvwm/fvwm.h
++++ b/fvwm/fvwm.h
+@@ -382,10 +382,12 @@
+ 	/* the ewmh icon is used as icon pixmap */
+ 	unsigned use_ewmh_icon : 1;
+ 	unsigned is_ewmh_modal : 1;
++	unsigned is_ewmh_focused : 1;
+ 	unsigned is_ewmh_fullscreen : 1;
+ #define EWMH_STATE_UNDEFINED_HINT 0
+ #define EWMH_STATE_NO_HINT        1
+ #define EWMH_STATE_HAS_HINT       2
++	unsigned has_ewmh_init_focused_state : 2;
+ 	unsigned has_ewmh_init_fullscreen_state : 2;
+ 	unsigned has_ewmh_init_hidden_state : 2;
+ 	unsigned has_ewmh_init_maxhoriz_state : 2;
+--- a/fvwm/icons.c
++++ b/fvwm/icons.c
+@@ -2512,6 +2512,15 @@
+ 				SET_ICONIFIED(t, 1);
+ 				SET_ICON_UNMAPPED(t, 1);
+ 				SET_ICONIFIED_BY_PARENT(t, 1);
++
++				/* Remove _NET_WM_STATE_FOCUSED atom if present */
++				DBUG("Iconify", "unfocus t");
++				if (IS_EWMH_FOCUSED(t))
++				{
++					SET_EWMH_FOCUSED(t, False);
++					EWMH_SetWMState(t, False);
++				}
++
+ 				get_icon_geometry(t, &g);
+ 				BroadcastPacket(
+ 					M_ICONIFY, 7, (long)FW_W(t),
+@@ -2575,6 +2584,15 @@
+ 	}
+ 	SET_ICONIFIED(fw, 1);
+ 	SET_ICON_UNMAPPED(fw, 0);
++
++	/* Remove _NET_WM_STATE_FOCUSED atom if present */
++	if (IS_EWMH_FOCUSED(fw))
++	{
++		DBUG("Iconify", "unfocus fw");
++		SET_EWMH_FOCUSED(fw, False);
++		EWMH_SetWMState(fw, False);
++	}
++
+ 	get_icon_geometry(fw, &icon_rect);
+ 	/* if this fails it does not overwrite icon_rect */
+ 	EWMH_GetIconGeometry(fw, &icon_rect);
+--- a/fvwm/window_flags.h
++++ b/fvwm/window_flags.h
+@@ -680,12 +680,24 @@
+ 	(fw)->flags.is_ewmh_modal = !!(x)
+ #define SETM_EWMH_MODAL(fw,x) \
+ 	(fw)->flag_mask.is_ewmh_modal = !!(x)
++#define IS_EWMH_FOCUSED(fw) \
++	((fw)->flags.is_ewmh_focused)
++#define SET_EWMH_FOCUSED(fw,x) \
++	(fw)->flags.is_ewmh_focused = !!(x)
++#define SETM_EWMH_FOCUSED(fw,x) \
++	(fw)->flag_mask.is_ewmh_focused = !!(x)
+ #define IS_EWMH_FULLSCREEN(fw) \
+ 	((fw)->flags.is_ewmh_fullscreen)
+ #define SET_EWMH_FULLSCREEN(fw,x) \
+ 	(fw)->flags.is_ewmh_fullscreen = !!(x)
+ #define SETM_EWMH_FULLSCREEN(fw,x) \
+ 	(fw)->flag_mask.is_ewmh_fullscreen = !!(x)
++#define SET_HAS_EWMH_INIT_FOCUSED_STATE(fw,x) \
++	(fw)->flags.has_ewmh_init_focused_state = (x)
++#define SETM_HAS_EWMH_INIT_FOCUSED_STATE(fw,x) \
++	(fw)->flag_mask.has_ewmh_init_focused_state = (x)
++#define HAS_EWMH_INIT_FOCUSED_STATE(fw) \
++	((fw)->flags.has_ewmh_init_focused_state)
+ #define SET_HAS_EWMH_INIT_FULLSCREEN_STATE(fw,x) \
+ 	(fw)->flags.has_ewmh_init_fullscreen_state = (x)
+ #define SETM_HAS_EWMH_INIT_FULLSCREEN_STATE(fw,x) \

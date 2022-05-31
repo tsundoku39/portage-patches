@@ -1,0 +1,1305 @@
+Description: Remove keyboard accelerators from Japanese UI strings
+ Japanese UI strings contain a suffixed letter in parentheses for placement
+ of the Windows-style keyboard accelerator underline. Disabling accelerators
+ through GTK themes only removes the underline, leaving the vestigial letter.
+ This patch removes them all e.g.
+ ファイル (F) → ファイル
+Origin: tsundoku custom patchset
+Author: tsundoku <me@tsundoku.ne.jp>
+Last-Update: 2019-02-28
+--- a/po/ja.po
++++ b/po/ja.po
+@@ -347,12 +347,12 @@
+ #. Add the credits button
+ #: ../gtk/gtkaboutdialog.c:646
+ msgid "C_redits"
+-msgstr "クレジット(_R)"
++msgstr "クレジット"
+ 
+ #. Add the license button
+ #: ../gtk/gtkaboutdialog.c:660
+ msgid "_License"
+-msgstr "ライセンス(_L)"
++msgstr "ライセンス"
+ 
+ #: ../gtk/gtkaboutdialog.c:966
+ #, c-format
+@@ -604,7 +604,7 @@
+ 
+ #: ../gtk/gtkcolorsel.c:391
+ msgid "_Hue:"
+-msgstr "色相(_H):"
++msgstr "色相:"
+ 
+ #: ../gtk/gtkcolorsel.c:392
+ msgid "Position on the color wheel."
+@@ -612,7 +612,7 @@
+ 
+ #: ../gtk/gtkcolorsel.c:394
+ msgid "_Saturation:"
+-msgstr "彩度(_S):"
++msgstr "彩度:"
+ 
+ #: ../gtk/gtkcolorsel.c:395
+ msgid "\"Deepness\" of the color."
+@@ -620,7 +620,7 @@
+ 
+ #: ../gtk/gtkcolorsel.c:396
+ msgid "_Value:"
+-msgstr "明度(_V):"
++msgstr "明度:"
+ 
+ #: ../gtk/gtkcolorsel.c:397
+ msgid "Brightness of the color."
+@@ -628,7 +628,7 @@
+ 
+ #: ../gtk/gtkcolorsel.c:398
+ msgid "_Red:"
+-msgstr "赤(_R):"
++msgstr "赤:"
+ 
+ #: ../gtk/gtkcolorsel.c:399
+ msgid "Amount of red light in the color."
+@@ -636,7 +636,7 @@
+ 
+ #: ../gtk/gtkcolorsel.c:400
+ msgid "_Green:"
+-msgstr "緑(_G):"
++msgstr "緑:"
+ 
+ #: ../gtk/gtkcolorsel.c:401
+ msgid "Amount of green light in the color."
+@@ -644,7 +644,7 @@
+ 
+ #: ../gtk/gtkcolorsel.c:402
+ msgid "_Blue:"
+-msgstr "青(_B):"
++msgstr "青:"
+ 
+ #: ../gtk/gtkcolorsel.c:403
+ msgid "Amount of blue light in the color."
+@@ -652,7 +652,7 @@
+ 
+ #: ../gtk/gtkcolorsel.c:406
+ msgid "Op_acity:"
+-msgstr "不透明度(_A):"
++msgstr "不透明度:"
+ 
+ #: ../gtk/gtkcolorsel.c:413 ../gtk/gtkcolorsel.c:423
+ msgid "Transparency of the color."
+@@ -660,7 +660,7 @@
+ 
+ #: ../gtk/gtkcolorsel.c:430
+ msgid "Color _name:"
+-msgstr "色の名称(_N):"
++msgstr "色の名称:"
+ 
+ #: ../gtk/gtkcolorsel.c:444
+ msgid ""
+@@ -672,7 +672,7 @@
+ 
+ #: ../gtk/gtkcolorsel.c:474
+ msgid "_Palette:"
+-msgstr "パレット(_P):"
++msgstr "パレット:"
+ 
+ #: ../gtk/gtkcolorsel.c:503
+ msgid "Color Wheel"
+@@ -708,7 +708,7 @@
+ 
+ #: ../gtk/gtkcolorsel.c:1389
+ msgid "_Save color here"
+-msgstr "ここに色を保存する(_S)"
++msgstr "ここに色を保存する"
+ 
+ #: ../gtk/gtkcolorsel.c:1593
+ msgid ""
+@@ -757,11 +757,11 @@
+ 
+ #: ../gtk/gtkcustompaperunixdialog.c:1054
+ msgid "_Width:"
+-msgstr "幅(_W):"
++msgstr "幅:"
+ 
+ #: ../gtk/gtkcustompaperunixdialog.c:1066
+ msgid "_Height:"
+-msgstr "高さ(_H):"
++msgstr "高さ:"
+ 
+ #: ../gtk/gtkcustompaperunixdialog.c:1078
+ msgid "Paper Size"
+@@ -769,19 +769,19 @@
+ 
+ #: ../gtk/gtkcustompaperunixdialog.c:1087
+ msgid "_Top:"
+-msgstr "上側(_T):"
++msgstr "上側:"
+ 
+ #: ../gtk/gtkcustompaperunixdialog.c:1099
+ msgid "_Bottom:"
+-msgstr "下側(_B):"
++msgstr "下側:"
+ 
+ #: ../gtk/gtkcustompaperunixdialog.c:1111
+ msgid "_Left:"
+-msgstr "左側(_L):"
++msgstr "左側:"
+ 
+ #: ../gtk/gtkcustompaperunixdialog.c:1123
+ msgid "_Right:"
+-msgstr "右側(_R):"
++msgstr "右側:"
+ 
+ #: ../gtk/gtkcustompaperunixdialog.c:1164
+ msgid "Paper Margins"
+@@ -789,11 +789,11 @@
+ 
+ #: ../gtk/gtkentry.c:8726 ../gtk/gtktextview.c:7976
+ msgid "Input _Methods"
+-msgstr "入力メソッド(_M)"
++msgstr "入力メソッド"
+ 
+ #: ../gtk/gtkentry.c:8740 ../gtk/gtktextview.c:7990
+ msgid "_Insert Unicode Control Character"
+-msgstr "Unicode 制御文字の挿入(_I)"
++msgstr "Unicode 制御文字の挿入"
+ 
+ #: ../gtk/gtkentry.c:10123
+ msgid "Caps Lock is on"
+@@ -935,7 +935,7 @@
+ #. Column header for the file chooser's shortcuts pane
+ #: ../gtk/gtkfilechooserdefault.c:3641
+ msgid "_Places"
+-msgstr "場所(_P)"
++msgstr "場所"
+ 
+ #: ../gtk/gtkfilechooserdefault.c:3715
+ msgid "Add the selected folder to the Bookmarks"
+@@ -947,15 +947,15 @@
+ 
+ #: ../gtk/gtkfilechooserdefault.c:4032
+ msgid "_Add to Bookmarks"
+-msgstr "ブックマークへ追加(_A)"
++msgstr "ブックマークへ追加"
+ 
+ #: ../gtk/gtkfilechooserdefault.c:4045
+ msgid "Show _Hidden Files"
+-msgstr "隠しファイルを表示する(_H)"
++msgstr "隠しファイルを表示する"
+ 
+ #: ../gtk/gtkfilechooserdefault.c:4052
+ msgid "Show _Size Column"
+-msgstr "サイズを表示する(_S)"
++msgstr "サイズを表示する"
+ 
+ #: ../gtk/gtkfilechooserdefault.c:4276 ../gtk/gtkfilesel.c:730
+ msgid "Files"
+@@ -976,7 +976,7 @@
+ #. Label
+ #: ../gtk/gtkfilechooserdefault.c:4459 ../gtk/gtkprinteroptionwidget.c:841
+ msgid "_Name:"
+-msgstr "名前(_N):"
++msgstr "名前:"
+ 
+ #: ../gtk/gtkfilechooserdefault.c:4699
+ msgid "Type a file name"
+@@ -995,7 +995,7 @@
+ #. Create Folder
+ #: ../gtk/gtkfilechooserdefault.c:4823
+ msgid "Create Fo_lder"
+-msgstr "フォルダの作成(_L)"
++msgstr "フォルダの作成"
+ 
+ #: ../gtk/gtkfilechooserdefault.c:4871
+ msgid "Search:"
+@@ -1003,15 +1003,15 @@
+ 
+ #: ../gtk/gtkfilechooserdefault.c:4922
+ msgid "_Location:"
+-msgstr "場所(_L):"
++msgstr "場所:"
+ 
+ #: ../gtk/gtkfilechooserdefault.c:5372
+ msgid "Save in _folder:"
+-msgstr "フォルダの中に保存(_F):"
++msgstr "フォルダの中に保存:"
+ 
+ #: ../gtk/gtkfilechooserdefault.c:5374
+ msgid "Create in _folder:"
+-msgstr "フォルダの中に作成(_F):"
++msgstr "フォルダの中に作成:"
+ 
+ #: ../gtk/gtkfilechooserdefault.c:6468
+ #, c-format
+@@ -1062,7 +1062,7 @@
+ 
+ #: ../gtk/gtkfilechooserdefault.c:8214 ../gtk/gtkprintunixdialog.c:491
+ msgid "_Replace"
+-msgstr "置き換える(_R)"
++msgstr "置き換える"
+ 
+ #: ../gtk/gtkfilechooserdefault.c:9021
+ msgid "Could not start the search process"
+@@ -1156,11 +1156,11 @@
+ 
+ #: ../gtk/gtkfilesel.c:698
+ msgid "Fol_ders"
+-msgstr "フォルダ(_D)"
++msgstr "フォルダ"
+ 
+ #: ../gtk/gtkfilesel.c:734
+ msgid "_Files"
+-msgstr "ファイル(_F)"
++msgstr "ファイル"
+ 
+ #: ../gtk/gtkfilesel.c:821 ../gtk/gtkfilesel.c:2154
+ #, c-format
+@@ -1180,15 +1180,15 @@
+ 
+ #: ../gtk/gtkfilesel.c:1020
+ msgid "_New Folder"
+-msgstr "新しいフォルダ(_N)"
++msgstr "新しいフォルダ"
+ 
+ #: ../gtk/gtkfilesel.c:1031
+ msgid "De_lete File"
+-msgstr "ファイルの削除(_L)"
++msgstr "ファイルの削除"
+ 
+ #: ../gtk/gtkfilesel.c:1042
+ msgid "_Rename File"
+-msgstr "ファイル名の変更(_R)"
++msgstr "ファイル名の変更"
+ 
+ #: ../gtk/gtkfilesel.c:1347
+ #, c-format
+@@ -1202,11 +1202,11 @@
+ 
+ #: ../gtk/gtkfilesel.c:1409
+ msgid "_Folder name:"
+-msgstr "フォルダ名(_F):"
++msgstr "フォルダ名:"
+ 
+ #: ../gtk/gtkfilesel.c:1433
+ msgid "C_reate"
+-msgstr "作成(_R)"
++msgstr "作成"
+ 
+ #: ../gtk/gtkfilesel.c:1476 ../gtk/gtkfilesel.c:1585 ../gtk/gtkfilesel.c:1598
+ #, c-format
+@@ -1253,11 +1253,11 @@
+ 
+ #: ../gtk/gtkfilesel.c:1702
+ msgid "_Rename"
+-msgstr "ファイル名の変更(_R)"
++msgstr "ファイル名の変更"
+ 
+ #: ../gtk/gtkfilesel.c:2134
+ msgid "_Selection: "
+-msgstr "選択(_S): "
++msgstr "選択: "
+ 
+ #: ../gtk/gtkfilesel.c:3056
+ #, c-format
+@@ -1310,20 +1310,20 @@
+ 
+ #: ../gtk/gtkfontsel.c:343
+ msgid "_Family:"
+-msgstr "ファミリ(_F):"
++msgstr "ファミリ:"
+ 
+ #: ../gtk/gtkfontsel.c:349
+ msgid "_Style:"
+-msgstr "スタイル(_S):"
++msgstr "スタイル:"
+ 
+ #: ../gtk/gtkfontsel.c:355
+ msgid "Si_ze:"
+-msgstr "サイズ(_Z):"
++msgstr "サイズ:"
+ 
+ #. create the text entry widget
+ #: ../gtk/gtkfontsel.c:532
+ msgid "_Preview:"
+-msgstr "プレビュー(_P):"
++msgstr "プレビュー:"
+ 
+ #: ../gtk/gtkfontsel.c:1649
+ msgid "Font Selection"
+@@ -1335,7 +1335,7 @@
+ 
+ #: ../gtk/gtkgamma.c:420
+ msgid "_Gamma value"
+-msgstr "ガンマ値(_G)"
++msgstr "ガンマ値"
+ 
+ #. Remove this icon source so we don't keep trying to
+ #. * load it.
+@@ -1397,7 +1397,7 @@
+ 
+ #: ../gtk/gtkinputdialog.c:220
+ msgid "_Device:"
+-msgstr "デバイス(_D):"
++msgstr "デバイス:"
+ 
+ #: ../gtk/gtkinputdialog.c:237
+ msgid "Disabled"
+@@ -1413,7 +1413,7 @@
+ 
+ #: ../gtk/gtkinputdialog.c:258
+ msgid "_Mode:"
+-msgstr "モード(_M):"
++msgstr "モード:"
+ 
+ #. The axis listbox
+ #: ../gtk/gtkinputdialog.c:279
+@@ -1427,27 +1427,27 @@
+ 
+ #: ../gtk/gtkinputdialog.c:524
+ msgid "_X:"
+-msgstr "X(_X):"
++msgstr "X:"
+ 
+ #: ../gtk/gtkinputdialog.c:525
+ msgid "_Y:"
+-msgstr "Y(_Y):"
++msgstr "Y:"
+ 
+ #: ../gtk/gtkinputdialog.c:526
+ msgid "_Pressure:"
+-msgstr "圧力(_P):"
++msgstr "圧力:"
+ 
+ #: ../gtk/gtkinputdialog.c:527
+ msgid "X _tilt:"
+-msgstr "X軸の傾き(_T):"
++msgstr "X軸の傾き:"
+ 
+ #: ../gtk/gtkinputdialog.c:528
+ msgid "Y t_ilt:"
+-msgstr "Y軸の傾き(_I):"
++msgstr "Y軸の傾き:"
+ 
+ #: ../gtk/gtkinputdialog.c:529
+ msgid "_Wheel:"
+-msgstr "ホイール(_W):"
++msgstr "ホイール:"
+ 
+ #: ../gtk/gtkinputdialog.c:581
+ msgid "none"
+@@ -1464,17 +1464,17 @@
+ #. and clear button
+ #: ../gtk/gtkinputdialog.c:751
+ msgid "Cl_ear"
+-msgstr "クリア(_E)"
++msgstr "クリア"
+ 
+ #. Open Link
+ #: ../gtk/gtklabel.c:5696
+ msgid "_Open Link"
+-msgstr "リンクを開く(_O)"
++msgstr "リンクを開く"
+ 
+ #. Copy Link Address
+ #: ../gtk/gtklabel.c:5708
+ msgid "Copy _Link Address"
+-msgstr "リンクのアドレスをコピー(_L)"
++msgstr "リンクのアドレスをコピー"
+ 
+ #: ../gtk/gtklinkbutton.c:428
+ msgid "Copy URL"
+@@ -1533,39 +1533,39 @@
+ 
+ #: ../gtk/gtkmountoperation.c:494
+ msgid "Co_nnect"
+-msgstr "接続する(_N)"
++msgstr "接続する"
+ 
+ #: ../gtk/gtkmountoperation.c:561
+ msgid "Connect _anonymously"
+-msgstr "匿名で接続する(_A)"
++msgstr "匿名で接続する"
+ 
+ #: ../gtk/gtkmountoperation.c:570
+ msgid "Connect as u_ser:"
+-msgstr "ユーザを指定する(_S):"
++msgstr "ユーザを指定する:"
+ 
+ #: ../gtk/gtkmountoperation.c:608
+ msgid "_Username:"
+-msgstr "ユーザ名(_U):"
++msgstr "ユーザ名:"
+ 
+ #: ../gtk/gtkmountoperation.c:613
+ msgid "_Domain:"
+-msgstr "ドメイン(_D):"
++msgstr "ドメイン:"
+ 
+ #: ../gtk/gtkmountoperation.c:619
+ msgid "_Password:"
+-msgstr "パスワード(_P):"
++msgstr "パスワード:"
+ 
+ #: ../gtk/gtkmountoperation.c:637
+ msgid "Forget password _immediately"
+-msgstr "今すぐパスワードを破棄する(_I)"
++msgstr "今すぐパスワードを破棄する"
+ 
+ #: ../gtk/gtkmountoperation.c:647
+ msgid "Remember password until you _logout"
+-msgstr "ログアウトするまでパスワードを記憶する(_L)"
++msgstr "ログアウトするまでパスワードを記憶する"
+ 
+ #: ../gtk/gtkmountoperation.c:657
+ msgid "Remember _forever"
+-msgstr "期限なしで記憶する(_F)"
++msgstr "期限なしで記憶する"
+ 
+ #: ../gtk/gtkmountoperation.c:886
+ #, c-format
+@@ -1578,7 +1578,7 @@
+ 
+ #: ../gtk/gtkmountoperation.c:1106
+ msgid "_End Process"
+-msgstr "プロセスを終了(_E)"
++msgstr "プロセスを終了"
+ 
+ #: ../gtk/gtkmountoperation-stub.c:64
+ #, c-format
+@@ -1650,15 +1650,15 @@
+ 
+ #: ../gtk/gtkpagesetupunixdialog.c:894
+ msgid "_Format for:"
+-msgstr "フォーマット(_F):"
++msgstr "フォーマット:"
+ 
+ #: ../gtk/gtkpagesetupunixdialog.c:916 ../gtk/gtkprintunixdialog.c:3458
+ msgid "_Paper size:"
+-msgstr "用紙サイズ(_P):"
++msgstr "用紙サイズ:"
+ 
+ #: ../gtk/gtkpagesetupunixdialog.c:947
+ msgid "_Orientation:"
+-msgstr "用紙の向き(_O):"
++msgstr "用紙の向き:"
+ 
+ #: ../gtk/gtkpagesetupunixdialog.c:1011 ../gtk/gtkprintunixdialog.c:3520
+ msgid "Page Setup"
+@@ -1686,7 +1686,7 @@
+ 
+ #: ../gtk/gtkprinteroptionwidget.c:853
+ msgid "_Save in folder:"
+-msgstr "フォルダの中に保存(_S):"
++msgstr "フォルダの中に保存:"
+ 
+ #. translators: this string is the default job title for print
+ #. * jobs. %s gets replaced by the application name, %d gets replaced
+@@ -1859,19 +1859,19 @@
+ 
+ #: ../gtk/gtkprintunixdialog.c:2183
+ msgid "_All Pages"
+-msgstr "すべてのページ(_A)"
++msgstr "すべてのページ"
+ 
+ #: ../gtk/gtkprintunixdialog.c:2190
+ msgid "C_urrent Page"
+-msgstr "現在のページだけ(_U)"
++msgstr "現在のページだけ"
+ 
+ #: ../gtk/gtkprintunixdialog.c:2200
+ msgid "Se_lection"
+-msgstr "選択(_L)"
++msgstr "選択"
+ 
+ #: ../gtk/gtkprintunixdialog.c:2209
+ msgid "Pag_es:"
+-msgstr "ページ(_E):"
++msgstr "ページ:"
+ 
+ #: ../gtk/gtkprintunixdialog.c:2210
+ msgid ""
+@@ -1892,15 +1892,15 @@
+ #. FIXME chpe: too much space between Copies and spinbutton, put those 2 in a hbox and make it span 2 columns
+ #: ../gtk/gtkprintunixdialog.c:2239
+ msgid "Copie_s:"
+-msgstr "コピーの数(_S):"
++msgstr "コピーの数:"
+ 
+ #: ../gtk/gtkprintunixdialog.c:2258
+ msgid "C_ollate"
+-msgstr "ページを揃える(_O)"
++msgstr "ページを揃える"
+ 
+ #: ../gtk/gtkprintunixdialog.c:2266
+ msgid "_Reverse"
+-msgstr "ページを逆順にする(_R)"
++msgstr "ページを逆順にする"
+ 
+ #: ../gtk/gtkprintunixdialog.c:2286
+ msgid "General"
+@@ -1982,19 +1982,19 @@
+ 
+ #: ../gtk/gtkprintunixdialog.c:3313
+ msgid "T_wo-sided:"
+-msgstr "両面印刷(_W):"
++msgstr "両面印刷:"
+ 
+ #: ../gtk/gtkprintunixdialog.c:3328
+ msgid "Pages per _side:"
+-msgstr "段組み印刷(_S):"
++msgstr "段組み印刷:"
+ 
+ #: ../gtk/gtkprintunixdialog.c:3345
+ msgid "Page or_dering:"
+-msgstr "ページの順番(_D):"
++msgstr "ページの順番:"
+ 
+ #: ../gtk/gtkprintunixdialog.c:3361
+ msgid "_Only print:"
+-msgstr "印刷の対象(_O):"
++msgstr "印刷の対象:"
+ 
+ #. In enum order
+ #: ../gtk/gtkprintunixdialog.c:3376
+@@ -2011,7 +2011,7 @@
+ 
+ #: ../gtk/gtkprintunixdialog.c:3381
+ msgid "Sc_ale:"
+-msgstr "拡大/縮小(_A):"
++msgstr "拡大/縮小:"
+ 
+ #: ../gtk/gtkprintunixdialog.c:3408
+ msgid "Paper"
+@@ -2019,19 +2019,19 @@
+ 
+ #: ../gtk/gtkprintunixdialog.c:3412
+ msgid "Paper _type:"
+-msgstr "種類(_T):"
++msgstr "種類:"
+ 
+ #: ../gtk/gtkprintunixdialog.c:3427
+ msgid "Paper _source:"
+-msgstr "用紙のソース(_S):"
++msgstr "用紙のソース:"
+ 
+ #: ../gtk/gtkprintunixdialog.c:3442
+ msgid "Output t_ray:"
+-msgstr "出力先のトレイ(_R):"
++msgstr "出力先のトレイ:"
+ 
+ #: ../gtk/gtkprintunixdialog.c:3482
+ msgid "Or_ientation:"
+-msgstr "用紙の向き(_I):"
++msgstr "用紙の向き:"
+ 
+ #. In enum order
+ #: ../gtk/gtkprintunixdialog.c:3497
+@@ -2056,11 +2056,11 @@
+ 
+ #: ../gtk/gtkprintunixdialog.c:3551
+ msgid "Pri_ority:"
+-msgstr "優先順位(_O):"
++msgstr "優先順位:"
+ 
+ #: ../gtk/gtkprintunixdialog.c:3566
+ msgid "_Billing info:"
+-msgstr "サマリ情報(_B):"
++msgstr "サマリ情報:"
+ 
+ #: ../gtk/gtkprintunixdialog.c:3584
+ msgid "Print Document"
+@@ -2071,11 +2071,11 @@
+ #.
+ #: ../gtk/gtkprintunixdialog.c:3593
+ msgid "_Now"
+-msgstr "今すぐ印刷する(_N)"
++msgstr "今すぐ印刷する"
+ 
+ #: ../gtk/gtkprintunixdialog.c:3604
+ msgid "A_t:"
+-msgstr "時間を指定する(_T):"
++msgstr "時間を指定する:"
+ 
+ #. Translators: Ability to parse the am/pm format depends on actual locale.
+ #. * You can remove the am/pm values below for your locale if they are not
+@@ -2095,7 +2095,7 @@
+ 
+ #: ../gtk/gtkprintunixdialog.c:3636
+ msgid "On _hold"
+-msgstr "保留する(_H)"
++msgstr "保留する"
+ 
+ #: ../gtk/gtkprintunixdialog.c:3637
+ msgid "Hold the job until it is explicitly released"
+@@ -2110,14 +2110,14 @@
+ #.
+ #: ../gtk/gtkprintunixdialog.c:3666
+ msgid "Be_fore:"
+-msgstr "前(_F):"
++msgstr "前:"
+ 
+ #. Translators, this is the label used for the option in the print
+ #. * dialog that controls the back cover page.
+ #.
+ #: ../gtk/gtkprintunixdialog.c:3684
+ msgid "_After:"
+-msgstr "後(_A):"
++msgstr "後:"
+ 
+ #. Translators: this is the tab label for the notebook tab containing
+ #. * job-specific options in the print dialog
+@@ -2193,19 +2193,19 @@
+ 
+ #: ../gtk/gtkrecentchooserdefault.c:1779
+ msgid "Copy _Location"
+-msgstr "場所のコピー(_L)"
++msgstr "場所のコピー"
+ 
+ #: ../gtk/gtkrecentchooserdefault.c:1792
+ msgid "_Remove From List"
+-msgstr "一覧から削除する(_R)"
++msgstr "一覧から削除する"
+ 
+ #: ../gtk/gtkrecentchooserdefault.c:1801
+ msgid "_Clear List"
+-msgstr "一覧のクリア(_C)"
++msgstr "一覧のクリア"
+ 
+ #: ../gtk/gtkrecentchooserdefault.c:1815
+ msgid "Show _Private Resources"
+-msgstr "個人的なリソースを表示する(_P)"
++msgstr "個人的なリソースを表示する"
+ 
+ #. we create a placeholder menuitem, to be used in case
+ #. * the menu is empty. this placeholder will stay around
+@@ -2299,175 +2299,175 @@
+ #: ../gtk/gtkstock.c:323
+ msgctxt "Stock label"
+ msgid "_About"
+-msgstr "情報(_A)"
++msgstr "情報"
+ 
+ #: ../gtk/gtkstock.c:324
+ msgctxt "Stock label"
+ msgid "_Add"
+-msgstr "追加(_A)"
++msgstr "追加"
+ 
+ #: ../gtk/gtkstock.c:325
+ msgctxt "Stock label"
+ msgid "_Apply"
+-msgstr "適用(_A)"
++msgstr "適用"
+ 
+ #: ../gtk/gtkstock.c:326
+ msgctxt "Stock label"
+ msgid "_Bold"
+-msgstr "太字(_B)"
++msgstr "太字"
+ 
+ #: ../gtk/gtkstock.c:327
+ msgctxt "Stock label"
+ msgid "_Cancel"
+-msgstr "キャンセル(_C)"
++msgstr "キャンセル"
+ 
+ #: ../gtk/gtkstock.c:328
+ msgctxt "Stock label"
+ msgid "_CD-Rom"
+-msgstr "CD-ROM(_C)"
++msgstr "CD-ROM"
+ 
+ #: ../gtk/gtkstock.c:329
+ msgctxt "Stock label"
+ msgid "_Clear"
+-msgstr "クリア(_C)"
++msgstr "クリア"
+ 
+ #: ../gtk/gtkstock.c:330
+ msgctxt "Stock label"
+ msgid "_Close"
+-msgstr "閉じる(_C)"
++msgstr "閉じる"
+ 
+ #: ../gtk/gtkstock.c:331
+ msgctxt "Stock label"
+ msgid "C_onnect"
+-msgstr "接続(_O)"
++msgstr "接続"
+ 
+ #: ../gtk/gtkstock.c:332
+ msgctxt "Stock label"
+ msgid "_Convert"
+-msgstr "変換(_C)"
++msgstr "変換"
+ 
+ #: ../gtk/gtkstock.c:333
+ msgctxt "Stock label"
+ msgid "_Copy"
+-msgstr "コピー(_C)"
++msgstr "コピー"
+ 
+ #: ../gtk/gtkstock.c:334
+ msgctxt "Stock label"
+ msgid "Cu_t"
+-msgstr "切り取り(_T)"
++msgstr "切り取り"
+ 
+ #: ../gtk/gtkstock.c:335
+ msgctxt "Stock label"
+ msgid "_Delete"
+-msgstr "削除(_D)"
++msgstr "削除"
+ 
+ #: ../gtk/gtkstock.c:336
+ msgctxt "Stock label"
+ msgid "_Discard"
+-msgstr "無効(_D)"
++msgstr "無効"
+ 
+ #: ../gtk/gtkstock.c:337
+ msgctxt "Stock label"
+ msgid "_Disconnect"
+-msgstr "切断(_D)"
++msgstr "切断"
+ 
+ #: ../gtk/gtkstock.c:338
+ msgctxt "Stock label"
+ msgid "_Execute"
+-msgstr "実行(_E)"
++msgstr "実行"
+ 
+ #: ../gtk/gtkstock.c:339
+ msgctxt "Stock label"
+ msgid "_Edit"
+-msgstr "編集(_E)"
++msgstr "編集"
+ 
+ #: ../gtk/gtkstock.c:340
+ msgctxt "Stock label"
+ msgid "_Find"
+-msgstr "検索(_F)"
++msgstr "検索"
+ 
+ #: ../gtk/gtkstock.c:341
+ msgctxt "Stock label"
+ msgid "Find and _Replace"
+-msgstr "検索して置換(_R)"
++msgstr "検索して置換"
+ 
+ #: ../gtk/gtkstock.c:342
+ msgctxt "Stock label"
+ msgid "_Floppy"
+-msgstr "フロッピー(_F)"
++msgstr "フロッピー"
+ 
+ #: ../gtk/gtkstock.c:343
+ msgctxt "Stock label"
+ msgid "_Fullscreen"
+-msgstr "フルスクリーン(_F)"
++msgstr "フルスクリーン"
+ 
+ #: ../gtk/gtkstock.c:344
+ msgctxt "Stock label"
+ msgid "_Leave Fullscreen"
+-msgstr "フルスクリーンの解除(_L)"
++msgstr "フルスクリーンの解除"
+ 
+ #. This is a navigation label as in "go to the bottom of the page"
+ #: ../gtk/gtkstock.c:346
+ msgctxt "Stock label, navigation"
+ msgid "_Bottom"
+-msgstr "最後(_B)"
++msgstr "最後"
+ 
+ #. This is a navigation label as in "go to the first page"
+ #: ../gtk/gtkstock.c:348
+ msgctxt "Stock label, navigation"
+ msgid "_First"
+-msgstr "先頭(_F)"
++msgstr "先頭"
+ 
+ #. This is a navigation label as in "go to the last page"
+ #: ../gtk/gtkstock.c:350
+ msgctxt "Stock label, navigation"
+ msgid "_Last"
+-msgstr "最後(_L)"
++msgstr "最後"
+ 
+ #. This is a navigation label as in "go to the top of the page"
+ #: ../gtk/gtkstock.c:352
+ msgctxt "Stock label, navigation"
+ msgid "_Top"
+-msgstr "先頭(_T)"
++msgstr "先頭"
+ 
+ #. This is a navigation label as in "go back"
+ #: ../gtk/gtkstock.c:354
+ msgctxt "Stock label, navigation"
+ msgid "_Back"
+-msgstr "戻る(_B)"
++msgstr "戻る"
+ 
+ #. This is a navigation label as in "go down"
+ #: ../gtk/gtkstock.c:356
+ msgctxt "Stock label, navigation"
+ msgid "_Down"
+-msgstr "下へ(_D)"
++msgstr "下へ"
+ 
+ #. This is a navigation label as in "go forward"
+ #: ../gtk/gtkstock.c:358
+ msgctxt "Stock label, navigation"
+ msgid "_Forward"
+-msgstr "進む(_F)"
++msgstr "進む"
+ 
+ #. This is a navigation label as in "go up"
+ #: ../gtk/gtkstock.c:360
+ msgctxt "Stock label, navigation"
+ msgid "_Up"
+-msgstr "上へ(_U)"
++msgstr "上へ"
+ 
+ #: ../gtk/gtkstock.c:361
+ msgctxt "Stock label"
+ msgid "_Harddisk"
+-msgstr "ハードディスク(_H)"
++msgstr "ハードディスク"
+ 
+ #: ../gtk/gtkstock.c:362
+ msgctxt "Stock label"
+ msgid "_Help"
+-msgstr "ヘルプ(_H)"
++msgstr "ヘルプ"
+ 
+ #: ../gtk/gtkstock.c:363
+ msgctxt "Stock label"
+ msgid "_Home"
+-msgstr "ホーム(_H)"
++msgstr "ホーム"
+ 
+ #: ../gtk/gtkstock.c:364
+ msgctxt "Stock label"
+@@ -2482,119 +2482,119 @@
+ #: ../gtk/gtkstock.c:366
+ msgctxt "Stock label"
+ msgid "_Index"
+-msgstr "インデックス(_I)"
++msgstr "インデックス"
+ 
+ #: ../gtk/gtkstock.c:367
+ msgctxt "Stock label"
+ msgid "_Information"
+-msgstr "情報(_I)"
++msgstr "情報"
+ 
+ #: ../gtk/gtkstock.c:368
+ msgctxt "Stock label"
+ msgid "_Italic"
+-msgstr "斜体(_I)"
++msgstr "斜体"
+ 
+ #: ../gtk/gtkstock.c:369
+ msgctxt "Stock label"
+ msgid "_Jump to"
+-msgstr "移動(_J)"
++msgstr "移動"
+ 
+ #. This is about text justification, "centered text"
+ #: ../gtk/gtkstock.c:371
+ msgctxt "Stock label"
+ msgid "_Center"
+-msgstr "中央寄せ(_C)"
++msgstr "中央寄せ"
+ 
+ #. This is about text justification
+ #: ../gtk/gtkstock.c:373
+ msgctxt "Stock label"
+ msgid "_Fill"
+-msgstr "埋める(_F)"
++msgstr "埋める"
+ 
+ #. This is about text justification, "left-justified text"
+ #: ../gtk/gtkstock.c:375
+ msgctxt "Stock label"
+ msgid "_Left"
+-msgstr "左寄せ(_L)"
++msgstr "左寄せ"
+ 
+ #. This is about text justification, "right-justified text"
+ #: ../gtk/gtkstock.c:377
+ msgctxt "Stock label"
+ msgid "_Right"
+-msgstr "右寄せ(_R)"
++msgstr "右寄せ"
+ 
+ #. Media label, as in "fast forward"
+ #: ../gtk/gtkstock.c:380
+ msgctxt "Stock label, media"
+ msgid "_Forward"
+-msgstr "早送り(_F)"
++msgstr "早送り"
+ 
+ #. Media label, as in "next song"
+ #: ../gtk/gtkstock.c:382
+ msgctxt "Stock label, media"
+ msgid "_Next"
+-msgstr "次(_N)"
++msgstr "次"
+ 
+ #. Media label, as in "pause music"
+ #: ../gtk/gtkstock.c:384
+ msgctxt "Stock label, media"
+ msgid "P_ause"
+-msgstr "一時停止(_A)"
++msgstr "一時停止"
+ 
+ #. Media label, as in "play music"
+ #: ../gtk/gtkstock.c:386
+ msgctxt "Stock label, media"
+ msgid "_Play"
+-msgstr "再生(_P)"
++msgstr "再生"
+ 
+ #. Media label, as in  "previous song"
+ #: ../gtk/gtkstock.c:388
+ msgctxt "Stock label, media"
+ msgid "Pre_vious"
+-msgstr "前(_V)"
++msgstr "前"
+ 
+ #. Media label
+ #: ../gtk/gtkstock.c:390
+ msgctxt "Stock label, media"
+ msgid "_Record"
+-msgstr "録音(_R)"
++msgstr "録音"
+ 
+ #. Media label
+ #: ../gtk/gtkstock.c:392
+ msgctxt "Stock label, media"
+ msgid "R_ewind"
+-msgstr "巻き戻し(_E)"
++msgstr "巻き戻し"
+ 
+ #. Media label
+ #: ../gtk/gtkstock.c:394
+ msgctxt "Stock label, media"
+ msgid "_Stop"
+-msgstr "停止(_S)"
++msgstr "停止"
+ 
+ #: ../gtk/gtkstock.c:395
+ msgctxt "Stock label"
+ msgid "_Network"
+-msgstr "ネットワーク(_N)"
++msgstr "ネットワーク"
+ 
+ #: ../gtk/gtkstock.c:396
+ msgctxt "Stock label"
+ msgid "_New"
+-msgstr "新規(_N)"
++msgstr "新規"
+ 
+ #: ../gtk/gtkstock.c:397
+ msgctxt "Stock label"
+ msgid "_No"
+-msgstr "いいえ(_N)"
++msgstr "いいえ"
+ 
+ #: ../gtk/gtkstock.c:398
+ msgctxt "Stock label"
+ msgid "_OK"
+-msgstr "OK(_O)"
++msgstr "OK"
+ 
+ #: ../gtk/gtkstock.c:399
+ msgctxt "Stock label"
+ msgid "_Open"
+-msgstr "開く(_O)"
++msgstr "開く"
+ 
+ #. Page orientation
+ #: ../gtk/gtkstock.c:401
+@@ -2623,153 +2623,153 @@
+ #: ../gtk/gtkstock.c:408
+ msgctxt "Stock label"
+ msgid "Page Set_up"
+-msgstr "ページの設定(_U)"
++msgstr "ページの設定"
+ 
+ #: ../gtk/gtkstock.c:409
+ msgctxt "Stock label"
+ msgid "_Paste"
+-msgstr "貼り付け(_P)"
++msgstr "貼り付け"
+ 
+ #: ../gtk/gtkstock.c:410
+ msgctxt "Stock label"
+ msgid "_Preferences"
+-msgstr "設定(_P)"
++msgstr "設定"
+ 
+ #: ../gtk/gtkstock.c:411
+ msgctxt "Stock label"
+ msgid "_Print"
+-msgstr "印刷(_P)"
++msgstr "印刷"
+ 
+ #: ../gtk/gtkstock.c:412
+ msgctxt "Stock label"
+ msgid "Print Pre_view"
+-msgstr "印刷プレビュー(_V)"
++msgstr "印刷プレビュー"
+ 
+ #: ../gtk/gtkstock.c:413
+ msgctxt "Stock label"
+ msgid "_Properties"
+-msgstr "プロパティ(_P)"
++msgstr "プロパティ"
+ 
+ #: ../gtk/gtkstock.c:414
+ msgctxt "Stock label"
+ msgid "_Quit"
+-msgstr "終了(_Q)"
++msgstr "終了"
+ 
+ #: ../gtk/gtkstock.c:415
+ msgctxt "Stock label"
+ msgid "_Redo"
+-msgstr "やり直す(_R)"
++msgstr "やり直す"
+ 
+ #: ../gtk/gtkstock.c:416
+ msgctxt "Stock label"
+ msgid "_Refresh"
+-msgstr "更新(_R)"
++msgstr "更新"
+ 
+ #: ../gtk/gtkstock.c:417
+ msgctxt "Stock label"
+ msgid "_Remove"
+-msgstr "削除(_R)"
++msgstr "削除"
+ 
+ #: ../gtk/gtkstock.c:418
+ msgctxt "Stock label"
+ msgid "_Revert"
+-msgstr "元に戻す(_R)"
++msgstr "元に戻す"
+ 
+ #: ../gtk/gtkstock.c:419
+ msgctxt "Stock label"
+ msgid "_Save"
+-msgstr "保存(_S)"
++msgstr "保存"
+ 
+ #: ../gtk/gtkstock.c:420
+ msgctxt "Stock label"
+ msgid "Save _As"
+-msgstr "別名で保存(_A)"
++msgstr "別名で保存"
+ 
+ #: ../gtk/gtkstock.c:421
+ msgctxt "Stock label"
+ msgid "Select _All"
+-msgstr "すべて選択(_A)"
++msgstr "すべて選択"
+ 
+ #: ../gtk/gtkstock.c:422
+ msgctxt "Stock label"
+ msgid "_Color"
+-msgstr "色(_C)"
++msgstr "色"
+ 
+ #: ../gtk/gtkstock.c:423
+ msgctxt "Stock label"
+ msgid "_Font"
+-msgstr "フォント(_F)"
++msgstr "フォント"
+ 
+ #. Sorting direction
+ #: ../gtk/gtkstock.c:425
+ msgctxt "Stock label"
+ msgid "_Ascending"
+-msgstr "昇順(_A)"
++msgstr "昇順"
+ 
+ #. Sorting direction
+ #: ../gtk/gtkstock.c:427
+ msgctxt "Stock label"
+ msgid "_Descending"
+-msgstr "降順(_D)"
++msgstr "降順"
+ 
+ #: ../gtk/gtkstock.c:428
+ msgctxt "Stock label"
+ msgid "_Spell Check"
+-msgstr "スペル・チェック(_S)"
++msgstr "スペル・チェック"
+ 
+ #: ../gtk/gtkstock.c:429
+ msgctxt "Stock label"
+ msgid "_Stop"
+-msgstr "停止(_S)"
++msgstr "停止"
+ 
+ #. Font variant
+ #: ../gtk/gtkstock.c:431
+ msgctxt "Stock label"
+ msgid "_Strikethrough"
+-msgstr "打ち消し線(_S)"
++msgstr "打ち消し線"
+ 
+ #: ../gtk/gtkstock.c:432
+ msgctxt "Stock label"
+ msgid "_Undelete"
+-msgstr "削除の取り消し(_U)"
++msgstr "削除の取り消し"
+ 
+ #. Font variant
+ #: ../gtk/gtkstock.c:434
+ msgctxt "Stock label"
+ msgid "_Underline"
+-msgstr "下線(_U)"
++msgstr "下線"
+ 
+ #: ../gtk/gtkstock.c:435
+ msgctxt "Stock label"
+ msgid "_Undo"
+-msgstr "元に戻す(_U)"
++msgstr "元に戻す"
+ 
+ #: ../gtk/gtkstock.c:436
+ msgctxt "Stock label"
+ msgid "_Yes"
+-msgstr "はい(_Y)"
++msgstr "はい"
+ 
+ #. Zoom
+ #: ../gtk/gtkstock.c:438
+ msgctxt "Stock label"
+ msgid "_Normal Size"
+-msgstr "標準サイズ(_N)"
++msgstr "標準サイズ"
+ 
+ #. Zoom
+ #: ../gtk/gtkstock.c:440
+ msgctxt "Stock label"
+ msgid "Best _Fit"
+-msgstr "フィットさせる(_F)"
++msgstr "フィットさせる"
+ 
+ #: ../gtk/gtkstock.c:441
+ msgctxt "Stock label"
+ msgid "Zoom _In"
+-msgstr "拡大(_I)"
++msgstr "拡大"
+ 
+ #: ../gtk/gtkstock.c:442
+ msgctxt "Stock label"
+ msgid "Zoom _Out"
+-msgstr "縮小(_O)"
++msgstr "縮小"
+ 
+ #: ../gtk/gtktextbufferrichtext.c:652
+ #, c-format
+@@ -2891,43 +2891,43 @@
+ 
+ #: ../gtk/gtktextutil.c:61
+ msgid "LRM _Left-to-right mark"
+-msgstr "LRM 左→右 Mark(_L)"
++msgstr "LRM 左→右 Mark"
+ 
+ #: ../gtk/gtktextutil.c:62
+ msgid "RLM _Right-to-left mark"
+-msgstr "RLM 右→左 Mark(_R)"
++msgstr "RLM 右→左 Mark"
+ 
+ #: ../gtk/gtktextutil.c:63
+ msgid "LRE Left-to-right _embedding"
+-msgstr "LRE 左→右 Embedding(_E)"
++msgstr "LRE 左→右 Embedding"
+ 
+ #: ../gtk/gtktextutil.c:64
+ msgid "RLE Right-to-left e_mbedding"
+-msgstr "RLE 右→左 Embedding(_M)"
++msgstr "RLE 右→左 Embedding"
+ 
+ #: ../gtk/gtktextutil.c:65
+ msgid "LRO Left-to-right _override"
+-msgstr "LRO 左→右 Override(_O)"
++msgstr "LRO 左→右 Override"
+ 
+ #: ../gtk/gtktextutil.c:66
+ msgid "RLO Right-to-left o_verride"
+-msgstr "RLO 右→左 Override(_V)"
++msgstr "RLO 右→左 Override"
+ 
+ #: ../gtk/gtktextutil.c:67
+ msgid "PDF _Pop directional formatting"
+-msgstr "PDF POP Directional Formatting(_P)"
++msgstr "PDF POP Directional Formatting"
+ 
+ #: ../gtk/gtktextutil.c:68
+ msgid "ZWS _Zero width space"
+-msgstr "ZWS Zero Width Space(_Z)"
++msgstr "ZWS Zero Width Space"
+ 
+ #: ../gtk/gtktextutil.c:69
+ msgid "ZWJ Zero width _joiner"
+-msgstr "ZWJ Zero Width Joiner(_J)"
++msgstr "ZWJ Zero Width Joiner"
+ 
+ #: ../gtk/gtktextutil.c:70
+ msgid "ZWNJ Zero width _non-joiner"
+-msgstr "ZWNJ Zero Width Non-Joiner(_N)"
++msgstr "ZWNJ Zero Width Non-Joiner"
+ 
+ #: ../gtk/gtkthemes.c:71
+ #, c-format
+@@ -4369,7 +4369,7 @@
+ #: ../modules/printbackends/file/gtkprintbackendfile.c:632
+ #: ../modules/printbackends/test/gtkprintbackendtest.c:503
+ msgid "Pages per _sheet:"
+-msgstr "段組み印刷(_S):"
++msgstr "段組み印刷:"
+ 
+ #: ../modules/printbackends/file/gtkprintbackendfile.c:691
+ msgid "File"
+@@ -4377,7 +4377,7 @@
+ 
+ #: ../modules/printbackends/file/gtkprintbackendfile.c:701
+ msgid "_Output format"
+-msgstr "出力の形式(_O)"
++msgstr "出力の形式"
+ 
+ #: ../modules/printbackends/lpr/gtkprintbackendlpr.c:395
+ msgid "Print to LPR"
+@@ -4445,13 +4445,13 @@
+ "壊れていると思われます"
+ 
+ #~ msgid "_Add"
+-#~ msgstr "追加(_A)"
++#~ msgstr "追加"
+ 
+ #~ msgid "_Remove"
+-#~ msgstr "削除(_R)"
++#~ msgstr "削除"
+ 
+ #~ msgid "_Browse for other folders"
+-#~ msgstr "他のフォルダ(_B)"
++#~ msgstr "他のフォルダ"
+ 
+ #~ msgid "Gdk debugging flags to set"
+ #~ msgstr "有効にする GDK のデバッグ・フラグを指定する"
+@@ -5105,7 +5105,7 @@
+ 
+ #, fuzzy
+ #~ msgid "<b>_Search:</b>"
+-#~ msgstr "検索(_S):"
++#~ msgstr "検索:"
+ 
+ #, fuzzy
+ #~ msgid "<b>Recently Used</b>"

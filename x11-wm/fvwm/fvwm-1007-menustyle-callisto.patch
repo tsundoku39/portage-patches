@@ -1,0 +1,208 @@
+Description: Adjust hardcoded menu style to match Callisto GTK theme
+ Some aspects of menu drawing that we need to match Callisto are not exposed
+ through the configuration interface.
+Origin: tsundoku custom patchset
+Author: tsundoku <me@tsundoku.ne.jp>
+Last-Update: 2019-02-19
+--- a/fvwm/menuitem.c
++++ b/fvwm/menuitem.c
+@@ -81,10 +81,11 @@
+  *
+  */
+ static void draw_separator(
+-	Window w, GC TopGC, GC BottomGC, int x1, int y, int x2)
++	Window w, GC TopGC, GC LineGC, GC BottomGC, int x1, int y, int x2)
+ {
+-	XDrawLine(dpy, w, TopGC   , x1,   y,   x2,   y);
+-	XDrawLine(dpy, w, BottomGC, x1-1, y+1, x2+1, y+1);
++	XDrawLine(dpy, w, TopGC   , x1 + 1,   y - 1,   x2,   y - 1);
++	XDrawLine(dpy, w, LineGC   , x1,   y,   x2,   y);
++	XDrawLine(dpy, w, BottomGC   , x1,   y + 1,   x2 - 1,   y + 1);
+ 
+ 	return;
+ }
+@@ -373,6 +374,7 @@
+ 	int lit_x_start;
+ 	int lit_x_end;
+ 	gc_quad_t gcs;
++	gc_quad_t active_gcs;
+ 	gc_quad_t off_gcs;
+ 	int cs = -1;
+ 	int off_cs;
+@@ -464,6 +466,8 @@
+ 	{
+ 		gcs = ST_MENU_INACTIVE_GCS(ms);
+ 		off_gcs = ST_MENU_INACTIVE_GCS(ms);
++		active_gcs = ST_MENU_ACTIVE_GCS(ms);
++
+ 	}
+ 	if (is_item_selected)
+ 	{
+@@ -542,8 +546,8 @@
+ 	}
+ 	else if (MI_IS_TITLE(mi))
+ 	{
+-		lit_x_start = MDIM_ITEM_X_OFFSET(*dim);
+-		lit_x_end = lit_x_start + MDIM_ITEM_WIDTH(*dim);
++		lit_x_start = MDIM_HILIGHT_X_OFFSET(*dim);
++		lit_x_end = lit_x_start + MDIM_HILIGHT_WIDTH(*dim);
+ 		/* Hilight the background. */
+ 		if (
+ 			MDIM_HILIGHT_WIDTH(*dim) > 0 &&
+@@ -551,9 +555,9 @@
+ 		{
+ 			draw_highlight_background(
+ 				mpip, lit_x_start,
+-				y_offset + relief_thickness,
++				y_offset,
+ 				lit_x_end - lit_x_start,
+-				y_height - relief_thickness,
++				y_height,
+ 				(cs >= 0 ? &Colorset[cs] : NULL),
+ 				gcs.back_gc);
+ 			item_cleared = True;
+@@ -601,9 +605,8 @@
+ 	/* Calculate the separator offsets. */
+ 	if (ST_HAS_LONG_SEPARATORS(ms))
+ 	{
+-		sx1 = MDIM_ITEM_X_OFFSET(*dim) + relief_thickness;
+-		sx2 = MDIM_ITEM_X_OFFSET(*dim) + MDIM_ITEM_WIDTH(*dim) - 1 -
+-			relief_thickness;
++		sx1 = MDIM_ITEM_X_OFFSET(*dim) - relief_thickness;
++		sx2 = MDIM_ITEM_X_OFFSET(*dim) + MDIM_ITEM_WIDTH(*dim);
+ 	}
+ 	else
+ 	{
+@@ -618,8 +621,8 @@
+ 		{
+ 			/* It's a separator. */
+ 			draw_separator(
+-				mpip->w, gcs.shadow_gc, gcs.hilight_gc, sx1,
+-				y_offset + y_height - MENU_SEPARATOR_HEIGHT,
++				mpip->w, gcs.shadow_gc, active_gcs.hilight_gc, gcs.hilight_gc, sx1,
++				(y_offset + y_height - MENU_SEPARATOR_HEIGHT) + 2,
+ 				sx2);
+ 			/* Nothing else to do. */
+ 		}
+@@ -660,7 +663,7 @@
+ 			if (sx1 < sx2)
+ 			{
+ 				draw_separator(
+-					mpip->w, gcs.shadow_gc, gcs.hilight_gc,
++					mpip->w, gcs.shadow_gc, active_gcs.hilight_gc, gcs.hilight_gc,
+ 					sx1, y, sx2);
+ 			}
+ 		}
+@@ -674,7 +677,7 @@
+ 			{
+ 				y = y_offset + y_height - MENU_SEPARATOR_HEIGHT;
+ 				draw_separator(
+-					mpip->w, gcs.shadow_gc, gcs.hilight_gc,
++					mpip->w, gcs.shadow_gc, active_gcs.hilight_gc, gcs.hilight_gc,
+ 					sx1, y, sx2);
+ 			}
+ 			break;
+--- a/fvwm/menus.c
++++ b/fvwm/menus.c
+@@ -1151,6 +1151,7 @@
+ 	int left_objects = 0;
+ 	int right_objects = 0;
+ 	int x;
++	int xsub;
+ 	unsigned char icons_placed = 0;
+ 	Bool sidepic_placed = False;
+ 	Bool triangle_placed = False;
+@@ -1265,6 +1266,7 @@
+ 					if (*format == 'r')
+ 					{
+ 						right_objects++;
++						xsub = x;
+ 					}
+ 					else
+ 					{
+@@ -1368,13 +1370,11 @@
+ 				triangle_placed = True;
+ 				if (msp->max.i.triangle_width > 0)
+ 				{
+-					x += gap_left;
++					x = xsub;
+ 					MR_TRIANGLE_X_OFFSET(
+-						msp->menu) = x;
++						msp->menu) = xsub - msp->max.i.triangle_width + 1;
+ 					MR_IS_LEFT_TRIANGLE(msp->menu) =
+ 						(*format == '<');
+-					x += msp->max.i.triangle_width +
+-						gap_right;
+ 					item_order[used_objects++] =
+ 						&(MR_TRIANGLE_X_OFFSET(
+ 							  msp->menu));
+@@ -1797,7 +1797,7 @@
+ 			/* don't propagate sidepic, sidecolor, popup and
+ 			 * popdown actions */
+ 			/* And add the entry pointing to the new menu */
+-			gt_name = gettext("More&...");
++			gt_name = gettext("継続...");
+ 			name = safestrdup(gt_name);
+ 			AddToMenu(
+ 				msp->menu, name, tempname,
+@@ -2706,10 +2706,15 @@
+ 		 * redrawing several menu items. */
+ 		RelieveRectangle(
+ 			dpy, MR_WINDOW(mr), 0, 0, MR_WIDTH(mr) - 1,
+-			MR_HEIGHT(mr) - 1, (Pdepth < 2) ?
++			MR_HEIGHT(mr) - 1,
++			HILIGHT_GC(MST_MENU_ACTIVE_GCS(mr)),
++			HILIGHT_GC(MST_MENU_ACTIVE_GCS(mr)), bw);
++		RelieveRectangle(
++			dpy, MR_WINDOW(mr), 1, 1, MR_WIDTH(mr) - 3,
++			MR_HEIGHT(mr) - 3, (Pdepth < 2) ?
+ 			SHADOW_GC(MST_MENU_INACTIVE_GCS(mr)) :
+ 			HILIGHT_GC(MST_MENU_INACTIVE_GCS(mr)),
+-			SHADOW_GC(MST_MENU_INACTIVE_GCS(mr)), bw);
++			SHADOW_GC(MST_MENU_INACTIVE_GCS(mr)), bw - 1);
+ 		{
+ 			return;
+ 		}
+@@ -2759,11 +2764,16 @@
+ 		}
+ 	} /* if (ms) */
+ 	/* draw the relief */
+-	RelieveRectangle(dpy, MR_WINDOW(mr), 0, 0, MR_WIDTH(mr) - 1,
+-			 MR_HEIGHT(mr) - 1, (Pdepth < 2) ?
++	RelieveRectangle(
++			dpy, MR_WINDOW(mr), 0, 0, MR_WIDTH(mr) - 1,
++			MR_HEIGHT(mr) - 1,
++			HILIGHT_GC(MST_MENU_ACTIVE_GCS(mr)),
++			HILIGHT_GC(MST_MENU_ACTIVE_GCS(mr)), bw);
++	RelieveRectangle(dpy, MR_WINDOW(mr), 1, 1, MR_WIDTH(mr) - 3,
++			 MR_HEIGHT(mr) - 3, (Pdepth < 2) ?
+ 			 SHADOW_GC(MST_MENU_INACTIVE_GCS(mr)) :
+ 			 HILIGHT_GC(MST_MENU_INACTIVE_GCS(mr)),
+-			 SHADOW_GC(MST_MENU_INACTIVE_GCS(mr)), bw);
++			 SHADOW_GC(MST_MENU_INACTIVE_GCS(mr)), bw - 1);
+ 	/* paint the menu items */
+ 	for (mi = MR_FIRST_ITEM(mr); mi != NULL; mi = MI_NEXT_ITEM(mi))
+ 	{
+--- a/libs/defaults.h
++++ b/libs/defaults.h
+@@ -61,16 +61,16 @@
+ #define DEFAULT_MENU_ITEM_FORMAT          "%s%.1|%.5i%.5l%.5l%.5r%.5i%2.3>%1|"
+ #define DEFAULT_LEFT_MENU_ITEM_FORMAT     "%.1|%3.2<%5i%5l%5l%5r%5i%1|%s"
+ /*   size of the submenu triangle. */
+-#define MENU_TRIANGLE_WIDTH                5 /* pixels */
+-#define MENU_TRIANGLE_HEIGHT               9 /* pixels */
++#define MENU_TRIANGLE_WIDTH                7 /* pixels */
++#define MENU_TRIANGLE_HEIGHT              11 /* pixels */
+ /*  menu underline parameters */
+ #define MENU_UNDERLINE_THICKNESS           1 /* pixels */
+ #define MENU_UNDERLINE_GAP                 1 /* pixels */
+ #define MENU_UNDERLINE_HEIGHT  (MENU_UNDERLINE_THICKNESS + MENU_UNDERLINE_GAP)
+ /*   menu separator parameters */
+-#define MENU_SEPARATOR_SHORT_X_OFFSET      5 /* pixels */
++#define MENU_SEPARATOR_SHORT_X_OFFSET      2 /* pixels */
+ #define MENU_SEPARATOR_Y_OFFSET            2 /* pixels */
+-#define MENU_SEPARATOR_HEIGHT              2 /* pixels */
++#define MENU_SEPARATOR_HEIGHT              5 /* pixels */
+ #define MENU_SEPARATOR_TOTAL_HEIGHT    \
+           (MENU_SEPARATOR_HEIGHT + MENU_SEPARATOR_Y_OFFSET)
+ /*   menu tear off bar parameters */

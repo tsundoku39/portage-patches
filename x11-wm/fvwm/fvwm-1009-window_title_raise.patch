@@ -1,0 +1,11 @@
+diff -urN a/fvwm/borders.c b/fvwm/borders.c
+--- a/fvwm/borders.c	2018-05-26 04:35:26.000000000 -0700
++++ b/fvwm/borders.c	2022-05-30 19:31:04.048007353 -0700
+@@ -3610,6 +3610,7 @@
+ 				1);
+ 		}
+ 	}
++	tdd->fstr.y--;
+ 	FlocaleDrawString(dpy, fw->title_font, &tdd->fstr, 0);
+ 
+ 	return;

@@ -1,0 +1,163 @@
+Description: Remove keyboard accelerators from Japanese UI strings
+ Japanese UI strings contain a suffixed letter in parentheses for placement
+ of the Windows-style keyboard accelerator underline. Disabling accelerators
+ through GTK themes only removes the underline, leaving the vestigial letter.
+ This patch removes them all e.g.
+ ファイル (F) → ファイル
+Origin: tsundoku custom patchset
+Author: tsundoku <me@tsundoku.ne.jp>
+Last-Update: 2019-02-23
+--- a/po/ja.po
++++ b/po/ja.po
+@@ -292,7 +292,7 @@
+ 
+ #: ../src/ui.c:959 ../ui/main_frame.ui.h:17 ../ui/main_frame_hildon.ui.h:16
+ msgid "Show _menu bar"
+-msgstr "メニュー・バーを表示する(_M)"
++msgstr "メニュー・バーを表示する"
+ 
+ #: ../src/ui.c:999
+ #, c-format
+@@ -678,39 +678,39 @@
+ 
+ #: ../ui/main_frame.ui.h:2 ../ui/main_frame_hildon.ui.h:1
+ msgid "_File"
+-msgstr "ファイル(_F)"
++msgstr "ファイル"
+ 
+ #: ../ui/main_frame.ui.h:3 ../ui/main_frame_hildon.ui.h:3
+ msgid "_Edit"
+-msgstr "編集(_E)"
++msgstr "編集"
+ 
+ #: ../ui/main_frame.ui.h:4 ../ui/main_frame_hildon.ui.h:4
+ msgid "Cu_t Display Value"
+-msgstr "表示値の切り取り(_T)"
++msgstr "表示値の切り取り"
+ 
+ #: ../ui/main_frame.ui.h:5 ../ui/main_frame_hildon.ui.h:5
+ msgid "_Copy Display Value"
+-msgstr "表示値のコピー(_C)"
++msgstr "表示値のコピー"
+ 
+ #: ../ui/main_frame.ui.h:6
+ msgid "_Paste and Append to Display Value"
+-msgstr "表示値に追加して貼り付け(_P)"
++msgstr "表示値に追加して貼り付け"
+ 
+ #: ../ui/main_frame.ui.h:7 ../ui/main_frame_hildon.ui.h:7
+ msgid "_Preferences..."
+-msgstr "設定(_P)..."
++msgstr "設定..."
+ 
+ #: ../ui/main_frame.ui.h:8 ../ui/main_frame_hildon.ui.h:8
+ msgid "_View"
+-msgstr "表示(_V)"
++msgstr "表示"
+ 
+ #: ../ui/main_frame.ui.h:9 ../ui/main_frame_hildon.ui.h:9
+ msgid "_Basic Mode"
+-msgstr "基本モード(_B)"
++msgstr "基本モード"
+ 
+ #: ../ui/main_frame.ui.h:10 ../ui/main_frame_hildon.ui.h:10
+ msgid "_Scientific Mode"
+-msgstr "科学計算モード(_S)"
++msgstr "科学計算モード"
+ 
+ #: ../ui/main_frame.ui.h:11
+ msgid "_Paper Mode"
+@@ -740,75 +740,75 @@
+ 
+ #: ../ui/main_frame.ui.h:18 ../ui/main_frame_hildon.ui.h:17
+ msgid "_Calculator"
+-msgstr "計算機(_C)"
++msgstr "計算機"
+ 
+ #: ../ui/main_frame.ui.h:19 ../ui/main_frame_hildon.ui.h:18
+ msgid "_Number bases"
+-msgstr "基数(_N)"
++msgstr "基数"
+ 
+ #: ../ui/main_frame.ui.h:20 ../ui/main_frame_hildon.ui.h:19
+ msgid "_Decimal"
+-msgstr "10進数(_D)"
++msgstr "10進数"
+ 
+ #: ../ui/main_frame.ui.h:21 ../ui/main_frame_hildon.ui.h:20
+ msgid "_Hexadecimal"
+-msgstr "16進数(_H)"
++msgstr "16進数"
+ 
+ #: ../ui/main_frame.ui.h:22 ../ui/main_frame_hildon.ui.h:21
+ msgid "_Octal"
+-msgstr "8進数(_O)"
++msgstr "8進数"
+ 
+ #: ../ui/main_frame.ui.h:23 ../ui/main_frame_hildon.ui.h:22
+ msgid "_Binary"
+-msgstr "2進数(_B)"
++msgstr "2進数"
+ 
+ #: ../ui/main_frame.ui.h:24 ../ui/main_frame_hildon.ui.h:23
+ msgid "Angle _units"
+-msgstr "角度の単位(_U)"
++msgstr "角度の単位"
+ 
+ #: ../ui/main_frame.ui.h:25 ../ui/main_frame_hildon.ui.h:24
+ msgid "D_egrees"
+-msgstr "度(_E)"
++msgstr "度"
+ 
+ #: ../ui/main_frame.ui.h:26 ../ui/main_frame_hildon.ui.h:25
+ msgid "_Radians"
+-msgstr "ラジアン(_R)"
++msgstr "ラジアン"
+ 
+ #: ../ui/main_frame.ui.h:27 ../ui/main_frame_hildon.ui.h:26
+ msgid "_Gradians"
+-msgstr "グラジアン(_G)"
++msgstr "グラジアン"
+ 
+ #: ../ui/main_frame.ui.h:28 ../ui/main_frame_hildon.ui.h:27
+ msgid "Notation _modes"
+-msgstr "表記モード(_M)"
++msgstr "表記モード"
+ 
+ #: ../ui/main_frame.ui.h:29 ../ui/main_frame_hildon.ui.h:28
+ msgid "_Algebraic"
+-msgstr "代数記法(_A)"
++msgstr "代数記法"
+ 
+ #: ../ui/main_frame.ui.h:30 ../ui/main_frame_hildon.ui.h:29
+ msgid "_Reverse Polish (RPN)"
+-msgstr "逆ポーランド記法(RPN)(_R)"
++msgstr "逆ポーランド記法(RPN)"
+ 
+ #: ../ui/main_frame.ui.h:31 ../ui/main_frame_hildon.ui.h:30
+ msgid "_Formula Entry"
+-msgstr "公式のエントリ(_F)"
++msgstr "公式のエントリ"
+ 
+ #: ../ui/main_frame.ui.h:32 ../ui/main_frame_hildon.ui.h:31
+ msgid "_Help"
+-msgstr "ヘルプ(_H)"
++msgstr "ヘルプ"
+ 
+ #: ../ui/main_frame_hildon.ui.h:2
+ msgid "_Quit"
+-msgstr "終了(_Q)"
++msgstr "終了"
+ 
+ #: ../ui/main_frame_hildon.ui.h:6
+ msgid "_Paste As Display Value"
+-msgstr "表示値へ貼り付け(_P)"
++msgstr "表示値へ貼り付け"
+ 
+ #: ../ui/main_frame_hildon.ui.h:32
+ msgid "_About..."
+-msgstr "情報(_A)..."
++msgstr "情報..."
+ 
+ #: ../ui/prefs_gtk2.ui.h:1 ../ui/prefs_gtk3.ui.h:1
+ msgid "Decimal"

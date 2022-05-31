@@ -1,0 +1,93 @@
+Description: Use symbolic accelerator labels in menus
+ Upstream GTK has Mac-style accelerator symbols defined for use
+ only when GTK is being compiled in macOS. We want them too
+ (with minor adjustments), so we remove the Windows-style labels
+ ("Ctrl+" "Shift+" etc.) and the conditional preprocessor directives.
+Origin: tsundoku custom patchset
+Author: tsundoku <me@tsundoku.ne.jp>
+Last-Update: 2019-02-28
+--- a/gtk/gtkaccellabel.c
++++ b/gtk/gtkaccellabel.c
+@@ -137,28 +137,6 @@
+   class->signal_quote1 = g_strdup ("<:");
+   class->signal_quote2 = g_strdup (":>");
+ 
+-#ifndef GDK_WINDOWING_QUARTZ
+-  /* This is the text that should appear next to menu accelerators
+-   * that use the shift key. If the text on this key isn't typically
+-   * translated on keyboards used for your language, don't translate
+-   * this.
+-   */
+-  class->mod_name_shift = g_strdup (C_("keyboard label", "Shift"));
+-  /* This is the text that should appear next to menu accelerators
+-   * that use the control key. If the text on this key isn't typically
+-   * translated on keyboards used for your language, don't translate
+-   * this.
+-   */
+-  class->mod_name_control = g_strdup (C_("keyboard label", "Ctrl"));
+-  /* This is the text that should appear next to menu accelerators
+-   * that use the alt key. If the text on this key isn't typically
+-   * translated on keyboards used for your language, don't translate
+-   * this.
+-   */
+-  class->mod_name_alt = g_strdup (C_("keyboard label", "Alt"));
+-  class->mod_separator = g_strdup ("+");
+-#else /* GDK_WINDOWING_QUARTZ */
+-
+   /* U+21E7 UPWARDS WHITE ARROW */
+   class->mod_name_shift = g_strdup ("\xe2\x87\xa7");
+   /* U+2303 UP ARROWHEAD */
+@@ -167,8 +145,6 @@
+   class->mod_name_alt = g_strdup ("\xe2\x8c\xa5");
+   class->mod_separator = g_strdup ("");
+ 
+-#endif /* GDK_WINDOWING_QUARTZ */
+-
+   class->accel_seperator = g_strdup (" / ");
+   class->latin1_to_char = TRUE;
+   
+@@ -592,12 +568,11 @@
+ append_keyval_symbol (guint    accelerator_key,
+                       GString *gstring)
+ {
+-#ifdef GDK_WINDOWING_QUARTZ
+   switch (accelerator_key)
+   {
+   case GDK_Return:
+-    /* U+21A9 LEFTWARDS ARROW WITH HOOK */
+-    g_string_append (gstring, "\xe2\x86\xa9");
++    /* U+21B5 DOWN ARROW WITH CORNER LEFT (CARRIAGE RETURN) */
++    g_string_append (gstring, "\xe2\x86\xb5");
+     return TRUE;
+ 
+   case GDK_ISO_Enter:
+@@ -663,9 +638,6 @@
+   default:
+     return FALSE;
+   }
+-#else /* !GDK_WINDOWING_QUARTZ */
+-  return FALSE;
+-#endif
+ }
+ 
+ gchar *
+@@ -740,7 +712,8 @@
+        * translated on keyboards used for your language, don't translate
+        * this.
+        */
+-      g_string_append (gstring, C_("keyboard label", "Super"));
++      /* Command key symbol U+2318 PLACE OF INTEREST SIGN */
++      g_string_append (gstring, C_("keyboard label", "\xe2\x8c\x98"));
+       seen_mod = TRUE;
+     }
+   if (accelerator_mods & GDK_HYPER_MASK)
+@@ -767,7 +740,8 @@
+        * translated on keyboards used for your language, don't translate
+        * this.
+        */
+-      g_string_append (gstring, C_("keyboard label", "Meta"));
++      /* Meta key symbol U+2B26 WHITE MEDIUM DIAMOND */
++      g_string_append (gstring, C_("keyboard label", "\xe2\xac\xa6"));
+ #else
+       /* Command key symbol U+2318 PLACE OF INTEREST SIGN */
+       g_string_append (gstring, "\xe2\x8c\x98");

@@ -1,0 +1,499 @@
+Description: Remove keyboard accelerators from Japanese UI strings
+ Japanese UI strings contain a suffixed letter in parentheses for placement
+ of the Windows-style keyboard accelerator underline. Disabling accelerators
+ through GTK themes only removes the underline, leaving the vestigial letter.
+ This patch removes them all e.g.
+ ファイル (F) → ファイル
+Origin: tsundoku custom patchset
+Author: tsundoku <me@tsundoku.ne.jp>
+Last-Update: 2019-05-21
+--- a/po/ja_JP.po
++++ b/po/ja_JP.po
+@@ -171,27 +171,27 @@
+ 
+ #: src/common/hexchat.c:885
+ msgid "_Open Dialog Window"
+-msgstr "ダイアログウィンドウを開く(_O)"
++msgstr "ダイアログウィンドウを開く"
+ 
+ #: src/common/hexchat.c:886
+ msgid "_Send a File"
+-msgstr "ファイルを送信(_S)"
++msgstr "ファイルを送信"
+ 
+ #: src/common/hexchat.c:887
+ msgid "_User Info (WhoIs)"
+-msgstr "ユーザー情報(Whois)(_U)"
++msgstr "ユーザー情報(Whois)"
+ 
+ #: src/common/hexchat.c:888
+ msgid "_Add to Friends List"
+-msgstr "フレンドリストに追加(_A)"
++msgstr "フレンドリストに追加"
+ 
+ #: src/common/hexchat.c:889
+ msgid "_Ignore"
+-msgstr "無視(_I)"
++msgstr "無視"
+ 
+ #: src/common/hexchat.c:890
+ msgid "O_perator Actions"
+-msgstr "オペレーターアクション(_P)"
++msgstr "オペレーターアクション"
+ 
+ #: src/common/hexchat.c:892
+ msgid "Give Ops"
+@@ -3329,15 +3329,15 @@
+ 
+ #: src/fe-gtk/chanlist.c:624 src/fe-gtk/chanlist.c:812
+ msgid "_Join Channel"
+-msgstr "チャンネルへ参加(_J)"
++msgstr "チャンネルへ参加"
+ 
+ #: src/fe-gtk/chanlist.c:626
+ msgid "_Copy Channel Name"
+-msgstr "チャンネル名をコピー(_C)"
++msgstr "チャンネル名をコピー"
+ 
+ #: src/fe-gtk/chanlist.c:628
+ msgid "Copy _Topic Text"
+-msgstr "トピックテキストをコピー(_T)"
++msgstr "トピックテキストをコピー"
+ 
+ #: src/fe-gtk/chanlist.c:720
+ #, c-format
+@@ -3346,15 +3346,15 @@
+ 
+ #: src/fe-gtk/chanlist.c:794
+ msgid "_Search"
+-msgstr "検索(_S)"
++msgstr "検索"
+ 
+ #: src/fe-gtk/chanlist.c:800
+ msgid "_Download List"
+-msgstr "ダウンロードリスト(_D)"
++msgstr "ダウンロードリスト"
+ 
+ #: src/fe-gtk/chanlist.c:806
+ msgid "Save _List..."
+-msgstr "リストを保存(_L)"
++msgstr "リストを保存"
+ 
+ #. =============================================================
+ #: src/fe-gtk/chanlist.c:819
+@@ -3811,7 +3811,7 @@
+ 
+ #: src/fe-gtk/joind.c:182
+ msgid "_Nothing, I'll join a channel later."
+-msgstr "何もしません。後でチャンネルに参加します。(_N)"
++msgstr "何もしません。後でチャンネルに参加します。"
+ 
+ #: src/fe-gtk/joind.c:191
+ msgid "_Join this channel:"
+@@ -3832,7 +3832,7 @@
+ 
+ #: src/fe-gtk/joind.c:223
+ msgid "_Always show this dialog after connecting."
+-msgstr "常にこのダイアログを接続後に表示します。(_A)"
++msgstr "常にこのダイアログを接続後に表示します。"
+ 
+ #: src/fe-gtk/maingui.c:386
+ msgid "Dialog with"
+@@ -3877,7 +3877,7 @@
+ 
+ #: src/fe-gtk/maingui.c:1225
+ msgid "_Minimize to Tray"
+-msgstr "トレイに最小化(_M)"
++msgstr "トレイに最小化"
+ 
+ #: src/fe-gtk/maingui.c:1441
+ msgid "Insert Attribute or Color Code"
+@@ -3909,11 +3909,11 @@
+ 
+ #: src/fe-gtk/maingui.c:1504
+ msgid "_Settings"
+-msgstr "設定(_S)"
++msgstr "設定"
+ 
+ #: src/fe-gtk/maingui.c:1506
+ msgid "_Log to Disk"
+-msgstr "ログをディスクに(_L)"
++msgstr "ログをディスクに"
+ 
+ #: src/fe-gtk/maingui.c:1507
+ msgid "_Reload Scrollback"
+@@ -3925,31 +3925,31 @@
+ 
+ #: src/fe-gtk/maingui.c:1511
+ msgid "_Hide Join/Part Messages"
+-msgstr "参加と退出メッセージを隠す(_H)"
++msgstr "参加と退出メッセージを隠す"
+ 
+ #: src/fe-gtk/maingui.c:1520
+ msgid "_Extra Alerts"
+-msgstr "追加の警告(_E)"
++msgstr "追加の警告"
+ 
+ #: src/fe-gtk/maingui.c:1522
+ msgid "Beep on _Message"
+-msgstr "メッセージでビープ音(_M)"
++msgstr "メッセージでビープ音"
+ 
+ #: src/fe-gtk/maingui.c:1524
+ msgid "Blink Tray _Icon"
+-msgstr "トレイアイコンを点滅(_I)"
++msgstr "トレイアイコンを点滅"
+ 
+ #: src/fe-gtk/maingui.c:1526
+ msgid "Blink Task _Bar"
+-msgstr "タスクバーを点滅(_B)"
++msgstr "タスクバーを点滅"
+ 
+ #: src/fe-gtk/maingui.c:1566 src/fe-gtk/menu.c:2351
+ msgid "_Detach"
+-msgstr "デタッチ(_D)"
++msgstr "デタッチ"
+ 
+ #: src/fe-gtk/maingui.c:1568 src/fe-gtk/menu.c:2352 src/fe-gtk/menu.c:2357
+ msgid "_Close"
+-msgstr "閉じる(_C)"
++msgstr "閉じる"
+ 
+ #: src/fe-gtk/maingui.c:1908 src/fe-gtk/maingui.c:2021
+ msgid "User limit must be a number!\n"
+@@ -4009,7 +4009,7 @@
+ 
+ #: src/fe-gtk/maingui.c:2922
+ msgid "Mat_ch case"
+-msgstr "大文字と小文字を区別(_C)"
++msgstr "大文字と小文字を区別"
+ 
+ #: src/fe-gtk/maingui.c:2927
+ msgid "Perform a case-sensitive search."
+@@ -4017,7 +4017,7 @@
+ 
+ #: src/fe-gtk/maingui.c:2929
+ msgid "_Regex"
+-msgstr "正規表現(_R)"
++msgstr "正規表現"
+ 
+ #: src/fe-gtk/maingui.c:2934
+ msgid "Regard search string as a regular expression."
+@@ -4109,7 +4109,7 @@
+ 
+ #: src/fe-gtk/menu.c:1077
+ msgid "_Autojoin"
+-msgstr "自動参加(_A)"
++msgstr "自動参加"
+ 
+ #: src/fe-gtk/menu.c:1079
+ msgid "Autojoin Channel"
+@@ -4117,7 +4117,7 @@
+ 
+ #: src/fe-gtk/menu.c:1113 src/fe-gtk/menu.c:1117
+ msgid "_Auto-Connect"
+-msgstr "自動接続(_A)"
++msgstr "自動接続"
+ 
+ #: src/fe-gtk/menu.c:1138
+ #, c-format
+@@ -4308,7 +4308,7 @@
+ 
+ #: src/fe-gtk/menu.c:1761
+ msgid "_New"
+-msgstr "新規(_N)"
++msgstr "新規"
+ 
+ #: src/fe-gtk/menu.c:1762
+ msgid "Server Tab"
+@@ -4332,24 +4332,24 @@
+ 
+ #: src/fe-gtk/menu.c:1776 src/fe-gtk/plugin-tray.c:579
+ msgid "_Quit"
+-msgstr "終了(_Q)"
++msgstr "終了"
+ 
+ #. 15
+ #: src/fe-gtk/menu.c:1778
+ msgid "_View"
+-msgstr "閲覧(_V)"
++msgstr "閲覧"
+ 
+ #: src/fe-gtk/menu.c:1780
+ msgid "_Menu Bar"
+-msgstr "メニューバー(_M)"
++msgstr "メニューバー"
+ 
+ #: src/fe-gtk/menu.c:1781
+ msgid "_Topic Bar"
+-msgstr "トピックバー(_T)"
++msgstr "トピックバー"
+ 
+ #: src/fe-gtk/menu.c:1782
+ msgid "_User List"
+-msgstr "ユーザーリスト(_U)"
++msgstr "ユーザーリスト"
+ 
+ #: src/fe-gtk/menu.c:1783
+ msgid "U_ser List Buttons"
+@@ -4357,23 +4357,23 @@
+ 
+ #: src/fe-gtk/menu.c:1784
+ msgid "M_ode Buttons"
+-msgstr "モードボタン(_O)"
++msgstr "モードボタン"
+ 
+ #: src/fe-gtk/menu.c:1786
+ msgid "_Channel Switcher"
+-msgstr "チャンネル切り替え(_C)"
++msgstr "チャンネル切り替え"
+ 
+ #: src/fe-gtk/menu.c:1788
+ msgid "_Tabs"
+-msgstr "タブ(_T)"
++msgstr "タブ"
+ 
+ #: src/fe-gtk/menu.c:1789
+ msgid "T_ree"
+-msgstr "ツリー(_R)"
++msgstr "ツリー"
+ 
+ #: src/fe-gtk/menu.c:1791
+ msgid "_Network Meters"
+-msgstr "ネットワークメーター(_N)"
++msgstr "ネットワークメーター"
+ 
+ #: src/fe-gtk/menu.c:1793 src/fe-gtk/setup.c:214
+ msgid "Off"
+@@ -4385,19 +4385,19 @@
+ 
+ #: src/fe-gtk/menu.c:1799
+ msgid "_Fullscreen"
+-msgstr "フルスクリーン(_F)"
++msgstr "フルスクリーン"
+ 
+ #: src/fe-gtk/menu.c:1801
+ msgid "_Server"
+-msgstr "サーバー(_S)"
++msgstr "サーバー"
+ 
+ #: src/fe-gtk/menu.c:1802
+ msgid "_Disconnect"
+-msgstr "切断する(_D)"
++msgstr "切断する"
+ 
+ #: src/fe-gtk/menu.c:1803
+ msgid "_Reconnect"
+-msgstr "再接続する(_R)"
++msgstr "再接続する"
+ 
+ #: src/fe-gtk/menu.c:1804
+ msgid "_Join a Channel"
+@@ -4409,20 +4409,20 @@
+ 
+ #: src/fe-gtk/menu.c:1808
+ msgid "Marked _Away"
+-msgstr "席を離れる(_A)"
++msgstr "席を離れる"
+ 
+ #: src/fe-gtk/menu.c:1810
+ msgid "_Usermenu"
+-msgstr "ユーザーメニュー(_U)"
++msgstr "ユーザーメニュー"
+ 
+ #. 40
+ #: src/fe-gtk/menu.c:1812
+ msgid "S_ettings"
+-msgstr "設定(_E)"
++msgstr "設定"
+ 
+ #: src/fe-gtk/menu.c:1813 src/fe-gtk/plugin-tray.c:577
+ msgid "_Preferences"
+-msgstr "設定(_P)..."
++msgstr "設定..."
+ 
+ #: src/fe-gtk/menu.c:1815
+ msgid "Auto Replace"
+@@ -4463,7 +4463,7 @@
+ #. 52
+ #: src/fe-gtk/menu.c:1825
+ msgid "_Window"
+-msgstr "ウィンドウ(_W)"
++msgstr "ウィンドウ"
+ 
+ #: src/fe-gtk/menu.c:1826
+ msgid "_Ban List"
+@@ -4508,11 +4508,11 @@
+ 
+ #: src/fe-gtk/menu.c:1838
+ msgid "_Copy Selection"
+-msgstr "選択した部分をコピー(_C)"
++msgstr "選択した部分をコピー"
+ 
+ #: src/fe-gtk/menu.c:1839
+ msgid "C_lear Text"
+-msgstr "通常テキスト(_L)"
++msgstr "通常テキスト"
+ 
+ #: src/fe-gtk/menu.c:1840
+ msgid "Save Text"
+@@ -4536,20 +4536,20 @@
+ 
+ #: src/fe-gtk/menu.c:1848 src/fe-gtk/menu.c:2343
+ msgid "_Help"
+-msgstr "ヘルプ(_H)"
++msgstr "ヘルプ"
+ 
+ #. 74
+ #: src/fe-gtk/menu.c:1849
+ msgid "_Contents"
+-msgstr "コンテンツ(_C)"
++msgstr "コンテンツ"
+ 
+ #: src/fe-gtk/menu.c:1850
+ msgid "_About"
+-msgstr "HexChat について(_A)"
++msgstr "HexChat について"
+ 
+ #: src/fe-gtk/menu.c:2356
+ msgid "_Attach"
+-msgstr "アタッチ(_A)"
++msgstr "アタッチ"
+ 
+ #: src/fe-gtk/notifygui.c:123 src/fe-gtk/plugingui.c:64
+ msgid "Name"
+@@ -4643,15 +4643,15 @@
+ 
+ #: src/fe-gtk/plugin-tray.c:549
+ msgid "_Restore Window"
+-msgstr "ウィンドウを元のサイズに戻す(_R)"
++msgstr "ウィンドウを元のサイズに戻す"
+ 
+ #: src/fe-gtk/plugin-tray.c:551
+ msgid "_Hide Window"
+-msgstr "ウィンドウを隠す(_H)"
++msgstr "ウィンドウを隠す"
+ 
+ #: src/fe-gtk/plugin-tray.c:555
+ msgid "_Blink on"
+-msgstr "点滅(_B)"
++msgstr "点滅"
+ 
+ #: src/fe-gtk/plugin-tray.c:556 src/fe-gtk/setup.c:705
+ msgid "Channel Message"
+@@ -4668,15 +4668,15 @@
+ #. blink_item (BIT_FILEOFFER, submenu, _("File Offer"));
+ #: src/fe-gtk/plugin-tray.c:561
+ msgid "_Change status"
+-msgstr "ステータスを変更(_C)"
++msgstr "ステータスを変更"
+ 
+ #: src/fe-gtk/plugin-tray.c:567
+ msgid "_Away"
+-msgstr "離席(_A)"
++msgstr "離席"
+ 
+ #: src/fe-gtk/plugin-tray.c:570
+ msgid "_Back"
+-msgstr "着席(_B)"
++msgstr "着席"
+ 
+ #: src/fe-gtk/plugin-tray.c:634
+ #, c-format
+@@ -4737,15 +4737,15 @@
+ 
+ #: src/fe-gtk/plugingui.c:256
+ msgid "_Load..."
+-msgstr "ロード...(_L)"
++msgstr "ロード..."
+ 
+ #: src/fe-gtk/plugingui.c:259
+ msgid "_Unload"
+-msgstr "アンロード(_U)"
++msgstr "アンロード"
+ 
+ #: src/fe-gtk/plugingui.c:262
+ msgid "_Reload"
+-msgstr "再読み込み(_R)"
++msgstr "再読み込み"
+ 
+ #: src/fe-gtk/rawlog.c:80 src/fe-gtk/rawlog.c:136 src/fe-gtk/textgui.c:475
+ #: src/fe-gtk/urlgrab.c:218
+@@ -4819,7 +4819,7 @@
+ 
+ #: src/fe-gtk/servlistgui.c:1853
+ msgid "_Edit"
+-msgstr "編集(_E)"
++msgstr "編集"
+ 
+ #: src/fe-gtk/servlistgui.c:1866
+ msgid "Connect to selected server only"
+@@ -4851,7 +4851,7 @@
+ 
+ #: src/fe-gtk/servlistgui.c:1880 src/fe-gtk/servlistgui.c:1999
+ msgid "_Nick name:"
+-msgstr "ニックネーム(_N):"
++msgstr "ニックネーム:"
+ 
+ #: src/fe-gtk/servlistgui.c:1881 src/fe-gtk/servlistgui.c:2006
+ msgid "Second choice:"
+@@ -4859,11 +4859,11 @@
+ 
+ #: src/fe-gtk/servlistgui.c:1882
+ msgid "Rea_l name:"
+-msgstr "本名(_L):"
++msgstr "本名:"
+ 
+ #: src/fe-gtk/servlistgui.c:1883 src/fe-gtk/servlistgui.c:2020
+ msgid "_User name:"
+-msgstr "ユーザー名(_U):"
++msgstr "ユーザー名:"
+ 
+ #: src/fe-gtk/servlistgui.c:1885
+ msgid "Login method:"
+@@ -4908,11 +4908,11 @@
+ 
+ #: src/fe-gtk/servlistgui.c:2160
+ msgid "_Edit..."
+-msgstr "編集...(_E)"
++msgstr "編集..."
+ 
+ #: src/fe-gtk/servlistgui.c:2167
+ msgid "_Sort"
+-msgstr "ソート(_S)"
++msgstr "ソート"
+ 
+ #: src/fe-gtk/servlistgui.c:2168
+ msgid ""
+@@ -4922,7 +4922,7 @@
+ 
+ #: src/fe-gtk/servlistgui.c:2176
+ msgid "_Favor"
+-msgstr "お気に入り(_F)"
++msgstr "お気に入り"
+ 
+ #: src/fe-gtk/servlistgui.c:2177
+ msgid "Mark or unmark this network as a favorite."
+@@ -4930,7 +4930,7 @@
+ 
+ #: src/fe-gtk/servlistgui.c:2201
+ msgid "C_onnect"
+-msgstr "接続(_O)"
++msgstr "接続"
+ 
+ #: src/fe-gtk/setup.c:90
+ msgid "Afrikaans"
+@@ -6175,11 +6175,11 @@
+ 
+ #: src/fe-gtk/setup.c:1815
+ msgid "_Browse..."
+-msgstr "参照...(_B)"
++msgstr "参照..."
+ 
+ #: src/fe-gtk/setup.c:1826
+ msgid "_Play"
+-msgstr "再生(_P)"
++msgstr "再生"
+ 
+ #: src/fe-gtk/setup.c:1872
+ msgid "Interface"
