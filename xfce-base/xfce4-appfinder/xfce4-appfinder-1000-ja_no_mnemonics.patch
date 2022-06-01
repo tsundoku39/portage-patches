@@ -1,0 +1,166 @@
+diff -urN a/po/ja.po b/po/ja.po
+--- a/po/ja.po	2021-09-21 13:42:28.000000000 -0700
++++ b/po/ja.po	2022-05-31 20:44:40.803421019 -0700
+@@ -63,7 +63,7 @@
+ 
+ #: ../src/appfinder-preferences.c:262
+ msgid "C_lear"
+-msgstr "クリア(_L)"
++msgstr "クリア"
+ 
+ #: ../src/appfinder-preferences.c:263
+ msgid "This will permanently clear the custom command history."
+@@ -75,7 +75,7 @@
+ 
+ #: ../src/appfinder-preferences.c:373
+ msgid "_Delete"
+-msgstr "削除(_D)"
++msgstr "削除"
+ 
+ #: ../src/appfinder-preferences.c:374
+ msgid "The custom action will be deleted permanently."
+@@ -98,11 +98,11 @@
+ 
+ #: ../src/appfinder-window.c:357
+ msgid "_Preferences"
+-msgstr "設定(_P)..."
++msgstr "設定..."
+ 
+ #: ../src/appfinder-window.c:368 ../src/appfinder-window.c:1096
+ msgid "La_unch"
+-msgstr "起動(_U)"
++msgstr "起動"
+ 
+ #: ../src/appfinder-window.c:897
+ msgid "Failed to launch desktop item editor"
+@@ -134,7 +134,7 @@
+ 
+ #: ../src/appfinder-window.c:972 ../src/appfinder-window.c:1142
+ msgid "_Hide"
+-msgstr "隠す(_H)"
++msgstr "隠す"
+ 
+ #: ../src/appfinder-window.c:973
+ #, c-format
+@@ -151,11 +151,11 @@
+ 
+ #: ../src/appfinder-window.c:1110
+ msgid "_Edit"
+-msgstr "編集(_E)"
++msgstr "編集"
+ 
+ #: ../src/appfinder-window.c:1127
+ msgid "_Revert"
+-msgstr "元に戻す(_R)"
++msgstr "元に戻す"
+ 
+ #: ../src/main.c:64
+ msgid "Start in collapsed mode"
+@@ -229,19 +229,19 @@
+ 
+ #: ../src/appfinder-preferences.glade.h:11
+ msgid "_Close"
+-msgstr "閉じる(_C)"
++msgstr "閉じる"
+ 
+ #: ../src/appfinder-preferences.glade.h:12
+ msgid "_Help"
+-msgstr "ヘルプ(_H)"
++msgstr "ヘルプ"
+ 
+ #: ../src/appfinder-preferences.glade.h:13
+ msgid "Remember last _selected category"
+-msgstr "最後に選択したカテゴリを記憶する(_S)"
++msgstr "最後に選択したカテゴリを記憶する"
+ 
+ #: ../src/appfinder-preferences.glade.h:14
+ msgid "Always c_enter the window"
+-msgstr "常に画面中央に表示する(_E)"
++msgstr "常に画面中央に表示する"
+ 
+ #: ../src/appfinder-preferences.glade.h:15
+ msgid "Center the window on startup."
+@@ -249,7 +249,7 @@
+ 
+ #: ../src/appfinder-preferences.glade.h:16
+ msgid "Keep running _instance in the background"
+-msgstr "インスタンスをバックグラウンドで常駐する(_I)"
++msgstr "インスタンスをバックグラウンドで常駐する"
+ 
+ #: ../src/appfinder-preferences.glade.h:17
+ msgid ""
+@@ -284,15 +284,15 @@
+ 
+ #: ../src/appfinder-preferences.glade.h:23
+ msgid "_View items as icons"
+-msgstr "アイテムをアイコンで表示する(_V)"
++msgstr "アイテムをアイコンで表示する"
+ 
+ #: ../src/appfinder-preferences.glade.h:24
+ msgid "Text besi_de icons"
+-msgstr "アイコンの横にテキストを表示する(_D)"
++msgstr "アイコンの横にテキストを表示する"
+ 
+ #: ../src/appfinder-preferences.glade.h:25
+ msgid "Ite_m icon size:"
+-msgstr "アイテムのアイコンサイズ(_M):"
++msgstr "アイテムのアイコンサイズ:"
+ 
+ #: ../src/appfinder-preferences.glade.h:26
+ msgid "Hide category pane"
+@@ -304,7 +304,7 @@
+ 
+ #: ../src/appfinder-preferences.glade.h:28
+ msgid "Categ_ory icon size:"
+-msgstr "カテゴリのアイコンサイズ(_O):"
++msgstr "カテゴリのアイコンサイズ:"
+ 
+ #: ../src/appfinder-preferences.glade.h:29
+ msgid "Appearance"
+@@ -312,7 +312,7 @@
+ 
+ #: ../src/appfinder-preferences.glade.h:30
+ msgid "C_lear Custom Command History"
+-msgstr "カスタムコマンド履歴のクリア(_L)"
++msgstr "カスタムコマンド履歴のクリア"
+ 
+ #: ../src/appfinder-preferences.glade.h:31
+ msgid "History"
+@@ -320,7 +320,7 @@
+ 
+ #: ../src/appfinder-preferences.glade.h:32
+ msgid "_General"
+-msgstr "全般(_G)"
++msgstr "全般"
+ 
+ #: ../src/appfinder-preferences.glade.h:33
+ msgid "Custom actions are only available in collapsed mode."
+@@ -348,23 +348,23 @@
+ 
+ #: ../src/appfinder-preferences.glade.h:39
+ msgid "Co_mmand:"
+-msgstr "コマンド(_M):"
++msgstr "コマンド:"
+ 
+ #: ../src/appfinder-preferences.glade.h:40
+ msgid "Patte_rn:"
+-msgstr "パターン(_R):"
++msgstr "パターン:"
+ 
+ #: ../src/appfinder-preferences.glade.h:41
+ msgid "_Type:"
+-msgstr "タイプ(_T):"
++msgstr "タイプ:"
+ 
+ #: ../src/appfinder-preferences.glade.h:42
+ msgid "_Save match in command history"
+-msgstr "マッチしたコマンドを履歴に保存する(_S)"
++msgstr "マッチしたコマンドを履歴に保存する"
+ 
+ #: ../src/appfinder-preferences.glade.h:43
+ msgid "Custom _Actions"
+-msgstr "カスタムアクション(_A)"
++msgstr "カスタムアクション"
+ 
+ #: ../data/xfce4-appfinder.desktop.in.h:2
+ msgid "Find and launch applications installed on your system"
