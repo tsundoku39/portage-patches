@@ -11,7 +11,7 @@ diff -urN a/fvwm/windowlist.c b/fvwm/windowlist.c
 -			sprintf(tlabel, "%s%s", desk_name,
 -				(is_top_title && (flags & SHOW_GEOMETRY)) ?
 -				_("\tGeometry") : "");
-+			sprintf(tlabel, "%s%s", desk_name, _("\t %ops/raise.png%"));
++			sprintf(tlabel, "%s%s", desk_name, _("\t %ops/every.png%"));
  		}
  		else
  		{
@@ -20,7 +20,7 @@ diff -urN a/fvwm/windowlist.c b/fvwm/windowlist.c
 -				_("\tGeometry") : "");
 +			sprintf(tlabel, "%s%s", desk_name,
 +				(is_top_title && (flags & SHOW_ICONIC)) ?
-+				_("\t非表示%ops/hidden_group.png%") : _("\t %teambuttons.png%"));
++				_("\t非表示%ops/hidden_group.png%") : _("\t %team.png%"));
  		}
  	}
  	else
@@ -29,7 +29,7 @@ diff -urN a/fvwm/windowlist.c b/fvwm/windowlist.c
 -			(is_top_title && (flags & SHOW_GEOMETRY)) ?
 -			_("\tGeometry") : "");
 +			(is_top_title && (flags & SHOW_ICONIC)) ?
-+			_("\t非表示%ops/hidden_group.png%") : _("\t %ops/raise.png%"));
++			_("\t非表示%ops/hidden_group.png%") : _("\t %ops/every.png%"));
  	}
  
  	return tlabel;
@@ -83,7 +83,7 @@ diff -urN a/fvwm/windowlist.c b/fvwm/windowlist.c
 +			if (numIcons)
 +			{
 +				AddToMenu(mr, "すべてを送る%ayame/ops/send_hidden.png%", "Popup DeskSendHidden", True, False, False);
-+				AddToMenu(mr, "すべてを表示%ops/raise.png%", "DeiconifyEvery", True, False, False);
++				AddToMenu(mr, "すべてを表示%ops/every.png%", "DeiconifyEvery", True, False, False);
 +				AddToMenu(mr, "", "Nop", False, False, False);
 +			}
 +		}
