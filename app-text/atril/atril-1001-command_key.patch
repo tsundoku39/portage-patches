@@ -1,6 +1,6 @@
 diff -urN a/previewer/ev-previewer-window.c b/previewer/ev-previewer-window.c
 --- a/previewer/ev-previewer-window.c	2021-08-06 04:08:05.000000000 -0700
-+++ b/previewer/ev-previewer-window.c	2021-10-26 05:50:01.239584380 -0700
++++ b/previewer/ev-previewer-window.c	2022-05-31 20:09:34.991147052 -0700
 @@ -281,22 +281,22 @@
  #endif
  
@@ -59,7 +59,7 @@ diff -urN a/previewer/ev-previewer-window.c b/previewer/ev-previewer-window.c
  };
 diff -urN a/shell/ev-window.c b/shell/ev-window.c
 --- a/shell/ev-window.c	2021-08-06 04:08:05.000000000 -0700
-+++ b/shell/ev-window.c	2021-10-26 05:50:01.239584380 -0700
++++ b/shell/ev-window.c	2022-05-31 20:15:48.530498507 -0700
 @@ -6450,62 +6450,62 @@
  	{ "Help",      NULL, N_("_Help"),      NULL, NULL, NULL },
  
@@ -209,8 +209,12 @@ diff -urN a/shell/ev-window.c b/shell/ev-window.c
  	  G_CALLBACK (ev_window_cmd_edit_copy) },
  	{ "FitPage", EV_STOCK_ZOOM_PAGE, NULL, "f", NULL,
  	  G_CALLBACK (ev_window_cmd_fit_page) },
-@@ -6601,7 +6601,7 @@
- 	{ "ViewToolbar", NULL, N_("_Toolbar"), "t",
+@@ -6598,10 +6598,10 @@
+ /* Toggle items */
+ static const GtkToggleActionEntry toggle_entries[] = {
+ 	/* View Menu */
+-	{ "ViewToolbar", NULL, N_("_Toolbar"), "t",
++	{ "ViewToolbar", NULL, N_("_Toolbar"), "<super>t",
  	  N_("Show or hide the toolbar"),
  	  G_CALLBACK (ev_window_view_toolbar_cb), TRUE },
 -        { "ViewSidebar", "gtk-index", N_("Side _Pane"), "F9",
@@ -218,7 +222,7 @@ diff -urN a/shell/ev-window.c b/shell/ev-window.c
  	  N_("Show or hide the side pane"),
  	  G_CALLBACK (ev_window_view_sidebar_cb), TRUE },
          { "ViewContinuous", EV_STOCK_VIEW_CONTINUOUS, N_("_Continuous"), "c",
-@@ -6613,7 +6613,7 @@
+@@ -6613,10 +6613,10 @@
  	{ "ViewDualOddLeft", NULL, N_("_Odd pages left"), "o",
  	  N_("Show odd pages on the left in dual mode"),
  	  G_CALLBACK (ev_window_cmd_dual_odd_pages_left), FALSE },
@@ -226,8 +230,12 @@ diff -urN a/shell/ev-window.c b/shell/ev-window.c
 +        { "ViewFullscreen", "view-fullscreen", N_("_Fullscreen"), "<alt><super>F",
            N_("Expand the window to fill the screen"),
            G_CALLBACK (ev_window_cmd_view_fullscreen) },
-         { "ViewPresentation", EV_STOCK_RUN_PRESENTATION, N_("Pre_sentation"), "F5",
-@@ -6625,7 +6625,7 @@
+-        { "ViewPresentation", EV_STOCK_RUN_PRESENTATION, N_("Pre_sentation"), "F5",
++        { "ViewPresentation", EV_STOCK_RUN_PRESENTATION, N_("Pre_sentation"), "<shift><super>F",
+           N_("Run document as a presentation"),
+           G_CALLBACK (ev_window_cmd_view_presentation) },
+         { "ViewFitPage", EV_STOCK_ZOOM_PAGE, N_("Fit Pa_ge"), "f",
+@@ -6625,10 +6625,10 @@
          { "ViewFitWidth", EV_STOCK_ZOOM_WIDTH, N_("Fit _Width"), "w",
            N_("Make the current document fill the window width"),
            G_CALLBACK (ev_window_cmd_view_fit_width) },
@@ -235,10 +243,14 @@ diff -urN a/shell/ev-window.c b/shell/ev-window.c
 +	{ "ViewInvertedColors", EV_STOCK_INVERTED_COLORS, N_("Inverted _Colors"), "<shift><super>I",
  	  N_("Show page contents with the colors inverted"),
  	  G_CALLBACK (ev_window_cmd_view_inverted_colors) },
-         { "ViewCaretNavigation", "gtk-index", N_("Caret _Navigation"), "F7",
+-        { "ViewCaretNavigation", "gtk-index", N_("Caret _Navigation"), "F7",
++        { "ViewCaretNavigation", "gtk-index", N_("Caret _Navigation"), NULL,
+ 	  N_("Activate or disable caret-navigation"),
+ 	  G_CALLBACK (ev_window_cmd_view_toggle_caret_navigation) },
+ 
 diff -urN a/shell/ev-window.c.orig b/shell/ev-window.c.orig
 --- a/shell/ev-window.c.orig	1969-12-31 16:00:00.000000000 -0800
-+++ b/shell/ev-window.c.orig	2021-08-06 04:08:05.000000000 -0700
++++ b/shell/ev-window.c.orig	2022-05-31 20:09:35.001146022 -0700
 @@ -0,0 +1,8310 @@
 +/* -*- Mode: C; tab-width: 8; indent-tabs-mode: t; c-basic-offset: 8; c-indent-level: 8 -*- */
 +/* this file is part of atril, a mate document viewer
