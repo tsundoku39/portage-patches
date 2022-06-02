@@ -1,6 +1,6 @@
 diff -urN a/fvwm/windowlist.c b/fvwm/windowlist.c
 --- a/fvwm/windowlist.c	2018-05-26 04:35:26.000000000 -0700
-+++ b/fvwm/windowlist.c	2022-05-30 16:28:29.423913357 -0700
++++ b/fvwm/windowlist.c	2022-06-02 07:02:04.265289040 -0700
 @@ -87,24 +87,22 @@
  
  	if (desk_name != NULL)
@@ -58,7 +58,7 @@ diff -urN a/fvwm/windowlist.c b/fvwm/windowlist.c
  	for (t = Scr.FvwmRoot.next; t != NULL; t = t->next)
  	{
  		numWindows++;
-@@ -710,6 +712,42 @@
+@@ -710,6 +712,19 @@
  		      (int(*)(const void*, const void*))sort);
  	}
  
@@ -75,33 +75,10 @@ diff -urN a/fvwm/windowlist.c b/fvwm/windowlist.c
 +			numNormal++;
 +		}
 +	}
-+	/* add the universal operations header or a "no windows" entry if appropriate */
-+	if (!(flags & NO_CURRENT_DESK_TITLE))
-+	{
-+		if (flags & SHOW_ICONIC)
-+		{
-+			if (numIcons)
-+			{
-+				AddToMenu(mr, "すべてを送る%ayame/ops/send_hidden.png%", "Popup DeskSendHidden", True, False, False);
-+				AddToMenu(mr, "すべてを表示%ops/every.png%", "DeiconifyEvery", True, False, False);
-+				AddToMenu(mr, "", "Nop", False, False, False);
-+			}
-+		}
-+		else
-+		{
-+			if (numNormal)
-+			{
-+				fprintf(stderr, "numNormal is %d", numNormal);
-+				AddToMenu(mr, "すべてを送る%ayame/ops/send_all.png%", "Popup DeskSendVisible", True, False, False);
-+				AddToMenu(mr, "すべてを隠す%ops/hide_all.png%", "IconifyEvery", True, False, False);
-+				AddToMenu(mr, "", "Nop", False, False, False);
-+			}
-+		}
-+	}
  	while(next_desk != INT_MAX)
  	{
  		/* Sort window list by desktop number */
-@@ -815,7 +853,7 @@
+@@ -815,7 +830,7 @@
  							t->Desk, flags, False);
  						AddToMenu(
  							mr, tlabel, "TITLE",
@@ -110,7 +87,7 @@ diff -urN a/fvwm/windowlist.c b/fvwm/windowlist.c
  						free(tlabel);
  					}
  				}
-@@ -825,7 +863,7 @@
+@@ -825,7 +840,7 @@
  			{
  				tlabel = get_desk_title(t->Desk, flags, False);
  				AddToMenu(
@@ -119,7 +96,43 @@ diff -urN a/fvwm/windowlist.c b/fvwm/windowlist.c
  					False);
  				free(tlabel);
  			}
-@@ -1040,7 +1078,7 @@
+@@ -1036,11 +1051,43 @@
+ 		}
+ 	}
+ 
++	/* add the universal operations header or a "no windows" entry if appropriate */
++	if (!(flags & NO_CURRENT_DESK_TITLE))
++	{
++		
++		if (flags & SHOW_ICONIC)
++		{
++			if (numIcons)
++			{
++				AddToMenu(mr, "", "Nop", False, False, False);
++				AddToMenu(mr, "すべてを送る%ayame/ops/send_hidden.png%", "Popup DeskSendHidden", True, False, False);
++				AddToMenu(mr, "すべてを表示%ops/every.png%", "DeiconifyEvery", True, False, False);
++			}
++			else
++			{
++				AddToMenu(mr, "ウィンドウがありません", "Nop", False, False, False);
++			}
++		}
++		else
++		{
++			if (numNormal)
++			{
++				AddToMenu(mr, "", "Nop", False, False, False);
++				AddToMenu(mr, "すべてを送る%ayame/ops/send_all.png%", "Popup DeskSendVisible", True, False, False);
++				AddToMenu(mr, "すべてを隠す%ops/hide_all.png%", "IconifyEvery", True, False, False);
++			}
++			else
++			{
++				AddToMenu(mr, "ウィンドウがありません", "Nop", False, False, False);
++			}
++		}
++	}
++
+ 	if (empty_menu)
  	{
  		/* force current desk title */
  		tlabel = get_desk_title(desk, flags, True);
