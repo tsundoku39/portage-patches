@@ -1,0 +1,250 @@
+diff -urN a/src/skins/main.cc b/src/skins/main.cc
+--- a/src/skins/main.cc	2021-02-01 15:30:38.000000000 -0800
++++ b/src/skins/main.cc	2022-06-05 12:36:56.989817601 -0700
+@@ -949,20 +949,20 @@
+ 
+ static void mainwin_create_widgets ()
+ {
+-    mainwin_menubtn = new Button (9, 9, 0, 0, 0, 9, SKIN_TITLEBAR, SKIN_TITLEBAR);
++/*  mainwin_menubtn = new Button (9, 9, 0, 0, 0, 9, SKIN_TITLEBAR, SKIN_TITLEBAR);
+     mainwin->put_widget (false, mainwin_menubtn, 6, 3);
+-    mainwin_menubtn->on_release ((ButtonCB) mainwin_menubtn_cb);
++    mainwin_menubtn->on_release ((ButtonCB) mainwin_menubtn_cb); */
+ 
+     mainwin_minimize = new Button (9, 9, 9, 0, 9, 9, SKIN_TITLEBAR, SKIN_TITLEBAR);
+-    mainwin->put_widget (false, mainwin_minimize, 244, 3);
++    mainwin->put_widget (false, mainwin_minimize, 254, 3);
+     mainwin_minimize->on_release ((ButtonCB) mainwin_minimize_cb);
+ 
+     mainwin_shade = new Button (9, 9, 0, 18, 9, 18, SKIN_TITLEBAR, SKIN_TITLEBAR);
+-    mainwin->put_widget (false, mainwin_shade, 254, 3);
++    mainwin->put_widget (false, mainwin_shade, 264, 3);
+     mainwin_shade->on_release ((ButtonCB) mainwin_shade_toggle);
+ 
+     mainwin_close = new Button (9, 9, 18, 0, 18, 9, SKIN_TITLEBAR, SKIN_TITLEBAR);
+-    mainwin->put_widget (false, mainwin_close, 264, 3);
++    mainwin->put_widget (false, mainwin_close, 3, 3);
+     mainwin_close->on_release ((ButtonCB) skins_close);
+ 
+     mainwin_rew = new Button (23, 18, 0, 0, 0, 18, SKIN_CBUTTONS, SKIN_CBUTTONS);
+@@ -1080,20 +1080,20 @@
+ 
+     /* shaded */
+ 
+-    mainwin_shaded_menubtn = new Button (9, 9, 0, 0, 0, 9, SKIN_TITLEBAR, SKIN_TITLEBAR);
++/*  mainwin_shaded_menubtn = new Button (9, 9, 0, 0, 0, 9, SKIN_TITLEBAR, SKIN_TITLEBAR);
+     mainwin->put_widget (true, mainwin_shaded_menubtn, 6, 3);
+-    mainwin_shaded_menubtn->on_release ((ButtonCB) mainwin_menubtn_cb);
++    mainwin_shaded_menubtn->on_release ((ButtonCB) mainwin_menubtn_cb); */
+ 
+     mainwin_shaded_minimize = new Button (9, 9, 9, 0, 9, 9, SKIN_TITLEBAR, SKIN_TITLEBAR);
+-    mainwin->put_widget (true, mainwin_shaded_minimize, 244, 3);
++    mainwin->put_widget (true, mainwin_shaded_minimize, 254, 3);
+     mainwin_shaded_minimize->on_release ((ButtonCB) mainwin_minimize_cb);
+ 
+     mainwin_shaded_shade = new Button (9, 9, 0, 27, 9, 27, SKIN_TITLEBAR, SKIN_TITLEBAR);
+-    mainwin->put_widget (true, mainwin_shaded_shade, 254, 3);
++    mainwin->put_widget (true, mainwin_shaded_shade, 264, 3);
+     mainwin_shaded_shade->on_release ((ButtonCB) mainwin_shade_toggle);
+ 
+     mainwin_shaded_close = new Button (9, 9, 18, 0, 18, 9, SKIN_TITLEBAR, SKIN_TITLEBAR);
+-    mainwin->put_widget (true, mainwin_shaded_close, 264, 3);
++    mainwin->put_widget (true, mainwin_shaded_close, 3, 3);
+     mainwin_shaded_close->on_release ((ButtonCB) skins_close);
+ 
+     mainwin_srew = new Button (8, 7);
+diff -urN a/src/skins/playlistwin.cc b/src/skins/playlistwin.cc
+--- a/src/skins/playlistwin.cc	2021-02-01 15:30:38.000000000 -0800
++++ b/src/skins/playlistwin.cc	2022-06-05 12:36:56.993150606 -0700
+@@ -186,10 +186,10 @@
+     playlistwin->move_widget (false, playlistwin_slider, w - 15, 20);
+     playlistwin_slider->resize (h - 58);
+ 
+-    playlistwin->move_widget (true, playlistwin_shaded_shade, w - 21, 3);
+-    playlistwin->move_widget (true, playlistwin_shaded_close, w - 11, 3);
+-    playlistwin->move_widget (false, playlistwin_shade, w - 21, 3);
+-    playlistwin->move_widget (false, playlistwin_close, w - 11, 3);
++    playlistwin->move_widget (true, playlistwin_shaded_shade, w - 11, 3);
++    playlistwin->move_widget (true, playlistwin_shaded_close, 3, 3);
++    playlistwin->move_widget (false, playlistwin_shade, w - 11, 3);
++    playlistwin->move_widget (false, playlistwin_close, 3, 3);
+ 
+     playlistwin->move_widget (false, playlistwin_time_min, w - 82, h - 15);
+     playlistwin->move_widget (false, playlistwin_time_sec, w - 64, h - 15);
+@@ -372,22 +372,22 @@
+ 
+     bool shaded = aud_get_bool ("skins", "playlist_shaded");
+     playlistwin_sinfo = new TextBox (w - 35, nullptr, shaded && config.autoscroll);
+-    playlistwin->put_widget (true, playlistwin_sinfo, 4, 4);
++    playlistwin->put_widget (true, playlistwin_sinfo, 14, 4);
+ 
+-    playlistwin_shaded_shade = new Button (9, 9, 128, 45, 150, 42, SKIN_PLEDIT, SKIN_PLEDIT);
+-    playlistwin->put_widget (true, playlistwin_shaded_shade, w - 21, 3);
++    playlistwin_shaded_shade = new Button (9, 9, 138, 45, 150, 42, SKIN_PLEDIT, SKIN_PLEDIT);
++    playlistwin->put_widget (true, playlistwin_shaded_shade, w - 11, 3);
+     playlistwin_shaded_shade->on_release ((ButtonCB) playlistwin_shade_toggle);
+ 
+-    playlistwin_shaded_close = new Button (9, 9, 138, 45, 52, 42, SKIN_PLEDIT, SKIN_PLEDIT);
+-    playlistwin->put_widget (true, playlistwin_shaded_close, w - 11, 3);
++    playlistwin_shaded_close = new Button (9, 9, 74, 45, 52, 42, SKIN_PLEDIT, SKIN_PLEDIT);
++    playlistwin->put_widget (true, playlistwin_shaded_close, 3, 3);
+     playlistwin_shaded_close->on_release ((ButtonCB) playlistwin_hide);
+ 
+-    playlistwin_shade = new Button (9, 9, 157, 3, 62, 42, SKIN_PLEDIT, SKIN_PLEDIT);
+-    playlistwin->put_widget (false, playlistwin_shade, w - 21, 3);
++    playlistwin_shade = new Button (9, 9, 167, 3, 62, 42, SKIN_PLEDIT, SKIN_PLEDIT);
++    playlistwin->put_widget (false, playlistwin_shade, w - 11, 3);
+     playlistwin_shade->on_release ((ButtonCB) playlistwin_shade_toggle);
+ 
+-    playlistwin_close = new Button (9, 9, 167, 3, 52, 42, SKIN_PLEDIT, SKIN_PLEDIT);
+-    playlistwin->put_widget (false, playlistwin_close, w - 11, 3);
++    playlistwin_close = new Button (9, 9, 2, 3, 52, 42, SKIN_PLEDIT, SKIN_PLEDIT);
++    playlistwin->put_widget (false, playlistwin_close, 3, 3);
+     playlistwin_close->on_release ((ButtonCB) playlistwin_hide);
+ 
+     String font = aud_get_str ("skins", "playlist_font");
+diff -urN a/src/skins/skin.h b/src/skins/skin.h
+--- a/src/skins/skin.h	2021-02-01 15:30:38.000000000 -0800
++++ b/src/skins/skin.h	2022-06-05 12:36:56.993150606 -0700
+@@ -153,13 +153,13 @@
+     int mainwin_about_x = 247;
+     int mainwin_about_y = 83;
+ 
+-    int mainwin_minimize_x = 244;
++    int mainwin_minimize_x = 254;
+     int mainwin_minimize_y = 3;
+ 
+-    int mainwin_shade_x = 254;
++    int mainwin_shade_x = 264;
+     int mainwin_shade_y = 3;
+ 
+-    int mainwin_close_x = 264;
++    int mainwin_close_x = 3;
+     int mainwin_close_y = 3;
+ 
+     int mainwin_width = 275;
+diff -urN a/src/skins-qt/main.cc b/src/skins-qt/main.cc
+--- a/src/skins-qt/main.cc	2021-02-01 15:30:38.000000000 -0800
++++ b/src/skins-qt/main.cc	2022-06-05 12:40:56.302717020 -0700
+@@ -889,20 +889,20 @@
+ 
+ static void mainwin_create_widgets ()
+ {
+-    mainwin_menubtn = new Button (9, 9, 0, 0, 0, 9, SKIN_TITLEBAR, SKIN_TITLEBAR);
++/*  mainwin_menubtn = new Button (9, 9, 0, 0, 0, 9, SKIN_TITLEBAR, SKIN_TITLEBAR);
+     mainwin->put_widget (false, mainwin_menubtn, 6, 3);
+-    mainwin_menubtn->on_release ((ButtonCB) mainwin_menubtn_cb);
++    mainwin_menubtn->on_release ((ButtonCB) mainwin_menubtn_cb); */
+ 
+     mainwin_minimize = new Button (9, 9, 9, 0, 9, 9, SKIN_TITLEBAR, SKIN_TITLEBAR);
+-    mainwin->put_widget (false, mainwin_minimize, 244, 3);
++    mainwin->put_widget (false, mainwin_minimize, 254, 3);
+     mainwin_minimize->on_release ((ButtonCB) mainwin_minimize_cb);
+ 
+     mainwin_shade = new Button (9, 9, 0, 18, 9, 18, SKIN_TITLEBAR, SKIN_TITLEBAR);
+-    mainwin->put_widget (false, mainwin_shade, 254, 3);
++    mainwin->put_widget (false, mainwin_shade, 264, 3);
+     mainwin_shade->on_release ((ButtonCB) mainwin_shade_toggle);
+ 
+     mainwin_close = new Button (9, 9, 18, 0, 18, 9, SKIN_TITLEBAR, SKIN_TITLEBAR);
+-    mainwin->put_widget (false, mainwin_close, 264, 3);
++    mainwin->put_widget (false, mainwin_close, 3, 3);
+     mainwin_close->on_release ((ButtonCB) skins_close);
+ 
+     mainwin_rew = new Button (23, 18, 0, 0, 0, 18, SKIN_CBUTTONS, SKIN_CBUTTONS);
+@@ -1020,20 +1020,20 @@
+ 
+     /* shaded */
+ 
+-    mainwin_shaded_menubtn = new Button (9, 9, 0, 0, 0, 9, SKIN_TITLEBAR, SKIN_TITLEBAR);
++/*  mainwin_shaded_menubtn = new Button (9, 9, 0, 0, 0, 9, SKIN_TITLEBAR, SKIN_TITLEBAR);
+     mainwin->put_widget (true, mainwin_shaded_menubtn, 6, 3);
+-    mainwin_shaded_menubtn->on_release ((ButtonCB) mainwin_menubtn_cb);
++    mainwin_shaded_menubtn->on_release ((ButtonCB) mainwin_menubtn_cb); */
+ 
+     mainwin_shaded_minimize = new Button (9, 9, 9, 0, 9, 9, SKIN_TITLEBAR, SKIN_TITLEBAR);
+-    mainwin->put_widget (true, mainwin_shaded_minimize, 244, 3);
++    mainwin->put_widget (true, mainwin_shaded_minimize, 254, 3);
+     mainwin_shaded_minimize->on_release ((ButtonCB) mainwin_minimize_cb);
+ 
+     mainwin_shaded_shade = new Button (9, 9, 0, 27, 9, 27, SKIN_TITLEBAR, SKIN_TITLEBAR);
+-    mainwin->put_widget (true, mainwin_shaded_shade, 254, 3);
++    mainwin->put_widget (true, mainwin_shaded_shade, 264, 3);
+     mainwin_shaded_shade->on_release ((ButtonCB) mainwin_shade_toggle);
+ 
+     mainwin_shaded_close = new Button (9, 9, 18, 0, 18, 9, SKIN_TITLEBAR, SKIN_TITLEBAR);
+-    mainwin->put_widget (true, mainwin_shaded_close, 264, 3);
++    mainwin->put_widget (true, mainwin_shaded_close, 3, 3);
+     mainwin_shaded_close->on_release ((ButtonCB) skins_close);
+ 
+     mainwin_srew = new Button (8, 7);
+diff -urN a/src/skins-qt/playlistwin.cc b/src/skins-qt/playlistwin.cc
+--- a/src/skins-qt/playlistwin.cc	2021-02-01 15:30:38.000000000 -0800
++++ b/src/skins-qt/playlistwin.cc	2022-06-05 12:45:09.987261050 -0700
+@@ -182,10 +182,10 @@
+     playlistwin->move_widget (false, playlistwin_slider, w - 15, 20);
+     playlistwin_slider->resize (h - 58);
+ 
+-    playlistwin->move_widget (true, playlistwin_shaded_shade, w - 21, 3);
+-    playlistwin->move_widget (true, playlistwin_shaded_close, w - 11, 3);
+-    playlistwin->move_widget (false, playlistwin_shade, w - 21, 3);
+-    playlistwin->move_widget (false, playlistwin_close, w - 11, 3);
++    playlistwin->move_widget (true, playlistwin_shaded_shade, w - 11, 3);
++    playlistwin->move_widget (true, playlistwin_shaded_close, 3, 3);
++    playlistwin->move_widget (false, playlistwin_shade, w - 11, 3);
++    playlistwin->move_widget (false, playlistwin_close, 3, 3);
+ 
+     playlistwin->move_widget (false, playlistwin_time_min, w - 82, h - 15);
+     playlistwin->move_widget (false, playlistwin_time_sec, w - 64, h - 15);
+@@ -357,22 +357,22 @@
+ 
+     bool shaded = aud_get_bool ("skins", "playlist_shaded");
+     playlistwin_sinfo = new TextBox (w - 35, nullptr, shaded && config.autoscroll);
+-    playlistwin->put_widget (true, playlistwin_sinfo, 4, 4);
++    playlistwin->put_widget (true, playlistwin_sinfo, 14, 4);
+ 
+-    playlistwin_shaded_shade = new Button (9, 9, 128, 45, 150, 42, SKIN_PLEDIT, SKIN_PLEDIT);
+-    playlistwin->put_widget (true, playlistwin_shaded_shade, w - 21, 3);
++    playlistwin_shaded_shade = new Button (9, 9, 138, 45, 150, 42, SKIN_PLEDIT, SKIN_PLEDIT);
++    playlistwin->put_widget (true, playlistwin_shaded_shade, w - 11, 3);
+     playlistwin_shaded_shade->on_release ((ButtonCB) playlistwin_shade_toggle);
+ 
+-    playlistwin_shaded_close = new Button (9, 9, 138, 45, 52, 42, SKIN_PLEDIT, SKIN_PLEDIT);
+-    playlistwin->put_widget (true, playlistwin_shaded_close, w - 11, 3);
++    playlistwin_shaded_close = new Button (9, 9, 74, 45, 52, 42, SKIN_PLEDIT, SKIN_PLEDIT);
++    playlistwin->put_widget (true, playlistwin_shaded_close, 3, 3);
+     playlistwin_shaded_close->on_release ((ButtonCB) playlistwin_hide);
+ 
+-    playlistwin_shade = new Button (9, 9, 157, 3, 62, 42, SKIN_PLEDIT, SKIN_PLEDIT);
+-    playlistwin->put_widget (false, playlistwin_shade, w - 21, 3);
++    playlistwin_shade = new Button (9, 9, 167, 3, 62, 42, SKIN_PLEDIT, SKIN_PLEDIT);
++    playlistwin->put_widget (false, playlistwin_shade, w - 11, 3);
+     playlistwin_shade->on_release ((ButtonCB) playlistwin_shade_toggle);
+ 
+-    playlistwin_close = new Button (9, 9, 167, 3, 52, 42, SKIN_PLEDIT, SKIN_PLEDIT);
+-    playlistwin->put_widget (false, playlistwin_close, w - 11, 3);
++    playlistwin_close = new Button (9, 9, 2, 3, 52, 42, SKIN_PLEDIT, SKIN_PLEDIT);
++    playlistwin->put_widget (false, playlistwin_close, 3, 3);
+     playlistwin_close->on_release ((ButtonCB) playlistwin_hide);
+ 
+     String font = aud_get_str ("skins", "playlist_font");
+diff -urN a/src/skins-qt/skin.h b/src/skins-qt/skin.h
+--- a/src/skins-qt/skin.h	2021-02-01 15:30:38.000000000 -0800
++++ b/src/skins-qt/skin.h	2022-06-05 12:45:43.963837342 -0700
+@@ -145,13 +145,13 @@
+     int mainwin_about_x = 247;
+     int mainwin_about_y = 83;
+ 
+-    int mainwin_minimize_x = 244;
++    int mainwin_minimize_x = 254;
+     int mainwin_minimize_y = 3;
+ 
+-    int mainwin_shade_x = 254;
++    int mainwin_shade_x = 264;
+     int mainwin_shade_y = 3;
+ 
+-    int mainwin_close_x = 264;
++    int mainwin_close_x = 3;
+     int mainwin_close_y = 3;
+ 
+     int mainwin_width = 275;
