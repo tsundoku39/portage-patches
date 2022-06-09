@@ -1,0 +1,74 @@
+diff -urN a/src/xpad-pad.c b/src/xpad-pad.c
+--- a/src/xpad-pad.c	2022-05-18 00:42:43.000000000 -0700
++++ b/src/xpad-pad.c	2022-06-09 07:00:29.146969445 -0700
+@@ -355,7 +355,7 @@
+ 	gtk_window_add_accel_group (pad_window, pad->priv->accel_group);
+ 	pad->priv->menu = menu_get_popup_no_highlight (pad, pad->priv->accel_group);
+ 	pad->priv->highlight_menu = menu_get_popup_highlight (pad, pad->priv->accel_group);
+-	gtk_accel_group_connect (pad->priv->accel_group, GDK_KEY_Q, GDK_CONTROL_MASK, 0, g_cclosure_new_swap (G_CALLBACK (xpad_app_quit), pad, NULL));
++	gtk_accel_group_connect (pad->priv->accel_group, GDK_KEY_Q, GDK_SUPER_MASK, 0, g_cclosure_new_swap (G_CALLBACK (xpad_app_quit), pad, NULL));
+ 
+ 	/* GtkBox with overlay and toolbar */
+ 	GtkBox *vbox = GTK_BOX (gtk_box_new (GTK_ORIENTATION_VERTICAL, 0));
+@@ -1169,7 +1169,7 @@
+ 		switch (event->button)
+ 		{
+ 		case 1:
+-			if ((event->state & gtk_accelerator_get_default_mod_mask ()) == GDK_CONTROL_MASK)
++			if ((event->state & gtk_accelerator_get_default_mod_mask ()) == GDK_SUPER_MASK)
+ 			{
+ 				gtk_window_begin_move_drag (GTK_WINDOW (pad), (gint) event->button, (gint) event->x_root, (gint) event->y_root, event->time);
+ 				return TRUE;
+@@ -1177,7 +1177,7 @@
+ 			break;
+ 
+ 		case 3:
+-			if ((event->state & gtk_accelerator_get_default_mod_mask ()) == GDK_CONTROL_MASK)
++			if ((event->state & gtk_accelerator_get_default_mod_mask ()) == GDK_SUPER_MASK)
+ 			{
+ 				GdkWindowEdge edge;
+ 
+@@ -1605,25 +1605,25 @@
+ 	uppermenu = gtk_menu_new ();
+ 	gtk_menu_set_accel_group (GTK_MENU (uppermenu), accel_group);
+ 	menu = uppermenu;
+-	MENU_ADD (_("_New"), "document-new", GDK_KEY_N, GDK_CONTROL_MASK, xpad_pad_spawn);
++	MENU_ADD (_("_New"), "document-new", GDK_KEY_N, GDK_SUPER_MASK, xpad_pad_spawn);
+ 	MENU_ADD (_("_Delete"), "edit-delete", GDK_KEY_Delete, GDK_SHIFT_MASK, xpad_pad_delete);
+ 	MENU_ADD (_("_Reload"), "reload-pad-content", GDK_KEY_F5, 0, xpad_pad_load_content);
+-	MENU_ADD (_("_Close"), "window-close", GDK_KEY_W, GDK_CONTROL_MASK, xpad_pad_close);
++	MENU_ADD (_("_Close"), "window-close", GDK_KEY_W, GDK_SUPER_MASK, xpad_pad_close);
+ 
+ 	/* Edit submenu */
+ 	item = gtk_menu_item_new_with_mnemonic (_("_Edit"));
+ 	gtk_container_add (GTK_CONTAINER (uppermenu), item);
+ 	menu = gtk_menu_new ();
+ 	gtk_menu_item_set_submenu (GTK_MENU_ITEM (item), menu);
+-	MENU_ADD (_("_Undo"), "edit-undo", GDK_KEY_Z, GDK_CONTROL_MASK, xpad_pad_undo);
++	MENU_ADD (_("_Undo"), "edit-undo", GDK_KEY_Z, GDK_SUPER_MASK, xpad_pad_undo);
+ 	g_object_set_data (G_OBJECT (uppermenu), "undo", item);
+-	MENU_ADD (_("_Redo"), "edit-redo", GDK_KEY_Y, GDK_CONTROL_MASK, xpad_pad_redo);
++	MENU_ADD (_("_Redo"), "edit-redo", GDK_KEY_Y, GDK_SUPER_MASK, xpad_pad_redo);
+ 	g_object_set_data (G_OBJECT (uppermenu), "redo", item);
+ 	MENU_ADD_SEP();
+ 	MENU_ADD (_("_Paste"), "edit-paste", 0, 0, xpad_pad_paste);
+ 	g_object_set_data (G_OBJECT (uppermenu), "paste", item);
+ 	MENU_ADD_SEP();
+-	MENU_ADD (_("_Find"), "edit-find", GDK_KEY_F, GDK_CONTROL_MASK, xpad_pad_search);
++	MENU_ADD (_("_Find"), "edit-find", GDK_KEY_F, GDK_SUPER_MASK, xpad_pad_search);
+ 	MENU_ADD_SEP();
+ 	MENU_ADD (_("_Layout"), "document-properties", 0, 0, xpad_pad_open_properties);
+ 	MENU_ADD (_("_Read only"), "editable", 0, 0, xpad_pad_open_properties);
+@@ -1763,9 +1763,9 @@
+ 	MENU_ADD (_("_Paste"), "edit-paste", 0, 0, xpad_pad_paste);
+ 	g_object_set_data (G_OBJECT (menu), "paste", item);
+ 	MENU_ADD_SEP ();
+-	MENU_ADD (_("_Bold"), "format-text-bold", GDK_KEY_b, GDK_CONTROL_MASK, menu_bold);
+-	MENU_ADD (_("_Italic"), "format-text-italic", GDK_KEY_i, GDK_CONTROL_MASK, menu_italic);
+-	MENU_ADD (_("_Underline"), "format-text-underline", GDK_KEY_u, GDK_CONTROL_MASK, menu_underline);
++	MENU_ADD (_("_Bold"), "format-text-bold", GDK_KEY_b, GDK_SUPER_MASK, menu_bold);
++	MENU_ADD (_("_Italic"), "format-text-italic", GDK_KEY_i, GDK_SUPER_MASK, menu_italic);
++	MENU_ADD (_("_Underline"), "format-text-underline", GDK_KEY_u, GDK_SUPER_MASK, menu_underline);
+ 	MENU_ADD (_("_Strikethrough"), "format-text-strikethrough", 0, 0, menu_strikethrough);
+ 
+ 	gtk_widget_show_all (menu);
