@@ -10,24 +10,6 @@ diff -urN a/src/xpad-pad.c b/src/xpad-pad.c
  
  	/* GtkBox with overlay and toolbar */
  	GtkBox *vbox = GTK_BOX (gtk_box_new (GTK_ORIENTATION_VERTICAL, 0));
-@@ -1169,7 +1169,7 @@
- 		switch (event->button)
- 		{
- 		case 1:
--			if ((event->state & gtk_accelerator_get_default_mod_mask ()) == GDK_CONTROL_MASK)
-+			if ((event->state & gtk_accelerator_get_default_mod_mask ()) == GDK_SUPER_MASK)
- 			{
- 				gtk_window_begin_move_drag (GTK_WINDOW (pad), (gint) event->button, (gint) event->x_root, (gint) event->y_root, event->time);
- 				return TRUE;
-@@ -1177,7 +1177,7 @@
- 			break;
- 
- 		case 3:
--			if ((event->state & gtk_accelerator_get_default_mod_mask ()) == GDK_CONTROL_MASK)
-+			if ((event->state & gtk_accelerator_get_default_mod_mask ()) == GDK_SUPER_MASK)
- 			{
- 				GdkWindowEdge edge;
- 
 @@ -1605,25 +1605,25 @@
  	uppermenu = gtk_menu_new ();
  	gtk_menu_set_accel_group (GTK_MENU (uppermenu), accel_group);
