@@ -1,0 +1,130 @@
+diff -urN a/po/ja.po b/po/ja.po
+--- a/po/ja.po	2021-08-05 02:22:48.000000000 -0700
++++ b/po/ja.po	2022-06-12 10:56:56.960010378 -0700
+@@ -965,22 +965,22 @@
+ #: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:675
+ #: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:814
+ msgid "Do_n't activate"
+-msgstr "有効にしない(_N)"
++msgstr "有効にしない"
+ 
+ #: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:675
+ #: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:814
+ msgid "Do_n't deactivate"
+-msgstr "無効にしない(_N)"
++msgstr "無効にしない"
+ 
+ #: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:678
+ #: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:817
+ msgid "_Activate"
+-msgstr "有効にする(_A)"
++msgstr "有効にする"
+ 
+ #: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:678
+ #: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:817
+ msgid "_Deactivate"
+-msgstr "無効にする(_D)"
++msgstr "無効にする"
+ 
+ #: plugins/a11y-keyboard/msd-a11y-keyboard-manager.c:682
+ msgid "Slow Keys Alert"
+@@ -1027,39 +1027,39 @@
+ 
+ #: plugins/a11y-keyboard/msd-a11y-preferences-dialog.ui:86
+ msgid "Use on-screen _keyboard"
+-msgstr "オンスクリーン・キーボードを使う(_K)"
++msgstr "オンスクリーン・キーボードを使う"
+ 
+ #: plugins/a11y-keyboard/msd-a11y-preferences-dialog.ui:102
+ msgid "Use screen _reader"
+-msgstr "スクリーン・リーダを使う(_R)"
++msgstr "スクリーン・リーダを使う"
+ 
+ #: plugins/a11y-keyboard/msd-a11y-preferences-dialog.ui:118
+ msgid "Use screen _magnifier"
+-msgstr "スクリーンの拡大鏡を使う(_M)"
++msgstr "スクリーンの拡大鏡を使う"
+ 
+ #: plugins/a11y-keyboard/msd-a11y-preferences-dialog.ui:134
+ msgid "Enhance _contrast in colors"
+-msgstr "色のコントラストを強調する(_C)"
++msgstr "色のコントラストを強調する"
+ 
+ #: plugins/a11y-keyboard/msd-a11y-preferences-dialog.ui:150
+ msgid "Make _text larger and easier to read"
+-msgstr "文字を大きく表示して読みやすくする(_T)"
++msgstr "文字を大きく表示して読みやすくする"
+ 
+ #: plugins/a11y-keyboard/msd-a11y-preferences-dialog.ui:166
+ msgid "_Press keyboard shortcuts one key at a time (Sticky Keys)"
+-msgstr "ステッキー・キーを有効にする(_P)"
++msgstr "ステッキー・キーを有効にする"
+ 
+ #: plugins/a11y-keyboard/msd-a11y-preferences-dialog.ui:182
+ msgid "_Ignore duplicate keypresses (Bounce Keys)"
+-msgstr "キーを素早く押下したり押し続けた場合は無視する(_I)"
++msgstr "キーを素早く押下したり押し続けた場合は無視する"
+ 
+ #: plugins/a11y-keyboard/msd-a11y-preferences-dialog.ui:198
+ msgid "Press and _hold keys to accept them (Slow Keys)"
+-msgstr "キーを押下したままにしてスロー・キーを有効にできる(_H)"
++msgstr "キーを押下したままにしてスロー・キーを有効にできる"
+ 
+ #: plugins/a11y-keyboard/msd-a11y-preferences-dialog.ui:214
+ msgid "_Beep when pressing a key while CapsLock is active"
+-msgstr "CapsLock が有効な時、キーを押すとビープ音を鳴らす(_B)"
++msgstr "CapsLock が有効な時、キーを押すとビープ音を鳴らす"
+ 
+ #: plugins/a11y-settings/a11y-settings.mate-settings-plugin.desktop.in:5
+ msgid "Accessibility settings"
+@@ -1235,7 +1235,7 @@
+ 
+ #: plugins/housekeeping/msd-ldsm-trash-empty.c:366
+ msgid "_Empty Trash"
+-msgstr "ゴミ箱を空にする(_E)"
++msgstr "ゴミ箱を空にする"
+ 
+ #: plugins/keybindings/keybindings.mate-settings-plugin.desktop.in:5
+ msgid "Keybindings"
+@@ -1303,15 +1303,15 @@
+ 
+ #: plugins/keyboard/msd-keyboard-xkb.c:286
+ msgid "_Layouts"
+-msgstr "レイアウト(_L)"
++msgstr "レイアウト"
+ 
+ #: plugins/keyboard/msd-keyboard-xkb.c:293
+ msgid "Keyboard _Preferences"
+-msgstr "キーボードの設定(_P)"
++msgstr "キーボードの設定"
+ 
+ #: plugins/keyboard/msd-keyboard-xkb.c:299
+ msgid "Show _Current Layout"
+-msgstr "現在のレイアウトを表示(_C)"
++msgstr "現在のレイアウトを表示"
+ 
+ #: plugins/media-keys/media-keys.mate-settings-plugin.desktop.in:5
+ msgid "Media keys"
+@@ -1535,11 +1535,11 @@
+ 
+ #: plugins/xrandr/msd-xrandr-manager.c:498
+ msgid "_Restore Previous Configuration"
+-msgstr "前の設定に戻す(_R)"
++msgstr "前の設定に戻す"
+ 
+ #: plugins/xrandr/msd-xrandr-manager.c:499
+ msgid "_Keep This Configuration"
+-msgstr "この設定のままにする(_K)"
++msgstr "この設定のままにする"
+ 
+ #: plugins/xrandr/msd-xrandr-manager.c:580
+ msgid "The selected configuration for displays could not be applied"
+@@ -1609,7 +1609,7 @@
+ 
+ #: plugins/xrandr/msd-xrandr-manager.c:2292
+ msgid "_Configure Display Settings…"
+-msgstr "ディスプレイの設定(_C)…"
++msgstr "ディスプレイの設定…"
+ 
+ #: plugins/xrandr/msd-xrandr-manager.c:2302
+ msgid "Open the display configuration dialog (all settings)"

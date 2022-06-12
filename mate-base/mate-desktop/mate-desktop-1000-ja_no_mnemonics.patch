@@ -1,0 +1,107 @@
+diff -urN a/po/ja.po b/po/ja.po
+--- a/po/ja.po	2021-08-03 10:33:20.000000000 -0700
++++ b/po/ja.po	2022-06-12 10:18:43.996893484 -0700
+@@ -222,7 +222,7 @@
+ 
+ #: libmate-desktop/mate-colorsel.c:378
+ msgid "_Hue:"
+-msgstr "色相(_H):"
++msgstr "色相:"
+ 
+ #: libmate-desktop/mate-colorsel.c:379
+ msgid "Position on the color wheel."
+@@ -230,7 +230,7 @@
+ 
+ #: libmate-desktop/mate-colorsel.c:381
+ msgid "_Saturation:"
+-msgstr "彩度(_S):"
++msgstr "彩度:"
+ 
+ #: libmate-desktop/mate-colorsel.c:382
+ msgid "\"Deepness\" of the color."
+@@ -238,7 +238,7 @@
+ 
+ #: libmate-desktop/mate-colorsel.c:383
+ msgid "_Value:"
+-msgstr "明度(_V):"
++msgstr "明度:"
+ 
+ #: libmate-desktop/mate-colorsel.c:384
+ msgid "Brightness of the color."
+@@ -246,7 +246,7 @@
+ 
+ #: libmate-desktop/mate-colorsel.c:385
+ msgid "_Red:"
+-msgstr "赤(_R) :"
++msgstr "赤 :"
+ 
+ #: libmate-desktop/mate-colorsel.c:386
+ msgid "Amount of red light in the color."
+@@ -254,7 +254,7 @@
+ 
+ #: libmate-desktop/mate-colorsel.c:387
+ msgid "_Green:"
+-msgstr "緑(_G) :"
++msgstr "緑 :"
+ 
+ #: libmate-desktop/mate-colorsel.c:388
+ msgid "Amount of green light in the color."
+@@ -262,7 +262,7 @@
+ 
+ #: libmate-desktop/mate-colorsel.c:389
+ msgid "_Blue:"
+-msgstr "青(_B) :"
++msgstr "青 :"
+ 
+ #: libmate-desktop/mate-colorsel.c:390
+ msgid "Amount of blue light in the color."
+@@ -270,7 +270,7 @@
+ 
+ #: libmate-desktop/mate-colorsel.c:393
+ msgid "Op_acity:"
+-msgstr "透明度(_A) :"
++msgstr "透明度 :"
+ 
+ #: libmate-desktop/mate-colorsel.c:400 libmate-desktop/mate-colorsel.c:410
+ msgid "Transparency of the color."
+@@ -278,7 +278,7 @@
+ 
+ #: libmate-desktop/mate-colorsel.c:417
+ msgid "Color _name:"
+-msgstr "色の名前(_N):"
++msgstr "色の名前:"
+ 
+ #: libmate-desktop/mate-colorsel.c:431
+ msgid ""
+@@ -288,7 +288,7 @@
+ 
+ #: libmate-desktop/mate-colorsel.c:461
+ msgid "_Palette:"
+-msgstr "パレット(_P):"
++msgstr "パレット:"
+ 
+ #: libmate-desktop/mate-colorsel.c:491
+ msgid "Color Wheel"
+@@ -327,7 +327,7 @@
+ 
+ #: libmate-desktop/mate-colorsel.c:1371
+ msgid "_Save color here"
+-msgstr "ここに色を保存(_S)"
++msgstr "ここに色を保存"
+ 
+ #: libmate-desktop/mate-colorsel.c:1593
+ msgid ""
+@@ -1556,11 +1556,11 @@
+ 
+ #: tools/mate-color-select.c:70
+ msgid "_Copy"
+-msgstr "コピー(_C)"
++msgstr "コピー"
+ 
+ #: tools/mate-color-select.c:76
+ msgid "_Close"
+-msgstr "閉じる(_C)"
++msgstr "閉じる"
+ 
+ #: tools/mate-color-select.desktop.in:4
+ msgid "Color selection dialog"

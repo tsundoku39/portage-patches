@@ -1,0 +1,139 @@
+diff -urN a/po/ja.po b/po/ja.po
+--- a/po/ja.po	2021-08-04 11:51:56.000000000 -0700
++++ b/po/ja.po	2022-06-12 10:55:34.775147787 -0700
+@@ -119,12 +119,12 @@
+ #: applets/brightness/brightness-applet.c:1081
+ #: applets/inhibit/inhibit-applet.c:503
+ msgid "_About"
+-msgstr "情報(_A)"
++msgstr "情報"
+ 
+ #: applets/brightness/brightness-applet.c:1084
+ #: applets/inhibit/inhibit-applet.c:506 data/gpm-prefs.ui:41
+ msgid "_Help"
+-msgstr "ヘルプ(_H)"
++msgstr "ヘルプ"
+ 
+ #: applets/brightness/org.mate.BrightnessApplet.mate-panel-applet.desktop.in.in:5
+ msgid "Brightness Applet Factory"
+@@ -916,17 +916,17 @@
+ 
+ #: data/gpm-prefs.ui:71
+ msgid "_Close"
+-msgstr "閉じる(_C)"
++msgstr "閉じる"
+ 
+ #: data/gpm-prefs.ui:138 data/gpm-prefs.ui:406 data/gpm-prefs.ui:746
+ msgid "Put computer to _sleep when inactive for:"
+ msgstr ""
+ "次の時間、アイドル状態が続いたら\n"
+-"システムをスリープする(_S):"
++"システムをスリープする:"
+ 
+ #: data/gpm-prefs.ui:176 data/gpm-prefs.ui:444
+ msgid "When laptop lid is cl_osed:"
+-msgstr "ノート PC を閉じたら(_O):"
++msgstr "ノート PC を閉じたら:"
+ 
+ #: data/gpm-prefs.ui:213 data/gpm-prefs.ui:519 data/gpm-prefs.ui:825
+ #: data/gpm-prefs.ui:1031
+@@ -937,15 +937,15 @@
+ msgid "Put _display to sleep when inactive for:"
+ msgstr ""
+ "次の時間、アイドル状態が続いたら\n"
+-"画面をスリープする(_D):"
++"画面をスリープする:"
+ 
+ #: data/gpm-prefs.ui:289
+ msgid "Set display _brightness to:"
+-msgstr "画面の明るさの設定(_B):"
++msgstr "画面の明るさの設定:"
+ 
+ #: data/gpm-prefs.ui:322 data/gpm-prefs.ui:607
+ msgid "Di_m display when idle"
+-msgstr "アイドル状態になったら画面を暗くする(_M)"
++msgstr "アイドル状態になったら画面を暗くする"
+ 
+ #: data/gpm-prefs.ui:344 data/gpm-prefs.ui:629 data/gpm-prefs.ui:890
+ msgid "Display"
+@@ -957,15 +957,15 @@
+ 
+ #: data/gpm-prefs.ui:482
+ msgid "When battery po_wer is critically low:"
+-msgstr "バッテリがほとんどない場合は(_W):"
++msgstr "バッテリがほとんどない場合は:"
+ 
+ #: data/gpm-prefs.ui:591
+ msgid "_Reduce backlight brightness"
+-msgstr "バックライトの輝度を低くする(_R)"
++msgstr "バックライトの輝度を低くする"
+ 
+ #: data/gpm-prefs.ui:663
+ msgid "_Reduce keyboard backlight"
+-msgstr "キーボードの明るさを抑える(_R)"
++msgstr "キーボードの明るさを抑える"
+ 
+ #: data/gpm-prefs.ui:685 src/gpm-upower.c:507
+ msgid "Keyboard"
+@@ -978,11 +978,11 @@
+ 
+ #: data/gpm-prefs.ui:760
+ msgid "When UPS power is l_ow:"
+-msgstr "UPS 電源が低下したら(_O):"
++msgstr "UPS 電源が低下したら:"
+ 
+ #: data/gpm-prefs.ui:774
+ msgid "When UPS power is _critically low:"
+-msgstr "UPS 電源がほとんどない場合は(_C):"
++msgstr "UPS 電源がほとんどない場合は:"
+ 
+ #: data/gpm-prefs.ui:912
+ msgid "On UPS Power"
+@@ -990,31 +990,31 @@
+ 
+ #: data/gpm-prefs.ui:956
+ msgid "When the power _button is pressed:"
+-msgstr "電源ボタンを押したら(_B):"
++msgstr "電源ボタンを押したら:"
+ 
+ #: data/gpm-prefs.ui:994
+ msgid "When the _suspend button is pressed:"
+-msgstr "サスペンド・ボタンを押したら(_S):"
++msgstr "サスペンド・ボタンを押したら:"
+ 
+ #: data/gpm-prefs.ui:1065
+ msgid "_Never display an icon"
+-msgstr "アイコンを表示しない(_N)"
++msgstr "アイコンを表示しない"
+ 
+ #: data/gpm-prefs.ui:1083
+ msgid "_Only display an icon when battery power is low"
+-msgstr "バッテリの残量が深刻な場合にのみ表示する(_O)"
++msgstr "バッテリの残量が深刻な場合にのみ表示する"
+ 
+ #: data/gpm-prefs.ui:1101
+ msgid "Only display an icon when charging or _discharging"
+-msgstr "バッテリーを充電/放電中の場合にのみ表示する(_D)"
++msgstr "バッテリーを充電/放電中の場合にのみ表示する"
+ 
+ #: data/gpm-prefs.ui:1119
+ msgid "Only display an icon when a battery is p_resent"
+-msgstr "バッテリーを使用している時だけアイコンを表示する(_R)"
++msgstr "バッテリーを使用している時だけアイコンを表示する"
+ 
+ #: data/gpm-prefs.ui:1137
+ msgid "_Always display an icon"
+-msgstr "常にアイコンを表示する(_A)"
++msgstr "常にアイコンを表示する"
+ 
+ #: data/gpm-prefs.ui:1161
+ msgid "Notification Area"
+@@ -1807,7 +1807,7 @@
+ 
+ #: src/gpm-tray-icon.c:370
+ msgid "_Preferences"
+-msgstr "設定(_P)"
++msgstr "設定"
+ 
+ #: src/gpm-upower.c:211
+ #, c-format

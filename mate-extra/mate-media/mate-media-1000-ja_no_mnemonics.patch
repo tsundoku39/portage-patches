@@ -1,0 +1,121 @@
+diff -urN a/po/ja.po b/po/ja.po
+--- a/po/ja.po	2021-08-04 07:02:35.313363380 -0700
++++ b/po/ja.po	2022-06-12 10:21:09.261970718 -0700
+@@ -91,7 +91,7 @@
+ #: mate-volume-control/gvc-applet.c:57
+ #: mate-volume-control/gvc-stream-status-icon.c:255
+ msgid "_Sound Preferences"
+-msgstr "サウンドの設定(_S)"
++msgstr "サウンドの設定"
+ 
+ #: mate-volume-control/gvc-applet.c:58 mate-volume-control/gvc-applet.c:469
+ msgid "Mute Output"
+@@ -153,15 +153,15 @@
+ 
+ #: mate-volume-control/gvc-balance-bar.c:335
+ msgid "_Balance:"
+-msgstr "バランス(_B):"
++msgstr "バランス:"
+ 
+ #: mate-volume-control/gvc-balance-bar.c:338
+ msgid "_Fade:"
+-msgstr "フェード(_F):"
++msgstr "フェード:"
+ 
+ #: mate-volume-control/gvc-balance-bar.c:341
+ msgid "_Subwoofer:"
+-msgstr "サブウーファー(_S):"
++msgstr "サブウーファー:"
+ 
+ #: mate-volume-control/gvc-channel-bar.c:310
+ msgctxt "volume"
+@@ -181,12 +181,12 @@
+ #: mate-volume-control/gvc-combo-box.c:250
+ #: mate-volume-control/gvc-mixer-dialog.c:1615
+ msgid "_Profile:"
+-msgstr "プロファイル(_P):"
++msgstr "プロファイル:"
+ 
+ #: mate-volume-control/gvc-mixer-dialog.c:352
+ #: mate-volume-control/gvc-mixer-dialog.c:501
+ msgid "Co_nnector:"
+-msgstr "コネクター(_N):"
++msgstr "コネクター:"
+ 
+ #: mate-volume-control/gvc-mixer-dialog.c:1123
+ msgid "Disabled"
+@@ -225,11 +225,11 @@
+ 
+ #: mate-volume-control/gvc-mixer-dialog.c:1846
+ msgid "_Alert volume: "
+-msgstr "警告音の音量(_A): "
++msgstr "警告音の音量: "
+ 
+ #: mate-volume-control/gvc-mixer-dialog.c:1973
+ msgid "_Output volume: "
+-msgstr "出力の音量(_O): "
++msgstr "出力の音量: "
+ 
+ #: mate-volume-control/gvc-mixer-dialog.c:2023
+ msgid "Hardware"
+@@ -237,7 +237,7 @@
+ 
+ #: mate-volume-control/gvc-mixer-dialog.c:2028
+ msgid "C_hoose a device to configure:"
+-msgstr "設定するデバイスを選択してください(_H):"
++msgstr "設定するデバイスを選択してください:"
+ 
+ #: mate-volume-control/gvc-mixer-dialog.c:2052
+ #: mate-volume-control/gvc-mixer-dialog.c:2182
+@@ -246,7 +246,7 @@
+ 
+ #: mate-volume-control/gvc-mixer-dialog.c:2075
+ msgid "_Input volume: "
+-msgstr "入力の音量(_I): "
++msgstr "入力の音量: "
+ 
+ #: mate-volume-control/gvc-mixer-dialog.c:2100
+ msgid "Input level:"
+@@ -254,11 +254,11 @@
+ 
+ #: mate-volume-control/gvc-mixer-dialog.c:2125
+ msgid "C_hoose a device for sound input:"
+-msgstr "サウンドの入力デバイスを選択してください(_H):"
++msgstr "サウンドの入力デバイスを選択してください:"
+ 
+ #: mate-volume-control/gvc-mixer-dialog.c:2158
+ msgid "C_hoose a device for sound output:"
+-msgstr "サウンドの出力デバイスを選択してください(_H):"
++msgstr "サウンドの出力デバイスを選択してください:"
+ 
+ #: mate-volume-control/gvc-mixer-dialog.c:2207
+ msgid "Applications"
+@@ -308,15 +308,15 @@
+ 
+ #: mate-volume-control/gvc-sound-theme-chooser.c:1029
+ msgid "Sound _theme:"
+-msgstr "サウンドのテーマ(_T):"
++msgstr "サウンドのテーマ:"
+ 
+ #: mate-volume-control/gvc-sound-theme-chooser.c:1042
+ msgid "C_hoose an alert sound:"
+-msgstr "警告音を選択してください(_H):"
++msgstr "警告音を選択してください:"
+ 
+ #: mate-volume-control/gvc-sound-theme-chooser.c:1070
+ msgid "Enable _window and button sounds"
+-msgstr "ウィンドウとボタンの音を鳴らす(_W)"
++msgstr "ウィンドウとボタンの音を鳴らす"
+ 
+ #: mate-volume-control/gvc-speaker-test.c:253
+ msgid "Stop"
+@@ -465,7 +465,7 @@
+ 
+ #: mate-volume-control/status-icon-main.c:56
+ msgid " — MATE Volume Control Status Icon"
+-msgstr "MATE 音量調節ステータスアイコン (_M)"
++msgstr "MATE 音量調節ステータスアイコン "
+ 
+ #~ msgid "_Mute"
+-#~ msgstr "ミュート(_M)"
++#~ msgstr "ミュート"

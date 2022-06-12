@@ -1,0 +1,111 @@
+diff -urN a/mousepad/mousepad-application.c b/mousepad/mousepad-application.c
+--- a/mousepad/mousepad-application.c	2022-04-01 06:41:27.000000000 -0700
++++ b/mousepad/mousepad-application.c	2022-05-31 22:07:06.787974381 -0700
+@@ -611,47 +611,37 @@
+   const gchar      *accel_maps[][2] =
+   {
+     /* increase/decrease font size from keyboard/mouse */
+-    { "win.increase-font-size", "<Control>plus" }, { "win.decrease-font-size", "<Control>minus" },
+-    { "win.reset-font-size", "<Control>0" },
++    { "win.increase-font-size", "<Super>plus" }, { "win.decrease-font-size", "<Super>minus" },
++    { "win.reset-font-size", "<Super>0" },
+ 
+     /* "File" menu */
+-    { "win.file.new", "<Control>N" }, { "win.file.new-window", "<Control><Shift>N" },
+-    { "win.file.open", "<Control>O" }, { "win.file.save", "<Control>S" },
+-    { "win.file.save-as", "<Control><Shift>S" }, { "win.file.print", "<Control>P" },
+-    { "win.file.detach-tab", "<Control>D" }, { "win.file.close-tab", "<Control>W" },
+-    { "win.file.close-window", "<Control><Shift>W" }, { "app.quit", "<Control>Q" },
++    { "win.file.new-window", "<Super>N" },
++    { "win.file.open", "<Super>O" }, { "win.file.save", "<Super>S" },
++    { "win.file.save-as", "<Super><Shift>S" }, { "win.file.print", "<Super>P" },
++    { "win.file.close-window", "<Super>W" }, { "app.quit", "<Super>Q" },
+ 
+     /* "Edit" menu */
+-    { "win.edit.undo", "<Control>Z" }, { "win.edit.redo", "<Control>Y" },
+-    { "win.edit.cut", "<Control>X" }, { "win.edit.copy", "<Control>C" },
+-    { "win.edit.paste", "<Control>V" }, { "win.edit.delete-selection", "Delete" },
+-    { "win.edit.delete-line", "<Control><Shift>Delete" }, { "win.edit.select-all", "<Control>A" },
+-    { "win.edit.convert.to-opposite-case", "<Alt><Control>U" },
+-    { "win.edit.convert.transpose", "<Control>T" },
++    { "win.edit.undo", "<Super>Z" }, { "win.edit.redo", "<Super>Y" },
++    { "win.edit.cut", "<Super>X" }, { "win.edit.copy", "<Super>C" },
++    { "win.edit.paste", "<Super>V" }, { "win.edit.delete-selection", "Delete" },
++    { "win.edit.delete-line", "<Super><Shift>Delete" }, { "win.edit.select-all", "<Super>A" },
++    { "win.edit.convert.to-opposite-case", "<Alt><Super>U" },
++    { "win.edit.convert.transpose", "<Super>T" },
+     { "win.edit.move.line-up", "<Alt>Up" }, { "win.edit.move.line-down", "<Alt>Down" },
+     { "win.edit.move.word-left", "<Alt>Left" }, { "win.edit.move.word-right", "<Alt>Right" },
+-    { "win.edit.increase-indent", "<Control>I" }, { "win.edit.decrease-indent", "<Control>U" },
++    { "win.edit.increase-indent", "<Super>I" }, { "win.edit.decrease-indent", "<Super>U" },
+ 
+     /* "Search" menu */
+-    { "win.search.find", "<Control>F" }, { "win.search.find-next", "<Control>G" },
+-    { "win.search.find-previous", "<Control><Shift>G" },
+-    { "win.search.find-and-replace", "<Control>R" },
+-    { "win.search.go-to", "<Control>L" },
++    { "win.search.find", "<Super>F" }, { "win.search.find-next", "<Super>G" },
++    { "win.search.find-previous", "<Super><Shift>G" },
++    { "win.search.find-and-replace", "<Super>R" },
++    { "win.search.go-to", "<Super>L" },
+ 
+     /* "View" menu */
+-    { "win.preferences.window.menubar-visible", "<Control>M" }, { "win.view.fullscreen", "F11" },
+-
+-    /* "Document" menu */
+-    { "win.document.previous-tab", "<Control>Page_Up" },
+-    { "win.document.next-tab", "<Control>Page_Down" },
+-    { "win.document.go-to-tab(0)", "<Alt>1" }, { "win.document.go-to-tab(1)", "<Alt>2" },
+-    { "win.document.go-to-tab(2)", "<Alt>3" }, { "win.document.go-to-tab(3)", "<Alt>4" },
+-    { "win.document.go-to-tab(4)", "<Alt>5" }, { "win.document.go-to-tab(5)", "<Alt>6" },
+-    { "win.document.go-to-tab(6)", "<Alt>7" }, { "win.document.go-to-tab(7)", "<Alt>8" },
+-    { "win.document.go-to-tab(8)", "<Alt>9" },
++    { "win.preferences.window.menubar-visible", "<Super>M" }, { "win.view.fullscreen", "<Super><Shift>F" },
+ 
+     /* "Help" menu */
+-    { "win.help.contents", "F1" }
++    { "win.help.contents", NULL }
+   };
+ 
+   /* actions that have a default accel */
+diff -urN a/mousepad/mousepad-window.c b/mousepad/mousepad-window.c
+--- a/mousepad/mousepad-window.c	2022-03-27 14:11:56.000000000 -0700
++++ b/mousepad/mousepad-window.c	2022-05-31 22:10:31.606640658 -0700
+@@ -476,8 +476,8 @@
+   { "reset-font-size", mousepad_window_action_reset_font_size, NULL, NULL, NULL },
+ 
+   /* "File" menu */
+-  { "file.new", mousepad_window_action_new, NULL, NULL, NULL },
+-  { "file.new-window", mousepad_window_action_new_window, NULL, NULL, NULL },
++  { "file.new", mousepad_window_action_new_window, NULL, NULL, NULL },
++  { "file.new-window", mousepad_window_action_new, NULL, NULL, NULL },
+   { "file.new-from-template", NULL, NULL, "false", mousepad_window_menu_templates },
+     { "file.new-from-template.new", mousepad_window_action_new_from_template, "s", NULL, NULL },
+ 
+diff -urN a/mousepad/resources/gtk/menus-common.ui b/mousepad/resources/gtk/menus-common.ui
+--- a/mousepad/resources/gtk/menus-common.ui	2022-03-27 14:11:56.000000000 -0700
++++ b/mousepad/resources/gtk/menus-common.ui	2022-05-31 21:46:28.250449473 -0700
+@@ -35,7 +35,7 @@
+         <attribute name="item-share-id">item.file.new</attribute>
+         <attribute name="label" translatable="yes">_New</attribute>
+         <attribute name="tooltip" translatable="yes">Create a new document</attribute>
+-        <attribute name="action">win.file.new</attribute>
++        <attribute name="action">win.file.new-window</attribute>
+         <attribute name="icon">document-new</attribute>
+       </item>
+     </section>
+diff -urN a/mousepad/resources/gtk/menus.ui b/mousepad/resources/gtk/menus.ui
+--- a/mousepad/resources/gtk/menus.ui	2022-03-27 14:11:56.000000000 -0700
++++ b/mousepad/resources/gtk/menus.ui	2022-05-31 21:47:45.935737057 -0700
+@@ -23,11 +23,6 @@
+           <attribute name="item-share-id">item.file.new</attribute>
+           <attribute name="label"/>
+         </item>
+-        <item>
+-          <attribute name="label" translatable="yes">New _Window</attribute>
+-          <attribute name="tooltip" translatable="yes">Create a new document in a new window</attribute>
+-          <attribute name="action">win.file.new-window</attribute>
+-        </item>
+         <submenu id="file.new-from-template">
+           <attribute name="label" translatable="yes">New From Te_mplate</attribute>
+           <attribute name="tooltip" translatable="yes">Create a new document from a template</attribute>

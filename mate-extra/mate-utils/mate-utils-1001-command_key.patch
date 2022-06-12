@@ -1,0 +1,145 @@
+diff -urN a/logview/src/logview-window.c b/logview/src/logview-window.c
+--- a/logview/src/logview-window.c	2021-08-05 12:43:41.000000000 -0700
++++ b/logview/src/logview-window.c	2022-06-12 11:07:50.026753091 -0700
+@@ -824,31 +824,31 @@
+     { "FilterMenu", NULL, N_("_Filters"), NULL, NULL, NULL },
+     { "HelpMenu", NULL, N_("_Help"), NULL, NULL, NULL },
+ 
+-    { "OpenLog", "document-open", N_("_Open..."), "<control>O", N_("Open a log from file"),
++    { "OpenLog", "document-open", N_("_Open..."), "<super>O", N_("Open a log from file"),
+       G_CALLBACK (logview_open_log) },
+-    { "CloseLog", "window-close", N_("_Close"), "<control>W", N_("Close this log"),
++    { "CloseLog", "window-close", N_("_Close"), "<super>W", N_("Close this log"),
+       G_CALLBACK (logview_close_log) },
+-    { "Quit", "application-exit", N_("_Quit"), "<control>Q", N_("Quit the log viewer"),
++    { "Quit", "application-exit", N_("_Quit"), "<super>Q", N_("Quit the log viewer"),
+       G_CALLBACK (gtk_main_quit) },
+ 
+-    { "Copy", "edit-copy", N_("_Copy"), "<control>C", N_("Copy the selection"),
++    { "Copy", "edit-copy", N_("_Copy"), "<super>C", N_("Copy the selection"),
+       G_CALLBACK (logview_copy) },
+-    { "SelectAll", NULL, N_("Select _All"), "<Control>A", N_("Select the entire log"),
++    { "SelectAll", NULL, N_("Select _All"), "<super>A", N_("Select the entire log"),
+       G_CALLBACK (logview_select_all) },
+-    { "Search", "edit-find", N_("_Find..."), "<control>F", N_("Find a word or phrase in the log"),
++    { "Search", "edit-find", N_("_Find..."), "<super>F", N_("Find a word or phrase in the log"),
+       G_CALLBACK (logview_search) },
+ 
+-    { "ViewZoomIn", "zoom-in", N_("Zoom _In"), "<control>plus", N_("Bigger text size"),
++    { "ViewZoomIn", "zoom-in", N_("Zoom _In"), "<super>plus", N_("Bigger text size"),
+       G_CALLBACK (logview_bigger_text)},
+-    { "ViewZoomOut", "zoom-out", N_("Zoom _Out"), "<control>minus", N_("Smaller text size"),
++    { "ViewZoomOut", "zoom-out", N_("Zoom _Out"), "<super>minus", N_("Smaller text size"),
+       G_CALLBACK (logview_smaller_text)},
+-    { "ViewZoom100", "zoom-original", N_("_Normal Size"), "<control>0", N_("Normal text size"),
++    { "ViewZoom100", "zoom-original", N_("_Normal Size"), "<super>0", N_("Normal text size"),
+       G_CALLBACK (logview_normal_text)},
+ 
+     { "FilterManage", NULL, N_("Manage Filters"), NULL, N_("Manage filters"),
+       G_CALLBACK (logview_manage_filters)},
+ 
+-    { "HelpContents", "help-browser", N_("_Contents"), "F1", N_("Open the help contents for the log viewer"),
++    { "HelpContents", "help-browser", N_("_Contents"), NULL, N_("Open the help contents for the log viewer"),
+       G_CALLBACK (logview_help) },
+     { "AboutAction", "help-about", N_("_About"), NULL, N_("Show the about dialog for the log viewer"),
+       G_CALLBACK (logview_about) },
+@@ -857,7 +857,7 @@
+ static GtkToggleActionEntry toggle_entries[] = {
+     { "ShowStatusBar", NULL, N_("_Statusbar"), NULL, N_("Show Status Bar"),
+       G_CALLBACK (logview_toggle_statusbar), TRUE },
+-    { "ShowSidebar", NULL, N_("Side _Pane"), "F9", N_("Show Side Pane"),
++    { "ShowSidebar", NULL, N_("Side _Pane"), "<super>B", N_("Show Side Pane"),
+       G_CALLBACK (logview_toggle_sidebar), TRUE },
+     { "FilterMatchOnly", NULL, N_("Show matches only"), NULL, N_("Only show lines that match one of the given filters"),
+       G_CALLBACK (logview_toggle_match_filters), FALSE}
+diff -urN a/mate-dictionary/src/gdict-window.c b/mate-dictionary/src/gdict-window.c
+--- a/mate-dictionary/src/gdict-window.c	2021-08-05 12:43:41.000000000 -0700
++++ b/mate-dictionary/src/gdict-window.c	2022-06-12 11:09:03.615904573 -0700
+@@ -1262,67 +1262,67 @@
+   { "Help", NULL, N_("_Help"), NULL, NULL, NULL },
+ 
+   /* File menu */
+-  { "FileNew", "document-new", N_("_New"), "<control>N",
++  { "FileNew", "document-new", N_("_New"), "<super>N",
+     N_("New look up"), G_CALLBACK (gdict_window_cmd_file_new) },
+   { "FileSaveAs", "document-save-as", N_("_Save a Copy..."), NULL, NULL,
+     G_CALLBACK (gdict_window_cmd_save_as) },
+-  { "FilePreview", NULL, N_("P_review..."), "<control><shift>P",
++  { "FilePreview", NULL, N_("P_review..."), "<super><shift>P",
+     N_("Preview this document"), G_CALLBACK (gdict_window_cmd_file_preview) },
+-  { "FilePrint", "document-print", N_("_Print..."), "<control>P",
++  { "FilePrint", "document-print", N_("_Print..."), "<super>P",
+     N_("Print this document"), G_CALLBACK (gdict_window_cmd_file_print) },
+-  { "FileCloseWindow", "window-close", N_("_Close"), "<control>W", NULL,
++  { "FileCloseWindow", "window-close", N_("_Close"), "<super>W", NULL,
+     G_CALLBACK (gdict_window_cmd_file_close_window) },
+ 
+   /* Edit menu */
+-  { "EditCopy", "edit-copy", N_("_Copy"), "<control>C", NULL,
++  { "EditCopy", "edit-copy", N_("_Copy"), "<super>C", NULL,
+     G_CALLBACK (gdict_window_cmd_edit_copy) },
+-  { "EditSelectAll", NULL, N_("Select _All"), "<control>A", NULL,
++  { "EditSelectAll", NULL, N_("Select _All"), "<super>A", NULL,
+     G_CALLBACK (gdict_window_cmd_edit_select_all) },
+-  { "EditFind", "edit-find", N_("_Find"), "<control>F",
++  { "EditFind", "edit-find", N_("_Find"), "<super>F",
+     N_("Find a word or phrase in the document"),
+     G_CALLBACK (gdict_window_cmd_edit_find) },
+-  { "EditFindNext", NULL, N_("Find Ne_xt"), "<control>G", NULL,
++  { "EditFindNext", NULL, N_("Find Ne_xt"), "<super>G", NULL,
+     G_CALLBACK (gdict_window_cmd_edit_find_next) },
+-  { "EditFindPrevious", NULL, N_("Find Pre_vious"), "<control><shift>G", NULL,
++  { "EditFindPrevious", NULL, N_("Find Pre_vious"), "<super><shift>G", NULL,
+     G_CALLBACK (gdict_window_cmd_edit_find_previous) },
+   { "EditPreferences", "preferences-desktop", N_("_Preferences"), NULL, NULL,
+     G_CALLBACK (gdict_window_cmd_edit_preferences) },
+ 
+   /* Go menu */
+-  { "GoPreviousDef", "go-previous", N_("_Previous Definition"), "<control>Page_Up",
++  { "GoPreviousDef", "go-previous", N_("_Previous Definition"), "<super>Page_Up",
+     N_("Go to the previous definition"), G_CALLBACK (gdict_window_cmd_go_previous_def) },
+-  { "GoNextDef", "go-next", N_("_Next Definition"), "<control>Page_Down",
++  { "GoNextDef", "go-next", N_("_Next Definition"), "<super>Page_Down",
+     N_("Go to the next definition"), G_CALLBACK (gdict_window_cmd_go_next_def) },
+-  { "GoFirstDef", "go-first", N_("_First Definition"), "<control>Home",
++  { "GoFirstDef", "go-first", N_("_First Definition"), "<super>Home",
+     N_("Go to the first definition"), G_CALLBACK (gdict_window_cmd_go_first_def) },
+-  { "GoLastDef", "go-last", N_("_Last Definition"), "<control>End",
++  { "GoLastDef", "go-last", N_("_Last Definition"), "<super>End",
+     N_("Go to the last definition"), G_CALLBACK (gdict_window_cmd_go_last_def) },
+ 
+   /* View menu */
+-  { "ViewSpeller", NULL, N_("Similar _Words"), "<control>T", NULL,
++  { "ViewSpeller", NULL, N_("Similar _Words"), "<super>T", NULL,
+     G_CALLBACK (gdict_window_cmd_view_speller), },
+-  { "ViewSource", NULL, N_("Dictionary Sources"), "<control>D", NULL,
++  { "ViewSource", NULL, N_("Dictionary Sources"), "<super>D", NULL,
+     G_CALLBACK (gdict_window_cmd_view_sources), },
+-  { "ViewDB", NULL, N_("Available _Databases"), "<control>B", NULL,
++  { "ViewDB", NULL, N_("Available _Databases"), "<shift><super>B", NULL,
+     G_CALLBACK (gdict_window_cmd_view_databases), },
+-  { "ViewStrat", NULL, N_("Available St_rategies"), "<control>R", NULL,
++  { "ViewStrat", NULL, N_("Available St_rategies"), "<super>R", NULL,
+     G_CALLBACK (gdict_window_cmd_view_strategies), },
+ 
+   /* Help menu */
+-  { "HelpContents", "help-browser", N_("_Contents"), "F1", NULL,
++  { "HelpContents", "help-browser", N_("_Contents"), NULL, NULL,
+     G_CALLBACK (gdict_window_cmd_help_contents) },
+   { "HelpAbout", "help-about", N_("_About"), NULL, NULL,
+     G_CALLBACK (gdict_window_cmd_help_about) },
+ 
+   /* Accelerators */
+-  { "Lookup", NULL, "", "<control>L", NULL, G_CALLBACK (gdict_window_cmd_lookup) },
++  { "Lookup", NULL, "", "<super>L", NULL, G_CALLBACK (gdict_window_cmd_lookup) },
+   { "Escape", NULL, "", "Escape", "", G_CALLBACK (gdict_window_cmd_escape) },
+   { "Slash", "edit-find", NULL, "slash", NULL, G_CALLBACK (gdict_window_cmd_edit_find) },
+ };
+ 
+ static const GtkToggleActionEntry toggle_entries[] = {
+   /* View menu */
+-  { "ViewSidebar", NULL, N_("_Sidebar"), "F9", NULL,
++  { "ViewSidebar", NULL, N_("_Sidebar"), "<super>B", NULL,
+     G_CALLBACK (gdict_window_cmd_view_sidebar), FALSE },
+   { "ViewStatusbar", NULL, N_("S_tatusbar"), NULL, NULL,
+     G_CALLBACK (gdict_window_cmd_view_statusbar), FALSE },

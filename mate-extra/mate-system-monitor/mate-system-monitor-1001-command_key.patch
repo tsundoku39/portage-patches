@@ -1,0 +1,55 @@
+diff -urN a/src/interface.cpp b/src/interface.cpp
+--- a/src/interface.cpp	2021-08-05 08:55:28.000000000 -0700
++++ b/src/interface.cpp	2022-06-12 11:00:08.063727650 -0700
+@@ -54,33 +54,33 @@
+     { "View", NULL, N_("_View") },
+     { "Help", NULL, N_("_Help") },
+ 
+-    { "Lsof", "edit-find", N_("Search for _Open Files"), "<control>O",
++    { "Lsof", "edit-find", N_("Search for _Open Files"), "<super>O",
+       N_("Search for open files"), G_CALLBACK(cb_show_lsof) },
+-    { "Quit", "application-exit", N_("_Quit"), "<control>Q",
++    { "Quit", "application-exit", N_("_Quit"), "<super>Q",
+       N_("Quit the program"), G_CALLBACK (cb_app_exit) },
+ 
+ 
+-    { "StopProcess", NULL, N_("_Stop Process"), "<control>S",
++    { "StopProcess", NULL, N_("_Stop Process"), "<super>S",
+       N_("Stop process"), G_CALLBACK(cb_kill_sigstop) },
+-    { "ContProcess", NULL, N_("_Continue Process"), "<control>C",
++    { "ContProcess", NULL, N_("_Continue Process"), "<super>C",
+       N_("Continue process if stopped"), G_CALLBACK(cb_kill_sigcont) },
+ 
+-    { "EndProcess", NULL, N_("_End Process"), "<control>E",
++    { "EndProcess", NULL, N_("_End Process"), "<super>E",
+       N_("Force process to finish normally"), G_CALLBACK (cb_end_process) },
+-    { "KillProcess", NULL, N_("_Kill Process"), "<control>K",
++    { "KillProcess", NULL, N_("_Kill Process"), "<super>K",
+       N_("Force process to finish immediately"), G_CALLBACK (cb_kill_process) },
+     { "ChangePriority", NULL, N_("_Change Priority"), NULL,
+       N_("Change the order of priority of process"), NULL },
+     { "Preferences", "preferences-desktop", N_("_Preferences"), NULL,
+       N_("Configure the application"), G_CALLBACK (cb_edit_preferences) },
+ 
+-    { "Refresh", "view-refresh", N_("_Refresh"), "<control>R",
++    { "Refresh", "view-refresh", N_("_Refresh"), "<super>R",
+       N_("Refresh the process list"), G_CALLBACK(cb_user_refresh) },
+ 
+-    { "MemoryMaps", NULL, N_("_Memory Maps"), "<control>M",
++    { "MemoryMaps", NULL, N_("_Memory Maps"), "<super>M",
+       N_("Open the memory maps associated with a process"), G_CALLBACK (cb_show_memory_maps) },
+     // Translators: this means 'Files that are open' (open is no verb here
+-    { "OpenFiles", NULL, N_("Open _Files"), "<control>F",
++    { "OpenFiles", NULL, N_("Open _Files"), "<super>F",
+       N_("View the files opened by a process"), G_CALLBACK (cb_show_open_files) },
+     { "ProcessProperties", NULL, N_("_Properties"), NULL,
+       N_("View additional information about a process"), G_CALLBACK (cb_show_process_properties) },
+@@ -94,7 +94,7 @@
+ 
+ static const GtkToggleActionEntry toggle_menu_entries[] =
+ {
+-    { "ShowDependencies", NULL, N_("_Dependencies"), "<control>D",
++    { "ShowDependencies", NULL, N_("_Dependencies"), "<super>D",
+       N_("Show parent/child relationship between processes"),
+       G_CALLBACK (cb_toggle_tree), TRUE },
+ };

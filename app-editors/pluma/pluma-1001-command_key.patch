@@ -1,0 +1,226 @@
+diff -urN a/plugins/snippets/data/c.xml b/plugins/snippets/data/c.xml
+--- a/plugins/snippets/data/c.xml	2021-08-06 01:59:33.000000000 -0700
++++ b/plugins/snippets/data/c.xml	2022-06-12 07:21:22.972606011 -0700
+@@ -145,7 +145,7 @@
+     <text><![CDATA[#endif
+ $0]]></text>
+     <description>#endif</description>
+-    <accelerator><![CDATA[<Control><Alt>period]]></accelerator>
++    <accelerator><![CDATA[<Super><Alt>period]]></accelerator>
+   </snippet>
+   <snippet id="td">
+     <text><![CDATA[typedef ${1:newtype} ${2:type};
+diff -urN a/plugins/snippets/data/cpp.xml b/plugins/snippets/data/cpp.xml
+--- a/plugins/snippets/data/cpp.xml	2021-08-06 01:59:33.000000000 -0700
++++ b/plugins/snippets/data/cpp.xml	2022-06-12 07:21:34.581410996 -0700
+@@ -33,7 +33,7 @@
+   <snippet id="endif">
+     <text><![CDATA[#endif
+ $0]]></text>
+-    <accelerator><![CDATA[<Control><Alt>period]]></accelerator>
++    <accelerator><![CDATA[<Super><Alt>period]]></accelerator>
+     <description>#endif</description>
+   </snippet>
+   <snippet id="if">
+diff -urN a/plugins/snippets/data/html.xml b/plugins/snippets/data/html.xml
+--- a/plugins/snippets/data/html.xml	2021-08-06 01:59:33.000000000 -0700
++++ b/plugins/snippets/data/html.xml	2022-06-12 07:21:53.596119943 -0700
+@@ -85,7 +85,7 @@
+   <snippet id="br">
+     <text><![CDATA[<br />
+ $0]]></text>
+-    <accelerator><![CDATA[<Shift><Control>space]]></accelerator>
++    <accelerator><![CDATA[<Shift><Super>space]]></accelerator>
+     <description>Br</description>
+   </snippet>
+   <snippet id="button">
+@@ -158,7 +158,7 @@
+   </snippet>
+   <snippet id="nbsp">
+     <text><![CDATA[&nbsp;]]></text>
+-    <accelerator><![CDATA[<Control><Alt>space]]></accelerator>
++    <accelerator><![CDATA[<Super><Alt>space]]></accelerator>
+     <description>Non-Breaking Space</description>
+   </snippet>
+   <snippet id="noscript">
+diff -urN a/plugins/snippets/data/python.xml b/plugins/snippets/data/python.xml
+--- a/plugins/snippets/data/python.xml	2021-08-06 01:59:33.000000000 -0700
++++ b/plugins/snippets/data/python.xml	2022-06-12 07:22:16.280450543 -0700
+@@ -75,12 +75,12 @@
+   </snippet>
+   <snippet id="insert">
+     <text><![CDATA["${1:$PLUMA_SELECTED_TEXT}"]]></text>
+-    <accelerator><![CDATA[<Control>2]]></accelerator>
++    <accelerator><![CDATA[<Super><Alt>2]]></accelerator>
+     <description>Inside String: Insert "…"</description>
+   </snippet>
+   <snippet id="insert-1">
+     <text><![CDATA['${1:$PLUMA_SELECTED_TEXT}']]></text>
+-    <accelerator><![CDATA[<Control>apostrophe]]></accelerator>
++    <accelerator><![CDATA[<Super>apostrophe]]></accelerator>
+     <description>Inside String: Insert '…'</description>
+   </snippet>
+   <snippet id=".">
+diff -urN a/plugins/spell/pluma-spell-plugin.c b/plugins/spell/pluma-spell-plugin.c
+--- a/plugins/spell/pluma-spell-plugin.c	2021-08-06 01:59:33.000000000 -0700
++++ b/plugins/spell/pluma-spell-plugin.c	2022-06-12 07:23:07.398517666 -0700
+@@ -114,7 +114,7 @@
+ 	{ "AutoSpell",
+ 	  NULL,
+ 	  N_("_Autocheck Spelling"),
+-	  "<control>F7",
++	  "<Alt><Super>S",
+ 	  N_("Automatically spell-check the current document"),
+ 	  G_CALLBACK (auto_spell_cb),
+ 	  FALSE
+diff -urN a/pluma/pluma-ui.h b/pluma/pluma-ui.h
+--- a/pluma/pluma-ui.h	2021-08-06 01:59:33.000000000 -0700
++++ b/pluma/pluma-ui.h	2022-06-12 07:19:35.187026648 -0700
+@@ -54,9 +54,9 @@
+ 	{ "Help", NULL, N_("_Help"), NULL, NULL, NULL },
+ 
+ 	/* File menu */
+-	{ "FileNew", "document-new", N_("_New"), "<control>N",
++	{ "FileNew", "document-new", N_("_New"), "<super>N",
+ 	  N_("Create a new document"), G_CALLBACK (_pluma_cmd_file_new) },
+-	{ "FileOpen", "document-open", N_("_Open..."), "<control>O",
++	{ "FileOpen", "document-open", N_("_Open..."), "<super>O",
+ 	  N_("Open a file"), G_CALLBACK (_pluma_cmd_file_open) },
+ 
+ 	/* Edit menu */
+@@ -64,7 +64,7 @@
+ 	  N_("Configure the application"), G_CALLBACK (_pluma_cmd_edit_preferences) },
+ 
+ 	/* Help menu */
+-	{"HelpContents", "help-browser", N_("_Contents"), "F1",
++	{"HelpContents", "help-browser", N_("_Contents"), NULL,
+ 	 N_("Open the pluma manual"), G_CALLBACK (_pluma_cmd_help_contents) },
+ 	{ "HelpAbout", "help-about", N_("_About"), NULL,
+ 	 N_("About this application"), G_CALLBACK (_pluma_cmd_help_about) },
+@@ -78,31 +78,31 @@
+ static const GtkActionEntry pluma_menu_entries[] =
+ {
+ 	/* File menu */
+-	{ "FileSave", "document-save", N_("_Save"), "<control>S",
++	{ "FileSave", "document-save", N_("_Save"), "<super>S",
+ 	  N_("Save the current file"), G_CALLBACK (_pluma_cmd_file_save) },
+-	{ "FileSaveAs", "document-save-as", N_("Save _As..."), "<shift><control>S",
++	{ "FileSaveAs", "document-save-as", N_("Save _As..."), "<shift><super>S",
+ 	  N_("Save the current file with a different name"), G_CALLBACK (_pluma_cmd_file_save_as) },
+ 	{ "FileRevert", "document-revert", N_("_Revert"), NULL,
+ 	  N_("Revert to a saved version of the file"), G_CALLBACK (_pluma_cmd_file_revert) },
+-	{ "FilePrintPreview", "document-print-preview", N_("Print Previe_w"),"<control><shift>P",
++	{ "FilePrintPreview", "document-print-preview", N_("Print Previe_w"),"<super><shift>P",
+ 	  N_("Print preview"), G_CALLBACK (_pluma_cmd_file_print_preview) },
+-	 { "FilePrint", "document-print", N_("_Print..."), "<control>P",
++	 { "FilePrint", "document-print", N_("_Print..."), "<super>P",
+ 	  N_("Print the current page"), G_CALLBACK (_pluma_cmd_file_print) },
+ 
+ 	/* Edit menu */
+-	{ "EditUndo", "edit-undo", N_("_Undo"), "<control>Z",
++	{ "EditUndo", "edit-undo", N_("_Undo"), "<super>Z",
+ 	  N_("Undo the last action"), G_CALLBACK (_pluma_cmd_edit_undo) },
+-	{ "EditRedo", "edit-redo", N_("_Redo"), "<shift><control>Z",
++	{ "EditRedo", "edit-redo", N_("_Redo"), "<shift><super>Z",
+ 	  N_("Redo the last undone action"), G_CALLBACK (_pluma_cmd_edit_redo) },
+-	{ "EditCut", "edit-cut", N_("Cu_t"), "<control>X",
++	{ "EditCut", "edit-cut", N_("Cu_t"), "<super>X",
+ 	  N_("Cut the selection"), G_CALLBACK (_pluma_cmd_edit_cut) },
+-	{ "EditCopy", "edit-copy", N_("_Copy"), "<control>C",
++	{ "EditCopy", "edit-copy", N_("_Copy"), "<super>C",
+ 	  N_("Copy the selection"), G_CALLBACK (_pluma_cmd_edit_copy) },
+-	{ "EditPaste", "edit-paste", N_("_Paste"), "<control>V",
++	{ "EditPaste", "edit-paste", N_("_Paste"), "<super>V",
+ 	  N_("Paste the clipboard"), G_CALLBACK (_pluma_cmd_edit_paste) },
+ 	{ "EditDelete", "edit-delete", N_("_Delete"), NULL,
+ 	  N_("Delete the selected text"), G_CALLBACK (_pluma_cmd_edit_delete) },
+-	{ "EditSelectAll", "edit-select-all", N_("Select _All"), "<control>A",
++	{ "EditSelectAll", "edit-select-all", N_("Select _All"), "<super>A",
+ 	  N_("Select the entire document"), G_CALLBACK (_pluma_cmd_edit_select_all) },
+ 	{ "ChangeCase", NULL, N_("C_hange Case"), NULL, NULL, NULL },
+ 	{ "UpperCase", NULL, N_("All _Upper Case"), NULL,
+@@ -118,29 +118,29 @@
+ 	{ "ViewHighlightMode", NULL, N_("_Highlight Mode"), NULL, NULL, NULL },
+ 
+ 	/* Search menu */
+-	{ "SearchFind", "edit-find", N_("_Find..."), "<control>F",
++	{ "SearchFind", "edit-find", N_("_Find..."), "<super>F",
+ 	  N_("Search for text"), G_CALLBACK (_pluma_cmd_search_find) },
+-	{ "SearchFindNext", NULL, N_("Find Ne_xt"), "<control>G",
++	{ "SearchFindNext", NULL, N_("Find Ne_xt"), "<super>G",
+ 	  N_("Search forwards for the same text"), G_CALLBACK (_pluma_cmd_search_find_next) },
+-	{ "SearchFindPrevious", NULL, N_("Find Pre_vious"), "<shift><control>G",
++	{ "SearchFindPrevious", NULL, N_("Find Pre_vious"), "<shift><super>G",
+ 	  N_("Search backwards for the same text"), G_CALLBACK (_pluma_cmd_search_find_prev) },
+-	{ "SearchReplace", "edit-find-replace", N_("_Replace..."), "<control>H",
++	{ "SearchReplace", "edit-find-replace", N_("_Replace..."), "<super>H",
+ 	  N_("Search for and replace text"), G_CALLBACK (_pluma_cmd_search_replace) },
+-	{ "SearchClearHighlight", NULL, N_("_Clear Highlight"), "<shift><control>K",
++	{ "SearchClearHighlight", NULL, N_("_Clear Highlight"), "<shift><super>K",
+ 	  N_("Clear highlighting of search matches"), G_CALLBACK (_pluma_cmd_search_clear_highlight) },
+-	{ "SearchGoToLine", "go-jump", N_("Go to _Line..."), "<control>I",
++	{ "SearchGoToLine", "go-jump", N_("Go to _Line..."), "<super>I",
+ 	  N_("Go to a specific line"), G_CALLBACK (_pluma_cmd_search_goto_line) },
+-	{ "SearchIncrementalSearch", "edit-find", N_("_Incremental Search..."), "<control>K",
++	{ "SearchIncrementalSearch", "edit-find", N_("_Incremental Search..."), "<super>K",
+ 	  N_("Incrementally search for text"), G_CALLBACK (_pluma_cmd_search_incremental_search) },
+ 
+ 	/* Documents menu */
+-	{ "FileSaveAll", "document-save", N_("_Save All"), "<shift><control>L",
++	{ "FileSaveAll", "document-save", N_("_Save All"), "<shift><super>L",
+ 	  N_("Save all open files"), G_CALLBACK (_pluma_cmd_file_save_all) },
+-	{ "FileCloseAll", "window-close", N_("_Close All"), "<shift><control>W",
++	{ "FileCloseAll", "window-close", N_("_Close All"), "<shift><super>W",
+ 	  N_("Close all open files"), G_CALLBACK (_pluma_cmd_file_close_all) },
+-	{ "DocumentsPreviousDocument", NULL, N_("_Previous Document"), "<alt><control>Page_Up",
++	{ "DocumentsPreviousDocument", NULL, N_("_Previous Document"), "<alt><super>Page_Up",
+ 	  N_("Activate previous document"), G_CALLBACK (_pluma_cmd_documents_previous_document) },
+-	{ "DocumentsNextDocument", NULL, N_("_Next Document"), "<alt><control>Page_Down",
++	{ "DocumentsNextDocument", NULL, N_("_Next Document"), "<alt><super>Page_Down",
+ 	  N_("Activate next document"), G_CALLBACK (_pluma_cmd_documents_next_document) },
+ 	{ "DocumentsMoveToNewWindow", NULL, N_("_Move to New Window"), NULL,
+ 	  N_("Move the current document to a new window"), G_CALLBACK (_pluma_cmd_documents_move_to_new_window) }
+@@ -149,26 +149,26 @@
+ /* separate group, needs to be sensitive on OS X even when there are no tabs */
+ static const GtkActionEntry pluma_close_menu_entries[] =
+ {
+-	{ "FileClose", "window-close", N_("_Close"), "<control>W",
++	{ "FileClose", "window-close", N_("_Close"), "<super>W",
+ 	  N_("Close the current file"), G_CALLBACK (_pluma_cmd_file_close) }
+ };
+ 
+ /* separate group, should be sensitive even when there are no tabs */
+ static const GtkActionEntry pluma_quit_menu_entries[] =
+ {
+-	{ "FileQuit", "application-exit", N_("_Quit"), "<control>Q",
++	{ "FileQuit", "application-exit", N_("_Quit"), "<super>Q",
+ 	  N_("Quit the program"), G_CALLBACK (_pluma_cmd_file_quit) }
+ };
+ 
+ static const GtkToggleActionEntry pluma_always_sensitive_toggle_menu_entries[] =
+ {
+-	{ "ViewToolbar", NULL, N_("_Toolbar"), NULL,
++	{ "ViewToolbar", NULL, N_("_Toolbar"), "<super>T",
+ 	  N_("Show or hide the toolbar in the current window"),
+ 	  G_CALLBACK (_pluma_cmd_view_show_toolbar), TRUE },
+ 	{ "ViewStatusbar", NULL, N_("_Statusbar"), NULL,
+ 	  N_("Show or hide the statusbar in the current window"),
+ 	  G_CALLBACK (_pluma_cmd_view_show_statusbar), TRUE },
+-	{ "ViewFullscreen", "view-fullscreen", N_("_Fullscreen"), "F11",
++	{ "ViewFullscreen", "view-fullscreen", N_("_Fullscreen"), "<shift><super>F",
+ 	  N_("Edit text in fullscreen"),
+ 	  G_CALLBACK (_pluma_cmd_view_toggle_fullscreen_mode), FALSE }
+ };
+@@ -176,10 +176,10 @@
+ /* separate group, should be always sensitive except when there are no panes */
+ static const GtkToggleActionEntry pluma_panes_toggle_menu_entries[] =
+ {
+-	{ "ViewSidePane", NULL, N_("Side _Pane"), "F9",
++	{ "ViewSidePane", NULL, N_("Side _Pane"), "<super>B",
+ 	  N_("Show or hide the side pane in the current window"),
+ 	  G_CALLBACK (_pluma_cmd_view_show_side_pane), FALSE },
+-	{ "ViewBottomPane", NULL, N_("_Bottom Pane"), "<control>F9",
++	{ "ViewBottomPane", NULL, N_("_Bottom Pane"), "<shift><super>B",
+ 	  N_("Show or hide the bottom pane in the current window"),
+ 	  G_CALLBACK (_pluma_cmd_view_show_bottom_pane), FALSE }
+ };

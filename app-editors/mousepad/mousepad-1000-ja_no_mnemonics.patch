@@ -1,0 +1,860 @@
+diff -urN a/po/ja.po b/po/ja.po
+--- a/po/ja.po	2022-04-01 06:40:42.000000000 -0700
++++ b/po/ja.po	2022-05-31 20:58:24.988282676 -0700
+@@ -132,15 +132,15 @@
+ #. add button
+ #: ../mousepad/mousepad-dialogs.c:240
+ msgid "_Jump to"
+-msgstr "次へ移動(_J)"
++msgstr "次へ移動"
+ 
+ #: ../mousepad/mousepad-dialogs.c:260
+ msgid "_Line number:"
+-msgstr "行番号(_L):"
++msgstr "行番号:"
+ 
+ #: ../mousepad/mousepad-dialogs.c:280
+ msgid "C_olumn number:"
+-msgstr "列番号(_O):"
++msgstr "列番号:"
+ 
+ #: ../mousepad/mousepad-dialogs.c:340
+ msgid "Remove all entries from the documents history?"
+@@ -159,7 +159,7 @@
+ 
+ #: ../mousepad/mousepad-dialogs.c:356
+ msgid "Clea_r"
+-msgstr "クリア(_R)"
++msgstr "クリア"
+ 
+ #: ../mousepad/mousepad-dialogs.c:382
+ msgid "Do you want to save the changes before closing?"
+@@ -176,7 +176,7 @@
+ 
+ #: ../mousepad/mousepad-dialogs.c:402
+ msgid "_Don't Save"
+-msgstr "保存しない(_D)"
++msgstr "保存しない"
+ 
+ #: ../mousepad/mousepad-dialogs.c:408
+ msgid ""
+@@ -260,7 +260,7 @@
+ #. combo box label
+ #: ../mousepad/mousepad-dialogs.c:1022
+ msgid "_Encoding:"
+-msgstr "エンコーディング(_E)"
++msgstr "エンコーディング"
+ 
+ #: ../mousepad/mousepad-dialogs.c:1057
+ msgid "Current"
+@@ -291,7 +291,7 @@
+ #. add button
+ #: ../mousepad/mousepad-dialogs.c:1208
+ msgid "_Open"
+-msgstr "開く(_O)"
++msgstr "開く"
+ 
+ #. create new font chooser dialog
+ #: ../mousepad/mousepad-dialogs.c:1262
+@@ -314,29 +314,29 @@
+ #. button labels
+ #: ../mousepad/mousepad-dialogs.h:33
+ msgid "_Cancel"
+-msgstr "キャンセル(_C)"
++msgstr "キャンセル"
+ 
+ #: ../mousepad/mousepad-dialogs.h:34
+ msgid "_OK"
+-msgstr "OK(_O)"
++msgstr "OK"
+ 
+ #: ../mousepad/mousepad-dialogs.h:35
+ #: ../mousepad/resources/gtk/menus-common.ui.h:5
+ msgid "_Save"
+-msgstr "保存(_S)"
++msgstr "保存"
+ 
+ #: ../mousepad/mousepad-dialogs.h:36
+ msgid "Save _As"
+-msgstr "名前を付けて保存(_A)"
++msgstr "名前を付けて保存"
+ 
+ #: ../mousepad/mousepad-dialogs.h:37
+ msgid "Re_vert"
+-msgstr "復帰(_V)"
++msgstr "復帰"
+ 
+ #: ../mousepad/mousepad-dialogs.h:38
+ #: ../mousepad/resources/gtk/menus-common.ui.h:9
+ msgid "Re_load"
+-msgstr "リロード(_L)"
++msgstr "リロード"
+ 
+ #. pack button, add signal and tooltip
+ #: ../mousepad/mousepad-document.c:570
+@@ -551,11 +551,11 @@
+ 
+ #: ../mousepad/mousepad-print.c:585
+ msgid "Print page _headers"
+-msgstr "ページヘッダーを印刷する(_H)"
++msgstr "ページヘッダーを印刷する"
+ 
+ #: ../mousepad/mousepad-print.c:593
+ msgid "Print _line numbers"
+-msgstr "行番号を印刷する(_L)"
++msgstr "行番号を印刷する"
+ 
+ #: ../mousepad/mousepad-print.c:610
+ msgid "Numbering interval:"
+@@ -570,11 +570,11 @@
+ 
+ #: ../mousepad/mousepad-print.c:631
+ msgid "Enable text _wrapping"
+-msgstr "文字の折り返しを有効にする(_W)"
++msgstr "文字の折り返しを有効にする"
+ 
+ #: ../mousepad/mousepad-print.c:640
+ msgid "Enable _syntax highlighting"
+-msgstr "シンタックスハイライトを有効にする(_S)"
++msgstr "シンタックスハイライトを有効にする"
+ 
+ #: ../mousepad/mousepad-print.c:652
+ msgid "Fonts"
+@@ -594,12 +594,12 @@
+ 
+ #: ../mousepad/mousepad-replace-dialog.c:169
+ msgid "_Replace All"
+-msgstr "すべて置換(_R)"
++msgstr "すべて置換"
+ 
+ #: ../mousepad/mousepad-replace-dialog.c:169
+ #: ../mousepad/mousepad-replace-dialog.c:269
+ msgid "_Replace"
+-msgstr "置換(_R)"
++msgstr "置換"
+ 
+ #. set dialog properties
+ #: ../mousepad/mousepad-replace-dialog.c:258
+@@ -610,23 +610,23 @@
+ #: ../mousepad/mousepad-replace-dialog.c:264
+ #: ../mousepad/resources/gtk/menus-common.ui.h:27
+ msgid "_Find"
+-msgstr "検索(_F)"
++msgstr "検索"
+ 
+ #: ../mousepad/mousepad-replace-dialog.c:273
+ msgid "_Close"
+-msgstr "閉じる(_C)"
++msgstr "閉じる"
+ 
+ #: ../mousepad/mousepad-replace-dialog.c:291
+ msgid "_Search for:"
+-msgstr "検索文字列(_S):"
++msgstr "検索文字列:"
+ 
+ #: ../mousepad/mousepad-replace-dialog.c:325
+ msgid "Replace _with:"
+-msgstr "置換文字列(_W):"
++msgstr "置換文字列:"
+ 
+ #: ../mousepad/mousepad-replace-dialog.c:347
+ msgid "Search _direction:"
+-msgstr "検索方向(_D):"
++msgstr "検索方向:"
+ 
+ #: ../mousepad/mousepad-replace-dialog.c:356
+ msgid "Up"
+@@ -639,30 +639,30 @@
+ #. wrap around
+ #: ../mousepad/mousepad-replace-dialog.c:366
+ msgid "_Wrap around"
+-msgstr "循環する(_W)"
++msgstr "循環する"
+ 
+ #. case sensitive
+ #. check button for case sensitive, including the proxy menu item
+ #: ../mousepad/mousepad-replace-dialog.c:373
+ #: ../mousepad/mousepad-search-bar.c:288 ../mousepad/mousepad-search-bar.c:296
+ msgid "Match _case"
+-msgstr "大文字/小文字を区別する(_C)"
++msgstr "大文字/小文字を区別する"
+ 
+ #. match whole word
+ #: ../mousepad/mousepad-replace-dialog.c:382
+ msgid "_Match whole word"
+-msgstr "完全一致(_M)"
++msgstr "完全一致"
+ 
+ #. enable regex search
+ #. check button for enabling regex, including the proxy menu item
+ #: ../mousepad/mousepad-replace-dialog.c:391
+ #: ../mousepad/mousepad-search-bar.c:302 ../mousepad/mousepad-search-bar.c:310
+ msgid "Regular e_xpression"
+-msgstr "正規表現(_X)"
++msgstr "正規表現"
+ 
+ #: ../mousepad/mousepad-replace-dialog.c:405
+ msgid "Replace _all in:"
+-msgstr "一括置換(_A):"
++msgstr "一括置換:"
+ 
+ #: ../mousepad/mousepad-replace-dialog.c:410
+ msgid "Selection"
+@@ -753,11 +753,11 @@
+ #: ../mousepad/mousepad-window.c:3469
+ #, c-format
+ msgid "Ot_her (%d)..."
+-msgstr "その他 (%d)(_H)..."
++msgstr "その他 (%d)..."
+ 
+ #: ../mousepad/mousepad-window.c:3479
+ msgid "Ot_her..."
+-msgstr "その他(_H)..."
++msgstr "その他..."
+ 
+ #: ../mousepad/mousepad-window.c:3578
+ msgid "Revert to the saved version of the file"
+@@ -823,7 +823,7 @@
+ 
+ #: ../mousepad/resources/gtk/menus.ui.h:1
+ msgid "_File"
+-msgstr "ファイル(_F)"
++msgstr "ファイル"
+ 
+ #: ../mousepad/resources/gtk/menus.ui.h:2
+ msgid "File menu"
+@@ -831,7 +831,7 @@
+ 
+ #: ../mousepad/resources/gtk/menus.ui.h:3
+ msgid "New _Window"
+-msgstr "新しいウィンドウ(_W)"
++msgstr "新しいウィンドウ"
+ 
+ #: ../mousepad/resources/gtk/menus.ui.h:4
+ msgid "Create a new document in a new window"
+@@ -839,7 +839,7 @@
+ 
+ #: ../mousepad/resources/gtk/menus.ui.h:5
+ msgid "New From Te_mplate"
+-msgstr "テンプレートから新規作成(_M)"
++msgstr "テンプレートから新規作成"
+ 
+ #: ../mousepad/resources/gtk/menus.ui.h:6
+ msgid "Create a new document from a template"
+@@ -847,7 +847,7 @@
+ 
+ #: ../mousepad/resources/gtk/menus.ui.h:7
+ msgid "Op_en Recent"
+-msgstr "最近開いたファイル(_E)"
++msgstr "最近開いたファイル"
+ 
+ #: ../mousepad/resources/gtk/menus.ui.h:8
+ msgid "Open a recently used file"
+@@ -855,7 +855,7 @@
+ 
+ #: ../mousepad/resources/gtk/menus.ui.h:9
+ msgid "Clear _History"
+-msgstr "履歴のクリア(_H)"
++msgstr "履歴のクリア"
+ 
+ #: ../mousepad/resources/gtk/menus.ui.h:10
+ msgid "Clear the recently used files history"
+@@ -863,7 +863,7 @@
+ 
+ #: ../mousepad/resources/gtk/menus.ui.h:11
+ msgid "Save A_ll"
+-msgstr "すべて保存(_L)"
++msgstr "すべて保存"
+ 
+ #: ../mousepad/resources/gtk/menus.ui.h:12
+ msgid "Save all document in this window"
+@@ -871,7 +871,7 @@
+ 
+ #: ../mousepad/resources/gtk/menus.ui.h:13
+ msgid "_Print..."
+-msgstr "印刷(_P)..."
++msgstr "印刷..."
+ 
+ #: ../mousepad/resources/gtk/menus.ui.h:14
+ msgid "Print the current document"
+@@ -879,7 +879,7 @@
+ 
+ #: ../mousepad/resources/gtk/menus.ui.h:15
+ msgid "_Close Window"
+-msgstr "ウィンドウを閉じる(_C)"
++msgstr "ウィンドウを閉じる"
+ 
+ #: ../mousepad/resources/gtk/menus.ui.h:16
+ msgid "Close this window"
+@@ -887,7 +887,7 @@
+ 
+ #: ../mousepad/resources/gtk/menus.ui.h:17
+ msgid "_Quit"
+-msgstr "終了(_Q)"
++msgstr "終了"
+ 
+ #: ../mousepad/resources/gtk/menus.ui.h:18
+ msgid "Quit Mousepad"
+@@ -895,7 +895,7 @@
+ 
+ #: ../mousepad/resources/gtk/menus.ui.h:19
+ msgid "_Edit"
+-msgstr "編集(_E)"
++msgstr "編集"
+ 
+ #: ../mousepad/resources/gtk/menus.ui.h:20
+ msgid "Edit menu"
+@@ -911,7 +911,7 @@
+ 
+ #: ../mousepad/resources/gtk/menus.ui.h:23
+ msgid "_Search"
+-msgstr "検索(_S)"
++msgstr "検索"
+ 
+ #: ../mousepad/resources/gtk/menus.ui.h:24
+ msgid "Search menu"
+@@ -919,7 +919,7 @@
+ 
+ #: ../mousepad/resources/gtk/menus.ui.h:25
+ msgid "Find _Next"
+-msgstr "次を検索(_N)"
++msgstr "次を検索"
+ 
+ #: ../mousepad/resources/gtk/menus.ui.h:26
+ msgid "Search forwards for the same text"
+@@ -927,7 +927,7 @@
+ 
+ #: ../mousepad/resources/gtk/menus.ui.h:27
+ msgid "Find _Previous"
+-msgstr "前を検索(_P)"
++msgstr "前を検索"
+ 
+ #: ../mousepad/resources/gtk/menus.ui.h:28
+ msgid "Search backwards for the same text"
+@@ -935,7 +935,7 @@
+ 
+ #: ../mousepad/resources/gtk/menus.ui.h:29
+ msgid "_Incremental Search"
+-msgstr "逐次検索(_I)"
++msgstr "逐次検索"
+ 
+ #: ../mousepad/resources/gtk/menus.ui.h:30
+ msgid "Automatically select the search result and scroll the view"
+@@ -943,7 +943,7 @@
+ 
+ #: ../mousepad/resources/gtk/menus.ui.h:31
+ msgid "Highlight _All"
+-msgstr "すべて強調表示(_A)"
++msgstr "すべて強調表示"
+ 
+ #: ../mousepad/resources/gtk/menus.ui.h:32
+ msgid "Highlight the search occurrences"
+@@ -951,7 +951,7 @@
+ 
+ #: ../mousepad/resources/gtk/menus.ui.h:33
+ msgid "_View"
+-msgstr "表示(_V)"
++msgstr "表示"
+ 
+ #: ../mousepad/resources/gtk/menus.ui.h:34
+ msgid "View menu"
+@@ -959,7 +959,7 @@
+ 
+ #: ../mousepad/resources/gtk/menus.ui.h:35
+ msgid "Select F_ont..."
+-msgstr "フォントを選択(_O)..."
++msgstr "フォントを選択..."
+ 
+ #: ../mousepad/resources/gtk/menus.ui.h:36
+ msgid "Change the editor font"
+@@ -967,7 +967,7 @@
+ 
+ #: ../mousepad/resources/gtk/menus.ui.h:37
+ msgid "_Color Scheme"
+-msgstr "カラースキーム(_C)"
++msgstr "カラースキーム"
+ 
+ #: ../mousepad/resources/gtk/menus.ui.h:38
+ msgid "Color scheme to use for the text view"
+@@ -984,7 +984,7 @@
+ 
+ #: ../mousepad/resources/gtk/menus.ui.h:41
+ msgid "Line N_umbers"
+-msgstr "行番号(_U)"
++msgstr "行番号"
+ 
+ #: ../mousepad/resources/gtk/menus.ui.h:42
+ #: ../mousepad/resources/ui/mousepad-prefs-dialog.ui.h:29
+@@ -993,7 +993,7 @@
+ 
+ #: ../mousepad/resources/gtk/menus.ui.h:43
+ msgid "_Menubar"
+-msgstr "メニューバー(_M)"
++msgstr "メニューバー"
+ 
+ #: ../mousepad/resources/gtk/menus.ui.h:44
+ msgid "Change the visibility of the main menubar"
+@@ -1001,7 +1001,7 @@
+ 
+ #: ../mousepad/resources/gtk/menus.ui.h:45
+ msgid "_Toolbar"
+-msgstr "ツールバー(_T)"
++msgstr "ツールバー"
+ 
+ #: ../mousepad/resources/gtk/menus.ui.h:46
+ msgid "Change the visibility of the toolbar"
+@@ -1009,7 +1009,7 @@
+ 
+ #: ../mousepad/resources/gtk/menus.ui.h:47
+ msgid "St_atusbar"
+-msgstr "ステータスバー(_A)"
++msgstr "ステータスバー"
+ 
+ #: ../mousepad/resources/gtk/menus.ui.h:48
+ msgid "Change the visibility of the statusbar"
+@@ -1017,7 +1017,7 @@
+ 
+ #: ../mousepad/resources/gtk/menus.ui.h:49
+ msgid "_Document"
+-msgstr "文書(_D)"
++msgstr "文書"
+ 
+ #: ../mousepad/resources/gtk/menus.ui.h:50
+ msgid "Document menu"
+@@ -1025,7 +1025,7 @@
+ 
+ #: ../mousepad/resources/gtk/menus.ui.h:51
+ msgid "_Word Wrap"
+-msgstr "行を折り返す(_W)"
++msgstr "行を折り返す"
+ 
+ #: ../mousepad/resources/gtk/menus.ui.h:52
+ msgid "Toggle breaking lines in between words"
+@@ -1033,7 +1033,7 @@
+ 
+ #: ../mousepad/resources/gtk/menus.ui.h:53
+ msgid "_Auto Indent"
+-msgstr "自動インデント(_A)"
++msgstr "自動インデント"
+ 
+ #: ../mousepad/resources/gtk/menus.ui.h:54
+ msgid "Auto indent a new line"
+@@ -1041,7 +1041,7 @@
+ 
+ #: ../mousepad/resources/gtk/menus.ui.h:55
+ msgid "Tab _Size"
+-msgstr "タブのサイズ(_S)"
++msgstr "タブのサイズ"
+ 
+ #: ../mousepad/resources/gtk/menus.ui.h:56
+ msgid "The number of space characters for a tabulation"
+@@ -1073,7 +1073,7 @@
+ 
+ #: ../mousepad/resources/gtk/menus.ui.h:63
+ msgid "Insert _Spaces"
+-msgstr "スペースを挿入(_S)"
++msgstr "スペースを挿入"
+ 
+ #: ../mousepad/resources/gtk/menus.ui.h:64
+ msgid "Insert spaces when the tab button is pressed"
+@@ -1081,7 +1081,7 @@
+ 
+ #: ../mousepad/resources/gtk/menus.ui.h:65
+ msgid "_Filetype"
+-msgstr "ファイルタイプ(_F)"
++msgstr "ファイルタイプ"
+ 
+ #: ../mousepad/resources/gtk/menus.ui.h:66
+ msgid "Language to use for syntax highlighting"
+@@ -1097,7 +1097,7 @@
+ 
+ #: ../mousepad/resources/gtk/menus.ui.h:69
+ msgid "Line E_nding"
+-msgstr "改行コード(_N)"
++msgstr "改行コード"
+ 
+ #: ../mousepad/resources/gtk/menus.ui.h:70
+ msgid "Character(s) to use as end of line"
+@@ -1117,7 +1117,7 @@
+ 
+ #: ../mousepad/resources/gtk/menus.ui.h:74
+ msgid "Write Unicode _BOM"
+-msgstr "Unicode BOM の書き出し(_B)"
++msgstr "Unicode BOM の書き出し"
+ 
+ #: ../mousepad/resources/gtk/menus.ui.h:75
+ msgid "Store the byte-order mark in the file"
+@@ -1125,7 +1125,7 @@
+ 
+ #: ../mousepad/resources/gtk/menus.ui.h:76
+ msgid "_Viewer Mode"
+-msgstr "ビュアーモード(_V)"
++msgstr "ビュアーモード"
+ 
+ #: ../mousepad/resources/gtk/menus.ui.h:77
+ msgid "Disallow modifications via keyboard / mouse"
+@@ -1133,7 +1133,7 @@
+ 
+ #: ../mousepad/resources/gtk/menus.ui.h:78
+ msgid "_Previous Tab"
+-msgstr "前のタブ(_P)"
++msgstr "前のタブ"
+ 
+ #: ../mousepad/resources/gtk/menus.ui.h:79
+ msgid "Select the previous tab"
+@@ -1141,7 +1141,7 @@
+ 
+ #: ../mousepad/resources/gtk/menus.ui.h:80
+ msgid "_Next Tab"
+-msgstr "次のタブ(_N)"
++msgstr "次のタブ"
+ 
+ #: ../mousepad/resources/gtk/menus.ui.h:81
+ msgid "Select the next tab"
+@@ -1149,7 +1149,7 @@
+ 
+ #: ../mousepad/resources/gtk/menus.ui.h:82
+ msgid "_Help"
+-msgstr "ヘルプ(_H)"
++msgstr "ヘルプ"
+ 
+ #: ../mousepad/resources/gtk/menus.ui.h:83
+ msgid "Help menu"
+@@ -1157,7 +1157,7 @@
+ 
+ #: ../mousepad/resources/gtk/menus.ui.h:84
+ msgid "_Contents"
+-msgstr "目次(_C)"
++msgstr "目次"
+ 
+ #: ../mousepad/resources/gtk/menus.ui.h:85
+ msgid "Display the Mousepad user manual"
+@@ -1165,7 +1165,7 @@
+ 
+ #: ../mousepad/resources/gtk/menus.ui.h:86
+ msgid "_About"
+-msgstr "このアプリケーションについて(_A)"
++msgstr "このアプリケーションについて"
+ 
+ #: ../mousepad/resources/gtk/menus.ui.h:87
+ msgid "About this application"
+@@ -1173,7 +1173,7 @@
+ 
+ #: ../mousepad/resources/gtk/menus-common.ui.h:1
+ msgid "_New"
+-msgstr "新規作成(_N)"
++msgstr "新規作成"
+ 
+ #: ../mousepad/resources/gtk/menus-common.ui.h:2
+ msgid "Create a new document"
+@@ -1181,7 +1181,7 @@
+ 
+ #: ../mousepad/resources/gtk/menus-common.ui.h:3
+ msgid "_Open..."
+-msgstr "開く(_O)..."
++msgstr "開く..."
+ 
+ #: ../mousepad/resources/gtk/menus-common.ui.h:4
+ msgid "Open a file"
+@@ -1193,7 +1193,7 @@
+ 
+ #: ../mousepad/resources/gtk/menus-common.ui.h:7
+ msgid "Save _As..."
+-msgstr "名前を付けて保存(_A)..."
++msgstr "名前を付けて保存..."
+ 
+ #: ../mousepad/resources/gtk/menus-common.ui.h:8
+ msgid "Save current document as another file"
+@@ -1201,7 +1201,7 @@
+ 
+ #: ../mousepad/resources/gtk/menus-common.ui.h:11
+ msgid "_Detach Tab"
+-msgstr "タブを切り離す(_D)"
++msgstr "タブを切り離す"
+ 
+ #: ../mousepad/resources/gtk/menus-common.ui.h:12
+ msgid "Move the current document to a new window"
+@@ -1209,7 +1209,7 @@
+ 
+ #: ../mousepad/resources/gtk/menus-common.ui.h:13
+ msgid "Close _Tab"
+-msgstr "タブを閉じる(_T)"
++msgstr "タブを閉じる"
+ 
+ #: ../mousepad/resources/gtk/menus-common.ui.h:14
+ msgid "Close the current document"
+@@ -1217,7 +1217,7 @@
+ 
+ #: ../mousepad/resources/gtk/menus-common.ui.h:15
+ msgid "_Undo"
+-msgstr "元に戻す(_U)"
++msgstr "元に戻す"
+ 
+ #: ../mousepad/resources/gtk/menus-common.ui.h:16
+ msgid "Undo the last action"
+@@ -1225,7 +1225,7 @@
+ 
+ #: ../mousepad/resources/gtk/menus-common.ui.h:17
+ msgid "_Redo"
+-msgstr "やり直す(_R)"
++msgstr "やり直す"
+ 
+ #: ../mousepad/resources/gtk/menus-common.ui.h:18
+ msgid "Redo the last undone action"
+@@ -1233,7 +1233,7 @@
+ 
+ #: ../mousepad/resources/gtk/menus-common.ui.h:19
+ msgid "Cu_t"
+-msgstr "切り取り(_T)"
++msgstr "切り取り"
+ 
+ #: ../mousepad/resources/gtk/menus-common.ui.h:20
+ msgid "Cut the selection"
+@@ -1241,7 +1241,7 @@
+ 
+ #: ../mousepad/resources/gtk/menus-common.ui.h:21
+ msgid "_Copy"
+-msgstr "コピー(_C)"
++msgstr "コピー"
+ 
+ #: ../mousepad/resources/gtk/menus-common.ui.h:22
+ msgid "Copy the selection"
+@@ -1249,7 +1249,7 @@
+ 
+ #: ../mousepad/resources/gtk/menus-common.ui.h:23
+ msgid "_Paste"
+-msgstr "貼り付け(_P)"
++msgstr "貼り付け"
+ 
+ #: ../mousepad/resources/gtk/menus-common.ui.h:24
+ msgid "Paste the clipboard"
+@@ -1257,7 +1257,7 @@
+ 
+ #: ../mousepad/resources/gtk/menus-common.ui.h:25
+ msgid "Select _All"
+-msgstr "すべて選択(_A)"
++msgstr "すべて選択"
+ 
+ #: ../mousepad/resources/gtk/menus-common.ui.h:26
+ msgid "Select the text in the entire document"
+@@ -1269,7 +1269,7 @@
+ 
+ #: ../mousepad/resources/gtk/menus-common.ui.h:29
+ msgid "Find and Rep_lace..."
+-msgstr "検索と置換(_L)..."
++msgstr "検索と置換..."
+ 
+ #: ../mousepad/resources/gtk/menus-common.ui.h:30
+ msgid "Search for and replace text"
+@@ -1277,7 +1277,7 @@
+ 
+ #: ../mousepad/resources/gtk/menus-common.ui.h:31
+ msgid "_Go to..."
+-msgstr "移動(_G)..."
++msgstr "移動..."
+ 
+ #: ../mousepad/resources/gtk/menus-common.ui.h:32
+ msgid "Go to a specific location in the document"
+@@ -1285,11 +1285,11 @@
+ 
+ #: ../mousepad/resources/gtk/menus-common.ui.h:33
+ msgid "_Fullscreen"
+-msgstr "全画面化(_F)"
++msgstr "全画面化"
+ 
+ #: ../mousepad/resources/gtk/menus-common.ui.h:35
+ msgid "Paste _Special"
+-msgstr "特殊な貼り付け(_S)"
++msgstr "特殊な貼り付け"
+ 
+ #: ../mousepad/resources/gtk/menus-common.ui.h:36
+ msgid "Paste the clipboard in a special way"
+@@ -1297,7 +1297,7 @@
+ 
+ #: ../mousepad/resources/gtk/menus-common.ui.h:37
+ msgid "Paste from _History"
+-msgstr "履歴から貼り付け(_H)"
++msgstr "履歴から貼り付け"
+ 
+ #: ../mousepad/resources/gtk/menus-common.ui.h:38
+ msgid "Paste from the clipboard history"
+@@ -1305,7 +1305,7 @@
+ 
+ #: ../mousepad/resources/gtk/menus-common.ui.h:39
+ msgid "Paste as _Column"
+-msgstr "列として貼り付け(_C)"
++msgstr "列として貼り付け"
+ 
+ #: ../mousepad/resources/gtk/menus-common.ui.h:40
+ msgid "Paste the clipboard text into a column"
+@@ -1313,7 +1313,7 @@
+ 
+ #: ../mousepad/resources/gtk/menus-common.ui.h:41
+ msgid "_Delete Selection"
+-msgstr "選択範囲を削除(_D)"
++msgstr "選択範囲を削除"
+ 
+ #: ../mousepad/resources/gtk/menus-common.ui.h:42
+ msgid "Delete the current selection"
+@@ -1321,7 +1321,7 @@
+ 
+ #: ../mousepad/resources/gtk/menus-common.ui.h:43
+ msgid "Delete _Line"
+-msgstr "行を削除(_L)"
++msgstr "行を削除"
+ 
+ #: ../mousepad/resources/gtk/menus-common.ui.h:44
+ msgid "Delete the current line"
+@@ -1329,7 +1329,7 @@
+ 
+ #: ../mousepad/resources/gtk/menus-common.ui.h:45
+ msgid "Conve_rt"
+-msgstr "変換(_R)"
++msgstr "変換"
+ 
+ #: ../mousepad/resources/gtk/menus-common.ui.h:46
+ msgid "Convert text in different ways"
+@@ -1337,7 +1337,7 @@
+ 
+ #: ../mousepad/resources/gtk/menus-common.ui.h:47
+ msgid "To _Lowercase"
+-msgstr "小文字化(_L)"
++msgstr "小文字化"
+ 
+ #: ../mousepad/resources/gtk/menus-common.ui.h:48
+ msgid "Change the case of the selection to lowercase"
+@@ -1345,7 +1345,7 @@
+ 
+ #: ../mousepad/resources/gtk/menus-common.ui.h:49
+ msgid "To _Uppercase"
+-msgstr "大文字化(_U)"
++msgstr "大文字化"
+ 
+ #: ../mousepad/resources/gtk/menus-common.ui.h:50
+ msgid "Change the case of the selection to uppercase"
+@@ -1353,7 +1353,7 @@
+ 
+ #: ../mousepad/resources/gtk/menus-common.ui.h:51
+ msgid "To _Title Case"
+-msgstr "頭文字のみ大文字化(_T)"
++msgstr "頭文字のみ大文字化"
+ 
+ #: ../mousepad/resources/gtk/menus-common.ui.h:52
+ msgid "Change the case of the selection to title case"
+@@ -1361,7 +1361,7 @@
+ 
+ #: ../mousepad/resources/gtk/menus-common.ui.h:53
+ msgid "To _Opposite Case"
+-msgstr "大文字小文字の入れ替え(_O)"
++msgstr "大文字小文字の入れ替え"
+ 
+ #: ../mousepad/resources/gtk/menus-common.ui.h:54
+ msgid "Change the case of the selection opposite case"
+@@ -1369,7 +1369,7 @@
+ 
+ #: ../mousepad/resources/gtk/menus-common.ui.h:55
+ msgid "_Tabs to Spaces"
+-msgstr "タブをスペースに(_T)"
++msgstr "タブをスペースに"
+ 
+ #: ../mousepad/resources/gtk/menus-common.ui.h:56
+ msgid "Convert all tabs to spaces in the selection or document"
+@@ -1377,7 +1377,7 @@
+ 
+ #: ../mousepad/resources/gtk/menus-common.ui.h:57
+ msgid "_Leading Spaces to Tabs"
+-msgstr "行頭のタブをスペースに(_L)"
++msgstr "行頭のタブをスペースに"
+ 
+ #: ../mousepad/resources/gtk/menus-common.ui.h:58
+ msgid ""
+@@ -1386,7 +1386,7 @@
+ 
+ #: ../mousepad/resources/gtk/menus-common.ui.h:59
+ msgid "St_rip Trailing Spaces"
+-msgstr "行末のスペースを除去(_R)"
++msgstr "行末のスペースを除去"
+ 
+ #: ../mousepad/resources/gtk/menus-common.ui.h:60
+ msgid "Remove all the trailing spaces from the selected line(s) or document"
+@@ -1394,7 +1394,7 @@
+ 
+ #: ../mousepad/resources/gtk/menus-common.ui.h:61
+ msgid "_Transpose"
+-msgstr "転置(_T)"
++msgstr "転置"
+ 
+ #: ../mousepad/resources/gtk/menus-common.ui.h:62
+ msgid "Reverse the order of something"
+@@ -1402,7 +1402,7 @@
+ 
+ #: ../mousepad/resources/gtk/menus-common.ui.h:63
+ msgid "_Move"
+-msgstr "移動(_M)"
++msgstr "移動"
+ 
+ #: ../mousepad/resources/gtk/menus-common.ui.h:64
+ msgid "Move content in different ways"
+@@ -1410,7 +1410,7 @@
+ 
+ #: ../mousepad/resources/gtk/menus-common.ui.h:65
+ msgid "Line _Up"
+-msgstr "1 行上へ(_U)"
++msgstr "1 行上へ"
+ 
+ #: ../mousepad/resources/gtk/menus-common.ui.h:66
+ msgid "Move lines one line up"
+@@ -1418,7 +1418,7 @@
+ 
+ #: ../mousepad/resources/gtk/menus-common.ui.h:67
+ msgid "Line _Down"
+-msgstr "1 行下へ(_D)"
++msgstr "1 行下へ"
+ 
+ #: ../mousepad/resources/gtk/menus-common.ui.h:68
+ msgid "Move lines one line down"
+@@ -1426,7 +1426,7 @@
+ 
+ #: ../mousepad/resources/gtk/menus-common.ui.h:69
+ msgid "Word _Left"
+-msgstr "左の単語(_L)"
++msgstr "左の単語"
+ 
+ #: ../mousepad/resources/gtk/menus-common.ui.h:70
+ msgid "Move words one word left"
+@@ -1434,7 +1434,7 @@
+ 
+ #: ../mousepad/resources/gtk/menus-common.ui.h:71
+ msgid "Word _Right"
+-msgstr "右の単語(_R)"
++msgstr "右の単語"
+ 
+ #: ../mousepad/resources/gtk/menus-common.ui.h:72
+ msgid "Move words one word right"
+@@ -1442,7 +1442,7 @@
+ 
+ #: ../mousepad/resources/gtk/menus-common.ui.h:73
+ msgid "Dup_licate Line / Selection"
+-msgstr "行/選択範囲の複製(_L)"
++msgstr "行/選択範囲の複製"
+ 
+ #: ../mousepad/resources/gtk/menus-common.ui.h:74
+ msgid "Duplicate the current line or selection"
+@@ -1450,7 +1450,7 @@
+ 
+ #: ../mousepad/resources/gtk/menus-common.ui.h:75
+ msgid "_Increase Indent"
+-msgstr "インデントを増やす(_I)"
++msgstr "インデントを増やす"
+ 
+ #: ../mousepad/resources/gtk/menus-common.ui.h:76
+ msgid "Increase the indentation of the selection or current line"
+@@ -1458,7 +1458,7 @@
+ 
+ #: ../mousepad/resources/gtk/menus-common.ui.h:77
+ msgid "_Decrease Indent"
+-msgstr "インデントを減らす(_D)"
++msgstr "インデントを減らす"
+ 
+ #: ../mousepad/resources/gtk/menus-common.ui.h:78
+ msgid "Decrease the indentation of the selection or current line"

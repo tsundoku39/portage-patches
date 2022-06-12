@@ -1,0 +1,40 @@
+diff -urN a/po/ja.po b/po/ja.po
+--- a/po/ja.po	2021-08-04 11:00:29.000000000 -0700
++++ b/po/ja.po	2022-06-12 10:54:30.788409918 -0700
+@@ -41,11 +41,11 @@
+ 
+ #: src/polkitmateauthenticationdialog.c:665
+ msgid "_Cancel"
+-msgstr "キャンセル(_C)"
++msgstr "キャンセル"
+ 
+ #: src/polkitmateauthenticationdialog.c:670
+ msgid "_Authenticate"
+-msgstr "認証する(_A)"
++msgstr "認証する"
+ 
+ #: src/polkitmateauthenticationdialog.c:711
+ msgid ""
+@@ -74,11 +74,11 @@
+ 
+ #: src/polkitmateauthenticationdialog.c:761 src/polkitmateauthenticator.c:302
+ msgid "_Password:"
+-msgstr "パスワード(_P):"
++msgstr "パスワード:"
+ 
+ #: src/polkitmateauthenticationdialog.c:779
+ msgid "<small><b>_Details</b></small>"
+-msgstr "<small><b>詳細(_D)</b></small>"
++msgstr "<small><b>詳細</b></small>"
+ 
+ #: src/polkitmateauthenticationdialog.c:837
+ msgid "<small><b>Action:</b></small>"
+@@ -105,7 +105,7 @@
+ #: src/polkitmateauthenticator.c:298
+ #, c-format
+ msgid "_Password for %s:"
+-msgstr "%s のパスワード(_P):"
++msgstr "%s のパスワード:"
+ 
+ #: src/polkitmateauthenticator.c:459
+ msgid "Your authentication attempt was unsuccessful. Please try again."

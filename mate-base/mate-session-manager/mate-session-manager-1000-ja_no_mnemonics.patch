@@ -1,0 +1,144 @@
+diff -urN a/po/ja.po b/po/ja.po
+--- a/po/ja.po	2021-08-05 01:58:39.000000000 -0700
++++ b/po/ja.po	2022-06-11 16:43:51.477221274 -0700
+@@ -43,7 +43,7 @@
+ #: capplet/gsm-app-dialog.c:218 mate-session/gsm-logout-dialog.c:453
+ #: mate-session/gsm-logout-dialog.c:486
+ msgid "_Cancel"
+-msgstr "キャンセル(_C)"
++msgstr "キャンセル"
+ 
+ #: capplet/gsm-app-dialog.c:224
+ msgid "Add Startup Program"
+@@ -51,7 +51,7 @@
+ 
+ #: capplet/gsm-app-dialog.c:226 data/session-properties.ui:86
+ msgid "_Add"
+-msgstr "追加(_A)"
++msgstr "追加"
+ 
+ #: capplet/gsm-app-dialog.c:229
+ msgid "Edit Startup Program"
+@@ -59,7 +59,7 @@
+ 
+ #: capplet/gsm-app-dialog.c:231
+ msgid "_Save"
+-msgstr "保存 (_S)"
++msgstr "保存 "
+ 
+ #: capplet/gsm-app-dialog.c:544
+ msgid "The startup command cannot be empty"
+@@ -71,11 +71,11 @@
+ 
+ #: capplet/gsm-properties-dialog.c:586
+ msgid "_Help"
+-msgstr "ヘルプ(_H)"
++msgstr "ヘルプ"
+ 
+ #: capplet/gsm-properties-dialog.c:590
+ msgid "_Close"
+-msgstr "閉じる(_C)"
++msgstr "閉じる"
+ 
+ #: capplet/gsm-properties-dialog.c:640
+ msgid "Enabled"
+@@ -300,19 +300,19 @@
+ 
+ #: data/session-properties.ui:35
+ msgid "Additional startup _programs:"
+-msgstr "自動的に起動するプログラムの追加(_P):"
++msgstr "自動的に起動するプログラムの追加:"
+ 
+ #: data/session-properties.ui:101
+ msgid "_Remove"
+-msgstr "削除(_R)"
++msgstr "削除"
+ 
+ #: data/session-properties.ui:117
+ msgid "_Edit"
+-msgstr "編集(_E)"
++msgstr "編集"
+ 
+ #: data/session-properties.ui:147
+ msgid "_Show hidden"
+-msgstr "隠しフォルダを表示(_S)"
++msgstr "隠しフォルダを表示"
+ 
+ #: data/session-properties.ui:168
+ msgid "Startup Programs"
+@@ -320,11 +320,11 @@
+ 
+ #: data/session-properties.ui:183
+ msgid "_Automatically remember running applications when logging out"
+-msgstr "ログアウト時に実行中のアプリを自動的に記憶しておく(_A)"
++msgstr "ログアウト時に実行中のアプリを自動的に記憶しておく"
+ 
+ #: data/session-properties.ui:225
+ msgid "_Remember Currently Running Application"
+-msgstr "現在実行中のアプリを記憶しておく(_R)"
++msgstr "現在実行中のアプリを記憶しておく"
+ 
+ #: data/session-properties.ui:259
+ msgid "Options"
+@@ -336,19 +336,19 @@
+ 
+ #: data/session-properties.ui:340
+ msgid "Comm_ent:"
+-msgstr "説明(_E):"
++msgstr "説明:"
+ 
+ #: data/session-properties.ui:354
+ msgid "Co_mmand:"
+-msgstr "コマンド(_M):"
++msgstr "コマンド:"
+ 
+ #: data/session-properties.ui:368
+ msgid "_Name:"
+-msgstr "名前(_N):"
++msgstr "名前:"
+ 
+ #: data/session-properties.ui:382
+ msgid "_Delay:"
+-msgstr "間隔(_D):"
++msgstr "間隔:"
+ 
+ #: mate-submodules/libegg/eggdesktopfile.c:168
+ msgid "File is not a valid .desktop file"
+@@ -489,11 +489,11 @@
+ 
+ #: mate-session/gsm-logout-dialog.c:448
+ msgid "_Switch User"
+-msgstr "ユーザーを切り替える(_S)"
++msgstr "ユーザーを切り替える"
+ 
+ #: mate-session/gsm-logout-dialog.c:457
+ msgid "_Log Out"
+-msgstr "ログアウト(_L)"
++msgstr "ログアウト"
+ 
+ #: mate-session/gsm-logout-dialog.c:463
+ msgid "Shut down this system now?"
+@@ -501,19 +501,19 @@
+ 
+ #: mate-session/gsm-logout-dialog.c:469
+ msgid "S_uspend"
+-msgstr "サスペンド(_U)"
++msgstr "サスペンド"
+ 
+ #: mate-session/gsm-logout-dialog.c:475
+ msgid "_Hibernate"
+-msgstr "ハイバーネート(_H)"
++msgstr "ハイバーネート"
+ 
+ #: mate-session/gsm-logout-dialog.c:481
+ msgid "_Restart"
+-msgstr "再起動(_R)"
++msgstr "再起動"
+ 
+ #: mate-session/gsm-logout-dialog.c:491
+ msgid "_Shut Down"
+-msgstr "シャットダウン(_S)"
++msgstr "シャットダウン"
+ 
+ #: mate-session/gsm-manager.c:1527 mate-session/gsm-manager.c:2351
+ msgid "Not responding"

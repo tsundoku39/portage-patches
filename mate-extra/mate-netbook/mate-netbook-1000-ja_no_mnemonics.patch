@@ -1,0 +1,17 @@
+diff -urN a/po/ja.po b/po/ja.po
+--- a/po/ja.po	2021-08-07 05:36:21.000000000 -0700
++++ b/po/ja.po	2022-06-12 10:23:29.317579226 -0700
+@@ -74,11 +74,11 @@
+ 
+ #: mate-window-picker-applet/applet.c:66
+ msgid "_Preferences"
+-msgstr "設定(_P)"
++msgstr "設定"
+ 
+ #: mate-window-picker-applet/applet.c:69
+ msgid "_About"
+-msgstr "情報(_A)"
++msgstr "情報"
+ 
+ #: mate-window-picker-applet/applet.c:250
+ msgid ""

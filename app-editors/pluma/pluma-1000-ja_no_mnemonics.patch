@@ -1,0 +1,1382 @@
+diff -urN a/po/ja.po b/po/ja.po
+--- a/po/ja.po	2021-08-06 02:01:32.000000000 -0700
++++ b/po/ja.po	2022-06-12 07:08:30.764796095 -0700
+@@ -702,15 +702,15 @@
+ 
+ #: pluma/dialogs/pluma-close-confirmation-dialog.c:137
+ msgid "Log Out _without Saving"
+-msgstr "保存せずにログアウト(_W)"
++msgstr "保存せずにログアウト"
+ 
+ #: pluma/dialogs/pluma-close-confirmation-dialog.c:141
+ msgid "_Cancel Logout"
+-msgstr "ログアウトのキャンセル(_C)"
++msgstr "ログアウトのキャンセル"
+ 
+ #: pluma/dialogs/pluma-close-confirmation-dialog.c:148
+ msgid "Close _without Saving"
+-msgstr "保存せずに閉じる(_W)"
++msgstr "保存せずに閉じる"
+ 
+ #: pluma/dialogs/pluma-close-confirmation-dialog.c:152
+ #: pluma/dialogs/pluma-encodings-dialog.c:329
+@@ -732,18 +732,18 @@
+ #: plugins/time/pluma-time-dialog.ui:52
+ #: plugins/time/pluma-time-setup-dialog.ui:55
+ msgid "_Cancel"
+-msgstr "キャンセル(_C)"
++msgstr "キャンセル"
+ 
+ #: pluma/dialogs/pluma-close-confirmation-dialog.c:179
+ #: pluma/pluma-file-chooser-dialog.c:457 pluma/pluma-ui.h:81
+ #: plugins/snippets/snippets/Manager.py:883
+ #: plugins/snippets/snippets/Manager.py:922
+ msgid "_Save"
+-msgstr "保存 (_S)"
++msgstr "保存 "
+ 
+ #: pluma/dialogs/pluma-close-confirmation-dialog.c:184
+ msgid "Save _As"
+-msgstr "別名で保存(_A)"
++msgstr "別名で保存"
+ 
+ #: pluma/dialogs/pluma-close-confirmation-dialog.c:217
+ msgid "Question"
+@@ -834,11 +834,11 @@
+ 
+ #: pluma/dialogs/pluma-close-confirmation-dialog.c:741
+ msgid "Docum_ents with unsaved changes:"
+-msgstr "まだ保存していない変更点を含む文書(_E):"
++msgstr "まだ保存していない変更点を含む文書:"
+ 
+ #: pluma/dialogs/pluma-close-confirmation-dialog.c:743
+ msgid "S_elect the documents you want to save:"
+-msgstr "保存する文書を選択してください(_E):"
++msgstr "保存する文書を選択してください:"
+ 
+ #: pluma/dialogs/pluma-close-confirmation-dialog.c:768
+ msgid "If you don't save, all your changes will be permanently lost."
+@@ -852,7 +852,7 @@
+ #: plugins/time/pluma-time-plugin.c:889
+ #: plugins/time/pluma-time-setup-dialog.ui:71
+ msgid "_OK"
+-msgstr "OK(_O)"
++msgstr "OK"
+ 
+ #: pluma/dialogs/pluma-encodings-dialog.c:331
+ #: pluma/dialogs/pluma-encodings-dialog.ui:40
+@@ -864,7 +864,7 @@
+ #: plugins/time/pluma-time-dialog.ui:36
+ #: plugins/time/pluma-time-setup-dialog.ui:39
+ msgid "_Help"
+-msgstr "ヘルプ(_H)"
++msgstr "ヘルプ"
+ 
+ #: pluma/dialogs/pluma-encodings-dialog.c:333
+ msgid "Character Encodings"
+@@ -873,12 +873,12 @@
+ #: pluma/dialogs/pluma-encodings-dialog.c:394
+ #: pluma/dialogs/pluma-encodings-dialog.c:455
+ msgid "_Description"
+-msgstr "説明(_D)"
++msgstr "説明"
+ 
+ #: pluma/dialogs/pluma-encodings-dialog.c:403
+ #: pluma/dialogs/pluma-encodings-dialog.c:464
+ msgid "_Encoding"
+-msgstr "エンコード(_E)"
++msgstr "エンコード"
+ 
+ #: pluma/dialogs/pluma-encodings-dialog.ui:25
+ msgid "Character encodings"
+@@ -886,21 +886,21 @@
+ 
+ #: pluma/dialogs/pluma-encodings-dialog.ui:112
+ msgid "A_vailable encodings:"
+-msgstr "利用可能なエンコード(_V):"
++msgstr "利用可能なエンコード:"
+ 
+ #: pluma/dialogs/pluma-encodings-dialog.ui:150
+ #: plugins/spell/pluma-automatic-spell-checker.c:515
+ msgid "_Add"
+-msgstr "追加(_A)"
++msgstr "追加"
+ 
+ #: pluma/dialogs/pluma-encodings-dialog.ui:190
+ msgid "E_ncodings shown in menu:"
+-msgstr "メニューに表示するエンコード(_N):"
++msgstr "メニューに表示するエンコード:"
+ 
+ #: pluma/dialogs/pluma-encodings-dialog.ui:228
+ #: pluma/dialogs/pluma-preferences-dialog.ui:1007
+ msgid "_Remove"
+-msgstr "削除(_R)"
++msgstr "削除"
+ 
+ #: pluma/dialogs/pluma-preferences-dialog.c:603
+ msgid "Click on this button to select the font to be used by the editor"
+@@ -911,7 +911,7 @@
+ #: pluma/dialogs/pluma-preferences-dialog.c:618
+ #, c-format
+ msgid "_Use the system fixed width font (%s)"
+-msgstr "システムの固定幅フォント (%s) を使う(_U)"
++msgstr "システムの固定幅フォント (%s) を使う"
+ 
+ #: pluma/dialogs/pluma-preferences-dialog.c:812
+ msgid "The selected color scheme cannot be installed."
+@@ -923,7 +923,7 @@
+ 
+ #: pluma/dialogs/pluma-preferences-dialog.c:898
+ msgid "A_dd Scheme"
+-msgstr "スキームの追加(_D)"
++msgstr "スキームの追加"
+ 
+ #: pluma/dialogs/pluma-preferences-dialog.c:906
+ msgid "Color Scheme Files"
+@@ -945,7 +945,7 @@
+ #: pluma/dialogs/pluma-search-dialog.ui:60 pluma/pluma-ui.h:152
+ #: plugins/docinfo/docinfo.ui:35 plugins/spell/spell-checker.ui:375
+ msgid "_Close"
+-msgstr "閉じる(_C)"
++msgstr "閉じる"
+ 
+ #: pluma/dialogs/pluma-preferences-dialog.c:1233
+ msgid "Pluma Preferences"
+@@ -963,12 +963,12 @@
+ #: pluma/dialogs/pluma-preferences-dialog.ui:139
+ #: pluma/pluma-print-preferences.ui:215
+ msgid "Enable text _wrapping"
+-msgstr "テキストの折り返しを有効にする(_W)"
++msgstr "テキストの折り返しを有効にする"
+ 
+ #: pluma/dialogs/pluma-preferences-dialog.ui:154
+ #: pluma/pluma-print-preferences.ui:235
+ msgid "Do not _split words over two lines"
+-msgstr "単語を二行以上に分割しない(_S)"
++msgstr "単語を二行以上に分割しない"
+ 
+ #: pluma/dialogs/pluma-preferences-dialog.ui:193
+ msgid "Highlighting"
+@@ -976,11 +976,11 @@
+ 
+ #: pluma/dialogs/pluma-preferences-dialog.ui:213
+ msgid "Highlight current _line"
+-msgstr "カーソルのある行を強調表示する(_L)"
++msgstr "カーソルのある行を強調表示する"
+ 
+ #: pluma/dialogs/pluma-preferences-dialog.ui:228
+ msgid "Highlight matching _bracket"
+-msgstr "対応するカッコを強調表示する(_B)"
++msgstr "対応するカッコを強調表示する"
+ 
+ #: pluma/dialogs/pluma-preferences-dialog.ui:266
+ msgid "Display"
+@@ -988,19 +988,19 @@
+ 
+ #: pluma/dialogs/pluma-preferences-dialog.ui:286 pluma/pluma-view.c:2274
+ msgid "_Display line numbers"
+-msgstr "行番号を表示する(_D)"
++msgstr "行番号を表示する"
+ 
+ #: pluma/dialogs/pluma-preferences-dialog.ui:306
+ msgid "Display right _margin at column"
+-msgstr "列の右端余白を表示する(_M)"
++msgstr "列の右端余白を表示する"
+ 
+ #: pluma/dialogs/pluma-preferences-dialog.ui:349
+ msgid "Display _grid pattern"
+-msgstr "グリッドパターンを表示する(_G)"
++msgstr "グリッドパターンを表示する"
+ 
+ #: pluma/dialogs/pluma-preferences-dialog.ui:364
+ msgid "Display _overview map"
+-msgstr "オーバービュー・マップを表示(_O)"
++msgstr "オーバービュー・マップを表示"
+ 
+ #: pluma/dialogs/pluma-preferences-dialog.ui:397
+ msgid "View"
+@@ -1012,7 +1012,7 @@
+ 
+ #: pluma/dialogs/pluma-preferences-dialog.ui:448
+ msgid "_Tab width:"
+-msgstr "タブの幅(_T):"
++msgstr "タブの幅:"
+ 
+ #: pluma/dialogs/pluma-preferences-dialog.ui:463
+ #: pluma/dialogs/pluma-preferences-dialog.ui:637
+@@ -1021,7 +1021,7 @@
+ 
+ #: pluma/dialogs/pluma-preferences-dialog.ui:484
+ msgid "Insert _spaces instead of tabs"
+-msgstr "タブの代わりにスペースを挿入する(_S)"
++msgstr "タブの代わりにスペースを挿入する"
+ 
+ #: pluma/dialogs/pluma-preferences-dialog.ui:522
+ msgid "Automatic Indentation"
+@@ -1029,7 +1029,7 @@
+ 
+ #: pluma/dialogs/pluma-preferences-dialog.ui:542
+ msgid "_Enable automatic indentation"
+-msgstr "自動インデントを有効にする(_E)"
++msgstr "自動インデントを有効にする"
+ 
+ #: pluma/dialogs/pluma-preferences-dialog.ui:580
+ msgid "File Saving"
+@@ -1037,15 +1037,15 @@
+ 
+ #: pluma/dialogs/pluma-preferences-dialog.ui:600
+ msgid "Create a _backup copy of files before saving"
+-msgstr "保存する前にバックアップを生成する(_B)"
++msgstr "保存する前にバックアップを生成する"
+ 
+ #: pluma/dialogs/pluma-preferences-dialog.ui:620
+ msgid "_Autosave files every"
+-msgstr "ファイルを自動的に保存する間隔(_A): "
++msgstr "ファイルを自動的に保存する間隔: "
+ 
+ #: pluma/dialogs/pluma-preferences-dialog.ui:653
+ msgid "_minutes"
+-msgstr "分ごと(_M)"
++msgstr "分ごと"
+ 
+ #: pluma/dialogs/pluma-preferences-dialog.ui:696
+ msgid "Show Spaces, Tabs, Newlines"
+@@ -1053,23 +1053,23 @@
+ 
+ #: pluma/dialogs/pluma-preferences-dialog.ui:717
+ msgid "Show _spaces"
+-msgstr "スペースを表示(_S)"
++msgstr "スペースを表示"
+ 
+ #: pluma/dialogs/pluma-preferences-dialog.ui:732
+ msgid "Show _trailing spaces only"
+-msgstr "後のスペースのみを表示(_T)"
++msgstr "後のスペースのみを表示"
+ 
+ #: pluma/dialogs/pluma-preferences-dialog.ui:748
+ msgid "Show _tabs"
+-msgstr "タブを表示(_T)"
++msgstr "タブを表示"
+ 
+ #: pluma/dialogs/pluma-preferences-dialog.ui:763
+ msgid "Show _trailing tabs only"
+-msgstr "後のタブのみを表示(_T)"
++msgstr "後のタブのみを表示"
+ 
+ #: pluma/dialogs/pluma-preferences-dialog.ui:779
+ msgid "Show _newlines"
+-msgstr "改行を表示(_N)"
++msgstr "改行を表示"
+ 
+ #: pluma/dialogs/pluma-preferences-dialog.ui:815
+ msgid "Editor"
+@@ -1081,7 +1081,7 @@
+ 
+ #: pluma/dialogs/pluma-preferences-dialog.ui:883
+ msgid "Editor _font: "
+-msgstr "エディタのフォント(_F):"
++msgstr "エディタのフォント:"
+ 
+ #: pluma/dialogs/pluma-preferences-dialog.ui:900
+ msgid "Pick the editor font"
+@@ -1093,7 +1093,7 @@
+ 
+ #: pluma/dialogs/pluma-preferences-dialog.ui:992
+ msgid "_Add..."
+-msgstr "追加(_A)..."
++msgstr "追加..."
+ 
+ #: pluma/dialogs/pluma-preferences-dialog.ui:1049
+ msgid "Font & Colors"
+@@ -1116,15 +1116,15 @@
+ #: pluma/dialogs/pluma-search-dialog.c:402
+ #: pluma/dialogs/pluma-search-dialog.ui:106
+ msgid "_Find"
+-msgstr "検索(_F)"
++msgstr "検索"
+ 
+ #: pluma/dialogs/pluma-search-dialog.c:405
+ msgid "Replace _All"
+-msgstr "すべて置き換える(_A)"
++msgstr "すべて置き換える"
+ 
+ #: pluma/dialogs/pluma-search-dialog.c:406 pluma/pluma-commands-file.c:587
+ msgid "_Replace"
+-msgstr "置換(_R)"
++msgstr "置換"
+ 
+ #: pluma/dialogs/pluma-search-dialog.ui:76
+ msgid "Replace All"
+@@ -1132,35 +1132,35 @@
+ 
+ #: pluma/dialogs/pluma-search-dialog.ui:146
+ msgid "_Search for: "
+-msgstr "検索(_S): "
++msgstr "検索: "
+ 
+ #: pluma/dialogs/pluma-search-dialog.ui:158
+ msgid "Replace _with: "
+-msgstr "置換後の文字列(_W): "
++msgstr "置換後の文字列: "
+ 
+ #: pluma/dialogs/pluma-search-dialog.ui:181
+ msgid "_Match case"
+-msgstr "大文字小文字を区別してマッチ(_M)"
++msgstr "大文字小文字を区別してマッチ"
+ 
+ #: pluma/dialogs/pluma-search-dialog.ui:197
+ msgid "Match _regular expression"
+-msgstr "正規表現にマッチさせる(_R)"
++msgstr "正規表現にマッチさせる"
+ 
+ #: pluma/dialogs/pluma-search-dialog.ui:213
+ msgid "Match _entire word only"
+-msgstr "単語全体にのみマッチ(_E)"
++msgstr "単語全体にのみマッチ"
+ 
+ #: pluma/dialogs/pluma-search-dialog.ui:229
+ msgid "Search _backwards"
+-msgstr "後方検索(_B)"
++msgstr "後方検索"
+ 
+ #: pluma/dialogs/pluma-search-dialog.ui:245
+ msgid "_Wrap around"
+-msgstr "折り返す(_W)"
++msgstr "折り返す"
+ 
+ #: pluma/dialogs/pluma-search-dialog.ui:262
+ msgid "_Parse escape sequences (e.g. \\n)"
+-msgstr "エスケープシーケンス(\\nなど)を解釈する(_P)"
++msgstr "エスケープシーケンス(\\nなど)を解釈する"
+ 
+ #: pluma/pluma.c:109
+ msgid "Show the application's version"
+@@ -1312,7 +1312,7 @@
+ 
+ #: pluma/pluma-commands-file.c:1227 pluma/pluma-ui.h:85
+ msgid "_Revert"
+-msgstr "戻す(_R)"
++msgstr "戻す"
+ 
+ #: pluma/pluma-commands-help.c:61
+ msgid "MATE Documentation Team"
+@@ -1569,11 +1569,11 @@
+ 
+ #: pluma/pluma-file-chooser-dialog.c:94
+ msgid "C_haracter Encoding:"
+-msgstr "文字エンコード(_H):"
++msgstr "文字エンコード:"
+ 
+ #: pluma/pluma-file-chooser-dialog.c:159
+ msgid "L_ine Ending:"
+-msgstr "行末(_I):"
++msgstr "行末:"
+ 
+ #: pluma/pluma-file-chooser-dialog.c:178
+ msgid "Unix/Linux"
+@@ -1592,7 +1592,7 @@
+ #: plugins/quickopen/quickopen/popup.py:38
+ #: plugins/snippets/snippets/Manager.py:797
+ msgid "_Open"
+-msgstr "開く(_O)"
++msgstr "開く"
+ 
+ #: pluma/pluma-help.c:82
+ msgid "There was an error displaying the help."
+@@ -1601,7 +1601,7 @@
+ #: pluma/pluma-io-error-message-area.c:184
+ #: pluma/pluma-io-error-message-area.c:486
+ msgid "_Retry"
+-msgstr "再試行(_R)"
++msgstr "再試行"
+ 
+ #: pluma/pluma-io-error-message-area.c:205
+ #, c-format
+@@ -1690,21 +1690,21 @@
+ 
+ #: pluma/pluma-io-error-message-area.c:443
+ msgid "Ch_aracter Encoding:"
+-msgstr "文字エンコード(_A):"
++msgstr "文字エンコード:"
+ 
+ #. Translators: the access key chosen for this string should be
+ #. different from other main menu access keys (Open, Edit, View...)
+ #: pluma/pluma-io-error-message-area.c:495
+ #: pluma/pluma-io-error-message-area.c:772
+ msgid "Edit Any_way"
+-msgstr "強制的に編集する(_W)"
++msgstr "強制的に編集する"
+ 
+ #. Translators: the access key chosen for this string should be
+ #. different from other main menu access keys (Open, Edit, View...)
+ #: pluma/pluma-io-error-message-area.c:500
+ #: pluma/pluma-io-error-message-area.c:777
+ msgid "D_on't Edit"
+-msgstr "編集しない(_O)"
++msgstr "編集しない"
+ 
+ #: pluma/pluma-io-error-message-area.c:598
+ msgid ""
+@@ -1790,12 +1790,12 @@
+ #: pluma/pluma-io-error-message-area.c:865
+ #: pluma/pluma-io-error-message-area.c:963
+ msgid "S_ave Anyway"
+-msgstr "とにかく保存する(_A)"
++msgstr "とにかく保存する"
+ 
+ #: pluma/pluma-io-error-message-area.c:869
+ #: pluma/pluma-io-error-message-area.c:967
+ msgid "D_on't Save"
+-msgstr "保存しない(_O)"
++msgstr "保存しない"
+ 
+ #: pluma/pluma-io-error-message-area.c:887
+ #, c-format
+@@ -1921,7 +1921,7 @@
+ 
+ #: pluma/pluma-io-error-message-area.c:1193
+ msgid "_Reload"
+-msgstr "再読み込み(_R)"
++msgstr "再読み込み"
+ 
+ #: pluma/pluma-panel.c:317 pluma/pluma-panel.c:491
+ msgid "Empty"
+@@ -1954,7 +1954,7 @@
+ 
+ #: pluma/pluma-print-preferences.ui:52
+ msgid "Print synta_x highlighting"
+-msgstr "強調表示を含めて印刷する(_X)"
++msgstr "強調表示を含めて印刷する"
+ 
+ #: pluma/pluma-print-preferences.ui:85
+ msgid "Line Numbers"
+@@ -1962,12 +1962,12 @@
+ 
+ #: pluma/pluma-print-preferences.ui:105
+ msgid "Print line nu_mbers"
+-msgstr "行番号を印刷する(_M)"
++msgstr "行番号を印刷する"
+ 
+ #. 'Number every' from 'Number every 3 lines' in the 'Text Editor' tab of the print preferences.
+ #: pluma/pluma-print-preferences.ui:128
+ msgid "_Number every"
+-msgstr "行番号を付与する間隔(_N) "
++msgstr "行番号を付与する間隔 "
+ 
+ #. 'lines' from 'Number every 3 lines' in the 'Text Editor' tab of the print preferences.
+ #: pluma/pluma-print-preferences.ui:155
+@@ -1980,7 +1980,7 @@
+ 
+ #: pluma/pluma-print-preferences.ui:294
+ msgid "Print page _headers"
+-msgstr "ページのヘッダーを印刷する(_H)"
++msgstr "ページのヘッダーを印刷する"
+ 
+ #: pluma/pluma-print-preferences.ui:340
+ msgid "Fonts"
+@@ -1988,19 +1988,19 @@
+ 
+ #: pluma/pluma-print-preferences.ui:369
+ msgid "_Body:"
+-msgstr "本文(_B):"
++msgstr "本文:"
+ 
+ #: pluma/pluma-print-preferences.ui:425
+ msgid "He_aders and footers:"
+-msgstr "ヘッダーとフッター(_A):"
++msgstr "ヘッダーとフッター:"
+ 
+ #: pluma/pluma-print-preferences.ui:439
+ msgid "_Line numbers:"
+-msgstr "行番号(_L):"
++msgstr "行番号:"
+ 
+ #: pluma/pluma-print-preferences.ui:463
+ msgid "_Restore Default Fonts"
+-msgstr "デフォルトに戻す(_R)"
++msgstr "デフォルトに戻す"
+ 
+ #: pluma/pluma-print-preview.c:570
+ msgid "Show the previous page"
+@@ -2049,7 +2049,7 @@
+ 
+ #: pluma/pluma-print-preview.c:705
+ msgid "_Close Preview"
+-msgstr "プレビューを閉じる(_C)"
++msgstr "プレビューを閉じる"
+ 
+ #: pluma/pluma-print-preview.c:708
+ msgid "Close print preview"
+@@ -2176,31 +2176,31 @@
+ 
+ #: pluma/pluma-ui.h:48
+ msgid "_File"
+-msgstr "ファイル(_F)"
++msgstr "ファイル"
+ 
+ #: pluma/pluma-ui.h:49
+ msgid "_Edit"
+-msgstr "編集(_E)"
++msgstr "編集"
+ 
+ #: pluma/pluma-ui.h:50
+ msgid "_View"
+-msgstr "表示(_V)"
++msgstr "表示"
+ 
+ #: pluma/pluma-ui.h:51
+ msgid "_Search"
+-msgstr "検索(_S)"
++msgstr "検索"
+ 
+ #: pluma/pluma-ui.h:52
+ msgid "_Tools"
+-msgstr "ツール(_T)"
++msgstr "ツール"
+ 
+ #: pluma/pluma-ui.h:53
+ msgid "_Documents"
+-msgstr "文書(_D)"
++msgstr "文書"
+ 
+ #: pluma/pluma-ui.h:57
+ msgid "_New"
+-msgstr "新規(_N)"
++msgstr "新規"
+ 
+ #: pluma/pluma-ui.h:58
+ msgid "Create a new document"
+@@ -2208,7 +2208,7 @@
+ 
+ #: pluma/pluma-ui.h:59
+ msgid "_Open..."
+-msgstr "開く(_O).."
++msgstr "開く.."
+ 
+ #: pluma/pluma-ui.h:60 pluma/pluma-window.c:1467
+ msgid "Open a file"
+@@ -2216,7 +2216,7 @@
+ 
+ #: pluma/pluma-ui.h:63
+ msgid "Pr_eferences"
+-msgstr "設定(_E)"
++msgstr "設定"
+ 
+ #: pluma/pluma-ui.h:64
+ msgid "Configure the application"
+@@ -2224,7 +2224,7 @@
+ 
+ #: pluma/pluma-ui.h:67
+ msgid "_Contents"
+-msgstr "目次(_C)"
++msgstr "目次"
+ 
+ #: pluma/pluma-ui.h:68
+ msgid "Open the pluma manual"
+@@ -2232,7 +2232,7 @@
+ 
+ #: pluma/pluma-ui.h:69
+ msgid "_About"
+-msgstr "情報(_A)"
++msgstr "情報"
+ 
+ #: pluma/pluma-ui.h:70
+ msgid "About this application"
+@@ -2240,7 +2240,7 @@
+ 
+ #: pluma/pluma-ui.h:73
+ msgid "_Leave Fullscreen"
+-msgstr "全画面を解除(_L)"
++msgstr "全画面を解除"
+ 
+ #: pluma/pluma-ui.h:74
+ msgid "Leave fullscreen mode"
+@@ -2252,7 +2252,7 @@
+ 
+ #: pluma/pluma-ui.h:83
+ msgid "Save _As..."
+-msgstr "別名で保存(_A)..."
++msgstr "別名で保存..."
+ 
+ #: pluma/pluma-ui.h:84
+ msgid "Save the current file with a different name"
+@@ -2264,7 +2264,7 @@
+ 
+ #: pluma/pluma-ui.h:87
+ msgid "Print Previe_w"
+-msgstr "印刷プレビュー(_W)"
++msgstr "印刷プレビュー"
+ 
+ #: pluma/pluma-ui.h:88
+ msgid "Print preview"
+@@ -2272,7 +2272,7 @@
+ 
+ #: pluma/pluma-ui.h:89
+ msgid "_Print..."
+-msgstr "印刷(_P)..."
++msgstr "印刷..."
+ 
+ #: pluma/pluma-ui.h:90
+ msgid "Print the current page"
+@@ -2280,7 +2280,7 @@
+ 
+ #: pluma/pluma-ui.h:93
+ msgid "_Undo"
+-msgstr "元に戻す(_U)"
++msgstr "元に戻す"
+ 
+ #: pluma/pluma-ui.h:94
+ msgid "Undo the last action"
+@@ -2288,7 +2288,7 @@
+ 
+ #: pluma/pluma-ui.h:95
+ msgid "_Redo"
+-msgstr "やり直す(_R)"
++msgstr "やり直す"
+ 
+ #: pluma/pluma-ui.h:96
+ msgid "Redo the last undone action"
+@@ -2296,7 +2296,7 @@
+ 
+ #: pluma/pluma-ui.h:97
+ msgid "Cu_t"
+-msgstr "切取り(_T)"
++msgstr "切取り"
+ 
+ #: pluma/pluma-ui.h:98
+ msgid "Cut the selection"
+@@ -2304,7 +2304,7 @@
+ 
+ #: pluma/pluma-ui.h:99
+ msgid "_Copy"
+-msgstr "コピー(_C)"
++msgstr "コピー"
+ 
+ #: pluma/pluma-ui.h:100
+ msgid "Copy the selection"
+@@ -2312,7 +2312,7 @@
+ 
+ #: pluma/pluma-ui.h:101
+ msgid "_Paste"
+-msgstr "貼り付け(_P)"
++msgstr "貼り付け"
+ 
+ #: pluma/pluma-ui.h:102
+ msgid "Paste the clipboard"
+@@ -2321,7 +2321,7 @@
+ #: pluma/pluma-ui.h:103 plugins/filebrowser/pluma-file-browser-utils.c:183
+ #: plugins/filebrowser/pluma-file-browser-widget.c:793
+ msgid "_Delete"
+-msgstr "削除(_D)"
++msgstr "削除"
+ 
+ #: pluma/pluma-ui.h:104
+ msgid "Delete the selected text"
+@@ -2329,7 +2329,7 @@
+ 
+ #: pluma/pluma-ui.h:105
+ msgid "Select _All"
+-msgstr "すべて選択(_A)"
++msgstr "すべて選択"
+ 
+ #: pluma/pluma-ui.h:106
+ msgid "Select the entire document"
+@@ -2337,11 +2337,11 @@
+ 
+ #: pluma/pluma-ui.h:107
+ msgid "C_hange Case"
+-msgstr "大/小文字の変更(_H)"
++msgstr "大/小文字の変更"
+ 
+ #: pluma/pluma-ui.h:108
+ msgid "All _Upper Case"
+-msgstr "すべて大文字にする(_U)"
++msgstr "すべて大文字にする"
+ 
+ #: pluma/pluma-ui.h:109
+ msgid "Change selected text to upper case"
+@@ -2349,7 +2349,7 @@
+ 
+ #: pluma/pluma-ui.h:110
+ msgid "All _Lower Case"
+-msgstr "すべて小文字にする(_L)"
++msgstr "すべて小文字にする"
+ 
+ #: pluma/pluma-ui.h:111
+ msgid "Change selected text to lower case"
+@@ -2357,7 +2357,7 @@
+ 
+ #: pluma/pluma-ui.h:112
+ msgid "_Invert Case"
+-msgstr "大/小文字を逆にする(_I)"
++msgstr "大/小文字を逆にする"
+ 
+ #: pluma/pluma-ui.h:113
+ msgid "Invert the case of selected text"
+@@ -2365,7 +2365,7 @@
+ 
+ #: pluma/pluma-ui.h:114
+ msgid "_Title Case"
+-msgstr "先頭文字を大文字にする(_T)"
++msgstr "先頭文字を大文字にする"
+ 
+ #: pluma/pluma-ui.h:115
+ msgid "Capitalize the first letter of each selected word"
+@@ -2373,11 +2373,11 @@
+ 
+ #: pluma/pluma-ui.h:118
+ msgid "_Highlight Mode"
+-msgstr "強調表示モード(_H)"
++msgstr "強調表示モード"
+ 
+ #: pluma/pluma-ui.h:121
+ msgid "_Find..."
+-msgstr "検索(_F)..."
++msgstr "検索..."
+ 
+ #: pluma/pluma-ui.h:122
+ msgid "Search for text"
+@@ -2385,7 +2385,7 @@
+ 
+ #: pluma/pluma-ui.h:123
+ msgid "Find Ne_xt"
+-msgstr "次を検索(_X)"
++msgstr "次を検索"
+ 
+ #: pluma/pluma-ui.h:124
+ msgid "Search forwards for the same text"
+@@ -2393,7 +2393,7 @@
+ 
+ #: pluma/pluma-ui.h:125
+ msgid "Find Pre_vious"
+-msgstr "前を検索(_V)"
++msgstr "前を検索"
+ 
+ #: pluma/pluma-ui.h:126
+ msgid "Search backwards for the same text"
+@@ -2401,7 +2401,7 @@
+ 
+ #: pluma/pluma-ui.h:127
+ msgid "_Replace..."
+-msgstr "置換(_R)..."
++msgstr "置換..."
+ 
+ #: pluma/pluma-ui.h:128
+ msgid "Search for and replace text"
+@@ -2409,7 +2409,7 @@
+ 
+ #: pluma/pluma-ui.h:129
+ msgid "_Clear Highlight"
+-msgstr "強調表示を消去(_C)"
++msgstr "強調表示を消去"
+ 
+ #: pluma/pluma-ui.h:130
+ msgid "Clear highlighting of search matches"
+@@ -2417,7 +2417,7 @@
+ 
+ #: pluma/pluma-ui.h:131
+ msgid "Go to _Line..."
+-msgstr "指定行へ移動(_L)..."
++msgstr "指定行へ移動..."
+ 
+ #: pluma/pluma-ui.h:132
+ msgid "Go to a specific line"
+@@ -2425,7 +2425,7 @@
+ 
+ #: pluma/pluma-ui.h:133
+ msgid "_Incremental Search..."
+-msgstr "逐次検索(_I)..."
++msgstr "逐次検索..."
+ 
+ #: pluma/pluma-ui.h:134
+ msgid "Incrementally search for text"
+@@ -2433,7 +2433,7 @@
+ 
+ #: pluma/pluma-ui.h:137
+ msgid "_Save All"
+-msgstr "すべて保存(_S)"
++msgstr "すべて保存"
+ 
+ #: pluma/pluma-ui.h:138
+ msgid "Save all open files"
+@@ -2441,7 +2441,7 @@
+ 
+ #: pluma/pluma-ui.h:139
+ msgid "_Close All"
+-msgstr "すべて閉じる(_C)"
++msgstr "すべて閉じる"
+ 
+ #: pluma/pluma-ui.h:140
+ msgid "Close all open files"
+@@ -2449,7 +2449,7 @@
+ 
+ #: pluma/pluma-ui.h:141
+ msgid "_Previous Document"
+-msgstr "前の文書(_P)"
++msgstr "前の文書"
+ 
+ #: pluma/pluma-ui.h:142
+ msgid "Activate previous document"
+@@ -2457,7 +2457,7 @@
+ 
+ #: pluma/pluma-ui.h:143
+ msgid "_Next Document"
+-msgstr "次の文書(_N)"
++msgstr "次の文書"
+ 
+ #: pluma/pluma-ui.h:144
+ msgid "Activate next document"
+@@ -2465,7 +2465,7 @@
+ 
+ #: pluma/pluma-ui.h:145
+ msgid "_Move to New Window"
+-msgstr "新しいウィンドウへ移動(_M)"
++msgstr "新しいウィンドウへ移動"
+ 
+ #: pluma/pluma-ui.h:146
+ msgid "Move the current document to a new window"
+@@ -2477,7 +2477,7 @@
+ 
+ #: pluma/pluma-ui.h:159
+ msgid "_Quit"
+-msgstr "終了 (_Q)"
++msgstr "終了 "
+ 
+ #: pluma/pluma-ui.h:160
+ msgid "Quit the program"
+@@ -2485,7 +2485,7 @@
+ 
+ #: pluma/pluma-ui.h:165
+ msgid "_Toolbar"
+-msgstr "ツールバー(_T)"
++msgstr "ツールバー"
+ 
+ #: pluma/pluma-ui.h:166
+ msgid "Show or hide the toolbar in the current window"
+@@ -2493,7 +2493,7 @@
+ 
+ #: pluma/pluma-ui.h:168
+ msgid "_Statusbar"
+-msgstr "ステータスバー(_S)"
++msgstr "ステータスバー"
+ 
+ #: pluma/pluma-ui.h:169
+ msgid "Show or hide the statusbar in the current window"
+@@ -2501,7 +2501,7 @@
+ 
+ #: pluma/pluma-ui.h:171
+ msgid "_Fullscreen"
+-msgstr "全画面(_F)"
++msgstr "全画面"
+ 
+ #: pluma/pluma-ui.h:172
+ msgid "Edit text in fullscreen"
+@@ -2509,7 +2509,7 @@
+ 
+ #: pluma/pluma-ui.h:179
+ msgid "Side _Pane"
+-msgstr "サイドペイン(_P)"
++msgstr "サイドペイン"
+ 
+ #: pluma/pluma-ui.h:180
+ msgid "Show or hide the side pane in the current window"
+@@ -2517,7 +2517,7 @@
+ 
+ #: pluma/pluma-ui.h:182
+ msgid "_Bottom Pane"
+-msgstr "ボトムペイン(_B)"
++msgstr "ボトムペイン"
+ 
+ #: pluma/pluma-ui.h:183
+ msgid "Show or hide the bottom pane in the current window"
+@@ -2545,15 +2545,15 @@
+ 
+ #: pluma/pluma-view.c:1525
+ msgid "_Wrap Around"
+-msgstr "折り返しも検索する(_W)"
++msgstr "折り返しも検索する"
+ 
+ #: pluma/pluma-view.c:1535
+ msgid "Match _Entire Word Only"
+-msgstr "単語全体にマッチさせる(_E)"
++msgstr "単語全体にマッチさせる"
+ 
+ #: pluma/pluma-view.c:1545
+ msgid "_Match Case"
+-msgstr "大/小文字を区別する(_M)"
++msgstr "大/小文字を区別する"
+ 
+ #: pluma/pluma-view.c:1555
+ msgid ""
+@@ -2561,7 +2561,7 @@
+ ")"
+ msgstr ""
+ "エスケープシーケンス(\n"
+-"など)を解釈する(_P)"
++"など)を解釈する"
+ 
+ #: pluma/pluma-view.c:1669
+ msgid "String you want to search for"
+@@ -2640,7 +2640,7 @@
+ 
+ #: plugins/docinfo/docinfo.ui:51
+ msgid "_Update"
+-msgstr "更新する(_U)"
++msgstr "更新する"
+ 
+ #: plugins/docinfo/docinfo.ui:84
+ msgid "File Name"
+@@ -2682,7 +2682,7 @@
+ 
+ #: plugins/docinfo/pluma-docinfo-plugin.c:441
+ msgid "_Document Statistics"
+-msgstr "文書の統計情報(_D)"
++msgstr "文書の統計情報"
+ 
+ #: plugins/docinfo/pluma-docinfo-plugin.c:443
+ msgid "Get statistical information on the current document"
+@@ -2698,7 +2698,7 @@
+ 
+ #: plugins/externaltools/tools/__init__.py:174
+ msgid "Manage _External Tools..."
+-msgstr "外部ツールを管理 (_E)"
++msgstr "外部ツールを管理 "
+ 
+ #: plugins/externaltools/tools/__init__.py:176
+ msgid "Opens the External Tools Manager"
+@@ -2706,7 +2706,7 @@
+ 
+ #: plugins/externaltools/tools/__init__.py:180
+ msgid "External _Tools"
+-msgstr "外部ツール (_T)"
++msgstr "外部ツール "
+ 
+ #: plugins/externaltools/tools/__init__.py:182
+ msgid "External tools"
+@@ -2848,32 +2848,32 @@
+ 
+ #: plugins/externaltools/tools/tools.ui:240
+ msgid "_Tools:"
+-msgstr "ツール (_T):"
++msgstr "ツール :"
+ 
+ #: plugins/externaltools/tools/tools.ui:355
+ msgid "_Applicability:"
+-msgstr "適用範囲(_A):"
++msgstr "適用範囲:"
+ 
+ #: plugins/externaltools/tools/tools.ui:368
+ msgid "_Output:"
+-msgstr "出力 (_O):"
++msgstr "出力 :"
+ 
+ #: plugins/externaltools/tools/tools.ui:381
+ msgid "_Input:"
+-msgstr "入力 (_I):"
++msgstr "入力 :"
+ 
+ #: plugins/externaltools/tools/tools.ui:394
+ msgid "_Save:"
+-msgstr "保存 (_S):"
++msgstr "保存 :"
+ 
+ #: plugins/externaltools/tools/tools.ui:407
+ msgid "_Shortcut Key:"
+-msgstr "ショートカットキー (_S):"
++msgstr "ショートカットキー :"
+ 
+ #: plugins/externaltools/tools/tools.ui:572
+ #: plugins/snippets/snippets/snippets.ui:308
+ msgid "_Edit:"
+-msgstr "編集 (_E):"
++msgstr "編集 :"
+ 
+ #: plugins/externaltools/data/build.desktop.in:3
+ msgid "Build"
+@@ -3018,7 +3018,7 @@
+ 
+ #: plugins/filebrowser/pluma-file-browser-plugin.c:578
+ msgid "_Set root to active document"
+-msgstr "文書のルートにする(_S)"
++msgstr "文書のルートにする"
+ 
+ #: plugins/filebrowser/pluma-file-browser-plugin.c:580
+ msgid "Set the root to the active document location"
+@@ -3026,7 +3026,7 @@
+ 
+ #: plugins/filebrowser/pluma-file-browser-plugin.c:585
+ msgid "_Open terminal here"
+-msgstr "端末を開く(_O)"
++msgstr "端末を開く"
+ 
+ #: plugins/filebrowser/pluma-file-browser-plugin.c:587
+ msgid "Open a terminal at the currently opened directory"
+@@ -3142,11 +3142,11 @@
+ 
+ #: plugins/filebrowser/pluma-file-browser-widget.c:785
+ msgid "_Filter"
+-msgstr "フィルタ(_F)"
++msgstr "フィルタ"
+ 
+ #: plugins/filebrowser/pluma-file-browser-widget.c:790
+ msgid "_Move to Trash"
+-msgstr "ゴミ箱へ移動(_M)"
++msgstr "ゴミ箱へ移動"
+ 
+ #: plugins/filebrowser/pluma-file-browser-widget.c:791
+ msgid "Move selected file or folder to trash"
+@@ -3170,7 +3170,7 @@
+ 
+ #: plugins/filebrowser/pluma-file-browser-widget.c:813
+ msgid "_New Folder"
+-msgstr "新しいフォルダー(_N)"
++msgstr "新しいフォルダー"
+ 
+ #: plugins/filebrowser/pluma-file-browser-widget.c:814
+ msgid "Add new empty folder"
+@@ -3178,7 +3178,7 @@
+ 
+ #: plugins/filebrowser/pluma-file-browser-widget.c:816
+ msgid "New F_ile"
+-msgstr "新しいファイル(_I)"
++msgstr "新しいファイル"
+ 
+ #: plugins/filebrowser/pluma-file-browser-widget.c:817
+ msgid "Add new empty file"
+@@ -3186,7 +3186,7 @@
+ 
+ #: plugins/filebrowser/pluma-file-browser-widget.c:822
+ msgid "_Rename"
+-msgstr "名前の変更(_R)"
++msgstr "名前の変更"
+ 
+ #: plugins/filebrowser/pluma-file-browser-widget.c:823
+ msgid "Rename selected file or folder"
+@@ -3194,7 +3194,7 @@
+ 
+ #: plugins/filebrowser/pluma-file-browser-widget.c:829
+ msgid "_Previous Location"
+-msgstr "前の場所(_P)"
++msgstr "前の場所"
+ 
+ #: plugins/filebrowser/pluma-file-browser-widget.c:831
+ msgid "Go to the previous visited location"
+@@ -3202,7 +3202,7 @@
+ 
+ #: plugins/filebrowser/pluma-file-browser-widget.c:833
+ msgid "_Next Location"
+-msgstr "次の場所(_N)"
++msgstr "次の場所"
+ 
+ #: plugins/filebrowser/pluma-file-browser-widget.c:834
+ msgid "Go to the next visited location"
+@@ -3210,7 +3210,7 @@
+ 
+ #: plugins/filebrowser/pluma-file-browser-widget.c:835
+ msgid "Re_fresh View"
+-msgstr "表示の更新(_F)"
++msgstr "表示の更新"
+ 
+ #: plugins/filebrowser/pluma-file-browser-widget.c:836
+ msgid "Refresh the view"
+@@ -3219,7 +3219,7 @@
+ #: plugins/filebrowser/pluma-file-browser-widget.c:837
+ #: plugins/filebrowser/pluma-file-browser-widget.c:855
+ msgid "_View Folder"
+-msgstr "フォルダーを開く(_V)"
++msgstr "フォルダーを開く"
+ 
+ #: plugins/filebrowser/pluma-file-browser-widget.c:838
+ #: plugins/filebrowser/pluma-file-browser-widget.c:856
+@@ -3228,7 +3228,7 @@
+ 
+ #: plugins/filebrowser/pluma-file-browser-widget.c:845
+ msgid "Show _Hidden"
+-msgstr "隠しファイル(_H)"
++msgstr "隠しファイル"
+ 
+ #: plugins/filebrowser/pluma-file-browser-widget.c:846
+ msgid "Show hidden files and folders"
+@@ -3236,7 +3236,7 @@
+ 
+ #: plugins/filebrowser/pluma-file-browser-widget.c:848
+ msgid "Show _Binary"
+-msgstr "バイナリ(_B)"
++msgstr "バイナリ"
+ 
+ #: plugins/filebrowser/pluma-file-browser-widget.c:849
+ msgid "Show binary files"
+@@ -3267,7 +3267,7 @@
+ 
+ #: plugins/filebrowser/pluma-file-browser-widget.c:1226
+ msgid "_Match Filename"
+-msgstr "ファイル名のフィルター(_M)"
++msgstr "ファイル名のフィルター"
+ 
+ #: plugins/filebrowser/pluma-file-browser-widget.c:2141
+ #, c-format
+@@ -3303,7 +3303,7 @@
+ 
+ #: plugins/pythonconsole/pythonconsole/config.ui:20
+ msgid "_Error color:"
+-msgstr "エラーの色 (_E):"
++msgstr "エラーの色 :"
+ 
+ #: plugins/pythonconsole/pythonconsole/config.ui:59
+ msgid "C_ommand color:"
+@@ -3351,7 +3351,7 @@
+ 
+ #: plugins/snippets/snippets/snippets.ui:144
+ msgid "_Snippets:"
+-msgstr "スニペット(_S):"
++msgstr "スニペット:"
+ 
+ #: plugins/snippets/snippets/snippets.ui:165
+ msgid "Create new snippet"
+@@ -3377,7 +3377,7 @@
+ 
+ #: plugins/snippets/snippets/snippets.ui:379
+ msgid "_Drop targets:"
+-msgstr "挿入する対象(_D):"
++msgstr "挿入する対象:"
+ 
+ #: plugins/snippets/snippets/snippets.ui:392
+ msgid "Shortcut key with which the snippet is activated"
+@@ -3385,12 +3385,12 @@
+ 
+ #: plugins/snippets/snippets/snippets.ui:411
+ msgid "S_hortcut key:"
+-msgstr "ショートカットキー(_H):"
++msgstr "ショートカットキー:"
+ 
+ #. "tab" here means the tab key, not the notebook tab!
+ #: plugins/snippets/snippets/snippets.ui:424
+ msgid "_Tab trigger:"
+-msgstr "タブ(_T):"
++msgstr "タブ:"
+ 
+ #: plugins/snippets/snippets/snippets.ui:446
+ #: plugins/snippets/snippets/Manager.py:682
+@@ -3399,7 +3399,7 @@
+ 
+ #: plugins/snippets/snippets/WindowHelper.py:73
+ msgid "Manage _Snippets..."
+-msgstr "スニペットの管理(_S)..."
++msgstr "スニペットの管理..."
+ 
+ #: plugins/snippets/snippets/WindowHelper.py:74
+ msgid "Manage snippets"
+@@ -3560,7 +3560,7 @@
+ 
+ #: plugins/sort/pluma-sort-plugin.c:79
+ msgid "S_ort..."
+-msgstr "並び替え(_O)..."
++msgstr "並び替え..."
+ 
+ #: plugins/sort/pluma-sort-plugin.c:81
+ msgid "Sort the current document or selection"
+@@ -3576,23 +3576,23 @@
+ 
+ #: plugins/sort/sort.ui:62
+ msgid "_Sort"
+-msgstr "並び替え(_S)"
++msgstr "並び替え"
+ 
+ #: plugins/sort/sort.ui:110
+ msgid "_Reverse order"
+-msgstr "逆順にする(_R)"
++msgstr "逆順にする"
+ 
+ #: plugins/sort/sort.ui:126
+ msgid "R_emove duplicates"
+-msgstr "重複する部分を削除する(_E)"
++msgstr "重複する部分を削除する"
+ 
+ #: plugins/sort/sort.ui:142
+ msgid "_Ignore case"
+-msgstr "大/小文字を区別する(_I)"
++msgstr "大/小文字を区別する"
+ 
+ #: plugins/sort/sort.ui:167
+ msgid "S_tart at column:"
+-msgstr "開始行(_T):"
++msgstr "開始行:"
+ 
+ #: plugins/spell/org.mate.pluma.plugins.spell.gschema.xml.in:11
+ msgid "Autocheck Type"
+@@ -3608,15 +3608,15 @@
+ 
+ #: plugins/spell/pluma-automatic-spell-checker.c:445
+ msgid "_More..."
+-msgstr "詳細(_M)..."
++msgstr "詳細..."
+ 
+ #: plugins/spell/pluma-automatic-spell-checker.c:500
+ msgid "_Ignore All"
+-msgstr "すべて無視(_I)"
++msgstr "すべて無視"
+ 
+ #: plugins/spell/pluma-automatic-spell-checker.c:554
+ msgid "_Spelling Suggestions..."
+-msgstr "スペルの提示(_S)..."
++msgstr "スペルの提示..."
+ 
+ #: plugins/spell/pluma-spell-checker-dialog.c:265
+ msgid "Check Spelling"
+@@ -3674,7 +3674,7 @@
+ 
+ #: plugins/spell/pluma-spell-plugin.c:97
+ msgid "_Check Spelling..."
+-msgstr "スペルチェック(_C)..."
++msgstr "スペルチェック..."
+ 
+ #: plugins/spell/pluma-spell-plugin.c:99
+ msgid "Check the current document for incorrect spelling"
+@@ -3682,7 +3682,7 @@
+ 
+ #: plugins/spell/pluma-spell-plugin.c:105
+ msgid "Set _Language..."
+-msgstr "言語の設定(_L).."
++msgstr "言語の設定.."
+ 
+ #: plugins/spell/pluma-spell-plugin.c:107
+ msgid "Set the language of the current document"
+@@ -3690,7 +3690,7 @@
+ 
+ #: plugins/spell/pluma-spell-plugin.c:116
+ msgid "_Autocheck Spelling"
+-msgstr "自動スペルチェック(_A)"
++msgstr "自動スペルチェック"
+ 
+ #: plugins/spell/pluma-spell-plugin.c:118
+ msgid "Automatically spell-check the current document"
+@@ -3706,7 +3706,7 @@
+ 
+ #: plugins/spell/languages-dialog.ui:105
+ msgid "Select the _language of the current document."
+-msgstr "この文書の言語を選択してください(_L):"
++msgstr "この文書の言語を選択してください:"
+ 
+ #: plugins/spell/spell-checker.ui:33
+ msgid "Check spelling"
+@@ -3722,31 +3722,31 @@
+ 
+ #: plugins/spell/spell-checker.ui:84
+ msgid "Change _to:"
+-msgstr "変更先(_T):"
++msgstr "変更先:"
+ 
+ #: plugins/spell/spell-checker.ui:115
+ msgid "Check _Word"
+-msgstr "単語のチェック(_W)"
++msgstr "単語のチェック"
+ 
+ #: plugins/spell/spell-checker.ui:151
+ msgid "_Suggestions:"
+-msgstr "正解の候補(_S):"
++msgstr "正解の候補:"
+ 
+ #: plugins/spell/spell-checker.ui:202
+ msgid "_Ignore"
+-msgstr "無視(_I)"
++msgstr "無視"
+ 
+ #: plugins/spell/spell-checker.ui:216
+ msgid "Cha_nge"
+-msgstr "変更(_N)"
++msgstr "変更"
+ 
+ #: plugins/spell/spell-checker.ui:230
+ msgid "Ignore _All"
+-msgstr "すべて無視(_A)"
++msgstr "すべて無視"
+ 
+ #: plugins/spell/spell-checker.ui:244
+ msgid "Change A_ll"
+-msgstr "すべて変更(_L)"
++msgstr "すべて変更"
+ 
+ #: plugins/spell/spell-checker.ui:273
+ msgid "User dictionary:"
+@@ -3754,7 +3754,7 @@
+ 
+ #: plugins/spell/spell-checker.ui:292
+ msgid "Add w_ord"
+-msgstr "単語の追加(_O)"
++msgstr "単語の追加"
+ 
+ #: plugins/spell/spell-checker.ui:334
+ msgid "Language:"
+@@ -3766,7 +3766,7 @@
+ 
+ #: plugins/spell/pluma-spell-setup-dialog.ui:23
+ msgid "_Configure Spell Checker plugin..."
+-msgstr "スペルチェックプラグインの設定(_C)…"
++msgstr "スペルチェックプラグインの設定…"
+ 
+ #: plugins/spell/pluma-spell-setup-dialog.ui:103
+ msgid "Autocheck spelling on document load..."
+@@ -3774,15 +3774,15 @@
+ 
+ #: plugins/spell/pluma-spell-setup-dialog.ui:116
+ msgid "_Never autocheck"
+-msgstr "自動チェックを行わない(_N)…"
++msgstr "自動チェックを行わない…"
+ 
+ #: plugins/spell/pluma-spell-setup-dialog.ui:133
+ msgid "_Remember autocheck by document"
+-msgstr "文書の自動チェックを記憶(_R)"
++msgstr "文書の自動チェックを記憶"
+ 
+ #: plugins/spell/pluma-spell-setup-dialog.ui:151
+ msgid "_Always autocheck"
+-msgstr "常に自動チェック(_A)"
++msgstr "常に自動チェック"
+ 
+ #: plugins/spell/spell.plugin.desktop.in.in:5
+ msgid "Spell Checker"
+@@ -3804,7 +3804,7 @@
+ 
+ #: plugins/taglist/pluma-taglist-plugin-panel.c:631
+ msgid "_Preview"
+-msgstr "プレビュー(_P)"
++msgstr "プレビュー"
+ 
+ #: plugins/taglist/pluma-taglist-plugin-panel.c:705
+ msgid "Available Tag Lists"
+@@ -6446,7 +6446,7 @@
+ 
+ #: plugins/time/pluma-time-plugin.c:184
+ msgid "In_sert Date and Time..."
+-msgstr "日付と時刻の挿入(_S)"
++msgstr "日付と時刻の挿入"
+ 
+ #: plugins/time/pluma-time-plugin.c:186
+ msgid "Insert current date and time at the cursor position"
+@@ -6478,17 +6478,17 @@
+ 
+ #: plugins/time/pluma-time-dialog.ui:99
+ msgid "_Insert"
+-msgstr "挿入する(_I)"
++msgstr "挿入する"
+ 
+ #: plugins/time/pluma-time-dialog.ui:144
+ #: plugins/time/pluma-time-setup-dialog.ui:165
+ msgid "Use the _selected format"
+-msgstr "次の書式を使う(_S)"
++msgstr "次の書式を使う"
+ 
+ #: plugins/time/pluma-time-dialog.ui:226
+ #: plugins/time/pluma-time-setup-dialog.ui:247
+ msgid "_Use custom format"
+-msgstr "その他(_U)"
++msgstr "その他"
+ 
+ #. Translators: Use the more common date format in your locale
+ #: plugins/time/pluma-time-dialog.ui:244
+@@ -6512,4 +6512,4 @@
+ 
+ #: plugins/time/pluma-time-setup-dialog.ui:143
+ msgid "_Prompt for a format"
+-msgstr "書式を毎回指定する(_P)"
++msgstr "書式を毎回指定する"

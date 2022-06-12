@@ -1,0 +1,711 @@
+diff -urN a/po/ja.po b/po/ja.po
+--- a/po/ja.po	2021-08-07 04:29:04.000000000 -0700
++++ b/po/ja.po	2022-06-12 09:33:50.739502236 -0700
+@@ -118,7 +118,7 @@
+ 
+ #: accessx-status/src/applet.c:218
+ msgid "_Keyboard Accessibility Preferences"
+-msgstr "キーボード操作性の設定(_K)"
++msgstr "キーボード操作性の設定"
+ 
+ #: accessx-status/src/applet.c:220 battstat/battstat_applet.c:62
+ #: battstat/battstat-preferences.ui:37 charpick/charpick.c:697
+@@ -132,7 +132,7 @@
+ #: stickynotes/sticky-notes-properties.ui:37
+ #: stickynotes/stickynotes_applet.c:46 trashapplet/src/trashapplet.c:74
+ msgid "_Help"
+-msgstr "ヘルプ(_H)"
++msgstr "ヘルプ"
+ 
+ #: accessx-status/src/applet.c:222 battstat/battstat_applet.c:65
+ #: charpick/charpick.c:700 command/src/command.c:87
+@@ -141,7 +141,7 @@
+ #: multiload/src/main.c:473 stickynotes/stickynotes_applet.c:49
+ #: timerapplet/src/timerapplet.c:88 trashapplet/src/trashapplet.c:77
+ msgid "_About"
+-msgstr "情報(_A)"
++msgstr "情報"
+ 
+ #: accessx-status/src/applet.c:571 accessx-status/src/applet.c:640
+ msgid "a"
+@@ -179,7 +179,7 @@
+ #: multiload/src/main.c:464 stickynotes/stickynotes_applet.c:43
+ #: timerapplet/src/timerapplet.c:87
+ msgid "_Preferences"
+-msgstr "設定(_P)"
++msgstr "設定"
+ 
+ #: battstat/battstat_applet.c:70
+ msgid "System is running on AC power"
+@@ -371,19 +371,19 @@
+ #: stickynotes/sticky-notes-properties.ui:54
+ #: timerapplet/data/timerapplet-preferences.ui:41
+ msgid "_Close"
+-msgstr "閉じる(_C)"
++msgstr "閉じる"
+ 
+ #: battstat/battstat-preferences.ui:102
+ msgid "_Show time/percentage:"
+-msgstr "充電時間/充電率を表示する(_S):"
++msgstr "充電時間/充電率を表示する:"
+ 
+ #: battstat/battstat-preferences.ui:125
+ msgid "Show _time remaining"
+-msgstr "残量を時間で表示する(_T)"
++msgstr "残量を時間で表示する"
+ 
+ #: battstat/battstat-preferences.ui:143
+ msgid "Show _percentage remaining"
+-msgstr "残量を百分率(%)で表示する(_P)"
++msgstr "残量を百分率(%)で表示する"
+ 
+ #: battstat/battstat-preferences.ui:175
+ msgid "Appearance"
+@@ -391,7 +391,7 @@
+ 
+ #: battstat/battstat-preferences.ui:214
+ msgid "_Warn when battery charge drops to:"
+-msgstr "次の充電率に下がったら警告する(_W):"
++msgstr "次の充電率に下がったら警告する:"
+ 
+ #: battstat/battstat-preferences.ui:255
+ msgid "Percent"
+@@ -403,7 +403,7 @@
+ 
+ #: battstat/battstat-preferences.ui:282
+ msgid "_Notify when battery is fully recharged"
+-msgstr "充電が完了したら通知する(_N)"
++msgstr "充電が完了したら通知する"
+ 
+ #: battstat/battstat-preferences.ui:305
+ msgid "Notifications"
+@@ -561,11 +561,11 @@
+ 
+ #: charpick/properties.c:28
+ msgid "_Edit"
+-msgstr "編集(_E)"
++msgstr "編集"
+ 
+ #: charpick/properties.c:94
+ msgid "_Palette:"
+-msgstr "パレット(_P):"
++msgstr "パレット:"
+ 
+ #: charpick/properties.c:102
+ msgid "Palette entry"
+@@ -589,7 +589,7 @@
+ 
+ #: charpick/properties.c:457
+ msgid "_Palettes:"
+-msgstr "パレット(_P):"
++msgstr "パレット:"
+ 
+ #: charpick/properties.c:480
+ msgid "Add button"
+@@ -625,7 +625,7 @@
+ 
+ #: command/data/command-preferences.ui:77
+ msgid "C_ommand:"
+-msgstr "コマンド(_O):"
++msgstr "コマンド:"
+ 
+ #: command/data/command-preferences.ui:91
+ msgid "_Interval (seconds):"
+@@ -708,7 +708,7 @@
+ 
+ #: cpufreq/cpufreq-preferences.ui:97
+ msgid "_Monitored CPU:"
+-msgstr "モニターする CPU(_M):"
++msgstr "モニターする CPU:"
+ 
+ #: cpufreq/cpufreq-preferences.ui:127
+ msgid "Monitor Settings"
+@@ -716,19 +716,19 @@
+ 
+ #: cpufreq/cpufreq-preferences.ui:168
+ msgid "_Appearance:"
+-msgstr "外観(_A):"
++msgstr "外観:"
+ 
+ #: cpufreq/cpufreq-preferences.ui:199
+ msgid "Show CPU frequency as _frequency"
+-msgstr "CPU の周波数を表示する(_F)"
++msgstr "CPU の周波数を表示する"
+ 
+ #: cpufreq/cpufreq-preferences.ui:216
+ msgid "Show frequency _units"
+-msgstr "周波数の単位を表示する(_U)"
++msgstr "周波数の単位を表示する"
+ 
+ #: cpufreq/cpufreq-preferences.ui:233
+ msgid "Show CPU frequency as _percentage"
+-msgstr "CPU 周波数を百分率で表示する(_P)"
++msgstr "CPU 周波数を百分率で表示する"
+ 
+ #: cpufreq/cpufreq-preferences.ui:256
+ msgid "Display Settings"
+@@ -879,31 +879,31 @@
+ 
+ #: drivemount/src/drive-button.c:940
+ msgid "_Play DVD"
+-msgstr "DVD の再生(_P)"
++msgstr "DVD の再生"
+ 
+ #: drivemount/src/drive-button.c:944
+ msgid "_Play CD"
+-msgstr "CD の再生(_P)"
++msgstr "CD の再生"
+ 
+ #: drivemount/src/drive-button.c:947
+ #, c-format
+ msgid "_Open %s"
+-msgstr "%s を開く(_O)"
++msgstr "%s を開く"
+ 
+ #: drivemount/src/drive-button.c:955
+ #, c-format
+ msgid "Un_mount %s"
+-msgstr "%s をアンマウントする(_M)"
++msgstr "%s をアンマウントする"
+ 
+ #: drivemount/src/drive-button.c:961
+ #, c-format
+ msgid "_Mount %s"
+-msgstr "%s をマウントする(_M)"
++msgstr "%s をマウントする"
+ 
+ #: drivemount/src/drive-button.c:969
+ #, c-format
+ msgid "_Eject %s"
+-msgstr "%s を取り出す(_E)"
++msgstr "%s を取り出す"
+ 
+ #: drivemount/src/drivemount.c:118
+ msgid "About Disk Mounter"
+@@ -947,7 +947,7 @@
+ 
+ #: geyes/data/themes.ui:100
+ msgid "_Select a theme:"
+-msgstr "テーマの選択(_S):"
++msgstr "テーマの選択:"
+ 
+ #: geyes/data/themes.ui:148
+ msgid "Themes"
+@@ -988,7 +988,7 @@
+ #: mateweather/data/mateweather-dialog.ui:30
+ #: mateweather/src/mateweather-applet.c:113
+ msgid "_Update"
+-msgstr "更新する(_U)"
++msgstr "更新する"
+ 
+ #: mateweather/data/mateweather-dialog.ui:88
+ msgid "City:"
+@@ -1060,7 +1060,7 @@
+ 
+ #: mateweather/data/mateweather-dialog.ui:497
+ msgid "_Visit Weather.com"
+-msgstr "Weather.com へジャンプ(_V)"
++msgstr "Weather.com へジャンプ"
+ 
+ #: mateweather/data/mateweather-dialog.ui:505
+ msgid "Visit Weather.com"
+@@ -1109,7 +1109,7 @@
+ 
+ #: mateweather/src/mateweather-applet.c:110
+ msgid "_Details"
+-msgstr "詳細(_D)"
++msgstr "詳細"
+ 
+ #: mateweather/src/mateweather-applet.c:165
+ msgid "?"
+@@ -1181,11 +1181,11 @@
+ #: mateweather/src/mateweather-pref.c:863
+ #: mateweather/src/mateweather-pref.c:1054
+ msgid "_Automatically update every:"
+-msgstr "自動的に更新する間隔(_A):"
++msgstr "自動的に更新する間隔:"
+ 
+ #: mateweather/src/mateweather-pref.c:878
+ msgid "_Temperature unit:"
+-msgstr "気温の単位(_T):"
++msgstr "気温の単位:"
+ 
+ #: mateweather/src/mateweather-pref.c:888
+ msgid "Kelvin"
+@@ -1201,7 +1201,7 @@
+ 
+ #: mateweather/src/mateweather-pref.c:900
+ msgid "_Wind speed unit:"
+-msgstr "風速の単位(_W):"
++msgstr "風速の単位:"
+ 
+ #: mateweather/src/mateweather-pref.c:911
+ msgid "m/s"
+@@ -1225,7 +1225,7 @@
+ 
+ #: mateweather/src/mateweather-pref.c:927
+ msgid "_Pressure unit:"
+-msgstr "気圧の単位(_P):"
++msgstr "気圧の単位:"
+ 
+ #: mateweather/src/mateweather-pref.c:938
+ msgid "kPa"
+@@ -1253,7 +1253,7 @@
+ 
+ #: mateweather/src/mateweather-pref.c:957
+ msgid "_Visibility unit:"
+-msgstr "視界の単位(_V):"
++msgstr "視界の単位:"
+ 
+ #: mateweather/src/mateweather-pref.c:968
+ msgid "meters"
+@@ -1269,19 +1269,19 @@
+ 
+ #: mateweather/src/mateweather-pref.c:996
+ msgid "Enable _radar map"
+-msgstr "レーダー・マップを有効にする(_R)"
++msgstr "レーダー・マップを有効にする"
+ 
+ #: mateweather/src/mateweather-pref.c:1011
+ msgid "Use _custom address for radar map"
+-msgstr "レーダー・マップのアドレスをカスタマイズする(_C)"
++msgstr "レーダー・マップのアドレスをカスタマイズする"
+ 
+ #: mateweather/src/mateweather-pref.c:1027
+ msgid "A_ddress:"
+-msgstr "住所(_D):"
++msgstr "住所:"
+ 
+ #: mateweather/src/mateweather-pref.c:1042
+ msgid "Show _notifications"
+-msgstr "通知を表示する(_N)"
++msgstr "通知を表示する"
+ 
+ #: mateweather/src/mateweather-pref.c:1050
+ msgid "Update"
+@@ -1301,15 +1301,15 @@
+ 
+ #: mateweather/src/mateweather-pref.c:1114
+ msgid "_Select a location:"
+-msgstr "場所の選択(_S):"
++msgstr "場所の選択:"
+ 
+ #: mateweather/src/mateweather-pref.c:1135
+ msgid "_Find:"
+-msgstr "検索(_F):"
++msgstr "検索:"
+ 
+ #: mateweather/src/mateweather-pref.c:1141
+ msgid "Find _Next"
+-msgstr "次を検索(_N)"
++msgstr "次を検索"
+ 
+ #: mateweather/src/mateweather-pref.c:1159
+ msgid "Location"
+@@ -1491,27 +1491,27 @@
+ 
+ #: multiload/data/properties.ui:131
+ msgid "_Processor"
+-msgstr "プロセッサ(_P)"
++msgstr "プロセッサ"
+ 
+ #: multiload/data/properties.ui:148
+ msgid "_Memory"
+-msgstr "メモリ(_M)"
++msgstr "メモリ"
+ 
+ #: multiload/data/properties.ui:165
+ msgid "_Network"
+-msgstr "ネットワーク(_N)"
++msgstr "ネットワーク"
+ 
+ #: multiload/data/properties.ui:182
+ msgid "S_wap Space"
+-msgstr "スワップ領域(_W)"
++msgstr "スワップ領域"
+ 
+ #: multiload/data/properties.ui:199
+ msgid "_Load"
+-msgstr "負荷(_L)"
++msgstr "負荷"
+ 
+ #: multiload/data/properties.ui:216
+ msgid "_Harddisk"
+-msgstr "ハードディスク(_H)"
++msgstr "ハードディスク"
+ 
+ #: multiload/data/properties.ui:239
+ msgid "Monitored Resources"
+@@ -1539,23 +1539,23 @@
+ 
+ #: multiload/data/properties.ui:481 multiload/data/properties.ui:583
+ msgid "_User"
+-msgstr "ユーザ(_U)"
++msgstr "ユーザ"
+ 
+ #: multiload/data/properties.ui:494
+ msgid "S_ystem"
+-msgstr "システム(_Y)"
++msgstr "システム"
+ 
+ #: multiload/data/properties.ui:507
+ msgid "N_ice"
+-msgstr "Nice値(_I)"
++msgstr "Nice値"
+ 
+ #: multiload/data/properties.ui:520
+ msgid "I_OWait"
+-msgstr "IOWait(_O)"
++msgstr "IOWait"
+ 
+ #: multiload/data/properties.ui:533
+ msgid "I_dle"
+-msgstr "待機(_D)"
++msgstr "待機"
+ 
+ #: multiload/data/properties.ui:548 multiload/src/main.c:272
+ msgid "Processor"
+@@ -1563,19 +1563,19 @@
+ 
+ #: multiload/data/properties.ui:612
+ msgid "Sh_ared"
+-msgstr "共有(_A)"
++msgstr "共有"
+ 
+ #: multiload/data/properties.ui:641
+ msgid "_Buffers"
+-msgstr "バッファ(_B)"
++msgstr "バッファ"
+ 
+ #: multiload/data/properties.ui:670
+ msgid "Cach_ed"
+-msgstr "キャッシュ(_E)"
++msgstr "キャッシュ"
+ 
+ #: multiload/data/properties.ui:699
+ msgid "F_ree"
+-msgstr "未使用(_R)"
++msgstr "未使用"
+ 
+ #: multiload/data/properties.ui:717 multiload/src/main.c:273
+ msgid "Memory"
+@@ -1583,24 +1583,24 @@
+ 
+ #: multiload/data/properties.ui:753
+ msgid "_In"
+-msgstr "受信(_I)"
++msgstr "受信"
+ 
+ #: multiload/data/properties.ui:782
+ msgid "_Out"
+-msgstr "送信(_O)"
++msgstr "送信"
+ 
+ #: multiload/data/properties.ui:811
+ msgid "_Local"
+-msgstr "ローカル(_L)"
++msgstr "ローカル"
+ 
+ #: multiload/data/properties.ui:840 multiload/data/properties.ui:1064
+ #: multiload/data/properties.ui:1211
+ msgid "_Background"
+-msgstr "背景色(_B)"
++msgstr "背景色"
+ 
+ #: multiload/data/properties.ui:869 multiload/data/properties.ui:1093
+ msgid "_Gridline"
+-msgstr "グリッドライン(_G)"
++msgstr "グリッドライン"
+ 
+ #: multiload/data/properties.ui:898
+ msgid "_Indicator"
+@@ -1612,11 +1612,11 @@
+ 
+ #: multiload/data/properties.ui:952
+ msgid "_Used"
+-msgstr "使用中(_U)"
++msgstr "使用中"
+ 
+ #: multiload/data/properties.ui:981
+ msgid "_Free"
+-msgstr "未使用(_F)"
++msgstr "未使用"
+ 
+ #: multiload/data/properties.ui:999 multiload/src/main.c:275
+ msgid "Swap Space"
+@@ -1624,7 +1624,7 @@
+ 
+ #: multiload/data/properties.ui:1035
+ msgid "_Average"
+-msgstr "平均(_A)"
++msgstr "平均"
+ 
+ #: multiload/data/properties.ui:1111
+ msgid "Load"
+@@ -1632,11 +1632,11 @@
+ 
+ #: multiload/data/properties.ui:1153
+ msgid "_Read"
+-msgstr "読み込み(_R)"
++msgstr "読み込み"
+ 
+ #: multiload/data/properties.ui:1182
+ msgid "_Write"
+-msgstr "書き込み(_W)"
++msgstr "書き込み"
+ 
+ #: multiload/data/properties.ui:1229
+ msgid "Use diskstats for _NVMe"
+@@ -1766,7 +1766,7 @@
+ 
+ #: multiload/src/main.c:467
+ msgid "_Open System Monitor"
+-msgstr "システムモニタを開く(_O)"
++msgstr "システムモニタを開く"
+ 
+ #: multiload/src/netspeed.c:60
+ #, c-format
+@@ -1783,11 +1783,11 @@
+ 
+ #: netspeed/data/netspeed-details.ui:133
+ msgid "_In graph color"
+-msgstr "受信グラフの色(_I)"
++msgstr "受信グラフの色"
+ 
+ #: netspeed/data/netspeed-details.ui:160
+ msgid "_Out graph color"
+-msgstr "送信グラフの色(_O)"
++msgstr "送信グラフの色"
+ 
+ #: netspeed/data/netspeed-details.ui:194
+ msgid "IPv4 Address:"
+@@ -1847,19 +1847,19 @@
+ 
+ #: netspeed/data/netspeed-preferences.ui:100
+ msgid "Network _device:"
+-msgstr "ネットワークデバイス(_D)"
++msgstr "ネットワークデバイス"
+ 
+ #: netspeed/data/netspeed-preferences.ui:131
+ msgid "Show _sum instead of in & out"
+-msgstr "受信と送信の代わりに合計を表示する(_S)"
++msgstr "受信と送信の代わりに合計を表示する"
+ 
+ #: netspeed/data/netspeed-preferences.ui:147
+ msgid "Show _bits instead of bytes"
+-msgstr "バイト単位の代わりにビット単位で表示する(_B)"
++msgstr "バイト単位の代わりにビット単位で表示する"
+ 
+ #: netspeed/data/netspeed-preferences.ui:163
+ msgid "_Change icon according to the selected device"
+-msgstr "選択されたデバイスに応じてアイコンを変える(_C)"
++msgstr "選択されたデバイスに応じてアイコンを変える"
+ 
+ #: netspeed/data/netspeed-preferences.ui:179
+ msgid "Show _icon"
+@@ -2223,7 +2223,7 @@
+ 
+ #: netspeed/src/netspeed.c:1231
+ msgid "Device _Details"
+-msgstr "デバイスの詳細(_D)"
++msgstr "デバイスの詳細"
+ 
+ #: netspeed/src/netspeed.c:1233
+ msgid "Preferences..."
+@@ -2344,11 +2344,11 @@
+ #: stickynotes/sticky-notes-delete.ui:37
+ #: trashapplet/trashapplet-empty-progress.ui:27
+ msgid "_Cancel"
+-msgstr "キャンセル(_C)"
++msgstr "キャンセル"
+ 
+ #: stickynotes/sticky-notes-delete-all.ui:53
+ msgid "_Delete All"
+-msgstr "すべて削除(_D)"
++msgstr "すべて削除"
+ 
+ #: stickynotes/sticky-notes-delete-all.ui:106
+ msgid "Delete all sticky notes?"
+@@ -2361,7 +2361,7 @@
+ 
+ #: stickynotes/sticky-notes-delete.ui:54
+ msgid "_Delete"
+-msgstr "削除(_D)"
++msgstr "削除"
+ 
+ #: stickynotes/sticky-notes-delete.ui:107
+ msgid "Delete this sticky note?"
+@@ -2393,11 +2393,11 @@
+ 
+ #: stickynotes/sticky-notes-preferences.ui:131
+ msgid "_Width:"
+-msgstr "幅(_W):"
++msgstr "幅:"
+ 
+ #: stickynotes/sticky-notes-preferences.ui:144
+ msgid "H_eight:"
+-msgstr "高さ(_E):"
++msgstr "高さ:"
+ 
+ #: stickynotes/sticky-notes-preferences.ui:157
+ msgid "Specify the default width (in pixels) of new notes"
+@@ -2417,15 +2417,15 @@
+ 
+ #: stickynotes/sticky-notes-preferences.ui:185
+ msgid "Use co_lor from the system theme"
+-msgstr "システムのテーマの色を使用する(_L)"
++msgstr "システムのテーマの色を使用する"
+ 
+ #: stickynotes/sticky-notes-preferences.ui:203
+ msgid "Font Co_lor:"
+-msgstr "フォントの色(_L):"
++msgstr "フォントの色:"
+ 
+ #: stickynotes/sticky-notes-preferences.ui:216
+ msgid "Note C_olor:"
+-msgstr "付箋の色(_O):"
++msgstr "付箋の色:"
+ 
+ #: stickynotes/sticky-notes-preferences.ui:241
+ msgid "Choose a base color to use for all sticky notes"
+@@ -2437,12 +2437,12 @@
+ 
+ #: stickynotes/sticky-notes-preferences.ui:251
+ msgid "Use fo_nt from the system theme"
+-msgstr "システムのフォントを使用する(_N)"
++msgstr "システムのフォントを使用する"
+ 
+ #: stickynotes/sticky-notes-preferences.ui:269
+ #: stickynotes/sticky-notes-properties.ui:226
+ msgid "_Font:"
+-msgstr "フォント(_F):"
++msgstr "フォント:"
+ 
+ #: stickynotes/sticky-notes-preferences.ui:283
+ msgid "Choose a font to use for all sticky notes"
+@@ -2458,7 +2458,7 @@
+ 
+ #: stickynotes/sticky-notes-preferences.ui:337
+ msgid "_Put notes on all workspaces"
+-msgstr "付箋をすべてのワークスペースに貼り付ける(_P)"
++msgstr "付箋をすべてのワークスペースに貼り付ける"
+ 
+ #: stickynotes/sticky-notes-preferences.ui:341
+ msgid "Choose if notes are visible on all workspaces"
+@@ -2466,7 +2466,7 @@
+ 
+ #: stickynotes/sticky-notes-preferences.ui:354
+ msgid "Force _default color and font on notes"
+-msgstr "デフォルトの色とフォントを強制的に適用する(_D)"
++msgstr "デフォルトの色とフォントを強制的に適用する"
+ 
+ #: stickynotes/sticky-notes-preferences.ui:358
+ msgid "Choose if the default style is forced on all notes"
+@@ -2474,7 +2474,7 @@
+ 
+ #: stickynotes/sticky-notes-preferences.ui:371
+ msgid "Hide notes when the des_ktop is clicked on"
+-msgstr "デスクトップがクリックされた時に付箋を隠す(_K)"
++msgstr "デスクトップがクリックされた時に付箋を隠す"
+ 
+ #: stickynotes/sticky-notes-preferences.ui:375
+ msgid "Choose whether to hide all notes when selecting on the desktop"
+@@ -2490,7 +2490,7 @@
+ 
+ #: stickynotes/sticky-notes-properties.ui:117
+ msgid "_Title:"
+-msgstr "役職(_T):"
++msgstr "役職:"
+ 
+ #: stickynotes/sticky-notes-properties.ui:130
+ msgid "Specify a title for the note"
+@@ -2498,19 +2498,19 @@
+ 
+ #: stickynotes/sticky-notes-properties.ui:139
+ msgid "Use default co_lor"
+-msgstr "デフォルトの色を使用する(_L)"
++msgstr "デフォルトの色を使用する"
+ 
+ #: stickynotes/sticky-notes-properties.ui:158
+ msgid "Font C_olor:"
+-msgstr "フォントの色(_O):"
++msgstr "フォントの色:"
+ 
+ #: stickynotes/sticky-notes-properties.ui:172
+ msgid "Note _Color:"
+-msgstr "付箋の色(_C):"
++msgstr "付箋の色:"
+ 
+ #: stickynotes/sticky-notes-properties.ui:183
+ msgid "Use default fo_nt"
+-msgstr "デフォルトのフォントを使用する(_N)"
++msgstr "デフォルトのフォントを使用する"
+ 
+ #: stickynotes/sticky-notes-properties.ui:213
+ msgid "Choose a color for the note"
+@@ -2669,19 +2669,19 @@
+ 
+ #: stickynotes/stickynotes_applet.c:34
+ msgid "_New Note"
+-msgstr "新しい付箋(_N)"
++msgstr "新しい付箋"
+ 
+ #: stickynotes/stickynotes_applet.c:37
+ msgid "Hi_de Notes"
+-msgstr "付箋を隠す(_D)"
++msgstr "付箋を隠す"
+ 
+ #: stickynotes/stickynotes_applet.c:40
+ msgid "_Delete Notes"
+-msgstr "付箋の削除(_D)"
++msgstr "付箋の削除"
+ 
+ #: stickynotes/stickynotes_applet.c:56
+ msgid "_Lock Notes"
+-msgstr "付箋のロック(_L)"
++msgstr "付箋のロック"
+ 
+ #: stickynotes/stickynotes_applet.c:607
+ #, c-format
+@@ -2747,7 +2747,7 @@
+ 
+ #: timerapplet/data/timerapplet-preferences.ui:79
+ msgid "_Name:"
+-msgstr "名前(_N):"
++msgstr "名前:"
+ 
+ #: timerapplet/data/timerapplet-preferences.ui:93
+ msgid "_Hours:"
+@@ -2771,15 +2771,15 @@
+ 
+ #: timerapplet/src/timerapplet.c:83
+ msgid "_Start timer"
+-msgstr "タイマーを開始(_S)"
++msgstr "タイマーを開始"
+ 
+ #: timerapplet/src/timerapplet.c:84
+ msgid "P_ause timer"
+-msgstr "タイマーを一時停止(_A)"
++msgstr "タイマーを一時停止"
+ 
+ #: timerapplet/src/timerapplet.c:85
+ msgid "S_top timer"
+-msgstr "タイマーを停止(_T)"
++msgstr "タイマーを停止"
+ 
+ #: timerapplet/src/timerapplet.c:86
+ msgid "R_eset"
+@@ -2826,11 +2826,11 @@
+ 
+ #: trashapplet/src/trashapplet.c:68 trashapplet/src/trash-empty.c:341
+ msgid "_Empty Trash"
+-msgstr "ゴミ箱を空にする(_E)"
++msgstr "ゴミ箱を空にする"
+ 
+ #: trashapplet/src/trashapplet.c:71
+ msgid "_Open Trash"
+-msgstr "ゴミ箱を開く(_O)"
++msgstr "ゴミ箱を開く"
+ 
+ #: trashapplet/src/trashapplet.c:127
+ #, c-format
