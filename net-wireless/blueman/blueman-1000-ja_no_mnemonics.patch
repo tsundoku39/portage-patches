@@ -1,0 +1,275 @@
+diff -urN a/po/ja.po b/po/ja.po
+--- a/po/ja.po	2022-06-10 01:41:21.000000000 -0700
++++ b/po/ja.po	2022-07-20 21:43:20.911054140 -0700
+@@ -67,20 +67,20 @@
+ 
+ #: data/ui/manager-main.ui:53
+ msgid "_Adapter"
+-msgstr "アダプター(_A)"
++msgstr "アダプター"
+ 
+ #: data/ui/manager-main.ui:61
+ msgid "_Device"
+-msgstr "デバイス(_D)"
++msgstr "デバイス"
+ 
+ #: data/ui/manager-main.ui:69
+ msgid "_View"
+-msgstr "表示(_V)"
++msgstr "表示"
+ 
+ #: data/ui/manager-main.ui:77 blueman/gui/manager/ManagerMenu.py:56
+ #: blueman/plugins/applet/StandardItems.py:48
+ msgid "_Help"
+-msgstr "ヘルプ(_H)"
++msgstr "ヘルプ"
+ 
+ #: data/ui/manager-main.ui:96
+ msgid "Search for nearby devices"
+@@ -265,7 +265,7 @@
+ 
+ #: data/ui/net-usage.ui:33
+ msgid "_Close"
+-msgstr "閉じる(_C)"
++msgstr "閉じる"
+ 
+ #: data/ui/net-usage.ui:79
+ msgid "<b>Downloaded:</b>"
+@@ -289,7 +289,7 @@
+ 
+ #: data/ui/net-usage.ui:243
+ msgid "_Reset"
+-msgstr "リセット(_R)"
++msgstr "リセット"
+ 
+ #: data/ui/note.ui:8
+ msgid "Send note"
+@@ -497,7 +497,7 @@
+ 
+ #: blueman/gui/manager/ManagerMenu.py:46
+ msgid "_Report a Problem"
+-msgstr "問題を報告 (_R)"
++msgstr "問題を報告 "
+ 
+ #: blueman/gui/manager/ManagerMenu.py:63
+ msgid "Device Manager"
+@@ -505,11 +505,11 @@
+ 
+ #: blueman/gui/manager/ManagerMenu.py:69
+ msgid "Show _Toolbar"
+-msgstr "ツールバーを表示(_T)"
++msgstr "ツールバーを表示"
+ 
+ #: blueman/gui/manager/ManagerMenu.py:74
+ msgid "Show _Statusbar"
+-msgstr "ステータスバーを表示(_S)"
++msgstr "ステータスバーを表示"
+ 
+ #: blueman/gui/manager/ManagerMenu.py:79
+ msgid "Hide _unnamed devices"
+@@ -517,29 +517,29 @@
+ 
+ #: blueman/gui/manager/ManagerMenu.py:89
+ msgid "S_ort By"
+-msgstr "並び替え(_O)"
++msgstr "並び替え"
+ 
+ #: blueman/gui/manager/ManagerMenu.py:96
+ msgid "_Name"
+-msgstr "名前(_N)"
++msgstr "名前"
+ 
+ #: blueman/gui/manager/ManagerMenu.py:101
+ msgid "_Added"
+-msgstr "追加済み(_A)"
++msgstr "追加済み"
+ 
+ #: blueman/gui/manager/ManagerMenu.py:115
+ msgid "_Descending"
+-msgstr "降順(_D)"
++msgstr "降順"
+ 
+ #: blueman/gui/manager/ManagerMenu.py:128
+ #: blueman/plugins/applet/StandardItems.py:50
+ msgid "_Plugins"
+-msgstr "プラグイン(_P)"
++msgstr "プラグイン"
+ 
+ #: blueman/gui/manager/ManagerMenu.py:133
+ #: blueman/plugins/applet/StandardItems.py:43
+ msgid "_Local Services"
+-msgstr "ローカルサービス(_L)"
++msgstr "ローカルサービス"
+ 
+ #: blueman/gui/manager/ManagerMenu.py:134
+ #: blueman/plugins/applet/StandardItems.py:82
+@@ -548,15 +548,15 @@
+ 
+ #: blueman/gui/manager/ManagerMenu.py:142
+ msgid "_Search"
+-msgstr "検索(_S)"
++msgstr "検索"
+ 
+ #: blueman/gui/manager/ManagerMenu.py:156
+ msgid "_Preferences"
+-msgstr "アダプター設定(_P)"
++msgstr "アダプター設定"
+ 
+ #: blueman/gui/manager/ManagerMenu.py:165 blueman/plugins/applet/ExitItem.py:12
+ msgid "_Exit"
+-msgstr "終了(_E)"
++msgstr "終了"
+ 
+ #. translators: device class
+ #: blueman/gui/manager/ManagerDeviceList.py:279
+@@ -684,7 +684,7 @@
+ 
+ #: blueman/gui/manager/ManagerDeviceMenu.py:285
+ msgid "_<b>_Connect</b>"
+-msgstr "_<b>(_C)接続</b>"
++msgstr "_<b>接続</b>"
+ 
+ #: blueman/gui/manager/ManagerDeviceMenu.py:287
+ msgid "Connects auto connect profiles A2DP source, A2DP sink, and HID"
+@@ -693,7 +693,7 @@
+ 
+ #: blueman/gui/manager/ManagerDeviceMenu.py:291
+ msgid "_<b>Disconnect</b>"
+-msgstr "_<b>(_D)切断</b>"
++msgstr "_<b>切断</b>"
+ 
+ #: blueman/gui/manager/ManagerDeviceMenu.py:292
+ msgid "Forcefully disconnect the device"
+@@ -713,19 +713,19 @@
+ 
+ #: blueman/gui/manager/ManagerDeviceMenu.py:341
+ msgid "Send a _File…"
+-msgstr "ファイルを送信(_F)…"
++msgstr "ファイルを送信…"
+ 
+ #: blueman/gui/manager/ManagerDeviceMenu.py:354
+ msgid "_Pair"
+-msgstr "ペア(_P)"
++msgstr "ペア"
+ 
+ #: blueman/gui/manager/ManagerDeviceMenu.py:364
+ msgid "_Trust"
+-msgstr "信頼する(_T)"
++msgstr "信頼する"
+ 
+ #: blueman/gui/manager/ManagerDeviceMenu.py:369
+ msgid "_Untrust"
+-msgstr "信頼しない(_U)"
++msgstr "信頼しない"
+ 
+ #: blueman/gui/manager/ManagerDeviceMenu.py:393
+ msgid "R_ename device…"
+@@ -733,7 +733,7 @@
+ 
+ #: blueman/gui/manager/ManagerDeviceMenu.py:402
+ msgid "_Remove…"
+-msgstr "削除(_R)…"
++msgstr "削除…"
+ 
+ #: blueman/gui/manager/ManagerProgressbar.py:44
+ msgid "Cancel Operation"
+@@ -2003,7 +2003,7 @@
+ 
+ #: blueman/plugins/manager/Info.py:120
+ msgid "_Info"
+-msgstr "情報(_I)"
++msgstr "情報"
+ 
+ #: blueman/plugins/manager/Info.py:121
+ msgid "Show device information"
+@@ -2011,7 +2011,7 @@
+ 
+ #: blueman/plugins/manager/Notes.py:51
+ msgid "Send _note"
+-msgstr "付箋紙を送る(_N)"
++msgstr "付箋紙を送る"
+ 
+ #: blueman/plugins/manager/Notes.py:52
+ msgid "Send a text note"
+@@ -2113,7 +2113,7 @@
+ 
+ #: blueman/plugins/applet/NetUsage.py:307
+ msgid "Network _Usage"
+-msgstr "ネットワーク利用状況(_U)"
++msgstr "ネットワーク利用状況"
+ 
+ #: blueman/plugins/applet/NetUsage.py:308
+ msgid "Shows network traffic usage"
+@@ -2153,7 +2153,7 @@
+ 
+ #: blueman/plugins/applet/RecentConns.py:64
+ msgid "Recent _Connections"
+-msgstr "最近使用した接続(_C)"
++msgstr "最近使用した接続"
+ 
+ #: blueman/plugins/applet/RecentConns.py:223
+ #, python-format
+@@ -2274,15 +2274,15 @@
+ 
+ #: blueman/plugins/applet/StandardItems.py:32
+ msgid "Send _Files to Device"
+-msgstr "デバイスにファイルを送信(_F)"
++msgstr "デバイスにファイルを送信"
+ 
+ #: blueman/plugins/applet/StandardItems.py:37
+ msgid "_Devices"
+-msgstr "デバイス(_D)"
++msgstr "デバイス"
+ 
+ #: blueman/plugins/applet/StandardItems.py:40
+ msgid "Adap_ters"
+-msgstr "アダプター(_T)"
++msgstr "アダプター"
+ 
+ #: blueman/plugins/applet/StandardItems.py:85
+ msgid "applet"
+@@ -2388,7 +2388,7 @@
+ #: blueman/plugins/applet/DiscvManager.py:35
+ #: blueman/plugins/applet/DiscvManager.py:123
+ msgid "_Make Discoverable"
+-msgstr "発見可能にする(_M)"
++msgstr "発見可能にする"
+ 
+ #: blueman/plugins/applet/DiscvManager.py:36
+ msgid "Make the default adapter temporarily visible"
+@@ -2489,7 +2489,7 @@
+ #: blueman/plugins/applet/PowerManager.py:55
+ #: blueman/plugins/applet/PowerManager.py:171
+ msgid "<b>Turn Bluetooth _Off</b>"
+-msgstr "<b>Bluetooth をオフにする(_O)</b>"
++msgstr "<b>Bluetooth をオフにする</b>"
+ 
+ #: blueman/plugins/applet/PowerManager.py:56
+ #: blueman/plugins/applet/PowerManager.py:173
+@@ -2498,7 +2498,7 @@
+ 
+ #: blueman/plugins/applet/PowerManager.py:162
+ msgid "<b>Turn Bluetooth _On</b>"
+-msgstr "<b>Bluetooth をオンにする(_O)</b>"
++msgstr "<b>Bluetooth をオンにする</b>"
+ 
+ #: blueman/plugins/applet/PowerManager.py:164
+ msgid "Turn on all adapters"
+@@ -2683,7 +2683,7 @@
+ #~ msgstr "Bluetooth アシスタント"
+ 
+ #~ msgid "_Set Up New Device"
+-#~ msgstr "新しいデバイスを設定する(_S)"
++#~ msgstr "新しいデバイスを設定する"
+ 
+ #~ msgid "Enter PIN code"
+ #~ msgstr "PIN コードを入力してください"
+@@ -2726,7 +2726,7 @@
+ #~ msgstr "デバイス名の変更"
+ 
+ #~ msgid "_Remove..."
+-#~ msgstr "削除(_R)"
++#~ msgstr "削除"
+ 
+ #~ msgid ""
+ #~ "Toggles a platform Bluetooth killswitch when Bluetooth power state "
