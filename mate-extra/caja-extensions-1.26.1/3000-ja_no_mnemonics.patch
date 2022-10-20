@@ -1,0 +1,133 @@
+diff -urN a/po/ja.po b/po/ja.po
+--- a/po/ja.po	2022-08-20 13:51:27.000000000 -0700
++++ b/po/ja.po	2022-10-20 09:21:45.051214976 -0700
+@@ -86,7 +86,7 @@
+ 
+ #: image-converter/caja-image-converter.c:121
+ msgid "_Resize Images..."
+-msgstr "画像サイズの変更(_R)..."
++msgstr "画像サイズの変更..."
+ 
+ #: image-converter/caja-image-converter.c:122
+ msgid "Resize each selected image"
+@@ -94,7 +94,7 @@
+ 
+ #: image-converter/caja-image-converter.c:131
+ msgid "Ro_tate Images..."
+-msgstr "画像の回転(_T)..."
++msgstr "画像の回転..."
+ 
+ #: image-converter/caja-image-converter.c:132
+ msgid "Rotate each selected image"
+@@ -108,11 +108,11 @@
+ #: image-converter/caja-image-rotate.ui:39 sendto/caja-sendto.ui:38
+ #: share/share-dialog.ui:249
+ msgid "_Cancel"
+-msgstr "キャンセル(_C)"
++msgstr "キャンセル"
+ 
+ #: image-converter/caja-image-resize.ui:69
+ msgid "_Resize"
+-msgstr "サイズの変更(_R)"
++msgstr "サイズの変更"
+ 
+ #: image-converter/caja-image-resize.ui:119
+ msgid "Select a size:"
+@@ -191,7 +191,7 @@
+ 
+ #: image-converter/caja-image-rotate.ui:54
+ msgid "_Rotate"
+-msgstr "回転する(_R)"
++msgstr "回転する"
+ 
+ #: image-converter/caja-image-rotate.ui:104
+ msgid "Select an angle:"
+@@ -260,7 +260,7 @@
+ #: open-terminal/caja-open-terminal.c:460
+ #: open-terminal/caja-open-terminal.c:473
+ msgid "Open in _Terminal"
+-msgstr "端末の中に開く(_T)"
++msgstr "端末の中に開く"
+ 
+ #: open-terminal/caja-open-terminal.c:462
+ msgid "Open the currently selected folder in a terminal"
+@@ -273,7 +273,7 @@
+ 
+ #: open-terminal/caja-open-terminal.c:470
+ msgid "Open _Terminal"
+-msgstr "端末を開く(_T)"
++msgstr "端末を開く"
+ 
+ #: open-terminal/caja-open-terminal.c:471
+ msgid "Open a terminal"
+@@ -415,11 +415,11 @@
+ 
+ #: sendto/caja-sendto.ui:116
+ msgid "Send _as:"
+-msgstr "使用するアプリ(_A):"
++msgstr "使用するアプリ:"
+ 
+ #: sendto/caja-sendto.ui:130
+ msgid "Send t_o:"
+-msgstr "宛先(_O):"
++msgstr "宛先:"
+ 
+ #: sendto/caja-sendto.ui:160
+ msgid "Destination"
+@@ -427,7 +427,7 @@
+ 
+ #: sendto/caja-sendto.ui:193
+ msgid "Send _packed in:"
+-msgstr "書庫にして送信する(_P):"
++msgstr "書庫にして送信する:"
+ 
+ #: sendto/caja-sendto.ui:258
+ msgid "Compression"
+@@ -563,11 +563,11 @@
+ 
+ #: share/caja-share.c:558 share/caja-share.c:794
+ msgid "Modify _Share"
+-msgstr "共有を変更(_S)"
++msgstr "共有を変更"
+ 
+ #: share/caja-share.c:558 share/caja-share.c:796
+ msgid "Create _Share"
+-msgstr "共有を作成(_S)"
++msgstr "共有を作成"
+ 
+ #: share/caja-share.c:686
+ msgid "There was an error while getting the sharing information"
+@@ -587,27 +587,27 @@
+ 
+ #: share/share-dialog.ui:85
+ msgid "Share this _folder"
+-msgstr "このフォルダーを共有する(_F)"
++msgstr "このフォルダーを共有する"
+ 
+ #: share/share-dialog.ui:119
+ msgid "Share _name:"
+-msgstr "共有名(_N):"
++msgstr "共有名:"
+ 
+ #: share/share-dialog.ui:133
+ msgid "Co_mment:"
+-msgstr "コメント(_M):"
++msgstr "コメント:"
+ 
+ #: share/share-dialog.ui:173
+ msgid "_Allow others to create and delete files in this folder"
+-msgstr "このフォルダー内で他人がファイルを作成・削除するのを許可する(_A)"
++msgstr "このフォルダー内で他人がファイルを作成・削除するのを許可する"
+ 
+ #: share/share-dialog.ui:189
+ msgid "_Guest access (for people without a user account)"
+-msgstr "ゲスト(ユーザーアカウントを持たない人)のアクセス(_G)"
++msgstr "ゲスト(ユーザーアカウントを持たない人)のアクセス"
+ 
+ #: share/share-dialog.ui:264
+ msgid "_Save"
+-msgstr "保存(_S)"
++msgstr "保存"
+ 
+ #: share/shares.c:127
+ #, c-format
