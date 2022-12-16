@@ -1,3 +1,5 @@
+2022-01-08 maia@tsundoku.ne.jp
+Evolution 3.40
 --- a/src/shell/e-shell-window.c.orig	2018-09-22 12:11:06.901023138 +0900
 +++ b/src/shell/e-shell-window.c	2018-09-22 12:14:40.137685266 +0900
 @@ -67,29 +67,29 @@

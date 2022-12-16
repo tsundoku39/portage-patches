@@ -1,6 +1,9 @@
+2022-12-15 maia@tsundoku.ne.jp
+Evolution 3.46.2
+
 diff -urN a/po/ja.po b/po/ja.po
---- a/po/ja.po	2021-08-13 02:50:35.000000000 -0700
-+++ b/po/ja.po	2021-10-21 19:15:42.870627726 -0700
+--- a/po/ja.po	2022-12-02 02:55:07.000000000 -0800
++++ b/po/ja.po	2022-12-14 06:35:43.283657838 -0800
 @@ -1326,7 +1326,7 @@
  #, fuzzy
  #| msgid "_Show the photograph of sender in the message preview"

@@ -1,0 +1,1672 @@
+2022-12-15 maia@tsundoku.ne.jp
+Evolution 3.46.2
+diff -urN a/src/addressbook/gui/contact-editor/e-contact-editor.c b/src/addressbook/gui/contact-editor/e-contact-editor.c
+--- a/src/addressbook/gui/contact-editor/e-contact-editor.c	2022-12-02 02:55:07.000000000 -0800
++++ b/src/addressbook/gui/contact-editor/e-contact-editor.c	2022-12-15 20:36:22.691523898 -0800
+@@ -262,14 +262,14 @@
+ 	{ "undo",
+ 	  "edit-undo",
+ 	  N_("_Undo"),
+-	  "<Control>z",
++	  "<Super>z",
+ 	  N_("Undo"),
+ 	  NULL }, /* Handled by EFocusTracker */
+ 
+ 	{ "redo",
+ 	  "edit-redo",
+ 	  N_("_Redo"),
+-	  "<Control>y",
++	  "<Super>y",
+ 	  N_("Redo"),
+ 	  NULL } /* Handled by EFocusTracker */
+ 
+diff -urN a/src/addressbook/gui/widgets/eab-contact-display.c b/src/addressbook/gui/widgets/eab-contact-display.c
+--- a/src/addressbook/gui/widgets/eab-contact-display.c	2022-12-02 02:55:07.000000000 -0800
++++ b/src/addressbook/gui/widgets/eab-contact-display.c	2022-12-15 20:36:22.691523898 -0800
+@@ -184,7 +184,7 @@
+ 	{ "contact-mailto-copy",
+ 	  "edit-copy",
+ 	  N_("Copy _Email Address"),
+-	  "<Control>c",
++	  "<Super>c",
+ 	  N_("Copy the email address to the clipboard"),
+ 	  G_CALLBACK (action_contact_mailto_copy_cb) },
+ 
+diff -urN a/src/calendar/gui/e-comp-editor-event.c b/src/calendar/gui/e-comp-editor-event.c
+--- a/src/calendar/gui/e-comp-editor-event.c	2022-12-02 02:55:07.000000000 -0800
++++ b/src/calendar/gui/e-comp-editor-event.c	2022-12-15 20:36:22.694856885 -0800
+@@ -781,7 +781,7 @@
+ 		{ "all-day-event",
+ 		  "stock_new-24h-appointment",
+ 		  N_("All _Day Event"),
+-		  "<Control>Y",
++		  "<Super>Y",
+ 		  N_("Toggles whether to have All Day Event"),
+ 		  NULL,
+ 		  FALSE },
+diff -urN a/src/calendar/gui/e-comp-editor-page-attachments.c b/src/calendar/gui/e-comp-editor-page-attachments.c
+--- a/src/calendar/gui/e-comp-editor-page-attachments.c	2022-12-02 02:55:07.000000000 -0800
++++ b/src/calendar/gui/e-comp-editor-page-attachments.c	2022-12-15 20:36:22.694856885 -0800
+@@ -621,7 +621,7 @@
+ 		{ "attachments-attach",
+ 		  "mail-attachment",
+ 		  N_("_Attachment…"),
+-		  "<Control>m",
++		  "<Super>m",
+ 		  N_("Attach a file"),
+ 		  G_CALLBACK (ecep_attachments_action_attach_cb) }
+ 	};
+diff -urN a/src/calendar/gui/e-comp-editor-task.c b/src/calendar/gui/e-comp-editor-task.c
+--- a/src/calendar/gui/e-comp-editor-task.c	2022-12-02 02:55:07.000000000 -0800
++++ b/src/calendar/gui/e-comp-editor-task.c	2022-12-15 20:36:22.694856885 -0800
+@@ -816,7 +816,7 @@
+ 		{ "all-day-task",
+ 		  "stock_new-24h-appointment",
+ 		  N_("All _Day Task"),
+-		  "<Control>Y",
++		  "<Super>Y",
+ 		  N_("Toggles whether to have All Day Task"),
+ 		  NULL,
+ 		  FALSE }
+diff -urN a/src/calendar/gui/e-comp-editor.c b/src/calendar/gui/e-comp-editor.c
+--- a/src/calendar/gui/e-comp-editor.c	2022-12-02 02:55:07.000000000 -0800
++++ b/src/calendar/gui/e-comp-editor.c	2022-12-15 20:36:22.691523898 -0800
+@@ -2171,21 +2171,21 @@
+ 		{ "close",
+ 		  "window-close",
+ 		  N_("_Close"),
+-		  "<Control>w",
++		  "<Super>w",
+ 		  N_("Close the current window"),
+ 		  G_CALLBACK (action_close_cb) },
+ 
+ 		{ "copy-clipboard",
+ 		  "edit-copy",
+ 		  N_("_Copy"),
+-		  "<Control>c",
++		  "<Super>c",
+ 		  N_("Copy the selection"),
+ 		  NULL },  /* Handled by EFocusTracker */
+ 
+ 		{ "cut-clipboard",
+ 		  "edit-cut",
+ 		  N_("Cu_t"),
+-		  "<Control>x",
++		  "<Super>x",
+ 		  N_("Cut the selection"),
+ 		  NULL },  /* Handled by EFocusTracker */
+ 
+@@ -2206,14 +2206,14 @@
+ 		{ "paste-clipboard",
+ 		  "edit-paste",
+ 		  N_("_Paste"),
+-		  "<Control>v",
++		  "<Super>v",
+ 		  N_("Paste the clipboard"),
+ 		  NULL },  /* Handled by EFocusTracker */
+ 
+ 		{ "print",
+ 		  "document-print",
+ 		  N_("_Print…"),
+-		  "<Control>p",
++		  "<Super>p",
+ 		  NULL,
+ 		  G_CALLBACK (action_print_cb) },
+ 
+@@ -2227,21 +2227,21 @@
+ 		{ "select-all",
+ 		  "edit-select-all",
+ 		  N_("Select _All"),
+-		  "<Control>a",
++		  "<Super>a",
+ 		  N_("Select all text"),
+ 		  NULL },  /* Handled by EFocusTracker */
+ 
+ 		{ "undo",
+ 		  "edit-undo",
+ 		  N_("_Undo"),
+-		  "<Control>z",
++		  "<Super>z",
+ 		  N_("Undo"),
+ 		  NULL },  /* Handled by EFocusTracker */
+ 
+ 		{ "redo",
+ 		  "edit-redo",
+ 		  N_("_Redo"),
+-		  "<Control>y",
++		  "<Super>y",
+ 		  N_("Redo"),
+ 		  NULL },  /* Handled by EFocusTracker */
+ 
+@@ -2302,14 +2302,14 @@
+ 		{ "save",
+ 		  "document-save",
+ 		  N_("_Save"),
+-		  "<Control>s",
++		  "<Super>s",
+ 		  N_("Save current changes"),
+ 		  G_CALLBACK (action_save_cb) },
+ 
+ 		{ "save-and-close",
+ 		  NULL,
+ 		  N_("Save and Close"),
+-		  "<Control>Return",
++		  "<Alt><Super>S",
+ 		  N_("Save current changes and close editor"),
+ 		  G_CALLBACK (action_save_and_close_cb) }
+ 	};
+diff -urN a/src/calendar/gui/ea-cal-view.c b/src/calendar/gui/ea-cal-view.c
+--- a/src/calendar/gui/ea-cal-view.c	2022-12-02 02:55:07.000000000 -0800
++++ b/src/calendar/gui/ea-cal-view.c	2022-12-15 20:36:22.691523898 -0800
+@@ -371,19 +371,19 @@
+ 	 switch (index) {
+ 	 case 0:
+ 		 /* New Appointment */
+-		 return "<Alt>fna;<Control>n";
++		 return "<Alt>fna;<Super>n";
+ 	 case 1:
+ 		 /* New Event */
+-		 return "<Alt>fnd;<Shift><Control>d";
++		 return "<Alt>fnd;<Shift><Super>d";
+ 	 case 2:
+ 		 /* New Meeting */
+-		 return "<Alt>fne;<Shift><Control>e";
++		 return "<Alt>fne;<Shift><Super>e";
+ 	 case 3:
+ 		 /* Go to today */
+-		 return "<Alt>vt;<Alt><Control>t";
++		 return "<Alt>vt;<Alt><Super>t";
+ 	 case 4:
+ 		 /* Go to date */
+-		 return "<Alt>vd;<Alt><Control>g";
++		 return "<Alt>vd;<Alt><Super>g";
+ 	 default:
+ 		 break;
+ 	 }
+diff -urN a/src/composer/e-composer-actions.c b/src/composer/e-composer-actions.c
+--- a/src/composer/e-composer-actions.c	2022-12-02 02:55:07.000000000 -0800
++++ b/src/composer/e-composer-actions.c	2022-12-15 20:36:22.694856885 -0800
+@@ -324,21 +324,21 @@
+ 	{ "attach",
+           "mail-attachment",
+ 	  N_("_Attachment…"),
+-	  "<Control>m",
++	  "<Super>m",
+ 	  N_("Attach a file"),
+ 	  G_CALLBACK (action_attach_cb) },
+ 
+ 	{ "close",
+ 	  "window-close",
+ 	  N_("_Close"),
+-	  "<Control>w",
++	  "<Super>w",
+ 	  N_("Close the current file"),
+ 	  G_CALLBACK (action_close_cb) },
+ 
+ 	{ "new-message",
+ 	  "mail-message-new",
+ 	  N_("New _Message"),
+-	  "<Control>n",
++	  "<Super>n",
+ 	  N_("Open New Message window"),
+ 	  G_CALLBACK (action_new_message_cb) },
+ 
+@@ -352,7 +352,7 @@
+ 	{ "save",
+ 	  "document-save",
+ 	  N_("_Save"),
+-	  "<Shift><Control>s",
++	  "<Shift><Super>s",
+ 	  N_("Save the current file"),
+ 	  G_CALLBACK (action_save_cb) },
+ 
+@@ -385,28 +385,28 @@
+ 	{ "print",
+ 	  "document-print",
+ 	  N_("_Print…"),
+-	  "<Control>p",
++	  "<Super>p",
+ 	  NULL,
+ 	  G_CALLBACK (action_print_cb) },
+ 
+ 	{ "print-preview",
+ 	  "document-print-preview",
+ 	  N_("Print Pre_view"),
+-	  "<Shift><Control>p",
++	  "<Shift><Super>p",
+ 	  NULL,
+ 	  G_CALLBACK (action_print_preview_cb) },
+ 
+ 	{ "save-draft",
+ 	  "document-save",
+ 	  N_("Save as _Draft"),
+-	  "<Control>s",
++	  "<Super>s",
+ 	  N_("Save as draft"),
+ 	  G_CALLBACK (action_save_draft_cb) },
+ 
+ 	{ "send",
+ 	  "mail-send",
+ 	  N_("S_end"),
+-	  "<Control>Return",
++	  "<Alt><Super>s",
+ 	  N_("Send this message"),
+ 	  G_CALLBACK (action_send_cb) },
+ };
+diff -urN a/src/e-util/e-html-editor-actions.c b/src/e-util/e-html-editor-actions.c
+--- a/src/e-util/e-html-editor-actions.c	2022-12-02 02:55:07.000000000 -0800
++++ b/src/e-util/e-html-editor-actions.c	2022-12-15 20:36:22.694856885 -0800
+@@ -1124,42 +1124,42 @@
+ 	{ "copy",
+ 	  "edit-copy",
+ 	  N_("_Copy"),
+-	  "<Control>c",
++	  "<Super>c",
+ 	  N_("Copy selected text to the clipboard"),
+ 	  NULL }, /* Handled by focus tracker */
+ 
+ 	{ "cut",
+ 	  "edit-cut",
+ 	  N_("Cu_t"),
+-	  "<Control>x",
++	  "<Super>x",
+ 	  N_("Cut selected text to the clipboard"),
+ 	  NULL }, /* Handled by focus tracker */
+ 
+ 	{ "paste",
+ 	  "edit-paste",
+ 	  N_("_Paste"),
+-	  "<Control>v",
++	  "<Super>v",
+ 	  N_("Paste text from the clipboard"),
+ 	  NULL }, /* Handled by focus tracker */
+ 
+ 	{ "redo",
+ 	  "edit-redo",
+ 	  N_("_Redo"),
+-	  "<Shift><Control>z",
++	  "<Shift><Super>z",
+ 	  N_("Redo the last undone action"),
+ 	  G_CALLBACK (action_redo_cb) },
+ 
+ 	{ "select-all",
+ 	  "edit-select-all",
+ 	  N_("Select _All"),
+-	  "<Control>a",
++	  "<Super>a",
+ 	  NULL,
+ 	  NULL }, /* Handled by focus tracker */
+ 
+ 	{ "undo",
+ 	  "edit-undo",
+ 	  N_("_Undo"),
+-	  "<Control>z",
++	  "<Super>z",
+ 	  N_("Undo the last action"),
+ 	  G_CALLBACK (action_undo_cb) },
+ 
+@@ -1227,7 +1227,7 @@
+ 	{ "indent",
+ 	  "format-indent-more",
+ 	  N_("_Increase Indent"),
+-	  "<Control>bracketright",
++	  "<Super>bracketright",
+ 	  N_("Increase Indent"),
+ 	  G_CALLBACK (action_indent_cb) },
+ 
+@@ -1262,28 +1262,28 @@
+ 	{ "paste-quote",
+ 	  NULL,
+ 	  N_("Paste _Quotation"),
+-	  "<Control><Alt>v",
++	  "<Super><Alt>v",
+ 	  NULL,
+ 	  G_CALLBACK (action_paste_quote_cb) },
+ 
+ 	{ "show-find",
+ 	  "edit-find",
+ 	  N_("_Find…"),
+-	  "<Control>f",
++	  "<Super>f",
+ 	  N_("Search for text"),
+ 	  G_CALLBACK (action_show_find_cb) },
+ 
+ 	{ "find-again",
+ 	  NULL,
+ 	  N_("Find A_gain"),
+-	  "<Control>g",
++	  "<Super>g",
+ 	  NULL,
+ 	  G_CALLBACK (action_find_again_cb) },
+ 
+ 	{ "show-replace",
+ 	  "edit-find-replace",
+ 	  N_("Re_place…"),
+-	  "<Control>h",
++	  "<Super>h",
+ 	  N_("Search for and replace text"),
+ 	  G_CALLBACK (action_show_replace_cb) },
+ 
+@@ -1297,14 +1297,14 @@
+ 	{ "unindent",
+ 	  "format-indent-less",
+ 	  N_("_Decrease Indent"),
+-	  "<Control>bracketleft",
++	  "<Super>bracketleft",
+ 	  N_("Decrease Indent"),
+ 	  G_CALLBACK (action_unindent_cb) },
+ 
+ 	{ "wrap-lines",
+ 	  NULL,
+ 	  N_("_Wrap Lines"),
+-	  "<Control><Shift>k",
++	  "<Super><Shift>k",
+ 	  NULL,
+ 	  G_CALLBACK (action_wrap_lines_cb) }
+ };
+@@ -1314,28 +1314,28 @@
+ 	{ "justify-center",
+ 	  "format-justify-center",
+ 	  N_("_Center"),
+-	  "<Control>e",
++	  "<Super>e",
+ 	  N_("Center Alignment"),
+ 	  E_CONTENT_EDITOR_ALIGNMENT_CENTER },
+ 
+ 	{ "justify-fill",
+ 	  "format-justify-fill",
+ 	  N_("_Justified"),
+-	  "<Control>j",
++	  "<Super>j",
+ 	  N_("Align Justified"),
+ 	  E_CONTENT_EDITOR_ALIGNMENT_JUSTIFY },
+ 
+ 	{ "justify-left",
+ 	  "format-justify-left",
+ 	  N_("_Left"),
+-	  "<Control>l",
++	  "<Super>l",
+ 	  N_("Left Alignment"),
+ 	  E_CONTENT_EDITOR_ALIGNMENT_LEFT },
+ 
+ 	{ "justify-right",
+ 	  "format-justify-right",
+ 	  N_("_Right"),
+-	  "<Control>r",
++	  "<Super>r",
+ 	  N_("Right Alignment"),
+ 	  E_CONTENT_EDITOR_ALIGNMENT_RIGHT }
+ };
+@@ -1383,63 +1383,63 @@
+ 	{ "style-normal",
+ 	  NULL,
+ 	  N_("_Normal"),
+-	  "<Control>0",
++	  "<Super>0",
+ 	  NULL,
+ 	  E_CONTENT_EDITOR_BLOCK_FORMAT_PARAGRAPH },
+ 
+ 	{ "style-h1",
+ 	  NULL,
+ 	  N_("Heading _1"),
+-	  "<Control>1",
++	  "<Super>1",
+ 	  NULL,
+ 	  E_CONTENT_EDITOR_BLOCK_FORMAT_H1 },
+ 
+ 	{ "style-h2",
+ 	  NULL,
+ 	  N_("Heading _2"),
+-	  "<Control>2",
++	  "<Super>2",
+ 	  NULL,
+ 	  E_CONTENT_EDITOR_BLOCK_FORMAT_H2 },
+ 
+ 	{ "style-h3",
+ 	  NULL,
+ 	  N_("Heading _3"),
+-	  "<Control>3",
++	  "<Super>3",
+ 	  NULL,
+ 	  E_CONTENT_EDITOR_BLOCK_FORMAT_H3 },
+ 
+ 	{ "style-h4",
+ 	  NULL,
+ 	  N_("Heading _4"),
+-	  "<Control>4",
++	  "<Super>4",
+ 	  NULL,
+ 	  E_CONTENT_EDITOR_BLOCK_FORMAT_H4 },
+ 
+ 	{ "style-h5",
+ 	  NULL,
+ 	  N_("Heading _5"),
+-	  "<Control>5",
++	  "<Super>5",
+ 	  NULL,
+ 	  E_CONTENT_EDITOR_BLOCK_FORMAT_H5 },
+ 
+ 	{ "style-h6",
+ 	  NULL,
+ 	  N_("Heading _6"),
+-	  "<Control>6",
++	  "<Super>6",
+ 	  NULL,
+ 	  E_CONTENT_EDITOR_BLOCK_FORMAT_H6 },
+ 
+         { "style-preformat",
+           NULL,
+           N_("_Preformatted"),
+-          "<Control>7",
++          "<Super>7",
+           NULL,
+           E_CONTENT_EDITOR_BLOCK_FORMAT_PRE },
+ 
+ 	{ "style-address",
+ 	  NULL,
+ 	  N_("A_ddress"),
+-	  "<Control>8",
++	  "<Super>8",
+ 	  NULL,
+ 	  E_CONTENT_EDITOR_BLOCK_FORMAT_ADDRESS },
+ 
+@@ -1491,7 +1491,7 @@
+ 	{ "insert-link",
+ 	  "insert-link",
+ 	  N_("_Link…"),
+-	  "<Control>k",
++	  "<Super>k",
+ 	  N_("Insert Link"),
+ 	  G_CALLBACK (action_insert_link_cb) },
+ 
+@@ -1573,7 +1573,7 @@
+ 	{ "paste-as-text",
+ 	  NULL,
+ 	  N_("Paste As _Text"),
+-	  "<Shift><Control>v",
++	  "<Shift><Super>v",
+ 	  NULL,
+ 	  G_CALLBACK (action_paste_as_text_cb) },
+ 
+@@ -1584,7 +1584,7 @@
+ 	{ "bold",
+ 	  "format-text-bold",
+ 	  N_("_Bold"),
+-	  "<Control>b",
++	  "<Super>b",
+ 	  N_("Bold"),
+ 	  NULL,
+ 	  FALSE },
+@@ -1592,7 +1592,7 @@
+ 	{ "italic",
+ 	  "format-text-italic",
+ 	  N_("_Italic"),
+-	  "<Control>i",
++	  "<Super>i",
+ 	  N_("Italic"),
+ 	  NULL,
+ 	  FALSE },
+@@ -1608,7 +1608,7 @@
+ 	{ "subscript",
+ 	  NULL,
+ 	  N_("Subs_cript"),
+-	  "<Control><Shift>b",
++	  "<Super><Shift>b",
+ 	  N_("Subscript"),
+ 	  NULL,
+ 	  FALSE },
+@@ -1616,7 +1616,7 @@
+ 	{ "superscript",
+ 	  NULL,
+ 	  N_("Su_perscript"),
+-	  "<Control><Shift>p",
++	  "<Super><Shift>p",
+ 	  N_("Superscript"),
+ 	  NULL,
+ 	  FALSE },
+@@ -1624,7 +1624,7 @@
+ 	{ "underline",
+ 	  "format-text-underline",
+ 	  N_("_Underline"),
+-	  "<Control>u",
++	  "<Super>u",
+ 	  N_("Underline"),
+ 	  NULL,
+ 	  FALSE }
+diff -urN a/src/e-util/e-mail-signature-editor.c b/src/e-util/e-mail-signature-editor.c
+--- a/src/e-util/e-mail-signature-editor.c	2022-12-02 02:55:07.000000000 -0800
++++ b/src/e-util/e-mail-signature-editor.c	2022-12-15 20:36:22.698189872 -0800
+@@ -332,14 +332,14 @@
+ 	{ "close",
+ 	  "window-close",
+ 	  N_("_Close"),
+-	  "<Control>w",
++	  "<Super>w",
+ 	  N_("Close"),
+ 	  G_CALLBACK (action_close_cb) },
+ 
+ 	{ "save-and-close",
+ 	  "document-save",
+ 	  N_("_Save and Close"),
+-	  "<Control>Return",
++	  "<Alt><Super>s",
+ 	  N_("Save and Close"),
+ 	  G_CALLBACK (action_save_and_close_cb) },
+ 
+diff -urN a/src/e-util/e-web-view.c b/src/e-util/e-web-view.c
+--- a/src/e-util/e-web-view.c	2022-12-02 02:55:07.000000000 -0800
++++ b/src/e-util/e-web-view.c	2022-12-15 20:36:22.698189872 -0800
+@@ -404,7 +404,7 @@
+ 	{ "uri-copy",
+ 	  "edit-copy",
+ 	  N_("_Copy Link Location"),
+-	  "<Control>c",
++	  "<Super>c",
+ 	  N_("Copy the link to the clipboard"),
+ 	  G_CALLBACK (action_uri_copy_cb) }
+ };
+@@ -424,7 +424,7 @@
+ 	{ "mailto-copy",
+ 	  "edit-copy",
+ 	  N_("_Copy Email Address"),
+-	  "<Control>c",
++	  "<Super>c",
+ 	  N_("Copy the email address to the clipboard"),
+ 	  G_CALLBACK (action_mailto_copy_cb) },
+ 
+@@ -448,14 +448,14 @@
+ 	{ "image-copy",
+ 	  "edit-copy",
+ 	  N_("_Copy Image"),
+-	  "<Control>c",
++	  "<Super>c",
+ 	  N_("Copy the image to the clipboard"),
+ 	  G_CALLBACK (action_image_copy_cb) },
+ 
+ 	{ "image-save",
+ 	  "document-save",
+ 	  N_("Save _Image…"),
+-	  "<Control>s",
++	  "<Super>s",
+ 	  N_("Save the image to a file"),
+ 	  G_CALLBACK (action_image_save_cb) }
+ };
+@@ -465,7 +465,7 @@
+ 	{ "copy-clipboard",
+ 	  "edit-copy",
+ 	  N_("_Copy"),
+-	  "<Control>c",
++	  "<Super>c",
+ 	  N_("Copy the selection"),
+ 	  G_CALLBACK (action_copy_clipboard_cb) },
+ 
+diff -urN a/src/e-util/test-html-editor-units-utils.c b/src/e-util/test-html-editor-units-utils.c
+--- a/src/e-util/test-html-editor-units-utils.c	2022-12-02 02:55:07.000000000 -0800
++++ b/src/e-util/test-html-editor-units-utils.c	2022-12-15 20:36:22.698189872 -0800
+@@ -227,7 +227,7 @@
+ 	return FALSE;
+ }
+ 
+-/* <Control>+<Shift>+I */
++/* <Super>+<Shift>+I */
+ #define WEBKIT_INSPECTOR_MOD  (GDK_CONTROL_MASK | GDK_SHIFT_MASK)
+ #define WEBKIT_INSPECTOR_KEY  (GDK_KEY_I)
+ 
+diff -urN a/src/e-util/test-html-editor.c b/src/e-util/test-html-editor.c
+--- a/src/e-util/test-html-editor.c	2022-12-02 02:55:07.000000000 -0800
++++ b/src/e-util/test-html-editor.c	2022-12-15 20:36:22.698189872 -0800
+@@ -423,7 +423,7 @@
+ 	{ "new-editor",
+ 	  "document-new",
+ 	  N_("_New editor"),
+-	  "<Control>N",
++	  "<Super>N",
+ 	  NULL,
+ 	  G_CALLBACK (action_new_editor_cb) },
+ 
+@@ -431,14 +431,14 @@
+ 	{ "print",
+ 	  "document-print",
+ 	  N_("_Print…"),
+-	  "<Control>p",
++	  "<Super>p",
+ 	  NULL,
+ 	  G_CALLBACK (action_print_cb) },
+ 
+ 	{ "print-preview",
+ 	  "document-print-preview",
+ 	  N_("Print Pre_view"),
+-	  "<Control><Shift>p",
++	  "<Super><Shift>p",
+ 	  NULL,
+ 	  G_CALLBACK (action_print_preview_cb) },
+ #endif /* ENABLE_PRINT */
+@@ -513,7 +513,7 @@
+ 	  NULL,
+ 	  N_("Inspector"),
+ 	  NULL,
+-	  "<Control><Shift>I",
++	  "<Super><Shift>I",
+ 	  G_CALLBACK (action_view_inspector) },
+ 
+ 	{ "view-menu",
+diff -urN a/src/mail/e-mail-browser.c b/src/mail/e-mail-browser.c
+--- a/src/mail/e-mail-browser.c	2022-12-02 02:55:07.000000000 -0800
++++ b/src/mail/e-mail-browser.c	2022-12-15 20:36:22.698189872 -0800
+@@ -164,28 +164,28 @@
+ 	{ "close",
+ 	  "window-close",
+ 	  N_("_Close"),
+-	  "<Control>w",
++	  "<Super>w",
+ 	  N_("Close this window"),
+ 	  G_CALLBACK (action_close_cb) },
+ 
+ 	{ "copy-clipboard",
+ 	  "edit-copy",
+ 	  N_("_Copy"),
+-	  "<Control>c",
++	  "<Super>c",
+ 	  N_("Copy the selection"),
+ 	  NULL },  /* Handled by EFocusTracker */
+ 
+ 	{ "cut-clipboard",
+ 	  "edit-cut",
+ 	  N_("Cu_t"),
+-	  "<Control>x",
++	  "<Super>x",
+ 	  N_("Cut the selection"),
+ 	  NULL },  /* Handled by EFocusTracker */
+ 
+ 	{ "paste-clipboard",
+ 	  "edit-paste",
+ 	  N_("_Paste"),
+-	  "<Control>v",
++	  "<Super>v",
+ 	  N_("Paste the clipboard"),
+ 	  NULL },  /* Handled by EFocusTracker */
+ 
+diff -urN a/src/mail/e-mail-notes.c b/src/mail/e-mail-notes.c
+--- a/src/mail/e-mail-notes.c	2022-12-02 02:55:07.000000000 -0800
++++ b/src/mail/e-mail-notes.c	2022-12-15 20:36:22.701522860 -0800
+@@ -1107,14 +1107,14 @@
+ 		{ "close",
+ 		  "window-close",
+ 		  N_("_Close"),
+-		  "<Control>w",
++		  "<Super>w",
+ 		  N_("Close"),
+ 		  G_CALLBACK (action_close_cb) },
+ 
+ 		{ "save-and-close",
+ 		  "document-save",
+ 		  N_("_Save and Close"),
+-		  "<Control>Return",
++		  "<Alt><Super>s",
+ 		  N_("Save and Close"),
+ 		  G_CALLBACK (action_save_and_close_cb) },
+ 
+diff -urN a/src/mail/e-mail-reader.c b/src/mail/e-mail-reader.c
+--- a/src/mail/e-mail-reader.c	2022-12-02 02:55:07.000000000 -0800
++++ b/src/mail/e-mail-reader.c	2022-12-15 20:36:41.362917710 -0800
+@@ -2514,14 +2514,14 @@
+ 	{ "mail-archive",
+ 	  "mail-archive",
+ 	  N_("_Archive…"),
+-	  "<Alt><Control>a",
++	  "<Alt><Super>a",
+ 	  N_("Move selected messages to the Archive folder for the account"),
+ 	  G_CALLBACK (action_mail_archive_cb) },
+ 
+ 	{ "mail-check-for-junk",
+ 	  "mail-mark-junk",
+ 	  N_("Check for _Junk"),
+-	  "<Control><Alt>j",
++	  "<Super><Alt>j",
+ 	  N_("Filter the selected messages for junk status"),
+ 	  G_CALLBACK (action_mail_check_for_junk_cb) },
+ 
+@@ -2542,14 +2542,14 @@
+ 	{ "mail-copy",
+ 	  "mail-copy",
+ 	  N_("_Copy to Folder…"),
+-	  "<Shift><Control>y",
++	  "<Shift><Super>y",
+ 	  N_("Copy selected messages to another folder"),
+ 	  G_CALLBACK (action_mail_copy_cb) },
+ 
+ 	{ "mail-delete",
+ 	  "user-trash",
+ 	  N_("_Delete Message"),
+-	  "<Control>d",
++	  "<Super>d",
+ 	  N_("Mark the selected messages for deletion"),
+ 	  G_CALLBACK (action_mail_delete_cb) },
+ 
+@@ -2605,14 +2605,14 @@
+ 	{ "mail-filters-apply",
+ 	  "stock_mail-filters-apply",
+ 	  N_("A_pply Filters"),
+-	  "<Control>y",
++	  "<Super>y",
+ 	  N_("Apply filter rules to the selected messages"),
+ 	  G_CALLBACK (action_mail_filters_apply_cb) },
+ 
+ 	{ "mail-find",
+ 	  "edit-find",
+ 	  N_("_Find in Message…"),
+-	  "<Shift><Control>f",
++	  "<Shift><Super>f",
+ 	  N_("Search for text in the body of the displayed message"),
+ 	  G_CALLBACK (action_mail_find_cb) },
+ 
+@@ -2633,14 +2633,14 @@
+ 	{ "mail-flag-for-followup",
+ 	  "stock_mail-flag-for-followup",
+ 	  N_("Follow _Up…"),
+-	  "<Shift><Control>g",
++	  "<Shift><Super>g",
+ 	  N_("Flag the selected messages for follow-up"),
+ 	  G_CALLBACK (action_mail_flag_for_followup_cb) },
+ 
+ 	{ "mail-forward",
+ 	  "mail-forward",
+ 	  N_("_Forward"),
+-	  "<Control>f",
++	  "<Super>f",
+ 	  N_("Forward the selected message to someone"),
+ 	  G_CALLBACK (action_mail_forward_cb) },
+ 
+@@ -2705,7 +2705,7 @@
+ 	{ "mail-load-images",
+ 	  "image-x-generic",
+ 	  N_("_Load Images"),
+-	  "<Control>i",
++	  "<Super>i",
+ 	  N_("Force images in HTML mail to be loaded"),
+ 	  G_CALLBACK (action_mail_load_images_cb) },
+ 
+@@ -2733,21 +2733,21 @@
+ 	{ "mail-mark-junk",
+ 	  "mail-mark-junk",
+ 	  N_("_Junk"),
+-	  "<Control>j",
++	  "<Super>j",
+ 	  N_("Mark the selected messages as junk"),
+ 	  G_CALLBACK (action_mail_mark_junk_cb) },
+ 
+ 	{ "mail-mark-notjunk",
+ 	  "mail-mark-notjunk",
+ 	  N_("_Not Junk"),
+-	  "<Shift><Control>j",
++	  "<Shift><Super>j",
+ 	  N_("Mark the selected messages as not being junk"),
+ 	  G_CALLBACK (action_mail_mark_notjunk_cb) },
+ 
+ 	{ "mail-mark-read",
+ 	  "mail-mark-read",
+ 	  N_("_Read"),
+-	  "<Control>k",
++	  "<Super>k",
+ 	  N_("Mark the selected messages as having been read"),
+ 	  G_CALLBACK (action_mail_mark_read_cb) },
+ 
+@@ -2775,7 +2775,7 @@
+ 	{ "mail-mark-unread",
+ 	  "mail-mark-unread",
+ 	  N_("_Unread"),
+-	  "<Shift><Control>k",
++	  "<Shift><Super>k",
+ 	  N_("Mark the selected messages as not having been read"),
+ 	  G_CALLBACK (action_mail_mark_unread_cb) },
+ 
+@@ -2789,28 +2789,28 @@
+ 	{ "mail-message-new",
+ 	  "mail-message-new",
+ 	  N_("Compose _New Message"),
+-	  "<Shift><Control>m",
++	  "<Shift><Super>m",
+ 	  N_("Open a window for composing a mail message"),
+ 	  G_CALLBACK (action_mail_message_new_cb) },
+ 
+ 	{ "mail-message-open",
+ 	  NULL,
+ 	  N_("_Open in New Window"),
+-	  "<Control>o",
++	  "<Super>o",
+ 	  N_("Open the selected messages in a new window"),
+ 	  G_CALLBACK (action_mail_message_open_cb) },
+ 
+ 	{ "mail-move",
+ 	  "mail-move",
+ 	  N_("_Move to Folder…"),
+-	  "<Shift><Control>v",
++	  "<Shift><Super>v",
+ 	  N_("Move selected messages to another folder"),
+ 	  G_CALLBACK (action_mail_move_cb) },
+ 
+ 	{ "mail-next",
+ 	  "go-next",
+ 	  N_("_Next Message"),
+-	  "<Control>Page_Down",
++	  "<Super>Page_Down",
+ 	  N_("Display the next message"),
+ 	  G_CALLBACK (action_mail_next_cb) },
+ 
+@@ -2831,14 +2831,14 @@
+ 	{ "mail-next-unread",
+ 	  "go-jump",
+ 	  N_("Next _Unread Message"),
+-	  "<Control>bracketright",
++	  "<Super>bracketright",
+ 	  N_("Display the next unread message"),
+ 	  G_CALLBACK (action_mail_next_unread_cb) },
+ 
+ 	{ "mail-previous",
+ 	  "go-previous",
+ 	  N_("_Previous Message"),
+-	  "<Control>Page_Up",
++	  "<Super>Page_Up",
+ 	  N_("Display the previous message"),
+ 	  G_CALLBACK (action_mail_previous_cb) },
+ 
+@@ -2859,14 +2859,14 @@
+ 	{ "mail-previous-unread",
+ 	  NULL,
+ 	  N_("P_revious Unread Message"),
+-	  "<Control>bracketleft",
++	  "<Super>bracketleft",
+ 	  N_("Display the previous unread message"),
+ 	  G_CALLBACK (action_mail_previous_unread_cb) },
+ 
+ 	{ "mail-print",
+ 	  "document-print",
+ 	  N_("_Print…"),
+-	  "<Control>p",
++	  "<Super>p",
+ 	  N_("Print this message"),
+ 	  G_CALLBACK (action_mail_print_cb) },
+ 
+@@ -2901,35 +2901,35 @@
+ 	{ "mail-reply-all",
+ 	  NULL,
+ 	  N_("Reply to _All"),
+-	  "<Shift><Control>r",
++	  "<Shift><Super>r",
+ 	  N_("Compose a reply to all the recipients of the selected message"),
+ 	  G_CALLBACK (action_mail_reply_all_cb) },
+ 
+ 	{ "mail-reply-alternative",
+ 	  NULL,
+ 	  N_("Al_ternative Reply…"),
+-	  "<Alt><Control>r",
++	  "<Alt><Super>r",
+ 	  N_("Choose reply options for the selected message"),
+ 	  G_CALLBACK (action_mail_reply_alternative_cb) },
+ 
+ 	{ "mail-reply-group",
+ 	  "mail-reply-all",
+ 	  N_("Group Reply"),
+-	  "<Control>g",
++	  "<Super>g",
+ 	  N_("Reply to the mailing list, or to all recipients"),
+ 	  G_CALLBACK (action_mail_reply_group_cb) },
+ 
+ 	{ "mail-reply-list",
+ 	  NULL,
+ 	  N_("Reply to _List"),
+-	  "<Control>l",
++	  "<Super>l",
+ 	  N_("Compose a reply to the mailing list of the selected message"),
+ 	  G_CALLBACK (action_mail_reply_list_cb) },
+ 
+ 	{ "mail-reply-sender",
+ 	  "mail-reply-sender",
+ 	  N_("_Reply to Sender"),
+-	  "<Control>r",
++	  "<Super>r",
+ 	  N_("Compose a reply to the sender of the selected message"),
+ 	  G_CALLBACK (action_mail_reply_sender_cb) },
+ 
+@@ -2943,7 +2943,7 @@
+ 	{ "mail-save-as",
+ 	  "document-save-as",
+ 	  N_("_Save as mbox…"),
+-	  "<Control>s",
++	  "<Super>s",
+ 	  N_("Save selected messages as an mbox file"),
+ 	  G_CALLBACK (action_mail_save_as_cb) },
+ 
+@@ -2957,7 +2957,7 @@
+ 	{ "mail-show-source",
+ 	  NULL,
+ 	  N_("_Message Source"),
+-	  "<Control>u",
++	  "<Super>u",
+ 	  N_("Show the raw email source of the message"),
+ 	  G_CALLBACK (action_mail_show_source_cb) },
+ 
+@@ -2971,28 +2971,28 @@
+ 	{ "mail-undelete",
+ 	  NULL,
+ 	  N_("_Undelete Message"),
+-	  "<Shift><Control>d",
++	  "<Shift><Super>d",
+ 	  N_("Undelete the selected messages"),
+ 	  G_CALLBACK (action_mail_undelete_cb) },
+ 
+ 	{ "mail-zoom-100",
+ 	  "zoom-original",
+ 	  N_("_Normal Size"),
+-	  "<Control>0",
++	  "<Super>0",
+ 	  N_("Reset the text to its original size"),
+ 	  G_CALLBACK (action_mail_zoom_100_cb) },
+ 
+ 	{ "mail-zoom-in",
+ 	  "zoom-in",
+ 	  N_("_Zoom In"),
+-	  "<Control>plus",
++	  "<Super>plus",
+ 	  N_("Increase the text size"),
+ 	  G_CALLBACK (action_mail_zoom_in_cb) },
+ 
+ 	{ "mail-zoom-out",
+ 	  "zoom-out",
+ 	  N_("Zoom _Out"),
+-	  "<Control>minus",
++	  "<Super>minus",
+ 	  N_("Decrease the text size"),
+ 	  G_CALLBACK (action_mail_zoom_out_cb) },
+ 
+@@ -5233,7 +5233,7 @@
+ 		G_CALLBACK (action_mail_forward_cb), reader);
+ 
+ 	gtk_action_group_add_action_with_accel (
+-		action_group, GTK_ACTION (menu_tool_action), "<Control>f");
++		action_group, GTK_ACTION (menu_tool_action), "<Super>f");
+ 
+ 	/* Likewise the "mail-reply-group" action. */
+ 
+@@ -5253,7 +5253,7 @@
+ 		G_CALLBACK (action_mail_reply_group_cb), reader);
+ 
+ 	gtk_action_group_add_action_with_accel (
+-		action_group, GTK_ACTION (menu_tool_action), "<Control>g");
++		action_group, GTK_ACTION (menu_tool_action), "<Super>g");
+ 
+ 	/* Add EMailReader actions for Search Folders.  The action group
+ 	 * should be made invisible if Search Folders are disabled. */
+diff -urN a/src/modules/addressbook/e-book-shell-backend.c b/src/modules/addressbook/e-book-shell-backend.c
+--- a/src/modules/addressbook/e-book-shell-backend.c	2022-12-02 02:55:07.000000000 -0800
++++ b/src/modules/addressbook/e-book-shell-backend.c	2022-12-15 20:36:22.701522860 -0800
+@@ -276,14 +276,14 @@
+ 	{ "contact-new",
+ 	  "contact-new",
+ 	  NC_("New", "_Contact"),
+-	  "<Shift><Control>c",
++	  "<Shift><Super>c",
+ 	  N_("Create a new contact"),
+ 	  G_CALLBACK (action_contact_new_cb) },
+ 
+ 	{ "contact-new-list",
+ 	  "stock_contact-list",
+ 	  NC_("New", "Contact _List"),
+-	  "<Shift><Control>l",
++	  "<Shift><Super>l",
+ 	  N_("Create a new contact list"),
+ 	  G_CALLBACK (action_contact_new_cb) }
+ };
+diff -urN a/src/modules/addressbook/e-book-shell-view-actions.c b/src/modules/addressbook/e-book-shell-view-actions.c
+--- a/src/modules/addressbook/e-book-shell-view-actions.c	2022-12-02 02:55:07.000000000 -0800
++++ b/src/modules/addressbook/e-book-shell-view-actions.c	2022-12-15 20:36:22.701522860 -0800
+@@ -1090,21 +1090,21 @@
+ 	{ "contact-copy",
+ 	  NULL,
+ 	  N_("_Copy Contact To…"),
+-	  "<Control><Shift>y",
++	  "<Super><Shift>y",
+ 	  N_("Copy selected contacts to another address book"),
+ 	  G_CALLBACK (action_contact_copy_cb) },
+ 
+ 	{ "contact-delete",
+ 	  "edit-delete",
+ 	  N_("_Delete Contact"),
+-	  "<Control>d",
++	  "<Super>d",
+ 	  N_("Delete selected contacts"),
+ 	  G_CALLBACK (action_contact_delete_cb) },
+ 
+ 	{ "contact-find",
+ 	  "edit-find",
+ 	  N_("_Find in Contact…"),
+-	  "<Shift><Control>f",
++	  "<Shift><Super>f",
+ 	  N_("Search for text in the displayed contact"),
+ 	  G_CALLBACK (action_contact_find_cb) },
+ 
+@@ -1118,7 +1118,7 @@
+ 	{ "contact-move",
+ 	  NULL,
+ 	  N_("_Move Contact To…"),
+-	  "<Control><Shift>v",
++	  "<Super><Shift>v",
+ 	  N_("Move selected contacts to another address book"),
+ 	  G_CALLBACK (action_contact_move_cb) },
+ 
+@@ -1139,7 +1139,7 @@
+ 	{ "contact-open",
+ 	  NULL,
+ 	  N_("_Open Contact"),
+-	  "<Control>o",
++	  "<Super>o",
+ 	  N_("View the current contact"),
+ 	  G_CALLBACK (action_contact_open_cb) },
+ 
+@@ -1223,7 +1223,7 @@
+ 	{ "contact-preview",
+ 	  NULL,
+ 	  N_("Contact _Preview"),
+-	  "<Control>m",
++	  "<Super>m",
+ 	  N_("Show contact preview window"),
+ 	  G_CALLBACK (action_contact_preview_cb),
+ 	  TRUE },
+@@ -1317,7 +1317,7 @@
+ 	{ "address-book-print",
+ 	  "document-print",
+ 	  N_("_Print…"),
+-	  "<Control>p",
++	  "<Super>p",
+ 	  N_("Print all shown contacts"),
+ 	  G_CALLBACK (action_address_book_print_cb) },
+ 
+diff -urN a/src/modules/calendar/e-cal-shell-backend.c b/src/modules/calendar/e-cal-shell-backend.c
+--- a/src/modules/calendar/e-cal-shell-backend.c	2022-12-02 02:55:07.000000000 -0800
++++ b/src/modules/calendar/e-cal-shell-backend.c	2022-12-15 20:36:22.701522860 -0800
+@@ -116,7 +116,7 @@
+ 	{ "event-new",
+ 	  "appointment-new",
+ 	  NC_("New", "_Appointment"),
+-	  "<Shift><Control>a",
++	  "<Shift><Super>a",
+ 	  N_("Create a new appointment"),
+ 	  G_CALLBACK (action_event_new_cb) },
+ 
+@@ -130,7 +130,7 @@
+ 	{ "event-meeting-new",
+ 	  "stock_people",
+ 	  NC_("New", "M_eeting"),
+-	  "<Shift><Control>e",
++	  "<Shift><Super>e",
+ 	  N_("Create a new meeting request"),
+ 	  G_CALLBACK (action_event_new_cb) }
+ };
+diff -urN a/src/modules/calendar/e-cal-shell-view-actions.c b/src/modules/calendar/e-cal-shell-view-actions.c
+--- a/src/modules/calendar/e-cal-shell-view-actions.c	2022-12-02 02:55:07.000000000 -0800
++++ b/src/modules/calendar/e-cal-shell-view-actions.c	2022-12-15 20:36:22.701522860 -0800
+@@ -1304,7 +1304,7 @@
+ 	{ "calendar-copy",
+ 	  "edit-copy",
+ 	  N_("_Copy…"),
+-	  "<Control>c",
++	  "<Super>c",
+ 	  NULL,  /* XXX Add a tooltip! */
+ 	  G_CALLBACK (action_calendar_copy_cb) },
+ 
+@@ -1332,14 +1332,14 @@
+ 	{ "calendar-go-today",
+ 	  "go-today",
+ 	  N_("Select _Today"),
+-	  "<Control>t",
++	  "<Super>t",
+ 	  N_("Select today"),
+ 	  G_CALLBACK (action_calendar_go_today_cb) },
+ 
+ 	{ "calendar-jump-to",
+ 	  "go-jump",
+ 	  N_("Select _Date"),
+-	  "<Control>g",
++	  "<Super>g",
+ 	  N_("Select a specific date"),
+ 	  G_CALLBACK (action_calendar_jump_to_cb) },
+ 
+@@ -1367,7 +1367,7 @@
+ 	{ "calendar-purge",
+ 	  NULL,
+ 	  N_("Purg_e"),
+-	  "<Control>e",
++	  "<Super>e",
+ 	  N_("Purge old appointments and meetings"),
+ 	  G_CALLBACK (action_calendar_purge_cb) },
+ 
+@@ -1395,14 +1395,14 @@
+ 	{ "calendar-search-next",
+ 	  "go-next",
+ 	  N_("Find _Next"),
+-	  "<Control><Shift>n",
++	  "<Super><Shift>n",
+ 	  N_("Find next occurrence of the current search string"),
+ 	  G_CALLBACK (action_calendar_search_next_cb) },
+ 
+ 	{ "calendar-search-prev",
+ 	  "go-previous",
+ 	  N_("Find _Previous"),
+-	  "<Control><Shift>p",
++	  "<Super><Shift>p",
+ 	  N_("Find previous occurrence of the current search string"),
+ 	  G_CALLBACK (action_calendar_search_prev_cb) },
+ 
+@@ -1444,7 +1444,7 @@
+ 	{ "event-delete",
+ 	  "edit-delete",
+ 	  N_("_Delete Appointment"),
+-	  "<Control>d",
++	  "<Super>d",
+ 	  N_("Delete selected appointments"),
+ 	  G_CALLBACK (action_event_delete_cb) },
+ 
+@@ -1570,7 +1570,7 @@
+ 	{ "event-open",
+ 	  "document-open",
+ 	  N_("_Open Appointment"),
+-	  "<Control>o",
++	  "<Super>o",
+ 	  N_("View the current appointment"),
+ 	  G_CALLBACK (action_event_open_cb) },
+ 
+@@ -1605,7 +1605,7 @@
+ 	{ "quit-calendar",
+ 	  "window-close",
+ 	  N_("Quit"),
+-	  "<Control>w",
++	  "<Super>w",
+ 	  NULL,  /* XXX Add a tooltip! */
+ 	  G_CALLBACK (quit_calendar_cb) },
+ 
+@@ -1771,35 +1771,35 @@
+ 	{ "calendar-view-day",
+ 	  "view-calendar-day",
+ 	  N_("Day"),
+-	  "<Control>y",
++	  "<Super>y",
+ 	  N_("Show one day"),
+ 	  E_CAL_VIEW_KIND_DAY },
+ 
+ 	{ "calendar-view-list",
+ 	  "view-calendar-list",
+ 	  N_("List"),
+-	  "<Control>l",
++	  "<Super>l",
+ 	  N_("Show as list"),
+ 	  E_CAL_VIEW_KIND_LIST },
+ 
+ 	{ "calendar-view-month",
+ 	  "view-calendar-month",
+ 	  N_("Month"),
+-	  "<Control>m",
++	  "<Super>m",
+ 	  N_("Show one month"),
+ 	  E_CAL_VIEW_KIND_MONTH },
+ 
+ 	{ "calendar-view-week",
+ 	  "view-calendar-week",
+ 	  N_("Week"),
+-	  "<Control>k",
++	  "<Super>k",
+ 	  N_("Show one week"),
+ 	  E_CAL_VIEW_KIND_WEEK },
+ 
+ 	{ "calendar-view-workweek",
+ 	  "view-calendar-workweek",
+ 	  N_("Work Week"),
+-	  "<Control>j",
++	  "<Super>j",
+ 	  N_("Show one work week"),
+ 	  E_CAL_VIEW_KIND_WORKWEEK },
+ 
+@@ -1912,7 +1912,7 @@
+ 	{ "calendar-print",
+ 	  "document-print",
+ 	  N_("Print…"),
+-	  "<Control>p",
++	  "<Super>p",
+ 	  N_("Print this calendar"),
+ 	  G_CALLBACK (action_calendar_print_cb) },
+ 
+diff -urN a/src/modules/calendar/e-cal-shell-view-memopad.c b/src/modules/calendar/e-cal-shell-view-memopad.c
+--- a/src/modules/calendar/e-cal-shell-view-memopad.c	2022-12-02 02:55:07.000000000 -0800
++++ b/src/modules/calendar/e-cal-shell-view-memopad.c	2022-12-15 20:36:22.701522860 -0800
+@@ -250,7 +250,7 @@
+ 	{ "calendar-memopad-open",
+ 	  "document-open",
+ 	  N_("_Open Memo"),
+-	  "<Control>o",
++	  "<Super>o",
+ 	  N_("View the selected memo"),
+ 	  G_CALLBACK (action_calendar_memopad_open_cb) },
+ 
+diff -urN a/src/modules/calendar/e-cal-shell-view-taskpad.c b/src/modules/calendar/e-cal-shell-view-taskpad.c
+--- a/src/modules/calendar/e-cal-shell-view-taskpad.c	2022-12-02 02:55:07.000000000 -0800
++++ b/src/modules/calendar/e-cal-shell-view-taskpad.c	2022-12-15 20:36:22.701522860 -0800
+@@ -344,7 +344,7 @@
+ 	{ "calendar-taskpad-open",
+ 	  "document-open",
+ 	  N_("_Open Task"),
+-	  "<Control>o",
++	  "<Super>o",
+ 	  N_("View the selected task"),
+ 	  G_CALLBACK (action_calendar_taskpad_open_cb) },
+ 
+diff -urN a/src/modules/calendar/e-memo-shell-backend.c b/src/modules/calendar/e-memo-shell-backend.c
+--- a/src/modules/calendar/e-memo-shell-backend.c	2022-12-02 02:55:07.000000000 -0800
++++ b/src/modules/calendar/e-memo-shell-backend.c	2022-12-15 20:36:22.704855847 -0800
+@@ -75,14 +75,14 @@
+ 	{ "memo-new",
+ 	  "stock_insert-note",
+ 	  NC_("New", "Mem_o"),
+-	  "<Shift><Control>o",
++	  "<Shift><Super>o",
+ 	  N_("Create a new memo"),
+ 	  G_CALLBACK (action_memo_new_cb) },
+ 
+ 	{ "memo-shared-new",
+ 	  "stock_insert-note",
+ 	  NC_("New", "_Shared Memo"),
+-	  "<Shift><Control>u",
++	  "<Shift><Super>u",
+ 	  N_("Create a new shared memo"),
+ 	  G_CALLBACK (action_memo_new_cb) }
+ };
+diff -urN a/src/modules/calendar/e-memo-shell-view-actions.c b/src/modules/calendar/e-memo-shell-view-actions.c
+--- a/src/modules/calendar/e-memo-shell-view-actions.c	2022-12-02 02:55:07.000000000 -0800
++++ b/src/modules/calendar/e-memo-shell-view-actions.c	2022-12-15 20:36:22.704855847 -0800
+@@ -575,21 +575,21 @@
+ 	{ "memo-find",
+ 	  "edit-find",
+ 	  N_("_Find in Memo…"),
+-	  "<Shift><Control>f",
++	  "<Shift><Super>f",
+ 	  N_("Search for text in the displayed memo"),
+ 	  G_CALLBACK (action_memo_find_cb) },
+ 
+ 	{ "memo-forward",
+ 	  "mail-forward",
+ 	  N_("_Forward as iCalendar…"),
+-	  "<Control>f",
++	  "<Super>f",
+ 	  NULL,  /* XXX Add a tooltip! */
+ 	  G_CALLBACK (action_memo_forward_cb) },
+ 
+ 	{ "memo-list-copy",
+ 	  "edit-copy",
+ 	  N_("_Copy…"),
+-	  "<Control>c",
++	  "<Super>c",
+ 	  NULL,  /* XXX Add a tooltip! */
+ 	  G_CALLBACK (action_memo_list_copy_cb) },
+ 
+@@ -666,7 +666,7 @@
+ 	{ "memo-open",
+ 	  "document-open",
+ 	  N_("_Open Memo"),
+-	  "<Control>o",
++	  "<Super>o",
+ 	  N_("View the selected memo"),
+ 	  G_CALLBACK (action_memo_open_cb) },
+ 
+@@ -743,7 +743,7 @@
+ 	{ "memo-preview",
+ 	  NULL,
+ 	  N_("Memo _Preview"),
+-	  "<Control>m",
++	  "<Super>m",
+ 	  N_("Show memo preview pane"),
+ 	  G_CALLBACK (action_memo_preview_cb),
+ 	  TRUE }
+@@ -829,7 +829,7 @@
+ 	{ "memo-list-print",
+ 	  "document-print",
+ 	  N_("Print…"),
+-	  "<Control>p",
++	  "<Super>p",
+ 	  N_("Print the list of memos"),
+ 	  G_CALLBACK (action_memo_list_print_cb) },
+ 
+diff -urN a/src/modules/calendar/e-task-shell-backend.c b/src/modules/calendar/e-task-shell-backend.c
+--- a/src/modules/calendar/e-task-shell-backend.c	2022-12-02 02:55:07.000000000 -0800
++++ b/src/modules/calendar/e-task-shell-backend.c	2022-12-15 20:36:22.704855847 -0800
+@@ -73,14 +73,14 @@
+ 	{ "task-new",
+ 	  "stock_task",
+ 	  NC_("New", "_Task"),
+-	  "<Shift><Control>t",
++	  "<Shift><Super>t",
+ 	  N_("Create a new task"),
+ 	  G_CALLBACK (action_task_new_cb) },
+ 
+ 	{ "task-assigned-new",
+ 	  "stock_task-assigned-to",
+ 	  NC_("New", "Assigne_d Task"),
+-	  "<Shift><Control>i",
++	  "<Shift><Super>i",
+ 	  N_("Create a new assigned task"),
+ 	  G_CALLBACK (action_task_new_cb) }
+ };
+diff -urN a/src/modules/calendar/e-task-shell-view-actions.c b/src/modules/calendar/e-task-shell-view-actions.c
+--- a/src/modules/calendar/e-task-shell-view-actions.c	2022-12-02 02:55:07.000000000 -0800
++++ b/src/modules/calendar/e-task-shell-view-actions.c	2022-12-15 20:36:22.704855847 -0800
+@@ -701,21 +701,21 @@
+ 	{ "task-find",
+ 	  "edit-find",
+ 	  N_("_Find in Task…"),
+-	  "<Shift><Control>f",
++	  "<Shift><Super>f",
+ 	  N_("Search for text in the displayed task"),
+ 	  G_CALLBACK (action_task_find_cb) },
+ 
+ 	{ "task-forward",
+ 	  "mail-forward",
+ 	  N_("_Forward as iCalendar…"),
+-	  "<Control>f",
++	  "<Super>f",
+ 	  NULL,  /* XXX Add a tooltip! */
+ 	  G_CALLBACK (action_task_forward_cb) },
+ 
+ 	{ "task-list-copy",
+ 	  "edit-copy",
+ 	  N_("_Copy…"),
+-	  "<Control>c",
++	  "<Super>c",
+ 	  NULL,  /* XXX Add a tooltip! */
+ 	  G_CALLBACK (action_task_list_copy_cb) },
+ 
+@@ -785,7 +785,7 @@
+ 	{ "task-mark-complete",
+ 	  NULL,
+ 	  N_("_Mark as Complete"),
+-	  "<Control>k",
++	  "<Super>k",
+ 	  N_("Mark selected tasks as complete"),
+ 	  G_CALLBACK (action_task_mark_complete_cb) },
+ 
+@@ -806,7 +806,7 @@
+ 	{ "task-open",
+ 	  "document-open",
+ 	  N_("_Open Task"),
+-	  "<Control>o",
++	  "<Super>o",
+ 	  N_("View the selected task"),
+ 	  G_CALLBACK (action_task_open_cb) },
+ 
+@@ -820,7 +820,7 @@
+ 	{ "task-purge",
+ 	  NULL,
+ 	  N_("Purg_e"),
+-	  "<Control>e",
++	  "<Super>e",
+ 	  N_("Delete completed tasks"),
+ 	  G_CALLBACK (action_task_purge_cb) },
+ 
+@@ -909,7 +909,7 @@
+ 	{ "task-preview",
+ 	  NULL,
+ 	  N_("Task _Preview"),
+-	  "<Control>m",
++	  "<Super>m",
+ 	  N_("Show task preview pane"),
+ 	  G_CALLBACK (action_task_preview_cb),
+ 	  TRUE }
+@@ -1058,7 +1058,7 @@
+ 	{ "task-list-print",
+ 	  "document-print",
+ 	  N_("Print…"),
+-	  "<Control>p",
++	  "<Super>p",
+ 	  N_("Print the list of tasks"),
+ 	  G_CALLBACK (action_task_list_print_cb) },
+ 
+diff -urN a/src/modules/mail/e-mail-shell-backend.c b/src/modules/mail/e-mail-shell-backend.c
+--- a/src/modules/mail/e-mail-shell-backend.c	2022-12-02 02:55:07.000000000 -0800
++++ b/src/modules/mail/e-mail-shell-backend.c	2022-12-15 20:36:22.704855847 -0800
+@@ -421,7 +421,7 @@
+ 	{ "mail-message-new",
+ 	  "mail-message-new",
+ 	  NC_("New", "_Mail Message"),
+-	  "<Shift><Control>m",
++	  "<Shift><Super>m",
+ 	  N_("Compose a new mail message"),
+ 	  G_CALLBACK (action_mail_message_new_cb) }
+ };
+diff -urN a/src/modules/mail/e-mail-shell-view-actions.c b/src/modules/mail/e-mail-shell-view-actions.c
+--- a/src/modules/mail/e-mail-shell-view-actions.c	2022-12-02 02:55:07.000000000 -0800
++++ b/src/modules/mail/e-mail-shell-view-actions.c	2022-12-15 20:36:22.704855847 -0800
+@@ -1634,14 +1634,14 @@
+ 	{ "mail-folder-expunge",
+ 	  NULL,
+ 	  N_("E_xpunge"),
+-	  "<Control>e",
++	  "<Super>e",
+ 	  N_("Permanently remove all deleted messages from this folder"),
+ 	  G_CALLBACK (action_mail_folder_expunge_cb) },
+ 
+ 	{ "mail-folder-mark-all-as-read",
+ 	  "mail-mark-read",
+ 	  N_("Mar_k All Messages as Read"),
+-	  "<Control>slash",
++	  "<Super>slash",
+ 	  N_("Mark all messages in the folder as read"),
+ 	  G_CALLBACK (action_mail_folder_mark_all_as_read_cb) },
+ 
+@@ -1684,14 +1684,14 @@
+ 	{ "mail-folder-select-thread",
+ 	  NULL,
+ 	  N_("Select Message _Thread"),
+-	  "<Control>h",
++	  "<Super>h",
+ 	  N_("Select all messages in the same thread as the selected message"),
+ 	  G_CALLBACK (action_mail_folder_select_thread_cb) },
+ 
+ 	{ "mail-folder-select-subthread",
+ 	  NULL,
+ 	  N_("Select Message S_ubthread"),
+-	  "<Shift><Control>h",
++	  "<Shift><Super>h",
+ 	  N_("Select all replies to the currently selected message"),
+ 	  G_CALLBACK (action_mail_folder_select_subthread_cb) },
+ 
+@@ -1712,7 +1712,7 @@
+ 	{ "mail-goto-folder",
+ 	  NULL,
+ 	  N_("Go to _Folder"),
+-	  "<Control>g",
++	  "<Super>g",
+ 	  N_("Opens a dialog to select a folder to go to"),
+ 	  G_CALLBACK (action_mail_goto_folder_cb) },
+ 
+@@ -1789,7 +1789,7 @@
+ 	{ "mail-threads-collapse-all",
+ 	  NULL,
+ 	  N_("Collapse All _Threads"),
+-	  "<Shift><Control>b",
++	  "<Shift><Super>b",
+ 	  N_("Collapse all message threads"),
+ 	  G_CALLBACK (action_mail_threads_collapse_all_cb) },
+ 
+@@ -1916,7 +1916,7 @@
+ 	{ "mail-preview",
+ 	  NULL,
+ 	  N_("Show Message _Preview"),
+-	  "<Control>m",
++	  "<Super>m",
+ 	  N_("Show message preview pane"),
+ 	  NULL,  /* Handled by property bindings */
+ 	  TRUE },
+@@ -1948,7 +1948,7 @@
+ 	{ "mail-threads-group-by",
+ 	  NULL,
+ 	  N_("_Group By Threads"),
+-	  "<Control>t",
++	  "<Super>t",
+ 	  N_("Threaded message list"),
+ 	  NULL,  /* Handled by property bindings */
+ 	  FALSE },
+diff -urN a/src/modules/webkit-inspector/evolution-webkit-inspector.c b/src/modules/webkit-inspector/evolution-webkit-inspector.c
+--- a/src/modules/webkit-inspector/evolution-webkit-inspector.c	2022-12-02 02:55:07.000000000 -0800
++++ b/src/modules/webkit-inspector/evolution-webkit-inspector.c	2022-12-15 20:36:22.704855847 -0800
+@@ -31,7 +31,7 @@
+ 	(G_TYPE_CHECK_INSTANCE_CAST \
+ 	((obj), E_TYPE_WEBKIT_INSPECTOR, EWebKitInspector))
+ 
+-/* <Control>+<Shift>+I or <Control>+<Shift>+D */
++/* <Super>+<Shift>+I or <Super>+<Shift>+D */
+ #define WEBKIT_INSPECTOR_MOD  (GDK_CONTROL_MASK | GDK_SHIFT_MASK)
+ #define WEBKIT_INSPECTOR_KEY1  (GDK_KEY_I)
+ #define WEBKIT_INSPECTOR_KEY2  (GDK_KEY_D)
+diff -urN a/src/plugins/external-editor/external-editor.c b/src/plugins/external-editor/external-editor.c
+--- a/src/plugins/external-editor/external-editor.c	2022-12-02 02:55:07.000000000 -0800
++++ b/src/plugins/external-editor/external-editor.c	2022-12-15 20:36:22.704855847 -0800
+@@ -487,7 +487,7 @@
+ 	{ "ExternalEditor",
+ 	  NULL,
+ 	  N_("Compose in External Editor"),
+-	  "<Shift><Control>e",
++	  "<Shift><Super>e",
+ 	  N_("Compose in External Editor"),
+ 	  G_CALLBACK (launch_editor) }
+ };
+diff -urN a/src/plugins/templates/templates.c b/src/plugins/templates/templates.c
+--- a/src/plugins/templates/templates.c	2022-12-02 02:55:07.000000000 -0800
++++ b/src/plugins/templates/templates.c	2022-12-15 20:36:22.708188834 -0800
+@@ -906,7 +906,7 @@
+ 	{ "template",
+ 	  "document-save",
+ 	  N_("Save as _Template"),
+-	  "<Shift><Control>t",
++	  "<Shift><Super>t",
+ 	  N_("Save as Template"),
+ 	  G_CALLBACK (action_template_cb) }
+ };
+diff -urN a/src/shell/e-shell-window-actions.c b/src/shell/e-shell-window-actions.c
+--- a/src/shell/e-shell-window-actions.c	2022-12-02 02:55:07.000000000 -0800
++++ b/src/shell/e-shell-window-actions.c	2022-12-15 20:36:22.708188834 -0800
+@@ -921,21 +921,21 @@
+ 	{ "close",
+ 	  "window-close",
+ 	  N_("_Close Window"),
+-	  "<Control>w",
++	  "<Super>w",
+ 	  N_("Close this window"),
+ 	  G_CALLBACK (action_close_cb) },
+ 
+ 	{ "close-window-menu",
+ 	  "window-close",
+ 	  N_("_Close"),
+-	  "<Control>w",
++	  "<Super>w",
+ 	  N_("Close this window"),
+ 	  G_CALLBACK (action_close_cb) },
+ 
+ 	{ "close-window",
+ 	  "window-close",
+ 	  N_("_Close Window"),
+-	  "<Control>w",
++	  "<Super>w",
+ 	  N_("Close this window"),
+ 	  G_CALLBACK (action_close_cb) },
+ 
+@@ -949,14 +949,14 @@
+ 	{ "copy-clipboard",
+ 	  "edit-copy",
+ 	  N_("_Copy"),
+-	  "<Control>c",
++	  "<Super>c",
+ 	  N_("Copy the selection"),
+ 	  NULL },  /* Handled by EFocusTracker */
+ 
+ 	{ "cut-clipboard",
+ 	  "edit-cut",
+ 	  N_("Cu_t"),
+-	  "<Control>x",
++	  "<Super>x",
+ 	  N_("Cut the selection"),
+ 	  NULL },  /* Handled by EFocusTracker */
+ 
+@@ -977,14 +977,14 @@
+ 	{ "new-window",
+ 	  "window-new",
+ 	  N_("New _Window"),
+-	  "<Control><Shift>w",
++	  "<Super><Shift>w",
+ 	  N_("Create a new window displaying this view"),
+ 	  G_CALLBACK (action_new_window_cb) },
+ 
+ 	{ "paste-clipboard",
+ 	  "edit-paste",
+ 	  N_("_Paste"),
+-	  "<Control>v",
++	  "<Super>v",
+ 	  N_("Paste the clipboard"),
+ 	  NULL },  /* Handled by EFocusTracker */
+ 
+@@ -998,14 +998,14 @@
+ 	{ "preferences",
+ 	  "preferences-system",
+ 	  N_("_Preferences"),
+-	  "<Control><Shift>s",
++	  "<Super><Shift>s",
+ 	  N_("Configure Evolution"),
+ 	  G_CALLBACK (action_preferences_cb) },
+ 
+ 	{ "quit",
+ 	  "application-exit",
+ 	  N_("_Quit"),
+-	  "<Control>q",
++	  "<Super>q",
+ 	  N_("Exit the program"),
+ 	  G_CALLBACK (action_quit_cb) },
+ 
+@@ -1026,7 +1026,7 @@
+ 	{ "search-clear",
+ 	  "edit-clear",
+ 	  N_("_Clear"),
+-	  "<Control><Shift>q",
++	  "<Super><Shift>q",
+ 	  N_("Clear the current search parameters"),
+ 	  G_CALLBACK (action_search_clear_cb) },
+ 
+@@ -1040,7 +1040,7 @@
+ 	{ "search-options",
+ 	  "edit-find",
+ 	  N_("_Find"),
+-	  "<Control>f",
++	  "<Super>f",
+ 	  N_("Click here to change the search type"),
+ 	  G_CALLBACK (action_search_options_cb) },
+ 
+@@ -1061,14 +1061,14 @@
+ 	{ "select-all",
+ 	  "edit-select-all",
+ 	  N_("Select _All"),
+-	  "<Control>a",
++	  "<Super>a",
+ 	  N_("Select all text"),
+ 	  NULL },  /* Handled by EFocusTracker */
+ 
+ 	{ "shortcuts",
+ 	  NULL,
+ 	  N_("_Keyboard Shortcuts"),
+-	  "<Control><Shift>question",
++	  "<Super><Shift>question",
+ 	  N_("Show keyboard shortcuts"),
+ 	  G_CALLBACK (action_shortcuts_cb) },
+ 
+@@ -1717,7 +1717,7 @@
+ 
+ 		/* The first nine views have accelerators Ctrl+(1-9). */
+ 		if (ii < 10)
+-			accelerator = g_strdup_printf ("<Control>%d", ii);
++			accelerator = g_strdup_printf ("<Super>%d", ii);
+ 		else
+ 			accelerator = g_strdup ("");
+ 
