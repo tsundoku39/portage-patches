@@ -1,6 +1,9 @@
+2023-02-09 maia@tsundoku.ne.jp
+mate-applets 1.26.1
+
 diff -urN a/po/ja.po b/po/ja.po
---- a/po/ja.po	2021-08-07 04:29:04.000000000 -0700
-+++ b/po/ja.po	2022-06-12 09:33:50.739502236 -0700
+--- a/po/ja.po	2022-07-09 08:06:13.000000000 -0700
++++ b/po/ja.po	2023-02-09 04:19:21.550591649 -0800
 @@ -118,7 +118,7 @@
  
  #: accessx-status/src/applet.c:218
@@ -9,7 +12,7 @@ diff -urN a/po/ja.po b/po/ja.po
 +msgstr "キーボード操作性の設定"
  
  #: accessx-status/src/applet.c:220 battstat/battstat_applet.c:62
- #: battstat/battstat-preferences.ui:37 charpick/charpick.c:697
+ #: battstat/battstat-preferences.ui:37 charpick/charpick.c:730
 @@ -132,7 +132,7 @@
  #: stickynotes/sticky-notes-properties.ui:37
  #: stickynotes/stickynotes_applet.c:46 trashapplet/src/trashapplet.c:74
@@ -18,7 +21,7 @@ diff -urN a/po/ja.po b/po/ja.po
 +msgstr "ヘルプ"
  
  #: accessx-status/src/applet.c:222 battstat/battstat_applet.c:65
- #: charpick/charpick.c:700 command/src/command.c:87
+ #: charpick/charpick.c:733 command/src/command.c:87
 @@ -141,7 +141,7 @@
  #: multiload/src/main.c:473 stickynotes/stickynotes_applet.c:49
  #: timerapplet/src/timerapplet.c:88 trashapplet/src/trashapplet.c:77
@@ -111,7 +114,7 @@ diff -urN a/po/ja.po b/po/ja.po
  
  #: command/data/command-preferences.ui:91
  msgid "_Interval (seconds):"
-@@ -708,7 +708,7 @@
+@@ -713,7 +713,7 @@
  
  #: cpufreq/cpufreq-preferences.ui:97
  msgid "_Monitored CPU:"
@@ -120,7 +123,7 @@ diff -urN a/po/ja.po b/po/ja.po
  
  #: cpufreq/cpufreq-preferences.ui:127
  msgid "Monitor Settings"
-@@ -716,19 +716,19 @@
+@@ -721,19 +721,19 @@
  
  #: cpufreq/cpufreq-preferences.ui:168
  msgid "_Appearance:"
@@ -144,7 +147,7 @@ diff -urN a/po/ja.po b/po/ja.po
  
  #: cpufreq/cpufreq-preferences.ui:256
  msgid "Display Settings"
-@@ -879,31 +879,31 @@
+@@ -884,31 +884,31 @@
  
  #: drivemount/src/drive-button.c:940
  msgid "_Play DVD"
@@ -182,7 +185,7 @@ diff -urN a/po/ja.po b/po/ja.po
  
  #: drivemount/src/drivemount.c:118
  msgid "About Disk Mounter"
-@@ -947,7 +947,7 @@
+@@ -952,7 +952,7 @@
  
  #: geyes/data/themes.ui:100
  msgid "_Select a theme:"
@@ -191,7 +194,7 @@ diff -urN a/po/ja.po b/po/ja.po
  
  #: geyes/data/themes.ui:148
  msgid "Themes"
-@@ -988,7 +988,7 @@
+@@ -993,7 +993,7 @@
  #: mateweather/data/mateweather-dialog.ui:30
  #: mateweather/src/mateweather-applet.c:113
  msgid "_Update"
@@ -200,16 +203,16 @@ diff -urN a/po/ja.po b/po/ja.po
  
  #: mateweather/data/mateweather-dialog.ui:88
  msgid "City:"
-@@ -1060,7 +1060,7 @@
+@@ -1065,7 +1065,7 @@
  
- #: mateweather/data/mateweather-dialog.ui:497
+ #: mateweather/data/mateweather-dialog.ui:510
  msgid "_Visit Weather.com"
 -msgstr "Weather.com へジャンプ(_V)"
 +msgstr "Weather.com へジャンプ"
  
- #: mateweather/data/mateweather-dialog.ui:505
+ #: mateweather/data/mateweather-dialog.ui:518
  msgid "Visit Weather.com"
-@@ -1109,7 +1109,7 @@
+@@ -1114,7 +1114,7 @@
  
  #: mateweather/src/mateweather-applet.c:110
  msgid "_Details"
@@ -218,7 +221,7 @@ diff -urN a/po/ja.po b/po/ja.po
  
  #: mateweather/src/mateweather-applet.c:165
  msgid "?"
-@@ -1181,11 +1181,11 @@
+@@ -1186,11 +1186,11 @@
  #: mateweather/src/mateweather-pref.c:863
  #: mateweather/src/mateweather-pref.c:1054
  msgid "_Automatically update every:"
@@ -232,7 +235,7 @@ diff -urN a/po/ja.po b/po/ja.po
  
  #: mateweather/src/mateweather-pref.c:888
  msgid "Kelvin"
-@@ -1201,7 +1201,7 @@
+@@ -1206,7 +1206,7 @@
  
  #: mateweather/src/mateweather-pref.c:900
  msgid "_Wind speed unit:"
@@ -241,7 +244,7 @@ diff -urN a/po/ja.po b/po/ja.po
  
  #: mateweather/src/mateweather-pref.c:911
  msgid "m/s"
-@@ -1225,7 +1225,7 @@
+@@ -1230,7 +1230,7 @@
  
  #: mateweather/src/mateweather-pref.c:927
  msgid "_Pressure unit:"
@@ -250,7 +253,7 @@ diff -urN a/po/ja.po b/po/ja.po
  
  #: mateweather/src/mateweather-pref.c:938
  msgid "kPa"
-@@ -1253,7 +1253,7 @@
+@@ -1258,7 +1258,7 @@
  
  #: mateweather/src/mateweather-pref.c:957
  msgid "_Visibility unit:"
@@ -259,7 +262,7 @@ diff -urN a/po/ja.po b/po/ja.po
  
  #: mateweather/src/mateweather-pref.c:968
  msgid "meters"
-@@ -1269,19 +1269,19 @@
+@@ -1274,19 +1274,19 @@
  
  #: mateweather/src/mateweather-pref.c:996
  msgid "Enable _radar map"
@@ -283,7 +286,7 @@ diff -urN a/po/ja.po b/po/ja.po
  
  #: mateweather/src/mateweather-pref.c:1050
  msgid "Update"
-@@ -1301,15 +1301,15 @@
+@@ -1306,15 +1306,15 @@
  
  #: mateweather/src/mateweather-pref.c:1114
  msgid "_Select a location:"
@@ -302,7 +305,7 @@ diff -urN a/po/ja.po b/po/ja.po
  
  #: mateweather/src/mateweather-pref.c:1159
  msgid "Location"
-@@ -1491,27 +1491,27 @@
+@@ -1496,27 +1496,27 @@
  
  #: multiload/data/properties.ui:131
  msgid "_Processor"
@@ -336,7 +339,7 @@ diff -urN a/po/ja.po b/po/ja.po
  
  #: multiload/data/properties.ui:239
  msgid "Monitored Resources"
-@@ -1539,23 +1539,23 @@
+@@ -1544,23 +1544,23 @@
  
  #: multiload/data/properties.ui:481 multiload/data/properties.ui:583
  msgid "_User"
@@ -365,7 +368,7 @@ diff -urN a/po/ja.po b/po/ja.po
  
  #: multiload/data/properties.ui:548 multiload/src/main.c:272
  msgid "Processor"
-@@ -1563,19 +1563,19 @@
+@@ -1568,19 +1568,19 @@
  
  #: multiload/data/properties.ui:612
  msgid "Sh_ared"
@@ -389,7 +392,7 @@ diff -urN a/po/ja.po b/po/ja.po
  
  #: multiload/data/properties.ui:717 multiload/src/main.c:273
  msgid "Memory"
-@@ -1583,24 +1583,24 @@
+@@ -1588,24 +1588,24 @@
  
  #: multiload/data/properties.ui:753
  msgid "_In"
@@ -419,7 +422,7 @@ diff -urN a/po/ja.po b/po/ja.po
  
  #: multiload/data/properties.ui:898
  msgid "_Indicator"
-@@ -1612,11 +1612,11 @@
+@@ -1617,11 +1617,11 @@
  
  #: multiload/data/properties.ui:952
  msgid "_Used"
@@ -433,7 +436,7 @@ diff -urN a/po/ja.po b/po/ja.po
  
  #: multiload/data/properties.ui:999 multiload/src/main.c:275
  msgid "Swap Space"
-@@ -1624,7 +1624,7 @@
+@@ -1629,7 +1629,7 @@
  
  #: multiload/data/properties.ui:1035
  msgid "_Average"
@@ -442,7 +445,7 @@ diff -urN a/po/ja.po b/po/ja.po
  
  #: multiload/data/properties.ui:1111
  msgid "Load"
-@@ -1632,11 +1632,11 @@
+@@ -1637,11 +1637,11 @@
  
  #: multiload/data/properties.ui:1153
  msgid "_Read"
@@ -456,7 +459,7 @@ diff -urN a/po/ja.po b/po/ja.po
  
  #: multiload/data/properties.ui:1229
  msgid "Use diskstats for _NVMe"
-@@ -1766,7 +1766,7 @@
+@@ -1771,7 +1771,7 @@
  
  #: multiload/src/main.c:467
  msgid "_Open System Monitor"
@@ -465,21 +468,21 @@ diff -urN a/po/ja.po b/po/ja.po
  
  #: multiload/src/netspeed.c:60
  #, c-format
-@@ -1783,11 +1783,11 @@
+@@ -1788,11 +1788,11 @@
  
- #: netspeed/data/netspeed-details.ui:133
+ #: netspeed/data/netspeed-details.ui:134
  msgid "_In graph color"
 -msgstr "受信グラフの色(_I)"
 +msgstr "受信グラフの色"
  
- #: netspeed/data/netspeed-details.ui:160
+ #: netspeed/data/netspeed-details.ui:161
  msgid "_Out graph color"
 -msgstr "送信グラフの色(_O)"
 +msgstr "送信グラフの色"
  
- #: netspeed/data/netspeed-details.ui:194
+ #: netspeed/data/netspeed-details.ui:195
  msgid "IPv4 Address:"
-@@ -1847,19 +1847,19 @@
+@@ -1852,19 +1852,19 @@
  
  #: netspeed/data/netspeed-preferences.ui:100
  msgid "Network _device:"
@@ -503,7 +506,7 @@ diff -urN a/po/ja.po b/po/ja.po
  
  #: netspeed/data/netspeed-preferences.ui:179
  msgid "Show _icon"
-@@ -2223,7 +2223,7 @@
+@@ -2228,7 +2228,7 @@
  
  #: netspeed/src/netspeed.c:1231
  msgid "Device _Details"
@@ -512,7 +515,7 @@ diff -urN a/po/ja.po b/po/ja.po
  
  #: netspeed/src/netspeed.c:1233
  msgid "Preferences..."
-@@ -2344,11 +2344,11 @@
+@@ -2349,11 +2349,11 @@
  #: stickynotes/sticky-notes-delete.ui:37
  #: trashapplet/trashapplet-empty-progress.ui:27
  msgid "_Cancel"
@@ -526,7 +529,7 @@ diff -urN a/po/ja.po b/po/ja.po
  
  #: stickynotes/sticky-notes-delete-all.ui:106
  msgid "Delete all sticky notes?"
-@@ -2361,7 +2361,7 @@
+@@ -2366,7 +2366,7 @@
  
  #: stickynotes/sticky-notes-delete.ui:54
  msgid "_Delete"
@@ -535,120 +538,136 @@ diff -urN a/po/ja.po b/po/ja.po
  
  #: stickynotes/sticky-notes-delete.ui:107
  msgid "Delete this sticky note?"
-@@ -2393,11 +2393,11 @@
+@@ -2374,17 +2374,17 @@
+ 
+ #: stickynotes/sticky-notes-note.ui:14 stickynotes/stickynotes_applet.c:34
+ msgid "_New Note"
+-msgstr "新しい付箋(_N)"
++msgstr "新しい付箋"
+ 
+ #: stickynotes/sticky-notes-note.ui:21
+ #, fuzzy
+ msgid "_Delete Note..."
+-msgstr "付箋の削除(_D)"
++msgstr "付箋の削除"
+ 
+ #: stickynotes/sticky-notes-note.ui:31
+ #, fuzzy
+ msgid "_Lock Note"
+-msgstr "付箋のロック(_L)"
++msgstr "付箋のロック"
+ 
+ #: stickynotes/sticky-notes-note.ui:41
+ #, fuzzy
+@@ -2417,11 +2417,11 @@
  
  #: stickynotes/sticky-notes-preferences.ui:131
  msgid "_Width:"
 -msgstr "幅(_W):"
 +msgstr "幅:"
  
- #: stickynotes/sticky-notes-preferences.ui:144
+ #: stickynotes/sticky-notes-preferences.ui:145
  msgid "H_eight:"
 -msgstr "高さ(_E):"
 +msgstr "高さ:"
  
- #: stickynotes/sticky-notes-preferences.ui:157
+ #: stickynotes/sticky-notes-preferences.ui:159
  msgid "Specify the default width (in pixels) of new notes"
-@@ -2417,15 +2417,15 @@
+@@ -2441,15 +2441,15 @@
  
- #: stickynotes/sticky-notes-preferences.ui:185
+ #: stickynotes/sticky-notes-preferences.ui:187
  msgid "Use co_lor from the system theme"
 -msgstr "システムのテーマの色を使用する(_L)"
 +msgstr "システムのテーマの色を使用する"
  
- #: stickynotes/sticky-notes-preferences.ui:203
+ #: stickynotes/sticky-notes-preferences.ui:205
  msgid "Font Co_lor:"
 -msgstr "フォントの色(_L):"
 +msgstr "フォントの色:"
  
- #: stickynotes/sticky-notes-preferences.ui:216
+ #: stickynotes/sticky-notes-preferences.ui:219
  msgid "Note C_olor:"
 -msgstr "付箋の色(_O):"
 +msgstr "付箋の色:"
  
- #: stickynotes/sticky-notes-preferences.ui:241
- msgid "Choose a base color to use for all sticky notes"
-@@ -2437,12 +2437,12 @@
+ #: stickynotes/sticky-notes-preferences.ui:234
+ #, fuzzy
+@@ -2471,12 +2471,12 @@
  
- #: stickynotes/sticky-notes-preferences.ui:251
+ #: stickynotes/sticky-notes-preferences.ui:257
  msgid "Use fo_nt from the system theme"
 -msgstr "システムのフォントを使用する(_N)"
 +msgstr "システムのフォントを使用する"
  
- #: stickynotes/sticky-notes-preferences.ui:269
- #: stickynotes/sticky-notes-properties.ui:226
+ #: stickynotes/sticky-notes-preferences.ui:275
+ #: stickynotes/sticky-notes-properties.ui:230
  msgid "_Font:"
 -msgstr "フォント(_F):"
 +msgstr "フォント:"
  
- #: stickynotes/sticky-notes-preferences.ui:283
+ #: stickynotes/sticky-notes-preferences.ui:290
  msgid "Choose a font to use for all sticky notes"
-@@ -2458,7 +2458,7 @@
+@@ -2492,7 +2492,7 @@
  
- #: stickynotes/sticky-notes-preferences.ui:337
+ #: stickynotes/sticky-notes-preferences.ui:344
  msgid "_Put notes on all workspaces"
 -msgstr "付箋をすべてのワークスペースに貼り付ける(_P)"
 +msgstr "付箋をすべてのワークスペースに貼り付ける"
  
- #: stickynotes/sticky-notes-preferences.ui:341
+ #: stickynotes/sticky-notes-preferences.ui:348
  msgid "Choose if notes are visible on all workspaces"
-@@ -2466,7 +2466,7 @@
+@@ -2500,7 +2500,7 @@
  
- #: stickynotes/sticky-notes-preferences.ui:354
+ #: stickynotes/sticky-notes-preferences.ui:361
  msgid "Force _default color and font on notes"
 -msgstr "デフォルトの色とフォントを強制的に適用する(_D)"
 +msgstr "デフォルトの色とフォントを強制的に適用する"
  
- #: stickynotes/sticky-notes-preferences.ui:358
+ #: stickynotes/sticky-notes-preferences.ui:365
  msgid "Choose if the default style is forced on all notes"
-@@ -2474,7 +2474,7 @@
+@@ -2508,7 +2508,7 @@
  
- #: stickynotes/sticky-notes-preferences.ui:371
+ #: stickynotes/sticky-notes-preferences.ui:378
  msgid "Hide notes when the des_ktop is clicked on"
 -msgstr "デスクトップがクリックされた時に付箋を隠す(_K)"
 +msgstr "デスクトップがクリックされた時に付箋を隠す"
  
- #: stickynotes/sticky-notes-preferences.ui:375
+ #: stickynotes/sticky-notes-preferences.ui:382
  msgid "Choose whether to hide all notes when selecting on the desktop"
-@@ -2490,7 +2490,7 @@
+@@ -2524,7 +2524,7 @@
  
  #: stickynotes/sticky-notes-properties.ui:117
  msgid "_Title:"
 -msgstr "役職(_T):"
 +msgstr "役職:"
  
- #: stickynotes/sticky-notes-properties.ui:130
+ #: stickynotes/sticky-notes-properties.ui:131
  msgid "Specify a title for the note"
-@@ -2498,19 +2498,19 @@
+@@ -2532,19 +2532,19 @@
  
- #: stickynotes/sticky-notes-properties.ui:139
+ #: stickynotes/sticky-notes-properties.ui:140
  msgid "Use default co_lor"
 -msgstr "デフォルトの色を使用する(_L)"
 +msgstr "デフォルトの色を使用する"
  
- #: stickynotes/sticky-notes-properties.ui:158
+ #: stickynotes/sticky-notes-properties.ui:159
  msgid "Font C_olor:"
 -msgstr "フォントの色(_O):"
 +msgstr "フォントの色:"
  
- #: stickynotes/sticky-notes-properties.ui:172
+ #: stickynotes/sticky-notes-properties.ui:174
  msgid "Note _Color:"
 -msgstr "付箋の色(_C):"
 +msgstr "付箋の色:"
  
- #: stickynotes/sticky-notes-properties.ui:183
+ #: stickynotes/sticky-notes-properties.ui:185
  msgid "Use default fo_nt"
 -msgstr "デフォルトのフォントを使用する(_N)"
 +msgstr "デフォルトのフォントを使用する"
  
- #: stickynotes/sticky-notes-properties.ui:213
- msgid "Choose a color for the note"
-@@ -2669,19 +2669,19 @@
- 
- #: stickynotes/stickynotes_applet.c:34
- msgid "_New Note"
--msgstr "新しい付箋(_N)"
-+msgstr "新しい付箋"
+ #: stickynotes/sticky-notes-properties.ui:204
+ #, fuzzy
+@@ -2713,15 +2713,15 @@
  
  #: stickynotes/stickynotes_applet.c:37
  msgid "Hi_de Notes"
@@ -667,7 +686,7 @@ diff -urN a/po/ja.po b/po/ja.po
  
  #: stickynotes/stickynotes_applet.c:607
  #, c-format
-@@ -2747,7 +2747,7 @@
+@@ -2787,7 +2787,7 @@
  
  #: timerapplet/data/timerapplet-preferences.ui:79
  msgid "_Name:"
@@ -676,7 +695,7 @@ diff -urN a/po/ja.po b/po/ja.po
  
  #: timerapplet/data/timerapplet-preferences.ui:93
  msgid "_Hours:"
-@@ -2771,15 +2771,15 @@
+@@ -2811,15 +2811,15 @@
  
  #: timerapplet/src/timerapplet.c:83
  msgid "_Start timer"
@@ -695,7 +714,7 @@ diff -urN a/po/ja.po b/po/ja.po
  
  #: timerapplet/src/timerapplet.c:86
  msgid "R_eset"
-@@ -2826,11 +2826,11 @@
+@@ -2866,11 +2866,11 @@
  
  #: trashapplet/src/trashapplet.c:68 trashapplet/src/trash-empty.c:341
  msgid "_Empty Trash"
@@ -707,5 +726,5 @@ diff -urN a/po/ja.po b/po/ja.po
 -msgstr "ゴミ箱を開く(_O)"
 +msgstr "ゴミ箱を開く"
  
- #: trashapplet/src/trashapplet.c:127
+ #: trashapplet/src/trashapplet.c:130
  #, c-format
