@@ -1,55 +1,58 @@
+2023-02-09 maia@tsundoku.ne.jp
+xfce4-appfinder 4.18.0
+
 diff -urN a/po/ja.po b/po/ja.po
---- a/po/ja.po	2021-09-21 13:42:28.000000000 -0700
-+++ b/po/ja.po	2022-05-31 20:44:40.803421019 -0700
+--- a/po/ja.po	2022-08-08 12:48:27.000000000 -0700
++++ b/po/ja.po	2023-02-09 04:12:35.152447639 -0800
 @@ -63,7 +63,7 @@
  
- #: ../src/appfinder-preferences.c:262
+ #: ../src/appfinder-preferences.c:266
  msgid "C_lear"
 -msgstr "クリア(_L)"
 +msgstr "クリア"
  
- #: ../src/appfinder-preferences.c:263
+ #: ../src/appfinder-preferences.c:267
  msgid "This will permanently clear the custom command history."
 @@ -75,7 +75,7 @@
  
- #: ../src/appfinder-preferences.c:373
+ #: ../src/appfinder-preferences.c:377
  msgid "_Delete"
 -msgstr "削除(_D)"
 +msgstr "削除"
  
- #: ../src/appfinder-preferences.c:374
+ #: ../src/appfinder-preferences.c:378
  msgid "The custom action will be deleted permanently."
 @@ -98,11 +98,11 @@
  
- #: ../src/appfinder-window.c:357
+ #: ../src/appfinder-window.c:358
  msgid "_Preferences"
 -msgstr "設定(_P)..."
 +msgstr "設定..."
  
- #: ../src/appfinder-window.c:368 ../src/appfinder-window.c:1096
+ #: ../src/appfinder-window.c:369 ../src/appfinder-window.c:1097
  msgid "La_unch"
 -msgstr "起動(_U)"
 +msgstr "起動"
  
- #: ../src/appfinder-window.c:897
+ #: ../src/appfinder-window.c:898
  msgid "Failed to launch desktop item editor"
 @@ -134,7 +134,7 @@
  
- #: ../src/appfinder-window.c:972 ../src/appfinder-window.c:1142
+ #: ../src/appfinder-window.c:973 ../src/appfinder-window.c:1143
  msgid "_Hide"
 -msgstr "隠す(_H)"
 +msgstr "隠す"
  
- #: ../src/appfinder-window.c:973
+ #: ../src/appfinder-window.c:974
  #, c-format
 @@ -151,11 +151,11 @@
  
- #: ../src/appfinder-window.c:1110
+ #: ../src/appfinder-window.c:1111
  msgid "_Edit"
 -msgstr "編集(_E)"
 +msgstr "編集"
  
- #: ../src/appfinder-window.c:1127
+ #: ../src/appfinder-window.c:1128
  msgid "_Revert"
 -msgstr "元に戻す(_R)"
 +msgstr "元に戻す"
@@ -116,48 +119,48 @@ diff -urN a/po/ja.po b/po/ja.po
 +msgstr "カテゴリのアイコンサイズ:"
  
  #: ../src/appfinder-preferences.glade.h:29
- msgid "Appearance"
-@@ -312,7 +312,7 @@
+ msgid "Hide window decorations"
+@@ -320,7 +320,7 @@
  
- #: ../src/appfinder-preferences.glade.h:30
+ #: ../src/appfinder-preferences.glade.h:32
  msgid "C_lear Custom Command History"
 -msgstr "カスタムコマンド履歴のクリア(_L)"
 +msgstr "カスタムコマンド履歴のクリア"
  
- #: ../src/appfinder-preferences.glade.h:31
+ #: ../src/appfinder-preferences.glade.h:33
  msgid "History"
-@@ -320,7 +320,7 @@
+@@ -328,7 +328,7 @@
  
- #: ../src/appfinder-preferences.glade.h:32
+ #: ../src/appfinder-preferences.glade.h:34
  msgid "_General"
 -msgstr "全般(_G)"
 +msgstr "全般"
  
- #: ../src/appfinder-preferences.glade.h:33
+ #: ../src/appfinder-preferences.glade.h:35
  msgid "Custom actions are only available in collapsed mode."
-@@ -348,23 +348,23 @@
+@@ -356,23 +356,23 @@
  
- #: ../src/appfinder-preferences.glade.h:39
+ #: ../src/appfinder-preferences.glade.h:41
  msgid "Co_mmand:"
 -msgstr "コマンド(_M):"
 +msgstr "コマンド:"
  
- #: ../src/appfinder-preferences.glade.h:40
+ #: ../src/appfinder-preferences.glade.h:42
  msgid "Patte_rn:"
 -msgstr "パターン(_R):"
 +msgstr "パターン:"
  
- #: ../src/appfinder-preferences.glade.h:41
+ #: ../src/appfinder-preferences.glade.h:43
  msgid "_Type:"
 -msgstr "タイプ(_T):"
 +msgstr "タイプ:"
  
- #: ../src/appfinder-preferences.glade.h:42
+ #: ../src/appfinder-preferences.glade.h:44
  msgid "_Save match in command history"
 -msgstr "マッチしたコマンドを履歴に保存する(_S)"
 +msgstr "マッチしたコマンドを履歴に保存する"
  
- #: ../src/appfinder-preferences.glade.h:43
+ #: ../src/appfinder-preferences.glade.h:45
  msgid "Custom _Actions"
 -msgstr "カスタムアクション(_A)"
 +msgstr "カスタムアクション"
