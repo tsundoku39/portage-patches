@@ -1,0 +1,175 @@
+diff -urN a/po/ja.po b/po/ja.po
+--- a/po/ja.po	2023-04-18 12:49:50.000000000 -0700
++++ b/po/ja.po	2023-04-28 08:32:12.833151584 -0700
+@@ -63,7 +63,7 @@
+ 
+ #: ../src/appfinder-preferences.c:276
+ msgid "C_lear"
+-msgstr "クリア(_L)"
++msgstr "クリア"
+ 
+ #: ../src/appfinder-preferences.c:277
+ msgid "This will permanently clear the custom command history."
+@@ -75,7 +75,7 @@
+ 
+ #: ../src/appfinder-preferences.c:389
+ msgid "_Delete"
+-msgstr "削除(_D)"
++msgstr "削除"
+ 
+ #: ../src/appfinder-preferences.c:390
+ msgid "The custom action will be deleted permanently."
+@@ -98,11 +98,11 @@
+ 
+ #: ../src/appfinder-window.c:368
+ msgid "_Preferences"
+-msgstr "設定(_P)..."
++msgstr "設定..."
+ 
+ #: ../src/appfinder-window.c:379 ../src/appfinder-window.c:1190
+ msgid "La_unch"
+-msgstr "起動(_U)"
++msgstr "起動"
+ 
+ #: ../src/appfinder-window.c:991
+ msgid "Failed to launch desktop item editor"
+@@ -134,7 +134,7 @@
+ 
+ #: ../src/appfinder-window.c:1066 ../src/appfinder-window.c:1236
+ msgid "_Hide"
+-msgstr "隠す(_H)"
++msgstr "隠す"
+ 
+ #: ../src/appfinder-window.c:1067
+ #, c-format
+@@ -151,11 +151,11 @@
+ 
+ #: ../src/appfinder-window.c:1204
+ msgid "_Edit"
+-msgstr "編集(_E)"
++msgstr "編集"
+ 
+ #: ../src/appfinder-window.c:1221
+ msgid "_Revert"
+-msgstr "元に戻す(_R)"
++msgstr "元に戻す"
+ 
+ #: ../src/main.c:66
+ msgid "Start in collapsed mode"
+@@ -237,19 +237,19 @@
+ 
+ #: ../src/appfinder-preferences.glade.h:11
+ msgid "_Close"
+-msgstr "閉じる(_C)"
++msgstr "閉じる"
+ 
+ #: ../src/appfinder-preferences.glade.h:12
+ msgid "_Help"
+-msgstr "ヘルプ(_H)"
++msgstr "ヘルプ"
+ 
+ #: ../src/appfinder-preferences.glade.h:13
+ msgid "Remember last _selected category"
+-msgstr "最後に選択したカテゴリを記憶する(_S)"
++msgstr "最後に選択したカテゴリを記憶する"
+ 
+ #: ../src/appfinder-preferences.glade.h:14
+ msgid "Always c_enter the window"
+-msgstr "常に画面中央に表示する(_E)"
++msgstr "常に画面中央に表示する"
+ 
+ #: ../src/appfinder-preferences.glade.h:15
+ msgid "Center the window on startup."
+@@ -257,7 +257,7 @@
+ 
+ #: ../src/appfinder-preferences.glade.h:16
+ msgid "Keep running _instance in the background"
+-msgstr "インスタンスをバックグラウンドで常駐する(_I)"
++msgstr "インスタンスをバックグラウンドで常駐する"
+ 
+ #: ../src/appfinder-preferences.glade.h:17
+ msgid ""
+@@ -300,15 +300,15 @@
+ 
+ #: ../src/appfinder-preferences.glade.h:25
+ msgid "_View items as icons"
+-msgstr "アイテムをアイコンで表示する(_V)"
++msgstr "アイテムをアイコンで表示する"
+ 
+ #: ../src/appfinder-preferences.glade.h:26
+ msgid "Text besi_de icons"
+-msgstr "アイコンの横にテキストを表示する(_D)"
++msgstr "アイコンの横にテキストを表示する"
+ 
+ #: ../src/appfinder-preferences.glade.h:27
+ msgid "Ite_m icon size:"
+-msgstr "アイテムのアイコンサイズ(_M):"
++msgstr "アイテムのアイコンサイズ:"
+ 
+ #: ../src/appfinder-preferences.glade.h:28
+ msgid "Hide category pane"
+@@ -320,7 +320,7 @@
+ 
+ #: ../src/appfinder-preferences.glade.h:30
+ msgid "Categ_ory icon size:"
+-msgstr "カテゴリのアイコンサイズ(_O):"
++msgstr "カテゴリのアイコンサイズ:"
+ 
+ #: ../src/appfinder-preferences.glade.h:31
+ msgid "Hide window decorations"
+@@ -332,7 +332,7 @@
+ 
+ #: ../src/appfinder-preferences.glade.h:33
+ msgid "Show generic application _names"
+-msgstr "一般的なアプリケーション名を表示する(_N)"
++msgstr "一般的なアプリケーション名を表示する"
+ 
+ #: ../src/appfinder-preferences.glade.h:34
+ msgid "Appearance"
+@@ -340,7 +340,7 @@
+ 
+ #: ../src/appfinder-preferences.glade.h:35
+ msgid "C_lear Custom Command History"
+-msgstr "カスタムコマンド履歴のクリア(_L)"
++msgstr "カスタムコマンド履歴のクリア"
+ 
+ #: ../src/appfinder-preferences.glade.h:36
+ msgid "History"
+@@ -348,7 +348,7 @@
+ 
+ #: ../src/appfinder-preferences.glade.h:37
+ msgid "_General"
+-msgstr "全般(_G)"
++msgstr "全般"
+ 
+ #: ../src/appfinder-preferences.glade.h:38
+ msgid "Custom actions are only available in collapsed mode."
+@@ -376,23 +376,23 @@
+ 
+ #: ../src/appfinder-preferences.glade.h:44
+ msgid "Co_mmand:"
+-msgstr "コマンド(_M):"
++msgstr "コマンド:"
+ 
+ #: ../src/appfinder-preferences.glade.h:45
+ msgid "Patte_rn:"
+-msgstr "パターン(_R):"
++msgstr "パターン:"
+ 
+ #: ../src/appfinder-preferences.glade.h:46
+ msgid "_Type:"
+-msgstr "タイプ(_T):"
++msgstr "タイプ:"
+ 
+ #: ../src/appfinder-preferences.glade.h:47
+ msgid "_Save match in command history"
+-msgstr "マッチしたコマンドを履歴に保存する(_S)"
++msgstr "マッチしたコマンドを履歴に保存する"
+ 
+ #: ../src/appfinder-preferences.glade.h:48
+ msgid "Custom _Actions"
+-msgstr "カスタムアクション(_A)"
++msgstr "カスタムアクション"
+ 
+ #: ../data/xfce4-appfinder.desktop.in.h:2
+ msgid "Find and launch applications installed on your system"
