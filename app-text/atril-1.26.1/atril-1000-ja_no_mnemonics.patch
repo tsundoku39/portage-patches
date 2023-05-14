@@ -1,0 +1,502 @@
+diff -urN a/po/ja.po b/po/ja.po
+--- a/po/ja.po	2023-04-28 14:00:56.000000000 -0700
++++ b/po/ja.po	2023-05-14 09:03:14.698654212 -0700
+@@ -816,7 +816,7 @@
+ 
+ #: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1473
+ msgid "_Move on Toolbar"
+-msgstr "ツールバー上で移動(_M)"
++msgstr "ツールバー上で移動"
+ 
+ #: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1474
+ msgid "Move the selected item on the toolbar"
+@@ -824,7 +824,7 @@
+ 
+ #: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1475
+ msgid "_Remove from Toolbar"
+-msgstr "ツールバーから削除(_R)"
++msgstr "ツールバーから削除"
+ 
+ #: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1476
+ msgid "Remove the selected item from the toolbar"
+@@ -832,7 +832,7 @@
+ 
+ #: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1477
+ msgid "_Delete Toolbar"
+-msgstr "ツールバーの削除(_D)"
++msgstr "ツールバーの削除"
+ 
+ #: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1478
+ msgid "Remove the selected toolbar"
+@@ -1022,11 +1022,11 @@
+ 
+ #: previewer/ev-previewer-window.c:284 shell/ev-window.c:6483
+ msgid "_Close"
+-msgstr "閉じる(_C)"
++msgstr "閉じる"
+ 
+ #: previewer/ev-previewer-window.c:287 shell/ev-window.c:6529
+ msgid "_Previous Page"
+-msgstr "前のページ(_P)"
++msgstr "前のページ"
+ 
+ #: previewer/ev-previewer-window.c:288 shell/ev-window.c:6530
+ msgid "Go to the previous page"
+@@ -1034,7 +1034,7 @@
+ 
+ #: previewer/ev-previewer-window.c:290 shell/ev-window.c:6532
+ msgid "_Next Page"
+-msgstr "次のページ(_N)"
++msgstr "次のページ"
+ 
+ #: previewer/ev-previewer-window.c:291 shell/ev-window.c:6533
+ msgid "Go to the next page"
+@@ -1042,7 +1042,7 @@
+ 
+ #: previewer/ev-previewer-window.c:293 shell/ev-window.c:6509
+ msgid "Zoom _In"
+-msgstr "拡大(_I)"
++msgstr "拡大"
+ 
+ #: previewer/ev-previewer-window.c:294 shell/ev-window.c:6510
+ msgid "Enlarge the document"
+@@ -1050,7 +1050,7 @@
+ 
+ #: previewer/ev-previewer-window.c:296 shell/ev-window.c:6512
+ msgid "Zoom _Out"
+-msgstr "縮小(_O)"
++msgstr "縮小"
+ 
+ #: previewer/ev-previewer-window.c:297 shell/ev-window.c:6513
+ msgid "Shrink the document"
+@@ -1070,7 +1070,7 @@
+ 
+ #: previewer/ev-previewer-window.c:339 shell/ev-window.c:6635
+ msgid "Fit Pa_ge"
+-msgstr "ページに合わせる(_G)"
++msgstr "ページに合わせる"
+ 
+ #: previewer/ev-previewer-window.c:340 shell/ev-window.c:6636
+ msgid "Make the current document fill the window"
+@@ -1078,7 +1078,7 @@
+ 
+ #: previewer/ev-previewer-window.c:342 shell/ev-window.c:6638
+ msgid "Fit _Width"
+-msgstr "幅に合わせる(_W)"
++msgstr "幅に合わせる"
+ 
+ #: previewer/ev-previewer-window.c:343 shell/ev-window.c:6639
+ msgid "Make the current document fill the window width"
+@@ -1502,7 +1502,7 @@
+ 
+ #: shell/ev-password-view.c:144 shell/ev-password-view.c:260
+ msgid "_Unlock Document"
+-msgstr "文書のロックを解除(_U)"
++msgstr "文書のロックを解除"
+ 
+ #: shell/ev-password-view.c:252
+ msgid "Enter password"
+@@ -1520,19 +1520,19 @@
+ 
+ #: shell/ev-password-view.c:321
+ msgid "_Password:"
+-msgstr "パスワード(_P):"
++msgstr "パスワード:"
+ 
+ #: shell/ev-password-view.c:353
+ msgid "Forget password _immediately"
+-msgstr "今すぐパスワードを破棄する(_I)"
++msgstr "今すぐパスワードを破棄する"
+ 
+ #: shell/ev-password-view.c:365
+ msgid "Remember password until you _log out"
+-msgstr "ログアウトするまでパスワードを記憶する(_L)"
++msgstr "ログアウトするまでパスワードを記憶する"
+ 
+ #: shell/ev-password-view.c:377
+ msgid "Remember _forever"
+-msgstr "パスワードを記憶する(_F)"
++msgstr "パスワードを記憶する"
+ 
+ #: shell/ev-properties-dialog.c:120
+ msgid "Properties"
+@@ -1602,15 +1602,15 @@
+ 
+ #: shell/ev-sidebar-bookmarks.c:155
+ msgid "_Open Bookmark"
+-msgstr "ブックマークを開く(_O)"
++msgstr "ブックマークを開く"
+ 
+ #: shell/ev-sidebar-bookmarks.c:157
+ msgid "_Rename Bookmark"
+-msgstr "ブックマークの名前を変更(_R)"
++msgstr "ブックマークの名前を変更"
+ 
+ #: shell/ev-sidebar-bookmarks.c:159
+ msgid "_Remove Bookmark"
+-msgstr "ブックマークを削除(_R)"
++msgstr "ブックマークを削除"
+ 
+ #: shell/ev-sidebar-bookmarks.c:314 shell/ev-window.c:1011
+ #: shell/ev-window.c:5091
+@@ -1620,11 +1620,11 @@
+ 
+ #: shell/ev-sidebar-bookmarks.c:470
+ msgid "_Add"
+-msgstr "追加(_A)"
++msgstr "追加"
+ 
+ #: shell/ev-sidebar-bookmarks.c:480
+ msgid "_Remove"
+-msgstr "削除(_R)"
++msgstr "削除"
+ 
+ #: shell/ev-sidebar-bookmarks.c:606
+ msgid "Bookmarks"
+@@ -1779,11 +1779,11 @@
+ 
+ #: shell/ev-window.c:3927
+ msgid "Close _without Saving"
+-msgstr "保存せずに閉じる(_W)"
++msgstr "保存せずに閉じる"
+ 
+ #: shell/ev-window.c:3931 shell/ev-window.c:6472
+ msgid "_Save As…"
+-msgstr "名前を付けて保存…(_S)"
++msgstr "名前を付けて保存…"
+ 
+ #: shell/ev-window.c:4000
+ #, c-format
+@@ -1804,11 +1804,11 @@
+ 
+ #: shell/ev-window.c:4026
+ msgid "Cancel _print and Close"
+-msgstr "キャンセルして閉じる(_P)"
++msgstr "キャンセルして閉じる"
+ 
+ #: shell/ev-window.c:4030
+ msgid "Close _after Printing"
+-msgstr "印刷してから閉じる(_A)"
++msgstr "印刷してから閉じる"
+ 
+ #: shell/ev-window.c:4427
+ msgid "Running in presentation mode"
+@@ -1929,7 +1929,7 @@
+ 
+ #: shell/ev-window.c:6141
+ msgid "_Enable"
+-msgstr "はい(_E)"
++msgstr "はい"
+ 
+ #: shell/ev-window.c:6144
+ msgid ""
+@@ -1948,31 +1948,31 @@
+ 
+ #: shell/ev-window.c:6458
+ msgid "_File"
+-msgstr "ファイル(_F)"
++msgstr "ファイル"
+ 
+ #: shell/ev-window.c:6459
+ msgid "_Edit"
+-msgstr "編集(_E)"
++msgstr "編集"
+ 
+ #: shell/ev-window.c:6460
+ msgid "_View"
+-msgstr "表示(_V)"
++msgstr "表示"
+ 
+ #: shell/ev-window.c:6461
+ msgid "_Go"
+-msgstr "移動(_G)"
++msgstr "移動"
+ 
+ #: shell/ev-window.c:6462
+ msgid "_Bookmarks"
+-msgstr "ブックマーク(_B)"
++msgstr "ブックマーク"
+ 
+ #: shell/ev-window.c:6463
+ msgid "_Help"
+-msgstr "ヘルプ(_H)"
++msgstr "ヘルプ"
+ 
+ #: shell/ev-window.c:6466 shell/ev-window.c:6833
+ msgid "_Open…"
+-msgstr "開く(_O)…"
++msgstr "開く…"
+ 
+ #: shell/ev-window.c:6467 shell/ev-window.c:6834
+ msgid "Open an existing document"
+@@ -1980,7 +1980,7 @@
+ 
+ #: shell/ev-window.c:6469
+ msgid "Op_en a Copy"
+-msgstr "コピーを開く(_E)"
++msgstr "コピーを開く"
+ 
+ #: shell/ev-window.c:6470
+ msgid "Open a copy of the current document in a new window"
+@@ -1992,7 +1992,7 @@
+ 
+ #: shell/ev-window.c:6475
+ msgid "Send _To..."
+-msgstr "送る...(_T)"
++msgstr "送る..."
+ 
+ #: shell/ev-window.c:6476
+ msgid "Send current document by mail, instant message..."
+@@ -2001,23 +2001,23 @@
+ 
+ #: shell/ev-window.c:6478
+ msgid "_Print…"
+-msgstr "印刷…(_P)"
++msgstr "印刷…"
+ 
+ #: shell/ev-window.c:6481
+ msgid "P_roperties"
+-msgstr "プロパティ(_R)"
++msgstr "プロパティ"
+ 
+ #: shell/ev-window.c:6487
+ msgid "_Copy"
+-msgstr "コピー(_C)"
++msgstr "コピー"
+ 
+ #: shell/ev-window.c:6489
+ msgid "Select _All"
+-msgstr "すべて選択(_A)"
++msgstr "すべて選択"
+ 
+ #: shell/ev-window.c:6491
+ msgid "_Find…"
+-msgstr "検索…(_F)"
++msgstr "検索…"
+ 
+ #: shell/ev-window.c:6492
+ msgid "Find a word or phrase in the document"
+@@ -2025,35 +2025,35 @@
+ 
+ #: shell/ev-window.c:6494
+ msgid "Find Ne_xt"
+-msgstr "次を検索(_X)"
++msgstr "次を検索"
+ 
+ #: shell/ev-window.c:6496
+ msgid "Find Pre_vious"
+-msgstr "前を検索(_V)"
++msgstr "前を検索"
+ 
+ #: shell/ev-window.c:6498
+ msgid "T_oolbar"
+-msgstr "ツールバー(_O)"
++msgstr "ツールバー"
+ 
+ #: shell/ev-window.c:6500
+ msgid "Rotate _Left"
+-msgstr "左へ回転(_L)"
++msgstr "左へ回転"
+ 
+ #: shell/ev-window.c:6502
+ msgid "Rotate _Right"
+-msgstr "右へ回転(_R)"
++msgstr "右へ回転"
+ 
+ #: shell/ev-window.c:6504
+ msgid "Save Current Settings as _Default"
+-msgstr "現在の設定をデフォルトとして保存(_D)"
++msgstr "現在の設定をデフォルトとして保存"
+ 
+ #: shell/ev-window.c:6515
+ msgid "_Reset Zoom"
+-msgstr "拡大率のリセット(_R)"
++msgstr "拡大率のリセット"
+ 
+ #: shell/ev-window.c:6518
+ msgid "_Reload"
+-msgstr "再読み込み(_R)"
++msgstr "再読み込み"
+ 
+ #: shell/ev-window.c:6519
+ msgid "Reload the document"
+@@ -2061,15 +2061,15 @@
+ 
+ #: shell/ev-window.c:6521
+ msgid "_Expand Window to Fit"
+-msgstr "ウィンドウをページに合わせる (_E)"
++msgstr "ウィンドウをページに合わせる "
+ 
+ #: shell/ev-window.c:6525
+ msgid "Auto_scroll"
+-msgstr "自動スクロール(_S)"
++msgstr "自動スクロール"
+ 
+ #: shell/ev-window.c:6535
+ msgid "_First Page"
+-msgstr "冒頭のページ(_F)"
++msgstr "冒頭のページ"
+ 
+ #: shell/ev-window.c:6536
+ msgid "Go to the first page"
+@@ -2077,7 +2077,7 @@
+ 
+ #: shell/ev-window.c:6538
+ msgid "_Last Page"
+-msgstr "末尾のページ(_L)"
++msgstr "末尾のページ"
+ 
+ #: shell/ev-window.c:6539
+ msgid "Go to the last page"
+@@ -2085,7 +2085,7 @@
+ 
+ #: shell/ev-window.c:6543
+ msgid "_Add Bookmark"
+-msgstr "ブックマークに追加(_A)"
++msgstr "ブックマークに追加"
+ 
+ #: shell/ev-window.c:6544
+ msgid "Add a bookmark for the current page"
+@@ -2093,11 +2093,11 @@
+ 
+ #: shell/ev-window.c:6548
+ msgid "_Contents"
+-msgstr "目次(_C)"
++msgstr "目次"
+ 
+ #: shell/ev-window.c:6551
+ msgid "_About"
+-msgstr "情報(_A)"
++msgstr "情報"
+ 
+ #: shell/ev-window.c:6555
+ msgid "Leave Fullscreen"
+@@ -2117,7 +2117,7 @@
+ 
+ #: shell/ev-window.c:6614
+ msgid "_Toolbar"
+-msgstr "ツールバー(_T)"
++msgstr "ツールバー"
+ 
+ #: shell/ev-window.c:6615
+ msgid "Show or hide the toolbar"
+@@ -2125,7 +2125,7 @@
+ 
+ #: shell/ev-window.c:6617
+ msgid "Side _Pane"
+-msgstr "サイドペイン(_P)"
++msgstr "サイドペイン"
+ 
+ #: shell/ev-window.c:6618
+ msgid "Show or hide the side pane"
+@@ -2133,7 +2133,7 @@
+ 
+ #: shell/ev-window.c:6620
+ msgid "_Continuous"
+-msgstr "連続ページ(_C)"
++msgstr "連続ページ"
+ 
+ #: shell/ev-window.c:6621
+ msgid "Show the entire document"
+@@ -2141,7 +2141,7 @@
+ 
+ #: shell/ev-window.c:6623
+ msgid "_Dual"
+-msgstr "見開きページ(_D)"
++msgstr "見開きページ"
+ 
+ #: shell/ev-window.c:6624
+ msgid "Show two pages at once"
+@@ -2149,7 +2149,7 @@
+ 
+ #: shell/ev-window.c:6626
+ msgid "_Odd pages left"
+-msgstr "奇数ページを左に(_O)"
++msgstr "奇数ページを左に"
+ 
+ #: shell/ev-window.c:6627
+ msgid "Show odd pages on the left in dual mode"
+@@ -2157,7 +2157,7 @@
+ 
+ #: shell/ev-window.c:6629
+ msgid "_Fullscreen"
+-msgstr "全画面(_F)"
++msgstr "全画面"
+ 
+ #: shell/ev-window.c:6630
+ msgid "Expand the window to fill the screen"
+@@ -2165,7 +2165,7 @@
+ 
+ #: shell/ev-window.c:6632
+ msgid "Pre_sentation"
+-msgstr "プレゼンテーション表示(_S)"
++msgstr "プレゼンテーション表示"
+ 
+ #: shell/ev-window.c:6633
+ msgid "Run document as a presentation"
+@@ -2173,7 +2173,7 @@
+ 
+ #: shell/ev-window.c:6641
+ msgid "Inverted _Colors"
+-msgstr "色の反転(_C)"
++msgstr "色の反転"
+ 
+ #: shell/ev-window.c:6642
+ msgid "Show page contents with the colors inverted"
+@@ -2181,7 +2181,7 @@
+ 
+ #: shell/ev-window.c:6644
+ msgid "Caret _Navigation"
+-msgstr "キャレット・ナビゲーション(_N)"
++msgstr "キャレット・ナビゲーション"
+ 
+ #: shell/ev-window.c:6645
+ msgid "Activate or disable caret-navigation"
+@@ -2189,27 +2189,27 @@
+ 
+ #: shell/ev-window.c:6653
+ msgid "_Open Link"
+-msgstr "リンクを開く(_O)"
++msgstr "リンクを開く"
+ 
+ #: shell/ev-window.c:6655
+ msgid "_Go To"
+-msgstr "移動(_G)"
++msgstr "移動"
+ 
+ #: shell/ev-window.c:6657
+ msgid "Open in New _Window"
+-msgstr "新しいウィンドウで開く(_W)"
++msgstr "新しいウィンドウで開く"
+ 
+ #: shell/ev-window.c:6659
+ msgid "_Copy Link Address"
+-msgstr "リンクアドレスのコピー(_C)"
++msgstr "リンクアドレスのコピー"
+ 
+ #: shell/ev-window.c:6661
+ msgid "_Save Image As…"
+-msgstr "画像を別名で保存…(_S)"
++msgstr "画像を別名で保存…"
+ 
+ #: shell/ev-window.c:6663
+ msgid "Copy _Image"
+-msgstr "画像のコピー(_I)"
++msgstr "画像のコピー"
+ 
+ #: shell/ev-window.c:6665
+ msgid "Annotation Properties…"
+@@ -2221,11 +2221,11 @@
+ 
+ #: shell/ev-window.c:6672
+ msgid "_Open Attachment"
+-msgstr "添付ファイルを開く(_O)"
++msgstr "添付ファイルを開く"
+ 
+ #: shell/ev-window.c:6674
+ msgid "_Save Attachment As…"
+-msgstr "添付ファイルを別名で保存…(_S)"
++msgstr "添付ファイルを別名で保存…"
+ 
+ #: shell/ev-window.c:6807
+ msgid "Zoom"
