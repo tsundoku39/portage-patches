@@ -1,6 +1,6 @@
 diff -urN a/po/ja.po b/po/ja.po
 --- a/po/ja.po	2023-04-28 14:00:56.000000000 -0700
-+++ b/po/ja.po	2023-05-14 09:03:14.698654212 -0700
++++ b/po/ja.po	2023-05-14 21:22:34.275600806 -0700
 @@ -816,7 +816,7 @@
  
  #: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1473
