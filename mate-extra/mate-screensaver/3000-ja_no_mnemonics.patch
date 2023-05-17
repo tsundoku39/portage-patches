@@ -1,0 +1,98 @@
+diff -urN a/po/ja.po b/po/ja.po
+--- a/po/ja.po	2021-11-15 14:30:55.000000000 -0800
++++ b/po/ja.po	2023-05-17 11:11:44.160998782 -0700
+@@ -53,27 +53,27 @@
+ 
+ #: data/mate-screensaver-preferences.ui:203
+ msgid "Power _Management"
+-msgstr "電源管理(_M)"
++msgstr "電源管理"
+ 
+ #: data/mate-screensaver-preferences.ui:219
+ msgid "_Preview"
+-msgstr "プレビュー(_P)"
++msgstr "プレビュー"
+ 
+ #: data/mate-screensaver-preferences.ui:279
+ msgid "_Screensaver theme:"
+-msgstr "スクリーンセーバーのテーマ(_S):"
++msgstr "スクリーンセーバーのテーマ:"
+ 
+ #: data/mate-screensaver-preferences.ui:397
+ msgid "Regard the computer as _idle after:"
+-msgstr "アイドル状態になるまでの時間(_I):"
++msgstr "アイドル状態になるまでの時間:"
+ 
+ #: data/mate-screensaver-preferences.ui:440
+ msgid "_Activate screensaver when computer is idle"
+-msgstr "アイドル状態になったらスクリーンセーバーを起動する(_A)"
++msgstr "アイドル状態になったらスクリーンセーバーを起動する"
+ 
+ #: data/mate-screensaver-preferences.ui:455
+ msgid "_Lock screen when screensaver is active"
+-msgstr "スクリーンセーバーを起動したら画面をロックする(_L):"
++msgstr "スクリーンセーバーを起動したら画面をロックする:"
+ 
+ #: data/mate-screensaver-preferences.ui:477
+ msgid "Background picture for lock screen:"
+@@ -114,23 +114,23 @@
+ 
+ #: data/lock-dialog-default.ui:233
+ msgid "_Leave Message"
+-msgstr "メッセージを残す(_L)"
++msgstr "メッセージを残す"
+ 
+ #: data/lock-dialog-default.ui:249
+ msgid "_Switch User"
+-msgstr "ユーザーを切り替える(_S)"
++msgstr "ユーザーを切り替える"
+ 
+ #: data/lock-dialog-default.ui:265
+ msgid "_Log Out"
+-msgstr "ログアウト(_L)"
++msgstr "ログアウト"
+ 
+ #: data/lock-dialog-default.ui:281 data/lock-dialog-default.ui:375
+ msgid "_Cancel"
+-msgstr "キャンセル(_C)"
++msgstr "キャンセル"
+ 
+ #: data/lock-dialog-default.ui:297 src/gs-lock-plug.c:1717
+ msgid "_Unlock"
+-msgstr "ロックの解除(_U)"
++msgstr "ロックの解除"
+ 
+ #: data/lock-dialog-default.ui:339
+ msgid "<b>Leave a message for %R:</b>"
+@@ -138,7 +138,7 @@
+ 
+ #: data/lock-dialog-default.ui:391
+ msgid "_Save"
+-msgstr "保存(_S)"
++msgstr "保存"
+ 
+ #: data/org.mate.screensaver.gschema.xml.in:10
+ msgid "Activate when idle"
+@@ -840,11 +840,11 @@
+ 
+ #: src/gs-lock-plug.c:1697
+ msgid "S_witch User..."
+-msgstr "ユーザの切り替え(_W)..."
++msgstr "ユーザの切り替え..."
+ 
+ #: src/gs-lock-plug.c:1706
+ msgid "Log _Out"
+-msgstr "ログアウト(_O)"
++msgstr "ログアウト"
+ 
+ #: src/gs-lock-plug.c:1919
+ msgid "%U on %h"
+@@ -852,7 +852,7 @@
+ 
+ #: src/gs-lock-plug.c:1934
+ msgid "_Password:"
+-msgstr "パスワード(_P):"
++msgstr "パスワード:"
+ 
+ #: src/gs-lock-plug.c:2162
+ msgid "Hide password"
