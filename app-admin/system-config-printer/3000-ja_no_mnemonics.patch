@@ -1,0 +1,345 @@
+app-admin/system-config-printer 1.15.18
+maia@tsundoku.ne.jp 2023-06-04
+
+Remove mnemonics from Japanese localized strings.
+
+diff -urN a/po/ja.po b/po/ja.po
+--- a/po/ja.po	2022-08-30 07:51:49.000000000 -0700
++++ b/po/ja.po	2023-06-04 18:12:46.456622186 -0700
+@@ -245,7 +245,7 @@
+ #: ui/NewPrinterWindow.ui:3313 ui/PrinterPropertiesDialog.ui:167
+ #: ui/ServerSettingsDialog.ui:25 ui/SMBBrowseDialog.ui:77
+ msgid "_Cancel"
+-msgstr "キャンセル(_C)"
++msgstr "キャンセル"
+ 
+ #: jobviewer.py:429
+ msgid "Cancel selected jobs"
+@@ -254,7 +254,7 @@
+ #: jobviewer.py:430 system-config-printer.py:1728
+ #: ui/PrinterPropertiesDialog.ui:1059
+ msgid "_Delete"
+-msgstr "削除(_D)"
++msgstr "削除"
+ 
+ #: jobviewer.py:431
+ msgid "Delete selected jobs"
+@@ -262,7 +262,7 @@
+ 
+ #: jobviewer.py:432
+ msgid "_Hold"
+-msgstr "保留(_H)"
++msgstr "保留"
+ 
+ #: jobviewer.py:433
+ msgid "Hold selected jobs"
+@@ -270,7 +270,7 @@
+ 
+ #: jobviewer.py:434
+ msgid "_Release"
+-msgstr "解放(_R)"
++msgstr "解放"
+ 
+ #: jobviewer.py:435
+ msgid "Release selected jobs"
+@@ -278,7 +278,7 @@
+ 
+ #: jobviewer.py:436
+ msgid "Re_print"
+-msgstr "再印刷(_P)"
++msgstr "再印刷"
+ 
+ #: jobviewer.py:437
+ msgid "Reprint selected jobs"
+@@ -286,7 +286,7 @@
+ 
+ #: jobviewer.py:438
+ msgid "Re_trieve"
+-msgstr "取得(_T)"
++msgstr "取得"
+ 
+ #: jobviewer.py:439
+ msgid "Retrieve selected jobs"
+@@ -294,15 +294,15 @@
+ 
+ #: jobviewer.py:440
+ msgid "_Move To"
+-msgstr "移動(_M)"
++msgstr "移動"
+ 
+ #: jobviewer.py:441
+ msgid "_Authenticate"
+-msgstr "認証(_A)"
++msgstr "認証"
+ 
+ #: jobviewer.py:443
+ msgid "_View Attributes"
+-msgstr "属性を表示(_V)"
++msgstr "属性を表示"
+ 
+ #: jobviewer.py:446 jobviewer.py:656
+ msgid "Close this window"
+@@ -495,7 +495,7 @@
+ 
+ #: jobviewer.py:2121
+ msgid "_Diagnose"
+-msgstr "診断(_D)"
++msgstr "診断"
+ 
+ #: jobviewer.py:2142
+ #, python-format
+@@ -2499,7 +2499,7 @@
+ 
+ #: system-config-printer.py:285
+ msgid "_Connect..."
+-msgstr "接続する(_C)..."
++msgstr "接続する..."
+ 
+ #: system-config-printer.py:286
+ msgid "Choose a different CUPS server"
+@@ -2507,7 +2507,7 @@
+ 
+ #: system-config-printer.py:288
+ msgid "_Settings..."
+-msgstr "設定(_S)..."
++msgstr "設定..."
+ 
+ #: system-config-printer.py:289
+ msgid "Adjust server settings"
+@@ -2515,39 +2515,39 @@
+ 
+ #: system-config-printer.py:291 ui/PrintersWindow.ui:41
+ msgid "_Printer"
+-msgstr "プリンター(_P)"
++msgstr "プリンター"
+ 
+ #: system-config-printer.py:293
+ msgid "_Class"
+-msgstr "クラス(_C)"
++msgstr "クラス"
+ 
+ #: system-config-printer.py:298
+ msgid "_Rename"
+-msgstr "名前を変更(_R)"
++msgstr "名前を変更"
+ 
+ #: system-config-printer.py:300
+ msgid "_Duplicate"
+-msgstr "複製(_D)"
++msgstr "複製"
+ 
+ #: system-config-printer.py:304
+ msgid "Set As De_fault"
+-msgstr "デフォルトに設定(_F)"
++msgstr "デフォルトに設定"
+ 
+ #: system-config-printer.py:308
+ msgid "_Create class"
+-msgstr "クラスの作成(_C) "
++msgstr "クラスの作成 "
+ 
+ #: system-config-printer.py:310
+ msgid "View Print _Queue"
+-msgstr "印刷キューを表示(_Q)"
++msgstr "印刷キューを表示"
+ 
+ #: system-config-printer.py:314
+ msgid "E_nabled"
+-msgstr "有効にする(_N)"
++msgstr "有効にする"
+ 
+ #: system-config-printer.py:316
+ msgid "_Shared"
+-msgstr "共有する(_S)"
++msgstr "共有する"
+ 
+ #: system-config-printer.py:321
+ msgid "Description"
+@@ -2571,11 +2571,11 @@
+ #: system-config-printer.py:387 ui/PrinterPropertiesDialog.ui:3652
+ #, fuzzy
+ msgid "Refresh"
+-msgstr "リフレッシュ(_R)"
++msgstr "リフレッシュ"
+ 
+ #: system-config-printer.py:401
+ msgid "_New"
+-msgstr "新規(_N)"
++msgstr "新規"
+ 
+ #: system-config-printer.py:772
+ #, python-format
+@@ -2635,15 +2635,15 @@
+ 
+ #: system-config-printer.py:1354
+ msgid "Set as the _system-wide default printer"
+-msgstr "システム全体のデフォルトプリンターに設定(_S)"
++msgstr "システム全体のデフォルトプリンターに設定"
+ 
+ #: system-config-printer.py:1356
+ msgid "_Clear my personal default setting"
+-msgstr "個人用のデフォルト設定を解除(_C)"
++msgstr "個人用のデフォルト設定を解除"
+ 
+ #: system-config-printer.py:1357
+ msgid "Set as my _personal default printer"
+-msgstr "個人用のデフォルトプリンターに設定(_P)"
++msgstr "個人用のデフォルトプリンターに設定"
+ 
+ #: system-config-printer.py:1362
+ msgid "setting default printer"
+@@ -2744,7 +2744,7 @@
+ 
+ #: ToolbarSearchEntry.py:74
+ msgid "_Filter:"
+-msgstr "フィルター(_F):"
++msgstr "フィルター:"
+ 
+ #: troubleshoot/base.py:36
+ msgid ""
+@@ -3190,11 +3190,11 @@
+ 
+ #: ui/ConnectDialog.ui:78
+ msgid "CUPS _server:"
+-msgstr "CUPS サーバー(_S):"
++msgstr "CUPS サーバー:"
+ 
+ #: ui/ConnectDialog.ui:116
+ msgid "Require _encryption"
+-msgstr "暗号化が必要(_E)"
++msgstr "暗号化が必要"
+ 
+ #: ui/ConnectingDialog.ui:8
+ msgid "Connecting to CUPS server"
+@@ -3210,7 +3210,7 @@
+ 
+ #: ui/InstallDialog.ui:64
+ msgid "_Install"
+-msgstr "インストール(_I)"
++msgstr "インストール"
+ 
+ #: ui/JobsWindow.ui:24
+ msgid "Refresh job list"
+@@ -3218,7 +3218,7 @@
+ 
+ #: ui/JobsWindow.ui:25 ui/SMBBrowseDialog.ui:61
+ msgid "_Refresh"
+-msgstr "リフレッシュ(_R)"
++msgstr "リフレッシュ"
+ 
+ #: ui/JobsWindow.ui:41
+ msgid "Show completed jobs"
+@@ -3226,7 +3226,7 @@
+ 
+ #: ui/JobsWindow.ui:42
+ msgid "Show _completed jobs"
+-msgstr "完了したジョブを表示(_C)"
++msgstr "完了したジョブを表示"
+ 
+ #: ui/NewPrinterName.ui:7
+ msgid "Duplicate Printer"
+@@ -3386,7 +3386,7 @@
+ 
+ #: ui/NewPrinterWindow.ui:1215
+ msgid "_Verify..."
+-msgstr "確認(_V)..."
++msgstr "確認..."
+ 
+ #: ui/NewPrinterWindow.ui:1242
+ msgid "SMB"
+@@ -3463,7 +3463,7 @@
+ 
+ #: ui/NewPrinterWindow.ui:1765
+ msgid "_Search"
+-msgstr "検索(_S)"
++msgstr "検索"
+ 
+ #: ui/NewPrinterWindow.ui:1798
+ msgid "Printer model:"
+@@ -3674,7 +3674,7 @@
+ 
+ #: ui/PrinterPropertiesDialog.ui:132
+ msgid "Co_nflicts"
+-msgstr "競合(_N)"
++msgstr "競合"
+ 
+ #: ui/PrinterPropertiesDialog.ui:197
+ msgid "_Close"
+@@ -4051,23 +4051,23 @@
+ 
+ #: ui/PrintersWindow.ui:32
+ msgid "_Server"
+-msgstr "サーバー(_S)"
++msgstr "サーバー"
+ 
+ #: ui/PrintersWindow.ui:50
+ msgid "_View"
+-msgstr "表示(_V)"
++msgstr "表示"
+ 
+ #: ui/PrintersWindow.ui:60
+ msgid "_Discovered Printers"
+-msgstr "検出されたプリンター(_D) "
++msgstr "検出されたプリンター "
+ 
+ #: ui/PrintersWindow.ui:75
+ msgid "_Help"
+-msgstr "ヘルプ(_H)"
++msgstr "ヘルプ"
+ 
+ #: ui/PrintersWindow.ui:82
+ msgid "_Troubleshoot"
+-msgstr "トラブルシューティング(_T)"
++msgstr "トラブルシューティング"
+ 
+ #: ui/PrintersWindow.ui:94
+ msgid "About"
+@@ -4095,28 +4095,28 @@
+ 
+ #: ui/ServerSettingsDialog.ui:83
+ msgid "_Show printers shared by other systems"
+-msgstr "他のシステムで共有されているプリンターを表示する(_S)"
++msgstr "他のシステムで共有されているプリンターを表示する"
+ 
+ #: ui/ServerSettingsDialog.ui:110
+ msgid "_Publish shared printers connected to this system"
+-msgstr "このシステムに接続されている共有プリンターを公開する(_P)"
++msgstr "このシステムに接続されている共有プリンターを公開する"
+ 
+ #: ui/ServerSettingsDialog.ui:126
+ msgid "Allow printing from the _Internet"
+-msgstr "インターネットからの印刷を許可する(_I)"
++msgstr "インターネットからの印刷を許可する"
+ 
+ #: ui/ServerSettingsDialog.ui:143
+ msgid "Allow _remote administration"
+-msgstr "リモート管理を許可する(_R)"
++msgstr "リモート管理を許可する"
+ 
+ #: ui/ServerSettingsDialog.ui:159
+ msgid "Allow _users to cancel any job (not just their own)"
+ msgstr ""
+-"ユーザーにジョブのキャンセルを許可する (ジョブの生成者以外であっても)(_U)"
++"ユーザーにジョブのキャンセルを許可する (ジョブの生成者以外であっても)"
+ 
+ #: ui/ServerSettingsDialog.ui:175
+ msgid "Save _debugging information for troubleshooting"
+-msgstr "トラブルシュートのためのデバッグ情報を保存する(_D)"
++msgstr "トラブルシュートのためのデバッグ情報を保存する"
+ 
+ #: ui/ServerSettingsDialog.ui:213
+ msgid "Do not preserve job history"
+@@ -4164,11 +4164,11 @@
+ 
+ #: ui/statusicon_popupmenu.ui:11
+ msgid "_Hide"
+-msgstr "隠す(_H)"
++msgstr "隠す"
+ 
+ #: ui/statusicon_popupmenu.ui:18
+ msgid "_Configure Printers"
+-msgstr "プリンターの設定(_C)"
++msgstr "プリンターの設定"
+ 
+ #: ui/statusicon_popupmenu.ui:33
+ msgid "_Quit"

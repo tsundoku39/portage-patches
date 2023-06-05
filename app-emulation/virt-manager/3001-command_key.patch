@@ -1,7 +1,7 @@
 app-emulation/virt-manager 4.1.0
 maia@tsundoku.ne.jp 2023-06-04
 
-Replace Control with Command for GUI keybindings
+Replace Control with Command for GUI keybindings.
 
 diff -urN a/ui/host.ui b/ui/host.ui
 --- a/ui/host.ui	2022-04-05 11:42:17.000000000 -0700

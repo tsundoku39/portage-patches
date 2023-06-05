@@ -1,0 +1,17 @@
+app-admin/system-config-printer 1.5.18
+maia@tsundoku.ne.jp 2023-06-04
+
+Replace Control with Command for GUI keybindings.
+
+diff -urN a/ui/JobsWindow.ui b/ui/JobsWindow.ui
+--- a/ui/JobsWindow.ui	2022-03-30 05:48:56.000000000 -0700
++++ b/ui/JobsWindow.ui	2023-06-04 18:15:17.272795896 -0700
+@@ -26,7 +26,7 @@
+                 <property name="use_underline">True</property>
+                 <property name="icon_name">view-refresh</property>
+                 <signal name="clicked" handler="on_refresh_clicked" swapped="no"/>
+-                <accelerator key="r" signal="clicked" modifiers="GDK_CONTROL_MASK"/>
++                <accelerator key="r" signal="clicked" modifiers="GDK_SUPER_MASK"/>
+               </object>
+               <packing>
+                 <property name="expand">False</property>
