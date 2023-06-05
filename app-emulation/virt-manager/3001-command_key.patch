@@ -1,0 +1,68 @@
+app-emulation/virt-manager 4.1.0
+maia@tsundoku.ne.jp 2023-06-04
+
+Replace Control with Command for GUI keybindings
+
+diff -urN a/ui/host.ui b/ui/host.ui
+--- a/ui/host.ui	2022-04-05 11:42:17.000000000 -0700
++++ b/ui/host.ui	2023-06-04 17:08:56.801982925 -0700
+@@ -51,7 +51,7 @@
+                         <property name="label">_Close</property>
+                         <property name="use-underline">True</property>
+                         <signal name="activate" handler="on_menu_file_close_activate" swapped="no"/>
+-                        <accelerator key="w" signal="activate" modifiers="GDK_CONTROL_MASK"/>
++                        <accelerator key="w" signal="activate" modifiers="GDK_SUPER_MASK"/>
+                       </object>
+                     </child>
+                     <child>
+@@ -61,7 +61,7 @@
+                         <property name="label">_Quit</property>
+                         <property name="use-underline">True</property>
+                         <signal name="activate" handler="on_menu_file_quit_activate" swapped="no"/>
+-                        <accelerator key="q" signal="activate" modifiers="GDK_CONTROL_MASK"/>
++                        <accelerator key="q" signal="activate" modifiers="GDK_SUPER_MASK"/>
+                       </object>
+                     </child>
+                   </object>
+diff -urN a/ui/manager.ui b/ui/manager.ui
+--- a/ui/manager.ui	2022-04-05 11:42:17.000000000 -0700
++++ b/ui/manager.ui	2023-06-04 17:09:02.671427509 -0700
+@@ -59,7 +59,7 @@
+                         <property name="label" translatable="yes">_Close</property>
+                         <property name="use-underline">True</property>
+                         <signal name="activate" handler="on_menu_file_close_activate" swapped="no"/>
+-                        <accelerator key="w" signal="activate" modifiers="GDK_CONTROL_MASK"/>
++                        <accelerator key="w" signal="activate" modifiers="GDK_SUPER_MASK"/>
+                       </object>
+                     </child>
+                     <child>
+@@ -69,7 +69,7 @@
+                         <property name="label" translatable="yes">_Quit</property>
+                         <property name="use-underline">True</property>
+                         <signal name="activate" handler="on_menu_file_quit_activate" swapped="no"/>
+-                        <accelerator key="q" signal="activate" modifiers="GDK_CONTROL_MASK"/>
++                        <accelerator key="q" signal="activate" modifiers="GDK_SUPER_MASK"/>
+                       </object>
+                     </child>
+                   </object>
+diff -urN a/ui/vmwindow.ui b/ui/vmwindow.ui
+--- a/ui/vmwindow.ui	2022-04-05 11:42:17.000000000 -0700
++++ b/ui/vmwindow.ui	2023-06-04 17:09:10.270709886 -0700
+@@ -49,7 +49,7 @@
+                         <property name="label" translatable="yes">_Close</property>
+                         <property name="use-underline">True</property>
+                         <signal name="activate" handler="on_details_menu_close_activate" swapped="no"/>
+-                        <accelerator key="w" signal="activate" modifiers="GDK_SHIFT_MASK | GDK_CONTROL_MASK"/>
++                        <accelerator key="w" signal="activate" modifiers="GDK_SHIFT_MASK | GDK_SUPER_MASK"/>
+                       </object>
+                     </child>
+                     <child>
+@@ -59,7 +59,7 @@
+                         <property name="label" translatable="yes">_Quit</property>
+                         <property name="use-underline">True</property>
+                         <signal name="activate" handler="on_details_menu_quit_activate" swapped="no"/>
+-                        <accelerator key="q" signal="activate" modifiers="GDK_SHIFT_MASK | GDK_CONTROL_MASK"/>
++                        <accelerator key="q" signal="activate" modifiers="GDK_SHIFT_MASK | GDK_SUPER_MASK"/>
+                       </object>
+                     </child>
+                   </object>

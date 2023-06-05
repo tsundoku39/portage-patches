@@ -1,0 +1,1728 @@
+app-emulation/virt-manager 4.1.0
+maia@tsundoku.ne.jp 2023-06-04
+
+Remove mnemonics from Japanese localized strings.
+
+diff -urN a/po/ja.po b/po/ja.po
+--- a/po/ja.po	2022-08-04 12:08:02.000000000 -0700
++++ b/po/ja.po	2023-06-03 09:38:46.992793568 -0700
+@@ -109,22 +109,22 @@
+ 
+ #: ui/addhardware.ui:153
+ msgid "_Device type:"
+-msgstr "デバイスの種類(_D):"
++msgstr "デバイスの種類:"
+ 
+ #: ui/addhardware.ui:184
+ msgid "_Bus type:"
+-msgstr "バスの種類(_B):"
++msgstr "バスの種類:"
+ 
+ #: ui/addhardware.ui:261 ui/addhardware.ui:532 ui/addhardware.ui:1152
+ #: ui/createpool.ui:355 ui/fsdetails.ui:87 ui/gfxdetails.ui:107
+ #: ui/tpmdetails.ui:49
+ msgid "_Type:"
+-msgstr "種類(_T):"
++msgstr "種類:"
+ 
+ #: ui/addhardware.ui:275 ui/addhardware.ui:613 ui/addhardware.ui:937
+ #: ui/addhardware.ui:1005 ui/addhardware.ui:1282 ui/tpmdetails.ui:99
+ msgid "_Model:"
+-msgstr "モデル(_M):"
++msgstr "モデル:"
+ 
+ #: ui/addhardware.ui:345
+ msgid "ctrl"
+@@ -136,49 +136,49 @@
+ 
+ #: ui/addhardware.ui:421 ui/details.ui:2976
+ msgid "_MAC address:"
+-msgstr "MAC アドレス(_M):"
++msgstr "MAC アドレス:"
+ 
+ #: ui/addhardware.ui:436 ui/details.ui:2962
+ msgid "Device mode_l:"
+-msgstr "デバイスのモデル(_L):"
++msgstr "デバイスのモデル:"
+ 
+ #: ui/addhardware.ui:673 ui/addhardware.ui:1229
+ msgid "Host _Device:"
+-msgstr "ホストデバイス(_D):"
++msgstr "ホストデバイス:"
+ 
+ #: ui/addhardware.ui:749
+ msgid "_Path:"
+-msgstr "パス(_P):"
++msgstr "パス:"
+ 
+ #: ui/addhardware.ui:763
+ msgid "Device _Type:"
+-msgstr "デバイスの種類(_T):"
++msgstr "デバイスの種類:"
+ 
+ #: ui/addhardware.ui:789
+ msgid "T_ype:"
+-msgstr "種類(_Y):"
++msgstr "種類:"
+ 
+ #: ui/addhardware.ui:803 ui/clone.ui:480 ui/createnet.ui:213
+ #: ui/createpool.ui:330 ui/createvm.ui:2152 ui/createvol.ui:185
+ #: ui/details.ui:218 ui/host.ui:169 ui/snapshotsnew.ui:103
+ msgid "_Name:"
+-msgstr "名前(_N):"
++msgstr "名前:"
+ 
+ #: ui/addhardware.ui:840
+ msgid "_Auto socket:"
+-msgstr "自動ソケット(_A):"
++msgstr "自動ソケット:"
+ 
+ #: ui/addhardware.ui:868
+ msgid "_Channel:"
+-msgstr "チャンネル(_C):"
++msgstr "チャンネル:"
+ 
+ #: ui/addhardware.ui:1018 ui/details.ui:4000
+ msgid "Ac_tion:"
+-msgstr "アクション(_T):"
++msgstr "アクション:"
+ 
+ #: ui/addhardware.ui:1110 ui/createnet.ui:139
+ msgid "_Mode:"
+-msgstr "モード(_M):"
++msgstr "モード:"
+ 
+ #: ui/addhardware.ui:1263 ui/details.ui:4688
+ msgid "rng"
+@@ -194,16 +194,16 @@
+ #: ui/delete.ui:181 ui/details.ui:4866 ui/hoststorage.ui:154 ui/migrate.ui:638
+ #: ui/snapshotsnew.ui:253
+ msgid "_Cancel"
+-msgstr "キャンセル(_C)"
++msgstr "キャンセル"
+ 
+ #: ui/addhardware.ui:1457 ui/createnet.ui:813 ui/createpool.ui:493
+ #: ui/createvm.ui:2446 ui/createvol.ui:477 ui/snapshotsnew.ui:268
+ msgid "_Finish"
+-msgstr "完了(_F)"
++msgstr "完了"
+ 
+ #: ui/addstorage.ui:33
+ msgid "C_reate a disk image for the virtual machine"
+-msgstr "仮想マシン用にディスクイメージを作成する(_R)"
++msgstr "仮想マシン用にディスクイメージを作成する"
+ 
+ #: ui/addstorage.ui:62
+ msgid "0.0"
+@@ -215,39 +215,39 @@
+ 
+ #: ui/addstorage.ui:156
+ msgid "_Select or create custom storage"
+-msgstr "カスタムストレージの選択または作成(_S)"
++msgstr "カスタムストレージの選択または作成"
+ 
+ #: ui/addstorage.ui:185
+ msgid "_Manage..."
+-msgstr "管理(_M)..."
++msgstr "管理..."
+ 
+ #: ui/addstorage.ui:254
+ msgid "Cac_he mode:"
+-msgstr "キャッシュモデル(_H):"
++msgstr "キャッシュモデル:"
+ 
+ #: ui/addstorage.ui:285
+ msgid "Discard mod_e:"
+-msgstr "Discard モード(_E):"
++msgstr "Discard モード:"
+ 
+ #: ui/addstorage.ui:316
+ msgid "R_eadonly:"
+-msgstr "読み込み専用(_E):"
++msgstr "読み込み専用:"
+ 
+ #: ui/addstorage.ui:330
+ msgid "Sharea_ble:"
+-msgstr "共有可能(_B):"
++msgstr "共有可能:"
+ 
+ #: ui/addstorage.ui:371
+ msgid "Removab_le:"
+-msgstr "リムーバブル(_L):"
++msgstr "リムーバブル:"
+ 
+ #: ui/addstorage.ui:399
+ msgid "Seria_l:"
+-msgstr "シリアル(_L):"
++msgstr "シリアル:"
+ 
+ #: ui/addstorage.ui:425
+ msgid "Advanced _options"
+-msgstr "詳細なオプション(_O)"
++msgstr "詳細なオプション"
+ 
+ #: ui/asyncjob.ui:8
+ msgid "Operation in progress"
+@@ -264,7 +264,7 @@
+ #: ui/asyncjob.ui:188 ui/vmwindow.ui:132 ui/xmleditor.ui:26
+ #: virtManager/manager.py:298
+ msgid "_Details"
+-msgstr "詳細(_D)"
++msgstr "詳細"
+ 
+ #: ui/clone.ui:8
+ msgid "Change storage path"
+@@ -272,7 +272,7 @@
+ 
+ #: ui/clone.ui:41 ui/connectauth.ui:37
+ msgid "_OK"
+-msgstr "OK(_O)"
++msgstr "OK"
+ 
+ #: ui/clone.ui:128 ui/hoststorage.ui:417
+ msgid "Size:"
+@@ -292,15 +292,15 @@
+ 
+ #: ui/clone.ui:222
+ msgid "Create a new disk (c_lone) for the virtual machine"
+-msgstr "仮想マシン用に新しい (複製) ディスクを作成する(_L)"
++msgstr "仮想マシン用に新しい (複製) ディスクを作成する"
+ 
+ #: ui/clone.ui:256 ui/createvol.ui:404 ui/fsdetails.ui:63
+ msgid "_Browse..."
+-msgstr "参照(_B)..."
++msgstr "参照..."
+ 
+ #: ui/clone.ui:273
+ msgid "New _Path:"
+-msgstr "新しいパス(_P):"
++msgstr "新しいパス:"
+ 
+ #: ui/clone.ui:306
+ msgid "Clone Virtual Machine"
+@@ -324,7 +324,7 @@
+ 
+ #: ui/clone.ui:582
+ msgid "_Details..."
+-msgstr "詳細(_D)..."
++msgstr "詳細..."
+ 
+ #: ui/clone.ui:651
+ msgid ""
+@@ -339,7 +339,7 @@
+ 
+ #: ui/clone.ui:706
+ msgid "C_lone"
+-msgstr "複製(_L)"
++msgstr "複製"
+ 
+ #: ui/console.ui:17 ui/console.ui:233
+ msgid "<b>The console is currently unavailable</b>"
+@@ -351,19 +351,19 @@
+ 
+ #: ui/console.ui:125
+ msgid "_Password:"
+-msgstr "パスワード(_P):"
++msgstr "パスワード:"
+ 
+ #: ui/console.ui:139 ui/createconn.ui:200
+ msgid "_Username:"
+-msgstr "ユーザー名(_U):"
++msgstr "ユーザー名:"
+ 
+ #: ui/console.ui:174
+ msgid "_Login"
+-msgstr "ログイン(_L)"
++msgstr "ログイン"
+ 
+ #: ui/console.ui:188
+ msgid "_Save this password in your keyring"
+-msgstr "キーリングにこのパスワードを保存する(_S)"
++msgstr "キーリングにこのパスワードを保存する"
+ 
+ #: ui/console.ui:192
+ msgid "Check to save password, uncheck to forget password."
+@@ -371,7 +371,7 @@
+ 
+ #: ui/console.ui:258
+ msgid "_Connect to console"
+-msgstr "コンソールに接続(_C)"
++msgstr "コンソールに接続"
+ 
+ #: ui/createconn.ui:8
+ msgid "Add Connection"
+@@ -379,23 +379,23 @@
+ 
+ #: ui/createconn.ui:41
+ msgid "Co_nnect"
+-msgstr "接続(_N)"
++msgstr "接続"
+ 
+ #: ui/createconn.ui:92
+ msgid "_Hypervisor:"
+-msgstr "ハイパーバイザー(_H):"
++msgstr "ハイパーバイザー:"
+ 
+ #: ui/createconn.ui:114
+ msgid "Connect to _remote host over SSH"
+-msgstr "SSH経由でリモートホストへ接続(_R)"
++msgstr "SSH経由でリモートホストへ接続"
+ 
+ #: ui/createconn.ui:133
+ msgid "_Autoconnect:"
+-msgstr "自動接続(_A):"
++msgstr "自動接続:"
+ 
+ #: ui/createconn.ui:183
+ msgid "H_ostname:"
+-msgstr "ホスト名(_O):"
++msgstr "ホスト名:"
+ 
+ #: ui/createconn.ui:234
+ msgid ""
+@@ -411,7 +411,7 @@
+ 
+ #: ui/createconn.ui:259
+ msgid "Cu_stom URI:"
+-msgstr "カスタム URI(_S):"
++msgstr "カスタム URI:"
+ 
+ #: ui/createconn.ui:308
+ msgid "Generated URI:"
+@@ -427,23 +427,23 @@
+ 
+ #: ui/createnet.ui:152
+ msgid "Fo_rward to:"
+-msgstr "転送先(_R):"
++msgstr "転送先:"
+ 
+ #: ui/createnet.ui:166
+ msgid "Device _List:"
+-msgstr "デバイスの一覧(_L):"
++msgstr "デバイスの一覧:"
+ 
+ #: ui/createnet.ui:244
+ msgid "De_vice:"
+-msgstr "デバイス(_V):"
++msgstr "デバイス:"
+ 
+ #: ui/createnet.ui:287
+ msgid "_Enable IPv4"
+-msgstr "IPv4 の有効化(_E)"
++msgstr "IPv4 の有効化"
+ 
+ #: ui/createnet.ui:326 ui/createnet.ui:537
+ msgid "_Network:"
+-msgstr "ネットワーク(_N):"
++msgstr "ネットワーク:"
+ 
+ #: ui/createnet.ui:417 ui/createnet.ui:628
+ msgid "Start:"
+@@ -463,7 +463,7 @@
+ 
+ #: ui/createnet.ui:498
+ msgid "_Enable IPv6"
+-msgstr "IPv6 の有効化(_E)"
++msgstr "IPv6 の有効化"
+ 
+ #: ui/createnet.ui:649
+ msgid "Enable DHCPv6"
+@@ -475,11 +475,11 @@
+ 
+ #: ui/createnet.ui:728
+ msgid "Use net_work name"
+-msgstr "ネットワーク名の使用(_W)"
++msgstr "ネットワーク名の使用"
+ 
+ #: ui/createnet.ui:746
+ msgid "Cust_om"
+-msgstr "カスタム(_O)"
++msgstr "カスタム"
+ 
+ #: ui/createnet.ui:765
+ msgid "<b>DNS domain name</b>"
+@@ -495,15 +495,15 @@
+ 
+ #: ui/createpool.ui:149
+ msgid "Tar_get Path:"
+-msgstr "ターゲットパス(_G):"
++msgstr "ターゲットパス:"
+ 
+ #: ui/createpool.ui:162 ui/createvol.ui:199
+ msgid "F_ormat:"
+-msgstr "フォーマット(_O):"
++msgstr "フォーマット:"
+ 
+ #: ui/createpool.ui:176
+ msgid "Host Na_me:"
+-msgstr "ホスト名(_M):"
++msgstr "ホスト名:"
+ 
+ #: ui/createpool.ui:204
+ msgid "Initiator _IQN:"
+@@ -511,11 +511,11 @@
+ 
+ #: ui/createpool.ui:215
+ msgid "B_rowse"
+-msgstr "参照(_R)"
++msgstr "参照"
+ 
+ #: ui/createpool.ui:235
+ msgid "Bro_wse"
+-msgstr "参照(_W)"
++msgstr "参照"
+ 
+ #: ui/createvm.ui:19
+ msgid "New VM"
+@@ -531,11 +531,11 @@
+ 
+ #: ui/createvm.ui:185
+ msgid "_Virtual machine"
+-msgstr "仮想マシン(_V)"
++msgstr "仮想マシン"
+ 
+ #: ui/createvm.ui:203
+ msgid "_Container"
+-msgstr "コンテナー(_C)"
++msgstr "コンテナー"
+ 
+ #: ui/createvm.ui:244
+ msgid "Choose how you would like to install the operating system"
+@@ -543,19 +543,19 @@
+ 
+ #: ui/createvm.ui:261
+ msgid "_Local install media (ISO image or CDROM)"
+-msgstr "ローカルのインストールメディア (ISO イメージまたは CD-ROMドライブ)(_L)"
++msgstr "ローカルのインストールメディア (ISO イメージまたは CD-ROMドライブ)"
+ 
+ #: ui/createvm.ui:279
+ msgid "Network _Install (HTTP, HTTPS, or FTP)"
+-msgstr "ネットワークインストール(HTTP, HTTPS, or FTP) (_I)"
++msgstr "ネットワークインストール(HTTP, HTTPS, or FTP) "
+ 
+ #: ui/createvm.ui:297
+ msgid "Import _existing disk image"
+-msgstr "既存のディスクイメージをインポート(_E)"
++msgstr "既存のディスクイメージをインポート"
+ 
+ #: ui/createvm.ui:315
+ msgid "Ma_nual install"
+-msgstr "手動インストール(_N)"
++msgstr "手動インストール"
+ 
+ #: ui/createvm.ui:355
+ msgid "Choose the container type"
+@@ -563,31 +563,31 @@
+ 
+ #: ui/createvm.ui:372
+ msgid "_Application container"
+-msgstr "アプリケーションコンテナー(_A)"
++msgstr "アプリケーションコンテナー"
+ 
+ #: ui/createvm.ui:390
+ msgid "O_perating system container"
+-msgstr "オペレーティングシステムコンテナー(_O)"
++msgstr "オペレーティングシステムコンテナー"
+ 
+ #: ui/createvm.ui:438
+ msgid "C_onnection:"
+-msgstr "接続(_O):"
++msgstr "接続:"
+ 
+ #: ui/createvm.ui:648
+ msgid "_Xen Type:"
+-msgstr "Xen の種類(_X):"
++msgstr "Xen の種類:"
+ 
+ #: ui/createvm.ui:662
+ msgid "_Architecture:"
+-msgstr "アーキテクチャー(_A):"
++msgstr "アーキテクチャー:"
+ 
+ #: ui/createvm.ui:676
+ msgid "_Machine Type:"
+-msgstr "マシンの種類(_M):"
++msgstr "マシンの種類:"
+ 
+ #: ui/createvm.ui:701
+ msgid "_Virt Type:"
+-msgstr "仮想化の種類(_V):"
++msgstr "仮想化の種類:"
+ 
+ #: ui/createvm.ui:727
+ msgid "Architecture options"
+@@ -600,11 +600,11 @@
+ 
+ #: ui/createvm.ui:776
+ msgid "Choose _ISO or CDROM install media:"
+-msgstr "ISO または CDROM インストールメディアの選択(_I):"
++msgstr "ISO または CDROM インストールメディアの選択:"
+ 
+ #: ui/createvm.ui:806
+ msgid "Bro_wse..."
+-msgstr "参照(_W)..."
++msgstr "参照..."
+ 
+ #: ui/createvm.ui:837
+ msgid "ISO"
+@@ -612,15 +612,15 @@
+ 
+ #: ui/createvm.ui:854
+ msgid "Provide the operating system install U_RL:"
+-msgstr "オペレーティングシステムのインストール URL の指定(_R):"
++msgstr "オペレーティングシステムのインストール URL の指定:"
+ 
+ #: ui/createvm.ui:918
+ msgid "Kerne_l options:"
+-msgstr "カーネルのオプション(_L):"
++msgstr "カーネルのオプション:"
+ 
+ #: ui/createvm.ui:951
+ msgid "URL _Options"
+-msgstr "URL のオプション(_O):"
++msgstr "URL のオプション:"
+ 
+ #: ui/createvm.ui:982
+ msgid "URL"
+@@ -636,7 +636,7 @@
+ 
+ #: ui/createvm.ui:1072 ui/createvm.ui:1200 ui/createvm.ui:1287
+ msgid "B_rowse..."
+-msgstr "参照(_R)..."
++msgstr "参照..."
+ 
+ #: ui/createvm.ui:1126
+ msgid ""
+@@ -648,11 +648,11 @@
+ 
+ #: ui/createvm.ui:1171
+ msgid "Provide the _application path:"
+-msgstr "アプリケーションパスを提供します(_A):"
++msgstr "アプリケーションパスを提供します:"
+ 
+ #: ui/createvm.ui:1252
+ msgid "Provide the existing OS root _directory:"
+-msgstr "既存の OS ルートディレクトリーを指定してください(_D):"
++msgstr "既存の OS ルートディレクトリーを指定してください:"
+ 
+ #: ui/createvm.ui:1334
+ msgid ""
+@@ -718,7 +718,7 @@
+ 
+ #: ui/createvm.ui:1661
+ msgid "Select _container template:"
+-msgstr "コンテナーのテンプレート(_C)を選択する:"
++msgstr "コンテナーのテンプレートを選択する:"
+ 
+ #: ui/createvm.ui:1704
+ msgid "VZ templates"
+@@ -726,11 +726,11 @@
+ 
+ #: ui/createvm.ui:1729
+ msgid "C_hoose the operating system you are installing:"
+-msgstr "インストールするオペレーティングシステムの選択(_H):"
++msgstr "インストールするオペレーティングシステムの選択:"
+ 
+ #: ui/createvm.ui:1758
+ msgid "A_utomatically detect from the installation media / source"
+-msgstr "インストールメディアまたはソースから自動検出します(_U)"
++msgstr "インストールメディアまたはソースから自動検出します"
+ 
+ #: ui/createvm.ui:1807
+ msgid "Install"
+@@ -742,11 +742,11 @@
+ 
+ #: ui/createvm.ui:1853
+ msgid "_Memory:"
+-msgstr "メモリ(_M):"
++msgstr "メモリ:"
+ 
+ #: ui/createvm.ui:1868
+ msgid "C_PUs:"
+-msgstr "CPU(_P):"
++msgstr "CPU:"
+ 
+ #: ui/createvm.ui:1903
+ msgid "(Insert host mem)"
+@@ -758,7 +758,7 @@
+ 
+ #: ui/createvm.ui:2002
+ msgid "_Enable storage for this virtual machine"
+-msgstr "この仮想マシンにストレージを割り当てる(_E)"
++msgstr "この仮想マシンにストレージを割り当てる"
+ 
+ #: ui/createvm.ui:2040 virtManager/addhardware.py:216
+ #: virtManager/addhardware.py:981 virtManager/clone.py:277
+@@ -771,7 +771,7 @@
+ 
+ #: ui/createvm.ui:2119
+ msgid "C_ustomize configuration before install"
+-msgstr "インストールの前に設定をカスタマイズする(_U)"
++msgstr "インストールの前に設定をカスタマイズする"
+ 
+ #: ui/createvm.ui:2183
+ msgid "Install:"
+@@ -791,7 +791,7 @@
+ 
+ #: ui/createvm.ui:2351
+ msgid "N_etwork selection"
+-msgstr "ネットワークの選択(_E)"
++msgstr "ネットワークの選択"
+ 
+ #: ui/createvm.ui:2371
+ msgid "Finish"
+@@ -799,11 +799,11 @@
+ 
+ #: ui/createvm.ui:2415
+ msgid "_Back"
+-msgstr "戻る(_B)"
++msgstr "戻る"
+ 
+ #: ui/createvm.ui:2431
+ msgid "_Forward"
+-msgstr "次へ(_B)"
++msgstr "次へ"
+ 
+ #: ui/createvol.ui:24
+ msgid "Add a Storage Volume"
+@@ -831,19 +831,19 @@
+ 
+ #: ui/createvol.ui:320
+ msgid "Ca_pacity:"
+-msgstr "容量(_P):"
++msgstr "容量:"
+ 
+ #: ui/createvol.ui:331
+ msgid "_Allocate entire volume now"
+-msgstr "今すぐボリューム全体を割り当てる(_A)"
++msgstr "今すぐボリューム全体を割り当てる"
+ 
+ #: ui/createvol.ui:377
+ msgid "Pa_th:"
+-msgstr "パス(_T):"
++msgstr "パス:"
+ 
+ #: ui/createvol.ui:423
+ msgid "_Backing store"
+-msgstr "バッキングストア(_B)"
++msgstr "バッキングストア"
+ 
+ #: ui/delete.ui:9 virtManager/delete.py:287
+ msgid "Delete Virtual Machine"
+@@ -858,15 +858,15 @@
+ 
+ #: ui/delete.ui:124
+ msgid "Delete _associated storage files"
+-msgstr "関連するストレージファイルを削除する(_A)"
++msgstr "関連するストレージファイルを削除する"
+ 
+ #: ui/delete.ui:196 ui/manager.ui:110 virtManager/vmmenu.py:91
+ msgid "_Delete"
+-msgstr "削除(_D)"
++msgstr "削除"
+ 
+ #: ui/details.ui:122
+ msgid "A_dd Hardware"
+-msgstr "ハードウェアを追加(_D)"
++msgstr "ハードウェアを追加"
+ 
+ #: ui/details.ui:194 ui/snapshotsnew.ui:164
+ msgid "Status:"
+@@ -878,7 +878,7 @@
+ 
+ #: ui/details.ui:257
+ msgid "T_itle:"
+-msgstr "表示名(_T):"
++msgstr "表示名:"
+ 
+ #: ui/details.ui:288
+ msgid "Shut down"
+@@ -886,7 +886,7 @@
+ 
+ #: ui/details.ui:320
+ msgid "D_escription:"
+-msgstr "説明(_E):"
++msgstr "説明:"
+ 
+ #: ui/details.ui:364
+ msgid "<b>Basic Details</b>"
+@@ -906,15 +906,15 @@
+ 
+ #: ui/details.ui:475
+ msgid "Machine _Type: "
+-msgstr "マシン形式(_T): "
++msgstr "マシン形式: "
+ 
+ #: ui/details.ui:488
+ msgid "Chipse_t:"
+-msgstr "チップセット(_T):"
++msgstr "チップセット:"
+ 
+ #: ui/details.ui:503
+ msgid "Firm_ware:"
+-msgstr "ファームウェア(_W):"
++msgstr "ファームウェア:"
+ 
+ #: ui/details.ui:663
+ msgid "<b>Hypervisor Details</b>"
+@@ -922,7 +922,7 @@
+ 
+ #: ui/details.ui:767
+ msgid "<b>Operating Sys_tem</b>"
+-msgstr "<b>オペレーティングシステム(_T)</b>"
++msgstr "<b>オペレーティングシステム</b>"
+ 
+ #: ui/details.ui:822
+ msgid "<b>Applications</b>"
+@@ -958,7 +958,7 @@
+ 
+ #: ui/details.ui:1310
+ msgid "vCPU a_llocation:"
+-msgstr "仮想 CPU 割り当て(_L):"
++msgstr "仮想 CPU 割り当て:"
+ 
+ #: ui/details.ui:1327
+ msgid "2"
+@@ -975,11 +975,11 @@
+ #: ui/details.ui:1441 ui/details.ui:3420 ui/details.ui:3879 ui/details.ui:4015
+ #: ui/details.ui:4174
+ msgid "M_odel:"
+-msgstr "モデル(_O):"
++msgstr "モデル:"
+ 
+ #: ui/details.ui:1452 virtManager/details/details.py:1947
+ msgid "Copy host CP_U configuration"
+-msgstr "ホスト CPU の設定をコピーする (_U)"
++msgstr "ホスト CPU の設定をコピーする "
+ 
+ #: ui/details.ui:1493
+ msgid "Enable available CPU security flaw mitigations"
+@@ -987,23 +987,23 @@
+ 
+ #: ui/details.ui:1519
+ msgid "<b>Configu_ration</b>"
+-msgstr "<b>設定(_R)</b>"
++msgstr "<b>設定</b>"
+ 
+ #: ui/details.ui:1549
+ msgid "Manuall_y set CPU topology"
+-msgstr "CPU トポロジーの手動設定(_Y)"
++msgstr "CPU トポロジーの手動設定"
+ 
+ #: ui/details.ui:1577
+ msgid "Thread_s:"
+-msgstr "スレッド数(_S):"
++msgstr "スレッド数:"
+ 
+ #: ui/details.ui:1591
+ msgid "Cor_es:"
+-msgstr "コア数(_E):"
++msgstr "コア数:"
+ 
+ #: ui/details.ui:1605
+ msgid "Socke_ts:"
+-msgstr "ソケット数(_T):"
++msgstr "ソケット数:"
+ 
+ #: ui/details.ui:1621 ui/details.ui:1639 ui/details.ui:1657
+ msgid "1"
+@@ -1011,15 +1011,15 @@
+ 
+ #: ui/details.ui:1696
+ msgid "<b>To_pology</b>"
+-msgstr "<b>トポロジー(_P)</b>"
++msgstr "<b>トポロジー</b>"
+ 
+ #: ui/details.ui:1761
+ msgid "Current a_llocation:"
+-msgstr "現在の割り当て(_L):"
++msgstr "現在の割り当て:"
+ 
+ #: ui/details.ui:1776
+ msgid "Ma_ximum allocation:"
+-msgstr "最大割り当て量(_X):"
++msgstr "最大割り当て量:"
+ 
+ #: ui/details.ui:1791
+ msgid "Total host memory:"
+@@ -1045,7 +1045,7 @@
+ 
+ #: ui/details.ui:1995
+ msgid "Start virt_ual machine on host boot up"
+-msgstr "ホスト起動時に仮想マシンを起動する(_U)"
++msgstr "ホスト起動時に仮想マシンを起動する"
+ 
+ #: ui/details.ui:2016
+ msgid "<b>Autostart</b>"
+@@ -1053,7 +1053,7 @@
+ 
+ #: ui/details.ui:2063
+ msgid "Init _path:"
+-msgstr "Init のパス(_P):"
++msgstr "Init のパス:"
+ 
+ #: ui/details.ui:2077
+ msgid "Init ar_gs:"
+@@ -1065,15 +1065,15 @@
+ 
+ #: ui/details.ui:2141
+ msgid "Ena_ble direct kernel boot"
+-msgstr "直接カーネル起動を有効にする(_B)"
++msgstr "直接カーネル起動を有効にする"
+ 
+ #: ui/details.ui:2174
+ msgid "Ke_rnel path:"
+-msgstr "カーネルのパス(_R):"
++msgstr "カーネルのパス:"
+ 
+ #: ui/details.ui:2190
+ msgid "_Initrd path:"
+-msgstr "Initrd のパス(_I):"
++msgstr "Initrd のパス:"
+ 
+ #: ui/details.ui:2221 ui/details.ui:2266 ui/details.ui:2357
+ msgid "Browse"
+@@ -1081,15 +1081,15 @@
+ 
+ #: ui/details.ui:2296
+ msgid "Kernel ar_gs:"
+-msgstr "カーネルの引数(_G):"
++msgstr "カーネルの引数:"
+ 
+ #: ui/details.ui:2326
+ msgid "D_TB path:"
+-msgstr "DTBパス(_T):"
++msgstr "DTBパス:"
+ 
+ #: ui/details.ui:2419
+ msgid "<b>Dir_ect kernel boot</b>"
+-msgstr "<b>直接カーネル起動(_E)</b>"
++msgstr "<b>直接カーネル起動</b>"
+ 
+ #: ui/details.ui:2450
+ msgid "Enable boot me_nu"
+@@ -1105,11 +1105,11 @@
+ 
+ #: ui/details.ui:2679
+ msgid "Source _path:"
+-msgstr "ソースパス(_P):"
++msgstr "ソースパス:"
+ 
+ #: ui/details.ui:2747
+ msgid "_Browse"
+-msgstr "参照(_B)"
++msgstr "参照"
+ 
+ #: ui/details.ui:2778 ui/details.ui:3521
+ msgid "Device type:"
+@@ -1117,7 +1117,7 @@
+ 
+ #: ui/details.ui:2791
+ msgid "Disk b_us:"
+-msgstr "ディスクバス(_U):"
++msgstr "ディスクバス:"
+ 
+ #: ui/details.ui:2828
+ msgid "disk-bus-label"
+@@ -1129,7 +1129,7 @@
+ 
+ #: ui/details.ui:3080
+ msgid "Link _state:"
+-msgstr "リンクの状態(_S):"
++msgstr "リンクの状態:"
+ 
+ #: ui/details.ui:3091
+ msgid "active"
+@@ -1141,7 +1141,7 @@
+ 
+ #: ui/details.ui:3155
+ msgid "I_P address:"
+-msgstr "IP アドレス(_P):"
++msgstr "IP アドレス:"
+ 
+ #: ui/details.ui:3177
+ msgid "<b>Virtual Network Interface</b>"
+@@ -1233,7 +1233,7 @@
+ 
+ #: ui/details.ui:4347 ui/migrate.ui:390
+ msgid "M_ode:"
+-msgstr "モード(_O):"
++msgstr "モード:"
+ 
+ #: ui/details.ui:4392
+ msgid "<b>Smartcard Device</b>"
+@@ -1284,23 +1284,23 @@
+ #: ui/details.ui:4886 ui/hostnets.ui:652 ui/hoststorage.ui:186
+ #: ui/snapshots.ui:499
+ msgid "_Apply"
+-msgstr "適用(_A)"
++msgstr "適用"
+ 
+ #: ui/fsdetails.ui:30
+ msgid "E_xport filesystem as readonly mount"
+-msgstr "読み込み専用のマウントとしてファイルシステムをエクスポートする(_X)"
++msgstr "読み込み専用のマウントとしてファイルシステムをエクスポートする"
+ 
+ #: ui/fsdetails.ui:101
+ msgid "_Driver:"
+-msgstr "ドライバー(_D):"
++msgstr "ドライバー:"
+ 
+ #: ui/fsdetails.ui:129
+ msgid "Ta_rget path:"
+-msgstr "ターゲットパス(_R):"
++msgstr "ターゲットパス:"
+ 
+ #: ui/fsdetails.ui:196
+ msgid "_Format:"
+-msgstr "形式(_F):"
++msgstr "形式:"
+ 
+ #: ui/fsdetails.ui:280
+ msgid "blah foo warning message"
+@@ -1312,20 +1312,20 @@
+ 
+ #: ui/gfxdetails.ui:121
+ msgid "Addr_ess:"
+-msgstr "アドレス(_E):"
++msgstr "アドレス:"
+ 
+ #: ui/gfxdetails.ui:137
+ msgid "Pa_ssword:"
+-msgstr "パスワード(_S):"
++msgstr "パスワード:"
+ 
+ #: ui/gfxdetails.ui:151 ui/migrate.ui:247
+ msgid "_Port:"
+-msgstr "ポート(_P):"
++msgstr "ポート:"
+ 
+ #: ui/gfxdetails.ui:168 ui/vsockdetails.ui:39
+ #: virtManager/device/gfxdetails.py:211
+ msgid "A_uto"
+-msgstr "自動(_U)"
++msgstr "自動"
+ 
+ #: ui/gfxdetails.ui:193 ui/vsockdetails.ui:64
+ msgid "5900"
+@@ -1333,11 +1333,11 @@
+ 
+ #: ui/gfxdetails.ui:261
+ msgid "Open_GL:"
+-msgstr "Open GL(_G):"
++msgstr "Open GL:"
+ 
+ #: ui/gfxdetails.ui:275
+ msgid "L_isten type:"
+-msgstr "リッスンタイプ(_I):"
++msgstr "リッスンタイプ:"
+ 
+ #: ui/gfxdetails.ui:365
+ msgid "OpenGL only works with 'virtio' graphics with '3D acceleration' enabled"
+@@ -1350,11 +1350,11 @@
+ 
+ #: ui/host.ui:27 ui/manager.ui:26 ui/vmwindow.ui:25
+ msgid "_File"
+-msgstr "ファイル(_F)"
++msgstr "ファイル"
+ 
+ #: ui/host.ui:36 ui/vmwindow.ui:34
+ msgid "_View Manager"
+-msgstr "仮想マシンマネージャーを表示(_V)"
++msgstr "仮想マシンマネージャーを表示"
+ 
+ #: ui/host.ui:116
+ msgid "Libvirt URI:"
+@@ -1362,7 +1362,7 @@
+ 
+ #: ui/host.ui:184
+ msgid "A_utoconnect:"
+-msgstr "自動接続(_U):"
++msgstr "自動接続:"
+ 
+ #: ui/host.ui:199
+ msgid "<b>Basic details</b>"
+@@ -1370,19 +1370,19 @@
+ 
+ #: ui/host.ui:352
+ msgid "_Overview"
+-msgstr "概要(_O)"
++msgstr "概要"
+ 
+ #: ui/host.ui:375
+ msgid "_Virtual Networks"
+-msgstr "仮想ネットワーク(_V)"
++msgstr "仮想ネットワーク"
+ 
+ #: ui/host.ui:399
+ msgid "_Storage"
+-msgstr "ストレージ(_S)"
++msgstr "ストレージ"
+ 
+ #: ui/hostnets.ui:187 ui/hoststorage.ui:403
+ msgid "A_utostart:"
+-msgstr "自動起動(_U):"
++msgstr "自動起動:"
+ 
+ #: ui/hostnets.ui:201
+ msgid "Domain:"
+@@ -1446,7 +1446,7 @@
+ 
+ #: ui/hoststorage.ui:138
+ msgid "_Browse Local"
+-msgstr "ローカルを参照(_B)"
++msgstr "ローカルを参照"
+ 
+ #: ui/hoststorage.ui:142
+ msgid "Browse local filesystem"
+@@ -1493,71 +1493,71 @@
+ 
+ #: ui/manager.ui:35
+ msgid "_Add Connection..."
+-msgstr "接続を追加(_A)..."
++msgstr "接続を追加..."
+ 
+ #: ui/manager.ui:44
+ msgid "_New Virtual Machine"
+-msgstr "新しい仮想マシン(_N)"
++msgstr "新しい仮想マシン"
+ 
+ #: ui/manager.ui:59 ui/preferences.ui:979 ui/vmwindow.ui:49
+ msgid "_Close"
+-msgstr "閉じる(_C)"
++msgstr "閉じる"
+ 
+ #: ui/manager.ui:69 ui/vmwindow.ui:59
+ msgid "_Quit"
+-msgstr "終了(_Q)"
++msgstr "終了"
+ 
+ #: ui/manager.ui:83
+ msgid "_Edit"
+-msgstr "編集(_E)"
++msgstr "編集"
+ 
+ #: ui/manager.ui:92
+ msgid "_Connection Details"
+-msgstr "接続の詳細(_C)"
++msgstr "接続の詳細"
+ 
+ #: ui/manager.ui:101
+ msgid "_Virtual Machine Details"
+-msgstr "仮想マシンの詳細(_V)"
++msgstr "仮想マシンの詳細"
+ 
+ #: ui/manager.ui:125
+ msgid "_Preferences"
+-msgstr "設定(_P)"
++msgstr "設定"
+ 
+ #: ui/manager.ui:138 ui/vmwindow.ui:112
+ msgid "_View"
+-msgstr "表示(_V)"
++msgstr "表示"
+ 
+ #: ui/manager.ui:147
+ msgid "_Graph"
+-msgstr "グラフ(_G)"
++msgstr "グラフ"
+ 
+ #: ui/manager.ui:157
+ msgid "_Guest CPU Usage"
+-msgstr "仮想マシン CPU 使用率(_G)"
++msgstr "仮想マシン CPU 使用率"
+ 
+ #: ui/manager.ui:167
+ msgid "_Host CPU Usage"
+-msgstr "ホスト CPU 使用率(_H)"
++msgstr "ホスト CPU 使用率"
+ 
+ #: ui/manager.ui:176
+ msgid "_Memory Usage"
+-msgstr "メモリーの使用率(_M)"
++msgstr "メモリーの使用率"
+ 
+ #: ui/manager.ui:185
+ msgid "_Disk I/O"
+-msgstr "ディスク I/O (_D)"
++msgstr "ディスク I/O "
+ 
+ #: ui/manager.ui:195
+ msgid "_Network I/O"
+-msgstr "ネットワーク I/O (_N)"
++msgstr "ネットワーク I/O "
+ 
+ #: ui/manager.ui:213
+ msgid "_Help"
+-msgstr "ヘルプ(_H)"
++msgstr "ヘルプ"
+ 
+ #: ui/manager.ui:222
+ msgid "_About"
+-msgstr "仮想マシンマネージャーについて(_A)"
++msgstr "仮想マシンマネージャーについて"
+ 
+ #: ui/manager.ui:253
+ msgid "Create a new virtual machine"
+@@ -1573,7 +1573,7 @@
+ 
+ #: ui/manager.ui:281 virtManager/vmmenu.py:95
+ msgid "_Open"
+-msgstr "開く(_O)"
++msgstr "開く"
+ 
+ #: ui/manager.ui:296 ui/vmwindow.ui:339
+ msgid "Power on the virtual machine"
+@@ -1582,7 +1582,7 @@
+ #: ui/manager.ui:297 virtManager/manager.py:758 virtManager/vmmenu.py:82
+ #: virtManager/vmwindow.py:380
+ msgid "_Run"
+-msgstr "実行(_R)"
++msgstr "実行"
+ 
+ #: ui/manager.ui:312 ui/vmwindow.ui:354 virtManager/manager.py:795
+ #: virtManager/vmwindow.py:421
+@@ -1591,7 +1591,7 @@
+ 
+ #: ui/manager.ui:313 virtManager/vmmenu.py:83
+ msgid "_Pause"
+-msgstr "一時停止(_P)"
++msgstr "一時停止"
+ 
+ #: ui/manager.ui:328 ui/vmwindow.ui:369
+ msgid "Shut down the virtual machine"
+@@ -1600,7 +1600,7 @@
+ #: ui/manager.ui:329 ui/vmwindow.ui:370 virtManager/vmmenu.py:53
+ #: virtManager/vmmenu.py:85
+ msgid "_Shut Down"
+-msgstr "シャットダウン(_S)"
++msgstr "シャットダウン"
+ 
+ #: ui/migrate.ui:14
+ msgid "Migrate the virtual machine"
+@@ -1616,11 +1616,11 @@
+ 
+ #: ui/migrate.ui:140
+ msgid "New _host:"
+-msgstr "新しいホスト(_H):"
++msgstr "新しいホスト:"
+ 
+ #: ui/migrate.ui:233
+ msgid "_Address:"
+-msgstr "アドレス(_A):"
++msgstr "アドレス:"
+ 
+ #: ui/migrate.ui:303
+ msgid "0"
+@@ -1653,7 +1653,7 @@
+ 
+ #: ui/migrate.ui:474
+ msgid "_URI:"
+-msgstr "URI(_U):"
++msgstr "URI:"
+ 
+ #: ui/migrate.ui:509
+ msgid "<b>Connectivity</b>"
+@@ -1675,7 +1675,7 @@
+ 
+ #: ui/migrate.ui:541
+ msgid "A_llow unsafe:"
+-msgstr "安全ではない場合を許可する(_L):"
++msgstr "安全ではない場合を許可する:"
+ 
+ #: ui/migrate.ui:567
+ msgid ""
+@@ -1699,7 +1699,7 @@
+ 
+ #: ui/migrate.ui:571
+ msgid "_Temporary move:"
+-msgstr "一時的に移動(_T):"
++msgstr "一時的に移動:"
+ 
+ #: ui/migrate.ui:599
+ msgid "Advanced options"
+@@ -1707,11 +1707,11 @@
+ 
+ #: ui/migrate.ui:653
+ msgid "_Migrate"
+-msgstr "マイグレーション(_M)"
++msgstr "マイグレーション"
+ 
+ #: ui/netlist.ui:17
+ msgid "De_vice name:"
+-msgstr "デバイス名(_V):"
++msgstr "デバイス名:"
+ 
+ #: ui/netlist.ui:63
+ msgid ""
+@@ -1728,11 +1728,11 @@
+ #, fuzzy
+ #| msgid "_Port:"
+ msgid "_Portgroup:"
+-msgstr "ポート(_P):"
++msgstr "ポート:"
+ 
+ #: ui/netlist.ui:182
+ msgid "_Network source:"
+-msgstr "ネットワークソース(_N):"
++msgstr "ネットワークソース:"
+ 
+ #: ui/oslist.ui:56
+ #, fuzzy
+@@ -1759,7 +1759,7 @@
+ 
+ #: ui/preferences.ui:45
+ msgid "Enable _system tray icon"
+-msgstr "システムトレイアイコンを表示する(_S)"
++msgstr "システムトレイアイコンを表示する"
+ 
+ #: ui/preferences.ui:67
+ msgid "Enable libgues_tfs VM introspection"
+@@ -1767,7 +1767,7 @@
+ 
+ #: ui/preferences.ui:124
+ msgid "Enable _XML editing"
+-msgstr "XML 編集の有効化(_X)"
++msgstr "XML 編集の有効化"
+ 
+ #: ui/preferences.ui:144
+ msgid "<b>General</b>"
+@@ -1775,23 +1775,23 @@
+ 
+ #: ui/preferences.ui:159
+ msgid "_General"
+-msgstr "全般(_G)"
++msgstr "全般"
+ 
+ #: ui/preferences.ui:188
+ msgid "Poll _Disk I/O"
+-msgstr "ディスク I/O の取得 (_D)"
++msgstr "ディスク I/O の取得 "
+ 
+ #: ui/preferences.ui:216
+ msgid "Poll _Network I/O"
+-msgstr "ネットワーク I/O の取得(_N)"
++msgstr "ネットワーク I/O の取得"
+ 
+ #: ui/preferences.ui:244
+ msgid "Poll _Memory stats"
+-msgstr "メモリーの統計を取得する(_M)"
++msgstr "メモリーの統計を取得する"
+ 
+ #: ui/preferences.ui:272
+ msgid "_Update status every"
+-msgstr "状態の更新間隔(_U)"
++msgstr "状態の更新間隔"
+ 
+ #: ui/preferences.ui:309
+ msgid "seconds"
+@@ -1799,7 +1799,7 @@
+ 
+ #: ui/preferences.ui:328
+ msgid "Poll C_PU usage"
+-msgstr "CPU使用率を取得する(_P)"
++msgstr "CPU使用率を取得する"
+ 
+ #: ui/preferences.ui:357
+ msgid "<b>Stats Options</b>"
+@@ -1807,11 +1807,11 @@
+ 
+ #: ui/preferences.ui:375
+ msgid "P_olling"
+-msgstr "ポーリング(_O)"
++msgstr "ポーリング"
+ 
+ #: ui/preferences.ui:409
+ msgid "Gra_phics type:"
+-msgstr "グラフィックのタイプ(_P):"
++msgstr "グラフィックのタイプ:"
+ 
+ #: ui/preferences.ui:422 ui/preferences.ui:448
+ msgid "Default storage format for new disk images."
+@@ -1819,7 +1819,7 @@
+ 
+ #: ui/preferences.ui:424
+ msgid "_Storage format:"
+-msgstr "ストレージの形式(_S):"
++msgstr "ストレージの形式:"
+ 
+ #: ui/preferences.ui:460
+ msgid ""
+@@ -1837,7 +1837,7 @@
+ 
+ #: ui/preferences.ui:464
+ msgid "CPU _default:"
+-msgstr "CPU デフォルト(_D):"
++msgstr "CPU デフォルト:"
+ 
+ #: ui/preferences.ui:488
+ msgid "Default Firmware for new VMs. Boot using either BIOS or UEFI."
+@@ -1847,7 +1847,7 @@
+ #, fuzzy
+ #| msgid "Firm_ware:"
+ msgid "x86 _Firmware:"
+-msgstr "ファームウェア(_W):"
++msgstr "ファームウェア:"
+ 
+ #: ui/preferences.ui:516
+ msgid "<b>New VM Defaults</b>"
+@@ -1855,15 +1855,15 @@
+ 
+ #: ui/preferences.ui:541
+ msgid "N_ew VM"
+-msgstr "新しい仮想マシン(_E)"
++msgstr "新しい仮想マシン"
+ 
+ #: ui/preferences.ui:569
+ msgid "Graphical console _scaling:"
+-msgstr "グラフィカルコンソールの縮小拡大(_S):"
++msgstr "グラフィカルコンソールの縮小拡大:"
+ 
+ #: ui/preferences.ui:587
+ msgid "Gr_ab keys:"
+-msgstr "グラブキー(_A):"
++msgstr "グラブキー:"
+ 
+ #: ui/preferences.ui:602
+ msgid "Not supported"
+@@ -1884,11 +1884,11 @@
+ 
+ #: ui/preferences.ui:649
+ msgid "_Resize guest with window:"
+-msgstr "ゲストのウィンドウをサイズ変更(_R):"
++msgstr "ゲストのウィンドウをサイズ変更:"
+ 
+ #: ui/preferences.ui:675
+ msgid "SPICE _USB Redirection:"
+-msgstr "Spice _USB 転送(_U):"
++msgstr "Spice _USB 転送:"
+ 
+ #: ui/preferences.ui:699
+ msgid ""
+@@ -1899,7 +1899,7 @@
+ 
+ #: ui/preferences.ui:701
+ msgid "Console autoconnec_t:"
+-msgstr "コンソール自動接続(_T):"
++msgstr "コンソール自動接続:"
+ 
+ #: ui/preferences.ui:729
+ msgid "<b>Graphical Consoles</b>"
+@@ -1907,31 +1907,31 @@
+ 
+ #: ui/preferences.ui:747
+ msgid "Conso_le"
+-msgstr "コンソール(_L)"
++msgstr "コンソール"
+ 
+ #: ui/preferences.ui:775
+ msgid "_Force Poweroff:"
+-msgstr "強制的に電源オフ時(_F):"
++msgstr "強制的に電源オフ時:"
+ 
+ #: ui/preferences.ui:802
+ msgid "Poweroff/_Reboot/Save:"
+-msgstr "電源オフ/再起動(_R)/保存時:"
++msgstr "電源オフ/再起動/保存時:"
+ 
+ #: ui/preferences.ui:816
+ msgid "_Pause:"
+-msgstr "一時停止時(_P):"
++msgstr "一時停止時:"
+ 
+ #: ui/preferences.ui:869
+ msgid "Device re_moval:"
+-msgstr "デバイスの削除時(_M):"
++msgstr "デバイスの削除時:"
+ 
+ #: ui/preferences.ui:883
+ msgid "_Unapplied changes:"
+-msgstr "未適用の変更点(_U):"
++msgstr "未適用の変更点:"
+ 
+ #: ui/preferences.ui:910
+ msgid "_Deleting storage:"
+-msgstr "ストレージを削除中(_D):"
++msgstr "ストレージを削除中:"
+ 
+ #: ui/preferences.ui:939
+ msgid "<b>Confirmations</b>"
+@@ -1939,7 +1939,7 @@
+ 
+ #: ui/preferences.ui:957
+ msgid "Feed_back"
+-msgstr "フィードバック(_B)"
++msgstr "フィードバック"
+ 
+ #: ui/snapshots.ui:80
+ msgid "Description:"
+@@ -1999,15 +1999,15 @@
+ 
+ #: ui/snapshotsnew.ui:131
+ msgid "_Description:"
+-msgstr "詳細(_D):"
++msgstr "詳細:"
+ 
+ #: ui/tpmdetails.ui:22
+ msgid "Device _Path:"
+-msgstr "デバイスパス(_P):"
++msgstr "デバイスパス:"
+ 
+ #: ui/tpmdetails.ui:130
+ msgid "_Version:"
+-msgstr "バージョン(_V):"
++msgstr "バージョン:"
+ 
+ #: ui/tpmdetails.ui:162
+ #, fuzzy
+@@ -2025,11 +2025,11 @@
+ 
+ #: ui/vmwindow.ui:73
+ msgid "Virtual _Machine"
+-msgstr "仮想マシン(_M)"
++msgstr "仮想マシン"
+ 
+ #: ui/vmwindow.ui:89
+ msgid "_Take Screenshot"
+-msgstr "スクリーンショットの取得(_T)"
++msgstr "スクリーンショットの取得"
+ 
+ #: ui/vmwindow.ui:98
+ msgid "Redirect host USB device to virtual machine with SPICE graphics."
+@@ -2038,59 +2038,59 @@
+ 
+ #: ui/vmwindow.ui:99
+ msgid "_Redirect USB device"
+-msgstr "USB デバイスのリダイレクト(_R)"
++msgstr "USB デバイスのリダイレクト"
+ 
+ #: ui/vmwindow.ui:121
+ msgid "_Console"
+-msgstr "コンソール(_C)"
++msgstr "コンソール"
+ 
+ #: ui/vmwindow.ui:143
+ msgid "Sna_pshots"
+-msgstr "スナップショット(_P)"
++msgstr "スナップショット"
+ 
+ #: ui/vmwindow.ui:160
+ msgid "_Fullscreen"
+-msgstr "フルスクリーン(_F)"
++msgstr "フルスクリーン"
+ 
+ #: ui/vmwindow.ui:169
+ msgid "_Resize to VM"
+-msgstr "仮想マシンの画面サイズに合わせる(_R)"
++msgstr "仮想マシンの画面サイズに合わせる"
+ 
+ #: ui/vmwindow.ui:178
+ msgid "_Scale Display"
+-msgstr "画面の縮小拡大(_S)"
++msgstr "画面の縮小拡大"
+ 
+ #: ui/vmwindow.ui:188
+ msgid "_Always"
+-msgstr "常に行う(_A)"
++msgstr "常に行う"
+ 
+ #: ui/vmwindow.ui:198
+ msgid "_Only when Fullscreen"
+-msgstr "フルスクリーン時のみ(_O)"
++msgstr "フルスクリーン時のみ"
+ 
+ #: ui/vmwindow.ui:209
+ msgid "_Never"
+-msgstr "しない(_N)"
++msgstr "しない"
+ 
+ #: ui/vmwindow.ui:226
+ msgid "Auto _resize VM with window"
+-msgstr "仮想マシンのウィンドウを自動的にリサイズ(_R)"
++msgstr "仮想マシンのウィンドウを自動的にリサイズ"
+ 
+ #: ui/vmwindow.ui:239
+ msgid "Co_nsoles"
+-msgstr "コンソール(_N)"
++msgstr "コンソール"
+ 
+ #: ui/vmwindow.ui:247
+ msgid "_Autoconnect"
+-msgstr "自動接続(_A)"
++msgstr "自動接続"
+ 
+ #: ui/vmwindow.ui:262
+ msgid "T_oolbar"
+-msgstr "ツールバー(_O)"
++msgstr "ツールバー"
+ 
+ #: ui/vmwindow.ui:276
+ msgid "Send _Key"
+-msgstr "キーの送信(_K)"
++msgstr "キーの送信"
+ 
+ #: ui/vmwindow.ui:299
+ msgid "Show the graphical console"
+@@ -2130,15 +2130,15 @@
+ 
+ #: ui/vmwindow.ui:434
+ msgid "_Begin Installation"
+-msgstr "インストールの開始(_B)"
++msgstr "インストールの開始"
+ 
+ #: ui/vmwindow.ui:448
+ msgid "_Cancel Installation"
+-msgstr "インストールのキャンセル(_C)"
++msgstr "インストールのキャンセル"
+ 
+ #: ui/vsockdetails.ui:23
+ msgid "Guest C_ID:"
+-msgstr "ゲスト CID(_I):"
++msgstr "ゲスト CID:"
+ 
+ #: ui/xmleditor.ui:96
+ msgid ""
+@@ -2149,7 +2149,7 @@
+ 
+ #: ui/xmleditor.ui:122
+ msgid "_XML"
+-msgstr "XML(_X)"
++msgstr "XML"
+ 
+ #: virtManager/about.py:21
+ #, python-format
+@@ -2837,23 +2837,23 @@
+ 
+ #: virtManager/createpool.py:213
+ msgid "Sou_rce Name:"
+-msgstr "ソース名(_R):"
++msgstr "ソース名:"
+ 
+ #: virtManager/createpool.py:213
+ msgid "Volg_roup Name:"
+-msgstr "ボリュームグループ名(_R):"
++msgstr "ボリュームグループ名:"
+ 
+ #: virtManager/createpool.py:215
+ msgid "_Source Path:"
+-msgstr "ソースパス(_S):"
++msgstr "ソースパス:"
+ 
+ #: virtManager/createpool.py:217
+ msgid "_Source IQN:"
+-msgstr "ソース IQN(_S):"
++msgstr "ソース IQN:"
+ 
+ #: virtManager/createpool.py:219
+ msgid "_Source Adapter:"
+-msgstr "ソースアダプター(_S):"
++msgstr "ソースアダプター:"
+ 
+ #: virtManager/createpool.py:332
+ #, python-format
+@@ -3527,11 +3527,11 @@
+ 
+ #: virtManager/details/details.py:537
+ msgid "_Add Hardware"
+-msgstr "ハードウェアを追加(_A)"
++msgstr "ハードウェアを追加"
+ 
+ #: virtManager/details/details.py:543
+ msgid "_Remove Hardware"
+-msgstr "ハードウェアを除去(_R)"
++msgstr "ハードウェアを除去"
+ 
+ #: virtManager/details/details.py:662 virtManager/details/details.py:1774
+ msgid "UEFI"
+@@ -3797,11 +3797,11 @@
+ 
+ #: virtManager/details/snapshots.py:378
+ msgid "_Start snapshot"
+-msgstr "スナップショットの適用(_S)"
++msgstr "スナップショットの適用"
+ 
+ #: virtManager/details/snapshots.py:383
+ msgid "_Delete snapshot"
+-msgstr "スナップショットの削除(_D)"
++msgstr "スナップショットの削除"
+ 
+ #: virtManager/details/snapshots.py:436
+ #, python-format
+@@ -4014,11 +4014,11 @@
+ 
+ #: virtManager/device/fsdetails.py:145
+ msgid "Te_mplate:"
+-msgstr "テンプレート(_M):"
++msgstr "テンプレート:"
+ 
+ #: virtManager/device/fsdetails.py:147
+ msgid "_Source path:"
+-msgstr "ソースパス(_S):"
++msgstr "ソースパス:"
+ 
+ #: virtManager/device/fsdetails.py:163
+ msgid "You may need to 'Enable shared memory' on the 'Memory' screen."
+@@ -4051,7 +4051,7 @@
+ #: virtManager/device/gfxdetails.py:218
+ #, python-format
+ msgid "A_uto (Port %(port)d)"
+-msgstr "自動 (ポート %(port)d) (_U)"
++msgstr "自動 (ポート %(port)d) "
+ 
+ #: virtManager/device/mediacombo.py:67
+ msgid "No media selected"
+@@ -4550,7 +4550,7 @@
+ #, fuzzy
+ #| msgid "_Delete"
+ msgid "De_lete"
+-msgstr "削除(_D)"
++msgstr "削除"
+ 
+ #: virtManager/manager.py:375
+ msgid "CPU usage"
+@@ -4604,7 +4604,7 @@
+ 
+ #: virtManager/manager.py:756 virtManager/vmwindow.py:378
+ msgid "_Restore"
+-msgstr "復元(_R)"
++msgstr "復元"
+ 
+ #: virtManager/manager.py:793 virtManager/vmwindow.py:419
+ msgid "Resume the virtual machine"
+@@ -4891,7 +4891,7 @@
+ 
+ #: virtManager/systray.py:119
+ msgid "_Show Virtual Machine Manager"
+-msgstr "仮想マシンマネージャーを表示する(_S)"
++msgstr "仮想マシンマネージャーを表示する"
+ 
+ #: virtManager/virtmanager.py:42
+ msgid "Error starting Virtual Machine Manager"
+@@ -4904,23 +4904,23 @@
+ 
+ #: virtManager/vmmenu.py:52
+ msgid "_Reboot"
+-msgstr "再起動(_R)"
++msgstr "再起動"
+ 
+ #: virtManager/vmmenu.py:54
+ msgid "F_orce Reset"
+-msgstr "強制的にリセット(_O)"
++msgstr "強制的にリセット"
+ 
+ #: virtManager/vmmenu.py:55
+ msgid "_Force Off"
+-msgstr "強制的に電源OFF(_F)"
++msgstr "強制的に電源OFF"
+ 
+ #: virtManager/vmmenu.py:57
+ msgid "Sa_ve"
+-msgstr "保存(_V)"
++msgstr "保存"
+ 
+ #: virtManager/vmmenu.py:84
+ msgid "R_esume"
+-msgstr "復帰(_E)"
++msgstr "復帰"
+ 
+ #: virtManager/vmmenu.py:89
+ msgid "Clone..."
+@@ -7078,7 +7078,7 @@
+ #~ msgstr "エミュレートされたデバイス:"
+ 
+ #~ msgid "D_etails"
+-#~ msgstr "詳細(_E)"
++#~ msgstr "詳細"
+ 
+ #~ msgid "No host CPU reported in capabilities"
+ #~ msgstr "ケイパビリティにおいて報告されたホスト CPU がありません"
+@@ -7087,7 +7087,7 @@
+ #~ msgstr "汎用 OS"
+ 
+ #~ msgid "Detect _zeroes:"
+-#~ msgstr "ゼロ検出(_Z):"
++#~ msgstr "ゼロ検出:"
+ 
+ #~ msgid "UEFI not found"
+ #~ msgstr "UEFI が見つかりません"
+@@ -7111,23 +7111,23 @@
+ #~ "グラフィックスのタイプ '%s' は、自動リサイズをサポートしていません。"
+ 
+ #~ msgid "_Write Policy:"
+-#~ msgstr "書き込みポリシー(_W):"
++#~ msgstr "書き込みポリシー:"
+ 
+ #~ msgid "_Allocation:"
+-#~ msgstr "割り当て(_A):"
++#~ msgstr "割り当て:"
+ 
+ #~ msgid "Browse..."
+ #~ msgstr "参照..."
+ 
+ #~ msgid "_Add sound device:"
+-#~ msgstr "サウンドデバイスを追加する(_A):"
++#~ msgstr "サウンドデバイスを追加する:"
+ 
+ #~ msgid ""
+ #~ "Add Spice _USB\n"
+ #~ "Redirection:"
+ #~ msgstr ""
+ #~ "Spice _USB 転送を\n"
+-#~ "追加する(_U):"
++#~ "追加する:"
+ 
+ #~ msgid "No"
+ #~ msgstr "いいえ"
+@@ -7164,7 +7164,7 @@
+ #, fuzzy
+ #~| msgid "Feed_back"
+ #~ msgid "feedback-tab"
+-#~ msgstr "フィードバック(_B)"
++#~ msgstr "フィードバック"
+ 
+ #~ msgid ""
+ #~ "When the guest graphical console has keyboard focus, do not disable "
+@@ -7179,13 +7179,13 @@
+ #~ "無効化されます。"
+ 
+ #~ msgid "_Force console shortcuts:"
+-#~ msgstr "コンソールのショートカットを強制する(_F)"
++#~ msgstr "コンソールのショートカットを強制する"
+ 
+ #~ msgid "_Text Consoles"
+-#~ msgstr "テキストコンソール(_T)"
++#~ msgstr "テキストコンソール"
+ 
+ #~ msgid "<b>Ad_vanced options</b>"
+-#~ msgstr "<b>詳細なオプション(_V)</b>"
++#~ msgstr "<b>詳細なオプション</b>"
+ 
+ #~ msgid "Create clone based on:"
+ #~ msgstr "作成するクローンのベース:"
+@@ -7214,7 +7214,7 @@
+ #~ msgstr "MAC アドレスを変更"
+ 
+ #~ msgid "New _MAC:"
+-#~ msgstr "新しい MAC アドレス(_M):"
++#~ msgstr "新しい MAC アドレス:"
+ 
+ #~ msgid "MAC:"
+ #~ msgstr "MAC:"
+@@ -7256,7 +7256,7 @@
+ #, fuzzy
+ #~| msgid "_Virtual Networks"
+ #~ msgid "Virtual Network (%(mac)s)"
+-#~ msgstr "仮想ネットワーク(_V)"
++#~ msgstr "仮想ネットワーク"
+ 
+ #~ msgid "Nothing to clone."
+ #~ msgstr "クローン対象なし"
+@@ -7338,7 +7338,7 @@
+ #~ msgstr "virt-manager は libvirt 0.6.0 以降を必要とします。"
+ 
+ #~ msgid "B_uild Pool:"
+-#~ msgstr "プールを構築(_U):"
++#~ msgstr "プールを構築:"
+ 
+ #~ msgid "Display:"
+ #~ msgstr "ディスプレイ:"
